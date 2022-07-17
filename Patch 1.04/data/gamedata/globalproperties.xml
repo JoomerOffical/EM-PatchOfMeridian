@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	$Id: $
+-->
+
+
+<Properties>
+
+	<Belongs
+		Values="1105 1106 1107 1108 1109 1110 1111 1112 1113 1114 1115 1116 1117 1118"
+	/>
+
+	<IzvratRepository
+		MaxSize="13 12" />
+
+	<GroundRepository
+                        Size="13 10000" />
+	<Mult	
+		GameTimeMult 				= "60" 
+		VehicleAIFiringRangeMult	= "0.25"
+		/>
+
+	<BurstParameters	
+		MaxBurstTime		= "4000"
+		MinBurstTime		= "1000"
+		TimeBetweenBursts	= "500"
+		/>
+	
+	<DynamicQuest
+		ProbabilityToGenerateDynamicQuestInTown	= "0.8">
+		
+		<ProbabilitiesForDQDrugs
+			SucceedingProbabilities = "25 15 5 50 40 30 75 65 55 100 90 80"
+			/>
+		
+		<DQ_treasure
+			DQ_MaxBeepDistance				= "500.0"
+			DQ_BeepIntervalForMaxDistance	= "10.0"
+			DQ_BeepSoundName				= "ET_S_HORN00"
+			/>
+		
+		<DQ_convoy
+			DQ_schwarzForMilky	= "1000"
+			DQ_schwarzForUral	= "10000"
+			DQ_schwarzForBelaz	= "100000"
+			/>
+	</DynamicQuest>
+
+	<CommonPaths 
+		Relationship	= "data/gamedata/Relationship.xml" 
+		GameObjects		= "data/gamedata/GameObjects/GameObjects.xml" 
+		Quests			= "data/gamedata/Quests.xml"
+		ResourceTypes	= "data/gamedata/ResourceTypes.xml"
+		Affixes			= "data/gamedata/Affixes.xml"
+		VehiclePartTypes	= "data/gamedata/VehiclePartTypes.xml"
+		PerkValues		= "data/gamedata/PerkValues.xml"
+		Charisma		= "data/gamedata/Charisma.xml"
+	/>
+
+	<Physics
+		DistToTurnOnPhysics			= "600"
+		DistToTurnOffPhysics		= "650"
+		PhysicStepTime				= "0.0166"
+		DefaultLandscapeFriction	= "1.3"
+		DefaultLandscapeResistance	= "0.0"
+		RoadFriction				= "1.3"
+		DefaultFriction				= "1.3"
+		Gravity						= "-23.00"
+	/>
+
+	<Npc
+		BarmanModelName = "r1_man"
+	/>
+
+	<ClashProperties
+		UnitClashVelocity			= "28.0"
+		FrontClashCoeff				= "1.0"
+		SideClashCoeff				= "0.7"
+		GlobalClashCoeff		= "0.5"
+		MinHitVelocity				= "10.0"
+		StaticClashCoeff		= "0.25"
+		EnemiesRammmingDamageCoeff	= "1.0"
+	/>
+
+	<BreakableObjectSplinters
+		AutoDisableLinearThreshold		= "0.5"
+		AutoDisableAngularThreshold		= "0.5"
+		AutoDisableNumSteps				= "5"
+		LifeTimeAfterDestroy			= "60"
+		TimeToCollideWithNpcVehicles    = "0.5"
+		/>
+
+	<Vehicles
+		VehiclesDropChests					= "true"
+		PartOfEnemySchwarzToDrop			= "0.20"
+		PartOfEnemySchwarzToDropDispersion	= "10"
+
+		MaxWaresToDrop						= "5"
+
+		WarePriceCoeffForDrop				= "1.5"
+		GunPriceCoeffForDrop				= "1.5"
+		GadgetPriceCoeffForDrop				= "1.5"
+		
+		ProbToDropMoney					= "0.25"
+		ProbToDropWares					= "0.25"	
+		ProbToDropGuns					= "0.10"
+		ProbToDropGadgetWeapon				= "0.10"
+		ProbToDropGadgetVehicle				= "0.10"
+
+		MaxSpeedWithNoFuel	= "10"
+		DefaultShootDist	= "150"	
+		SteeringBackCoeff	= "9.0"
+		
+		WheelSteerDerivativeCoeff		= "0.2"
+		WheelSteerIntegralCoeff			= "0.0"
+		WheelSteerTimeToAccumulateError	= "1.0"
+		
+		TimeOutToResumeHornIfFriendlyVehicleDisturbing		= "2.0"
+		NumHeadlightFlashesIfFriendlyVehicleDisturbing		= "2"
+		TimeToActivateHeadlightsIfFriendlyVehicleDisturbing	= "0.3"
+		TimeBetweenHeadlightsIfFriendlyVehicleDisturbing	= "0.2"
+
+		LinearVelForGetOutOfDifficultPlace					= "5.0"
+		AngularVelForGetOutOfDifficultPlace 				= "1.0"
+		FuelPercentForGetOutOfDifficultPlace				= "2.0"
+		TimeBetweenGetOutsOfDifficultPlace					= "0.5"
+		/>
+
+	<SmartCursor
+		InfoAreaRadius	= "50"
+		LockTimeout		= "1.5"
+		UnlockRegion	= "300 300"
+        />
+        
+	<CameraController
+		BlastWaveCameraShakeRadiusCoeff	= "1.0"
+		ShakeDamageToDurationCoeff		= "0.5"
+		MaxShakeDamage					= "50.0"
+	/>
+
+	<Caravans
+		DistanceFromPlayerToMoveout = "300"
+		/>
+                                
+	<Repair
+		HealthUnitPrice		= "1"
+		FuelUnitPrice		= "15"
+		PaintPrice			= "250"
+		SpecialWareAidCoeff	= "0.75"
+	/>
+
+	<ObstacleAvoidance
+		DefaultLookBoxLength	= "100.0"
+		DefaultTargetBoxLength	= "40.0"
+		AttractiveCoeff			= "0.01"
+		RepulsiveCoeff			= "5.0"
+		MaxDistToAvoid			= "40.0"
+		PredictionTime			= "0.2"
+        />
+
+	<DeathProperties
+		ThrowCoeff					= "3.0"
+		FlowVpVelocity				= "6.0"
+		FlowWheelVelocity			= "4.0"
+		QuietVpVelocity			= "0.1"
+		QuietWheelVelocity		= "0.1"
+		EnergyBlowDeltaTime			= "1.2"
+		EnergyVpBlowProbability		= "5"
+		EnergyWheelBlowProbability	= "2"
+		CriticalSpotForce			= "2"
+
+	   	UnitsToThrow = "DeathHuman, DeathHumanFire"
+		UnitThrowForce  = "50"
+        />
+        
+	<Articles
+		DefaultRegenerationTime 	= "60"
+		ProbabilityToDropGunsFromDeadVehicles = "0.85"
+		/>
+		
+	<InfectionZones
+		ZoneFrontSectorAngle = "60"
+		ZoneBackSectorAngle = "120"
+		ZoneMaxInfectionRange = "1000"
+		/>
+	
+
+	<VehiclesGeneration
+		PartOfSchwartzForCabin	= "0.25"
+		PartOfSchwartzForBasket	= "0.25"
+		PartOfSchwartzForGuns	= "0.50"
+		/>
+
+	<InterfaceStuff
+		ColorFriend			= "ff87e400"
+		ColorEnemy			= "ffff3300"
+		ColorTargetCaptured		= "ffff8700"
+		TargetInfoContourWidth		= "0.007"
+		TargetCapturedContourWidth	= "0.007"
+	/>
+
+	<PlayerPassmap 
+		PlayerPassMapUnpassableMu 	= "0.3"
+ 		PlayerPassMapUnpassableErp 	= "0.1"
+ 		PlayerPassMapUnpassableCfm 	= "0.01"
+	/>
+
+	<Weapon
+		MaxGroupingAngle		= "5"
+		TimeOutForReAimGuns		= "0.3"
+	/>
+	
+    <DifficultyLevels>
+    	<Level
+    		Name				= "EasyLevel"
+    		EnemyWeaponCoeff	= "0.3"
+    		EnemyShootingDelay	= "1.5"
+    		/>
+
+    	<Level
+    		Name				= "MediumLevel"
+    		EnemyWeaponCoeff	= "1.0"
+    		EnemyShootingDelay	= "0.75"
+    		/>
+
+    	<Level
+    		Name				= "HardLevel"
+    		EnemyWeaponCoeff	= "1.5"
+    		EnemyShootingDelay	= "0.5"
+    		/>
+
+    	<Level
+    		Name				= "ImpossibleLevel"
+    		EnemyWeaponCoeff	= "3.0"
+    		EnemyShootingDelay	= "0.0"
+    		/>
+    </DifficultyLevels>
+
+	<Price
+		Property2PriceCoeff		= "2.0"
+		PriceCoeffWhenLosingProfit  = "0.5"
+		/>
+
+	<Multiplayer
+		TimeBeforeRespawn		= "2"
+		SplintersLifeTime		= "10"
+		SplintersFadeTime		= "3" 
+		SpawneeModelsMinSize 	= "5"
+		TimeToShowGameOverStats	= "20000"
+		TimeBetweenAutomaticAddBots	= "2"
+		BotNickNames			= "mif2K Razaz JSinx Akari Borg Phosgen Santa Nukem AlexML Anton Goryh Isymbosi Jerzy Kaineer Puntus Roman Sega Shadow Staz Vano White UncleFu Hrrr Xoposhiy Crash Max Deniz Desperado Evgene LS Billy SergeO Sam Nomad Felix Axel Ben SoftKitty"
+		PlayerColors			= "ff090A0C ff53504A FF909899 ffEBE7DC FF24343B ff385429 ff56AC68 ffB9DD90 ff23305C ff154F6D ff7E8DC3 ff88BFC9 ff421346 ff59326F ff9451BB ffC3A0D8 ff55043F ff7A1649 ffB54D85 ffF09FC4 ff521603 ff721806 ffAA2211 ffFD4831 ff503223 FF9B3B10 ffFF9C00 ffF4B450 ff534222 ff777000 ffD7C43E ffEEEF9C"
+		DefaultPlayerColors		= "4 8 15"
+		>
+		
+		<TeamColorSchemes>
+			<Sheme
+				Colors	= "0xff000000 0xff4C6055 0xffFFBC2C" />
+			<Sheme
+				Colors	= "0xff240D00 0xffD1D89F 0xffA61800" />
+			<Sheme
+				Colors	= "0xff882A01 0xffA56616 0xffD4D6C2" />
+			<Sheme
+				Colors	= "0xff111E54 0xffDA7202 0xffDA7202" />
+			<Sheme
+				Colors	= "0xff6D431D 0xff1F5308 0xffD6A81A" />
+			<Sheme
+				Colors	= "0xff6E0E00 0xff9F3F00 0xffAA6300" />
+			<Sheme
+				Colors	= "0xff24343B 0xff909899 0xff9B3B10" />
+			<Sheme
+				Colors	= "0xff003100 0xff308000 0xff435B18" />
+			<Sheme
+				Colors	= "0xffFF7800 0xffFF7800 0xffFF7800" />
+			<Sheme
+				Colors	= "0xffB13507 0xffB13507 0xffB13507" />
+			<Sheme
+				Colors	= "0xff404040 0xff282121 0xffAC083E" />
+			<Sheme
+				Colors	= "0xff540000 0xffD81900 0xff000000" />
+			<Sheme
+				Colors	= "0xff4D4235 0xffA8A587 0xff7F6D58" />
+			<Sheme
+				Colors	= "0xff282B4F 0xffC5C8CB 0xff4F5C8D" />
+			<Sheme
+				Colors	= "0xff3730C6 0xff3730C6 0xff3730C6" />
+			<Sheme
+				Colors	= "0xff47770A 0xff47770A 0xff47770A" />
+			<Sheme
+				Colors	= "0xff1E1307 0xff51422B 0xff3F2800" />
+			<Sheme
+				Colors	= "0xff284F4B 0xffACB0AC 0xffB38006" />
+		</TeamColorSchemes>
+		
+		<MultiplayerType
+			Name					= "EasyMultiplayerLevel"
+			VehiclesPrototypes		= "ScoutMul01 BugMul01 MolokovozMul01"
+
+			BaseGunsPrototypes		= "maximMul01 fagotMul01 stormMul01 kordMul01 FlameThrowerMul1"
+
+			AuxGunsPrototypes		= ""
+
+			SpecialGunsPrototypes		= "Jumper SmokeMul TurboMul OilMul thorn2 thorn1 thorn3"
+			
+			BaseSlotName 			= "BASKET_SMALL_GUN"
+			AuxSlotName 			= ""
+			SpecialSlotName 		= "BASKET_SPECIAL_WEAPON"
+			/>
+
+		<MultiplayerType
+			Name					= "MediumMultiplayerLevel"
+			VehiclesPrototypes		= "UralMul01 FighterMul01 HunterMul01"
+
+			BaseGunsPrototypes		= "maximMul01 fagotMul01 stormMul01 kordMul01 FlameThrowerMul1"
+
+			AuxGunsPrototypes		= "rapierMul01 flagMul01 kpvtMul01 elephantMul01 odinMul01 bumblebeeMul01 FlameThrowerMul2 ElectroShockMul"
+
+			SpecialGunsPrototypes		= "Jumper SmokeMul TurboMul OilMul thorn2 thorn1 thorn3"
+			
+			BaseSlotName 			= "BASKET_SMALL_GUN"
+			AuxSlotName 			= "BASKET_BIG_GUN"
+			SpecialSlotName 		= "BASKET_SPECIAL_WEAPON"
+			/>
+			
+		<MultiplayerType
+			Name					= "HeavyMultiplayerLevel"
+			VehiclesPrototypes		= "BelazMul01 MirotvorecMul01 CruiserMul01"
+
+			BaseGunsPrototypes		= "rapierMul01 flagMul01 kpvtMul01 elephantMul01 odinMul01 bumblebeeMul01 FlameThrowerMul2 ElectroShockMul"
+
+			AuxGunsPrototypes		= "hammerMul01 dragonMul01 octopusMul01 cyclopsMul01 FlameThrowerMul3"
+
+			SpecialGunsPrototypes		= "Jumper SmokeMul TurboMul OilMul thorn2 thorn1 thorn3"
+
+			BaseSlotName 			= "BASKET_BIG_GUN"
+			AuxSlotName 			= "BASKET_GIANT_GUN"
+			SpecialSlotName 		= "BASKET_SPECIAL_WEAPON"
+			/>
+	</Multiplayer>
+
+</Properties>
+	

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+	<trigger Name="GlobalVar" active="1">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger Name="trStartMap" active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance (1100,1109, RS_ALLY)
+
+			CreateNewObject{prototypeName = "boxesprefab",objName = "cubzagr",belong = 1100}
+			getObj("cubzagr"):SetPosition( CVector(2085,301,3312))
+
+			CreateNewObject{prototypeName = "boxesprefab",objName = "cubzagr2",belong = 1100}
+			getObj("cubzagr2"):SetPosition( CVector(1833,298,3322))
+
+			CreateNewObject{prototypeName = "ZavalR3m1_01",objName = "zaval",belong = 1100}
+			getObj("zaval"):SetPosition( CVector(1582,295,3198))
+
+			CreateNewDummyObject( "rr_vagon2", "boss_vagon", -1, -1, CVector(502,333,877), Quaternion(0, 0, 0, 1), 0)
+			CreateNewDummyObject( "fence_short1", "zaborzagr", -1, -1, CVector(765,327,2782), Quaternion(0, 0, 0, 1), 0)
+			CreateNewDummyObject( "concrete_tube1", "bosszagr", -1, -1, CVector(814,327,972), Quaternion(0, 0, 0, 1), 0)
+
+			CreateNewDummyObject( "Indefinitely_bridge", "BigMost", -1, -1, CVector(3387.536, 319.793, 343.575), Quaternion(0.0000, -0.4848, 0.0000, 0.8746), 0)
+
+-- TEST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			CompleteQuest("r5m1_KillRobotsWithTank_Quest")
+-- TEST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+   			TakeQuest( "r6m1_EscapeFromStones_Quest" )
+		</script>
+	</trigger>
+
+	<trigger Name="trStartMapTwice" active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			if IsQuestTaken("r6m1_FindBadSam_Quest") then
+				trigger:Deactivate()
+
+				TDeactivate ("triggerExitToMap51")
+				TActivate ("triggerBackAfterEmissar")
+
+				local r = GetEntityByName ("BigMost")
+				if r then r:Remove() end
+
+				CreateNewDummyObject( "Indefinitely_bridge_destroyed", "BigMostDestroy", -1, -1, CVector(3387.536, 319.793, 343.575), Quaternion(0.0000, -0.4848, 0.0000, 0.8746), 0)
+			end
+		</script>
+	</trigger>
+
+
+
+
+<!-- игрок уехал от падающих камней -->
+	<trigger Name="triggerEndRockRace" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locEndRockRace" />
+		<script>
+			trigger:Deactivate()
+
+			StopPlayingCustomMusic()
+
+   			CompleteQuestIfTaken( "r6m1_EscapeFromStones_Quest" )
+ 		</script>
+	</trigger>
+
+
+
+<!-- Ловушка перед шахтами -->
+	<trigger Name="triggerWayToZavod" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local r = GetEntityByName ("cubzagr")
+			if r then r:Remove() end
+
+			TActivate ("triggerTrapInForestShahts")
+		</script>
+	</trigger>
+
+	<trigger Name="triggerTrapInForestShahts" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locTrapInForestShahts" />
+		<script>
+			trigger:Deactivate()
+
+   			CompleteQuest( "r6m1_FSPFindShaht_Quest" )
+
+			TActivate ("cinTrapInForestShahts")
+		</script>
+	</trigger>
+
+	<trigger Name="triggerRobotsInForestShahtsDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotsShahts" />
+		<script>
+			trigger:Deactivate()
+
+   			CompleteQuest( "r6m1_FSPKillRobots_Quest" )
+
+			TActivate ("triggerBeforeFactory")
+
+			TActivate ("cinDialogInForestShahts")
+		</script>
+	</trigger>
+
+
+
+
+<!-- Подъезжает к заводу -->
+	<trigger Name="triggerBeforeFactory" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locFactory" />
+		<script>
+			trigger:Deactivate()
+
+   			CompleteQuest( "r6m1_FFUseJump_Quest" )
+
+			TActivate ("cinBeforeFactory")
+		</script>
+	</trigger>
+
+
+
+
+<!-- Делает дыру в заборе -->
+	<trigger Name="triggerZaborDestroy" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Barrels" />
+		<script>
+			trigger:Deactivate()
+
+   			CompleteQuest( "r6m1_FFUseBomb_Quest" )
+
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(760,327,2783), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(762,331,2783), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(764,330,2782), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(766,329,2782), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(768,325,2784), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(770,327,2784), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+
+			CreateNewDummyObject( "fence_short_brocken", "zaborzagr2", -1, -1, CVector(765,327,2782), Quaternion(0, 0, 0, 1), 0)
+
+			TActivate ("triggerBossInFactory")
+			TActivate ("triggerZaborDestroyTimeOut")
+		</script>
+	</trigger>
+
+	<trigger Name="triggerZaborDestroyTimeOut" active="0">
+		<event timeout="1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local r = GetEntityByName ("zaborzagr")
+			if r then r:Remove() end
+
+			local r = GetEntityByName ("bosszagr")
+			if r then r:Remove() end
+		</script>
+	</trigger>
+
+
+
+<!-- Босс на заводе -->
+	<trigger Name="triggerBossInFactory" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locBoss2" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(false)
+
+   			CompleteQuest( "r6m1_DiscoveryFactory_Quest" )
+   			CompleteQuest( "r6m1_FindABombInJungle_Quest" )
+
+			TActivate ("cinBossInFactory")
+		</script>
+	</trigger>
+
+	<trigger Name="triggerBossInFactoryDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Boss2" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(true)
+
+   			CompleteQuest( "r6m1_KillBoss2_Quest" )
+
+			TActivate ("cinBossInFactoryDie")
+		</script>
+	</trigger>
+
+
+
+
+<!-- Игрок возвращается к мосту -->
+	<trigger Name="triggerBackAfterEmissar" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locBackAfterEmissar" />
+		<script>
+			trigger:Deactivate()
+
+   			CompleteQuest( "r6m1_FindBadSam_Quest" )
+			TakeQuest("r6m1_HSFindParts_Quest") 
+
+			TActivate ("cinBackAfterEmissar")
+		</script>
+	</trigger>
+
+
+
+
+<!-- Ходячий человек -->
+	<trigger Name="triggerHumanAvtoSTOPDie" active="1">
+		<event eventid="GE_OBJECT_DIE" ObjName="HumanAvtoSTOP" />
+		<script>
+			trigger:Deactivate()
+
+			local a = GetEntityByName("locAvtoSTOP")
+			if a then a:SetProperty("Active",0) end
+		</script>
+	</trigger>
+
+
+
+
+<!-- Знаки -->
+	<trigger Name="triggerSeeSigns" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locSign" />
+		<script>
+			trigger:Deactivate()
+
+   			CompleteQuest( "r6m1_opt_SignsSee" )
+
+			TActivate ("cinSeeSigns")
+		</script>
+	</trigger>
+
+
+
+
+<!-- Гонки -->
+	<trigger Name="triggerBigRace" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("SpeedyRacer",1150,CVector(2365.614, 299.172, 2633.993),{"DemoUral3"}, nil, nil, nil)
+
+			local vehP = GetEntityByName("SpeedyRacer_vehicle_0")
+			if vehP then
+			    vehP:setGodMode(1)
+				vehP:SetCruisingSpeed(160)			
+				vehP:SetExternalPathByName("Race_m1")
+				vehP:SetReactingOnDisturbingVehicles(false)
+			end
+
+			TActivate ("triggerYouWin")
+			TActivate ("triggerYouLose")
+		</script>
+	</trigger>
+
+	<trigger Name="triggerYouWin" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locEndOfRace1100" />
+		<script>
+			trigger:Deactivate()
+
+   			CompleteQuest( "r6m1_opt_StartRace" )
+
+			TActivate ("cinYouWin")
+			TDeactivate ("triggerYouLose")
+		</script>
+	</trigger>
+
+	<trigger Name="triggerYouLose" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="SpeedyRacer" />
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locEndOfRace1150" />
+		<script>
+			trigger:Deactivate()
+
+   			FailQuest( "r6m1_opt_StartRace" )
+
+			TActivate ("cinYouLose")
+			TDeactivate ("triggerYouWin")
+		</script>
+	</trigger>
+
+
+
+
+<!-- Фан бочки и битва -->
+	<trigger Name="triggerFun1" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locFunEffect_BarrelsCrash" />
+		<script>
+			trigger:Deactivate()
+
+			local bahID = CreateNewObject{
+				prototypeName = "superBlastWave",
+				objName = "MyWave",
+				belong = 1100
+			}
+			local bah = GetEntityByID(bahID)
+			if bah then
+				bah:SetPosition(CVector(2868.538, 289.000, 1511.237))
+			end
+
+			CreateTeam("RobotsBitva",1118,CVector(3021, 301.000, 2069),{"RobotBobot01","RobotBobot01"}, nil, nil, nil)
+
+			CreateTeam("CarsBitva",1116,CVector(3085, 301.000, 2057),{"CoolBelaz_2","r2m1_Hunter01"}, nil, nil, nil)
+		</script>
+	</trigger>
+
+
+
+
+<!-- Фан машина с горы -->
+	<trigger Name="triggerFun2" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locFunEffect_BarrelsCrash" />
+		<script>
+			trigger:Deactivate()
+
+			CreateVehicleEx("DemoBelaz1","CarsOnRock",CVector(2418, 360, 3297), 1106)
+
+			local FVehicle = GetEntityByName("CarsOnRock")
+			if FVehicle then
+				local locNCoor = GetPlayerVehicle():GetPosition()
+				local locNCoorOld = FVehicle:GetPosition()
+
+				local dir = locNCoor - locNCoorOld
+				dir.y = 0
+				FVehicle:SetDirection(dir:normalize())
+
+				FVehicle:SetThrottle( 1 )
+				FVehicle:SetCustomLinearVelocity( 50 )
+			end
+		</script>
+	</trigger>
+
+
+
+
+<!-- Фан машина прыжок -->
+	<trigger Name="triggerFun3" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="locFunEffect_CarJump" />
+		<script>
+			trigger:Deactivate()
+
+			CreateVehicleEx("r1m1_scout03","CarsJump",CVector(1142, 318, 3456), 1105)
+
+			local FVehicle = GetEntityByName("CarsJump")
+			if FVehicle then
+				FVehicle:SetRotation(Quaternion(0.0000, 0.9974, 0.0000, -0.0719))
+				FVehicle:SetThrottle( 1 )
+				FVehicle:SetCustomLinearVelocity( 50 )
+			end
+		</script>
+	</trigger>
+
+
+	<trigger Name="LostersBattle" active="0">
+		<event 	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1100,1116,RS_ENEMY)
+
+            CreateTeam("LostersGuard",1116,CVector(3460, 289, 2286),{"Fighter04", "Belaz02", "Molokovoz03"})
+
+			local lsteam = GetEntityByName("LostersGuard")
+			if lsteam then
+				for i=0,3 do
+			    	veh=lsteam:GetVehicle(i)
+				end
+			end
+
+			TActivate("LostersBattleEnd")
+		</script>
+	</trigger>
+
+	<trigger Name="LostersBattleEnd" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="LostersGuard" />
+		<script>
+			trigger:Deactivate()
+
+            StartConversation("r6m1_Lost_LostMan")
+		</script>
+	</trigger>
+<!-- Ha 51 -->
+	<trigger Name="triggerExitToMap51" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR5M1" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			local b = SpawnMessageBox(8801)
+			if b == 1 then
+				PassToMap("r5m1", "FromR6M1", -1 )
+
+				GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				TActivate ("RolikExitToMap51")
+				TActivate ("RolikENDExitToMap51")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap51" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate() 
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToR5M1")), CVector(getPos("FromR5M1")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR5M1")))
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap51" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+
+<!-- Ha 62 -->
+	<trigger Name="triggerExitToMap62" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR6M2" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			local b = SpawnMessageBox(8801)
+			if b == 1 then
+				PassToMap("r6m2", "FromR6M1", -1 )
+
+				GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				TActivate ("RolikExitToMap62")
+				TActivate ("RolikENDExitToMap62")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap62" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate() 
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToR6M2")), CVector(getPos("FromR6M2")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR6M2")))
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap62" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+	<trigger	Name="trPlaceSecret"	active="1">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local i=1
+			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
+			local len = getn(gunlist)
+
+			while getObj("chest"..i.."_loc")~=nil do
+				CreateBoxWithAffixGun(CVector(getPos("chest"..i.."_loc")), gunlist[exrandom(len)], random(3))
+				i = i + 1
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+</triggers>

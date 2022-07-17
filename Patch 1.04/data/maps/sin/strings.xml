@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="5000"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Хорошую вещь долгом не назовут... Отвезти посылку к черту на кулички. Получить за это жалких 500 монет. Все это из-за того, что оказался должен этому механику за спасение моей тачки."
+		sound="data\sounds\Speech\sin\sin_5000_nomad.ogg"
+		time="11" />
+
+	<string
+		id="5001"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Долг красен платежом. Мой платеж - добрых 400 миль по пустыне. Слева горы, справа степь или справа горы, слева степь - вот и всё разнообразие. Уже подташнивает от всей этой красоты."
+		sound="data\sounds\Speech\sin\sin_5001_nomad.ogg"
+		time="13" />
+
+	<string
+		id="5002"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|И в конце путешествия - маленький городишко Иерихон. Вряд ли здесь найдется хотя бы один приличный бар..."
+		sound="data\sounds\Speech\sin\sin_5002_nomad.ogg"
+		time="6" />
+
+	<string
+		id="5100"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Не торопись, бродяга!"
+		sound="data\sounds\Speech\sin\sin_5100_arlekin.ogg"
+		time="1" />
+
+	<string
+		id="5101"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А вы еще кто такие?"
+		sound="data\sounds\Speech\sin\sin_5101_nomad.ogg"
+		time="1" />
+
+	<string
+		id="5102"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Ты попал на Волчью Тропу. Мы Псы, бродяга, и мы не любим незнакомцев, от которых на милю несет неприятностями. Поворачивай назад, если не ищешь проблем."
+		sound="data\sounds\Speech\sin\sin_5102_arlekin.ogg"
+		time="7" />
+
+	<string
+		id="5103"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|У меня есть дела в городе."
+		sound="data\sounds\Speech\sin\sin_5103_nomad.ogg"
+		time="1" />
+
+	<string
+		id="5104"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Псы! Кажется наш гость не понимает здешних обычаев. Проявите радушие - объясните..."
+		sound="data\sounds\Speech\sin\sin_5104_arlekin.ogg"
+		time="5" />
+
+	<string
+		id="5105"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="332"
+		value="БОЕЦ|Ок, Босс."
+		sound="data\sounds\Speech\sin\sin_5105_fighter.ogg"
+		time="1" 		/>
+
+	<string
+		id="5106"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Счастливо оставаться, незнакомец."
+		sound="data\sounds\Speech\sin\sin_5106_arlekin.ogg"
+		time="1" />
+
+	<string
+		id="5200"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Опять ты?"
+		sound="data\sounds\Speech\sin\sin_5200_nomad.ogg"
+		time="1" />
+
+	<string
+		id="5201"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Пора поговорить с тобой по серьезному!"
+		sound="data\sounds\Speech\sin\sin_5201_arlekin.ogg"
+		time="1" />
+
+	<string
+		id="5202"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Садись в грузовик... Я не буду стрелять в человека без машины."
+		sound="data\sounds\Speech\sin\sin_5202_nomad.ogg"
+		time="4" />
+
+	<string
+		id="5203"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Ты поплатишься за дерзость."
+		sound="data\sounds\Speech\sin\sin_5203_arlekin.ogg"
+		time="1" />
+
+	<string
+		id="5204"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Кто нибудь ещё хочет меня поприветствовать в вашем городе? Нет? Счастливо оставаться, Щенки."
+		sound="data\sounds\Speech\sin\sin_5204_nomad.ogg"
+		time="7"/>
+
+	<string
+		id="5205"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Привет, красавчик. Теперь тебе в наших краях и заправиться-то не получится. Арелекин был правой рукой Бульдога, Босса Псов. Пока ты враг Псов - нет дураков, чтобы тебе помогать."
+		sound=""
+		time="7"/>		
+
+	<string
+		id="5206"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Остается воровать запчасти и сливать бензин по ночам."
+		sound=""
+		time="5"/>
+
+	<string
+		id="5207"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Как вариант. Вариант номер два - работать на Котов Гарфилда. Если ты будешь работать на Гарфилда, у тебя будут и деньги и бензин. Найти его можно на его Вилле. Скажи, что ты от Китти. Удачи, Красавчик."
+		sound=""
+		time="10"/>
+
+	<string
+		id="5208"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Спасибо."
+		sound=""
+		time="3"/>
+
+	<string
+		id="5300"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		value="ЭГОИСТ|Уйди с дороги, придурок."
+		sound="data\sounds\Speech\sin\sin_5300_egoist.ogg"
+		time="1" />
+
+	<string
+		id="5301"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Придержи язык."
+		sound="data\sounds\Speech\sin\sin_5301_nomad.ogg"
+		time="1" />
+
+	<string
+		id="5302"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		value="ЭГОИСТ|Это же ты тот приезжий, что пристрелил Арлекина! Теперь из-за тебя начнется война."
+		sound="data\sounds\Speech\sin\sin_5302_egoist.ogg"
+		time="6" />
+
+	<string
+		id="5303"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Чем ты недоволен? Ваши враги ослабли."
+		sound="data\sounds\Speech\sin\sin_5303_nomad.ogg"
+		time="2" />
+
+	<string
+		id="5304"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		value="ЭГОИСТ|Ты среди нас чужой. Лишний."
+		sound="data\sounds\Speech\sin\sin_5304_egoist.ogg"
+		time="2" />
+
+	<string
+		id="5305"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не нарывайся. Это не тебе решать."
+		sound="data\sounds\Speech\sin\sin_5305_nomad.ogg"
+		time="2" />
+
+	<string
+		id="5306"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		value="ЭГОИСТ|Я слышу угрозу в твоем голосе?!"
+		sound="data\sounds\Speech\sin\sin_5306_egoist.ogg"
+		time="2" />
+
+	<string
+		id="5307"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А если и так?"
+		sound="data\sounds\Speech\sin\sin_5307_nomad.ogg"
+		time="1" />
+
+	<string
+		id="5308"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		value="ЭГОИСТ|Я же тебя убью, наглец."
+		sound="data\sounds\Speech\sin\sin_5308_egoist.ogg"
+		time="2" />
+
+	<string
+		id="5312"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ещё остались вопросы?"
+		sound="data\sounds\Speech\sin\sin_5312_nomad.ogg"
+		time="1" />
+
+	<string
+		id="5313"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		value="ЭГОИСТ|Ты за это поплатишься..."
+		sound="data\sounds\Speech\sin\sin_5313_egoist.ogg"
+		time="2" />
+
+	<string
+		id="5314"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Поживем - увидим... Если я понадоблюсь - я буду в городе."
+		sound="data\sounds\Speech\sin\sin_5314_nomad.ogg"
+		time="4" />
+
+	<string
+		id="5400"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Помощь не требуется?"
+		sound="data\sounds\Speech\sin\sin_5400_nomad.ogg"
+		time="1" />
+
+	<string
+		id="5401"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ВОДИТЕЛЬ|Помощи каждый будет рад. Не ты ли тот водила, что убил Арлекина?"
+		sound="data\sounds\Speech\sin\sin_5401_driver.ogg"
+		time="5" />
+
+	<string
+		id="5402"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Наверно, путаешь меня с кем-то..."
+		sound="data\sounds\Speech\sin\sin_5402_nomad.ogg"
+		time="2" />
+
+	<string
+		id="5403"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ВОДИТЕЛЬ|Думаю, я не ошибся..."
+		sound="data\sounds\Speech\sin\sin_5403_driver.ogg"
+		time="2" />
+
+	<string
+		id="5500"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="332"
+		modelSlot="1"
+		value="ОХРАНА|Эй, парень, вали с дороги."
+		sound="data\sounds\Speech\sin\sin_5500_guard.ogg"
+		time="1" />
+
+	<string
+		id="5501"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Меня послали Коты с сообщением..."
+		sound="data\sounds\Speech\sin\sin_5501_nomad.ogg"
+		time="2" />
+
+	<string
+		id="5502"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="332"
+		modelSlot="1"
+		value="OXPAHA|Какое сообщение?"
+		sound="data\sounds\Speech\sin\sin_5502_guard.ogg"
+		time="1" />
+
+	<string
+		id="5503"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Деньги за работу у меня с собой... Стреляйте, ребята..."
+		sound="data\sounds\Speech\sin\sin_5503_nomad.ogg"
+		time="3" />
+
+	<string
+		id="5600"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Черт. Чтобы вернуться, придётся искать другую дорогу..."
+		sound="data\sounds\Speech\sin\sin_5600_nomad.ogg"
+		time="3" />
+
+	<string
+		id="5700"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Привет, ребята. Как вам отдыхается?"
+		sound="data\sounds\Speech\sin\sin_5700_nomad.ogg"
+		time="2" />
+
+	<string
+		id="5701"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="132"
+		modelSlot="1"
+		value="ЭГОИСТ|Стой, не убивай..."
+		sound="data\sounds\Speech\sin\sin_5701_egoist.ogg"
+		time="3" />
+
+	<string
+		id="5702"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Поедешь в моей машине... Только дернись - я тебе шею сверну."
+		sound="data\sounds\Speech\sin\sin_5702_nomad.ogg"
+		time="4" />
+
+	<string
+		id="5800"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Ты мне ещё ответишь за это..."
+		sound="data\sounds\Speech\sin\sin_5800_cat.ogg"
+		time="2" />
+
+	<string
+		id="5801"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="132"
+		value="БОРН|Где наш груз?!"
+		sound="data\sounds\Speech\sin\sin_5801_born.ogg"
+		time="1" />
+
+	<string
+		id="5802"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Сначала покажите нам Эгоиста."
+		sound="data\sounds\Speech\sin\sin_5802_cat.ogg"
+		time="2" />
+
+	<string
+		id="5803"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="132"
+		value="БОРН|С ним всё в порядке-забирайте."
+		sound="data\sounds\Speech\sin\sin_5803_born.ogg"
+		time="2" />
+
+	<string
+		id="5804"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Это не та коробка!!!"
+		sound="data\sounds\Speech\sin\sin_5804_cat.ogg"
+		time="1" />
+
+	<string
+		id="5805"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="132"
+		value="БОРН|Огонь!!!"
+		sound="data\sounds\Speech\sin\sin_5805_born.ogg"
+		time="1" />
+
+	<string
+		id="5806"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Смерть щенкам!!"
+		sound="data\sounds\Speech\sin\sin_5806_cat.ogg"
+		time="1" />
+
+	<string
+		id="5900"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Привет, ребята. Ждете кого-то?"
+		sound="data\sounds\Speech\sin\sin_5900_nomad.ogg"
+		time="2" />
+
+	<string
+		id="6000"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="132"
+		value="БОРН|Что здесь случилось?"
+		sound="data\sounds\Speech\sin\sin_6000_born.ogg"
+		time="1" />
+
+	<string
+		id="6001"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Видимо, у Псов появились новые бойцы... Когда я приехал, всё уже было кончено."
+		sound="data\sounds\Speech\sin\sin_6001_nomad.ogg"
+		time="5" />
+
+	<string
+		id="6002"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="КЕВИН|А что с твоей машиной?"
+		sound="data\sounds\Speech\sin\sin_6002_kevin.ogg"
+		time="1" />
+
+	<string
+		id="6003"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я сбил собаку."
+		sound="data\sounds\Speech\sin\sin_6003_nomad.ogg"
+		time="1" />
+
+	<string
+		id="6004"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="КЕВИН|Мы не видели по дороге ни одной."
+		sound="data\sounds\Speech\sin\sin_6004_kevin.ogg"
+		time="2" />
+
+	<string
+		id="6005"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Кто-то растащил на запчасти?"
+		sound="data\sounds\Speech\sin\sin_6005_nomad.ogg"
+		time="2" />
+
+	<string
+		id="6006"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="КЕВИН|Я так не думаю. Этот водитель не Кот и не Пес, он - поганая крыса. Снимите с его машины оружие."
+		sound="data\sounds\Speech\sin\sin_6006_kevin.ogg"
+		time="7" />
+
+	<string
+		id="6007"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Чёрт."
+		sound="data\sounds\Speech\sin\sin_6007_nomad.ogg"
+		time="1" />
+
+	<string
+		id="6100"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Как вы могли его упустить?! Поймайте его немедленно!!!"
+		sound="data\sounds\Speech\sin\sin_6100_cat.ogg"
+		time="3" />
+
+	<string
+		id="6101"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Куда он подевался?! Макс, Флеминг - останьтесь здесь, остальные со мной."
+		sound="data\sounds\Speech\sin\sin_6101_cat.ogg"
+		time="5" />
+
+	<string
+		id="6102"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		value="МАКС|Вон он!!!"
+		sound="data\sounds\Speech\sin\sin_6102_max.ogg"
+		time="2" />
+
+	<string
+		id="6103"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="ФЛЕМИНГ|Лови!!"
+		sound="data\sounds\Speech\sin\sin_6103_fleming.ogg"
+		time="2" />
+
+	<string
+		id="6104"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вроде, ушёл. Надо добраться до Церкви. Там можно отсидеться."
+		sound="data\sounds\Speech\sin\sin_6104_nomad.ogg"
+		time="4" />
+
+	<string
+		id="6200"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="326"
+		value="СВЯЩЕННИК|К тебе гости, Бродяга - Мэр."
+		sound="data\sounds\Speech\sin\sin_6200_god.ogg"
+		time="3" />
+
+	<string
+		id="6201"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="МЭР|Ты сделал всё отлично, одной банды теперь нет. Чем планируешь заняться дальше?"
+		sound="data\sounds\Speech\sin\sin_6201_mer.ogg"
+		time="5" />
+
+	<string
+		id="6202"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Сначала нужно отремонтировать тачку и достать оружие."
+		sound="data\sounds\Speech\sin\sin_6202_nomad.ogg"
+		time="3" />
+
+	<string
+		id="6203"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="МЭР|Я бы ни за что не стал тебе помогать... И я не буду этого делать. Я дам тебе только оружие. Псы захватили Джо. Я не хочу, чтобы с ним что нибудь случилось."
+		sound="data\sounds\Speech\sin\sin_6203_mer.ogg"
+		time="10" />
+
+	<string
+		id="6204"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Они в Иерихоне?"
+		sound="data\sounds\Speech\sin\sin_6204_nomad.ogg"
+		time="1" />
+
+	<string
+		id="6205"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="МЭР|Да, в Восточной части. Борн с Кевином уехали на поиски Китти. Остались только простые бойцы."
+		sound="data\sounds\Speech\sin\sin_6205_mer.ogg"
+		time="6" />
+
+	<string
+		id="6300"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="КЕВИН|А ты хорош! Может, даже так же хорош, как я."
+		sound="data\sounds\Speech\sin\sin_6300_kevin.ogg"
+		time="4" />
+
+	<string
+		id="6301"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Если верить слухам, то вряд ли..."
+		sound="data\sounds\Speech\sin\sin_6301_nomad.ogg"
+		time="2" />
+
+	<string
+		id="6302"
+		modelName="r2_woman"
+		modelSkin="0"
+		modelCfg="58"
+		modelSlot="1"
+		value="КЕВИН|Слухи обычно преувеличены..."
+		sound="data\sounds\Speech\sin\sin_6302_kevin.ogg"
+		time="2" />
+
+	<string
+		id="6303"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="132"
+		modelSlot="1"
+		value="БОРН|Слушайте! Я не хочу войны. Нам не нужна война. Война окончена - мы победили. Зачем нам воевать? Нам нужно радоваться! Бродяга, присоединяйся ко мне. Вместе мы найдем Китти, у меня есть деньги. Всё будет ок! Мы победили!"
+		sound="data\sounds\Speech\sin\sin_6303_born.ogg"
+		time="21" />
+
+	<string
+		id="6304"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вряд ли нам с Кевином по пути..."
+		sound="data\sounds\Speech\sin\sin_6304_nomad.ogg"
+		time="2" />
+
+	<string
+		id="6305"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="326"
+		modelSlot="1"
+		value="ДЖО|На, получи!!"
+		sound="data\sounds\Speech\sin\sin_6305_jo.ogg"
+		time="1" />
+
+	<string
+		id="6400"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вот так закончилась эта история... Город Иерихон был разрушен. Жители, так ненавидевшие банды, не смогли жить в городе без денег этих банд и вскоре разъехались. Деньги Борна так и не нашлись. Богатства Котов сгорели вместе с их Домом."
+		sound="data\sounds\Speech\sin\sin_6400_nomad.ogg"
+		time="18" />
+
+	<string
+		id="6401"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|На оставшиеся деньги я починил машину и отправился в дорогу. Один пьяница в баре проболтался про грузовик с ценным грузом, бороздящий местные края под видом небогатого торговца. Было бы глупо упускать такой шанс..."
+		sound="data\sounds\Speech\sin\sin_6401_nomad.ogg"
+		time="15" />
+
+	<string
+		id="6500"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Вряд ли я смогу здесь проехать. Должен быть другой путь."
+		sound="data\sounds\Speech\sin\sin_6500_nomad.ogg"
+		time="3" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я не знаю, куда ведет эта дорога, поэтому останусь здесь." 
+		sound="data\sounds\Speech\r5m1\r5m1_8802_nomad.ogg"
+		time="5" />
+
+	<string
+		id="8803"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Какое-то странное место. Лучше держаться отсюда подальше."
+		sound="data\sounds\Speech\r5m1\r5m1_8803_nomad.ogg"
+		time="5" />
+</resource>

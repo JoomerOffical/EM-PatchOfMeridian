@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Paths>
+
+<Path Name="Start_cam01">
+	<Point  coord="3732.640 387.352 318.174" rotation="-0.028 0.969 0.208 -0.130"/>
+	<Point  coord="3732.640 387.352 318.174" rotation="-0.041 0.942 0.309 -0.125"/>
+</Path>
+
+<Path Name="Start_cam02">
+	<Point  coord="0 -1 -5"/>
+	<Point  coord="0 10 -10"/>
+	<Point  coord="0 7 -15"/>
+	<Point  coord="0 10 -10"/>
+	<Point  coord="0 10 -10"/>
+</Path>
+
+<Path Name="Start_cam021">
+	<Point  coord="3696.629 345.121 469.010" rotation="-0.003 0.988 0.155 -0.019"/>
+	<Point  coord="3696.629 345.121 469.010" rotation="0.005 0.995 0.078 0.066"/>
+</Path>
+
+<Path Name="Start_cam03">
+	<Point  coord="3669.224 345.844 492.767" rotation="-0.001 -0.737 0.001 0.676"/>
+	<Point  coord="3672.491 345.218 494.912" rotation="-0.022 0.977 0.125 -0.171"/>
+	<Point  coord="3675.497 345.331 493.420" rotation="0.013 0.973 0.223 0.058"/>
+	<Point  coord="3675.497 345.331 493.420" rotation="0.196 0.795 0.332 0.468"/>
+	<Point  coord="3675.497 345.331 493.420" rotation="0.249 0.556 0.179 0.773"/>
+	<Point  coord="3675.497 345.331 493.420" rotation="0.070 0.048 0.003 0.996"/>
+</Path>
+
+<Path Name="Bandit_cam02">
+	<Point  coord="0 3 20"/>
+	<Point  coord="0 3 20"/>
+</Path>
+
+<Path Name="Bandit_cam03">
+	<Point  coord="3643.833 336.274 581.606" rotation="0.139 0.042 0.006 0.989"/>
+	<Point  coord="3643.833 336.272 581.606" rotation="0.139 0.042 0.006 0.989"/>
+</Path>
+
+<Path Name="Bandit_cam04">
+	<Point  coord="0 2 15"/>
+	<Point  coord="0 3 10"/>
+</Path>
+
+<Path Name="LibraryLook_cam01">
+	<Point  coord="3109.062 412.855 716.008" rotation="-0.067 0.673 -0.062 0.734"/>
+	<Point  coord="2058.114 475.233 788.911" rotation="0.017 0.687 0.016 0.726"/>
+</Path>
+
+<Path Name="LibraryLook_cam02">
+	<Point  coord="2137.534 459.402 1045.908" rotation="0.000 0.979 0.001 0.202"/>
+	<Point  coord="2225.899 454.782 885.411" rotation="0.026 0.851 0.042 0.522"/>
+	<Point  coord="2175.562 457.963 757.528" rotation="0.058 0.634 0.048 0.770"/>
+	<Point  coord="2077.948 459.610 649.739" rotation="0.095 0.166 0.016 0.982"/>
+</Path>
+
+<Path Name="cinPlayerLock_cam02">
+	<Point  coord="2023.704 463.838 762.656" rotation="0.036 -0.156 -0.006 0.987"/>
+	<Point  coord="2026.726 463.838 762.222" rotation="0.034 0.015 0.001 0.999"/>
+</Path>
+
+<Path Name="cinPlayerLock_cam01">
+	<Point  coord="2026.420 464.959 772.433" rotation="-0.000 0.991 -0.136 0.001"/>
+	<Point  coord="2026.254 463.112 773.022" rotation="-0.006 0.958 0.285 -0.020"/>
+	<Point  coord="2026.255 463.112 773.023" rotation="-0.006 0.958 0.285 -0.020"/>
+</Path>
+
+<Path Name="cinPlayerLock_cam021">
+	<Point  coord="2026.797 463.427 772.547" rotation="0.012 0.963 0.265 0.042"/>
+	<Point  coord="2026.014 463.427 772.584" rotation="-0.013 0.962 0.269 -0.046"/>
+</Path>
+
+<Path Name="cinPlayerLock_cam03">
+	<Point  coord="2040.121 473.937 775.302" rotation="-0.157 0.784 -0.221 0.559"/>
+	<Point  coord="2043.642 476.219 776.516" rotation="-0.157 0.784 -0.221 0.559"/>
+</Path>
+
+<Path Name="AfterFight_cam01">
+	<Point  coord="1997.414 541.772 1925.806" rotation="0.103 -0.316 -0.034 0.943"/>
+	<Point  coord="1997.867 541.938 1926.406" rotation="0.103 -0.316 -0.034 0.943"/>
+</Path>
+
+<Path Name="AfterFight_cam02">
+	<Point  coord="2000.094 543.180 1930.929" rotation="0.003 0.929 0.007 0.370"/>
+	<Point  coord="1999.981 543.183 1930.809" rotation="0.003 0.929 0.007 0.370"/>
+</Path>
+
+<Path Name="AfterFight_cam03">
+	<Point  coord="1999.141 542.936 1929.736" rotation="0.093 -0.641 -0.079 0.758"/>
+	<Point  coord="1999.462 543.017 1929.790" rotation="0.093 -0.641 -0.079 0.758"/>
+</Path>
+
+<Path Name="AfterFight_cam04">
+	<Point  coord="2002.390 544.450 1930.424" rotation="-0.130 0.762 -0.161 0.614"/>
+	<Point  coord="2001.787 544.200 1930.293" rotation="-0.115 0.765 -0.142 0.618"/>
+</Path>
+
+<Path Name="AfterFight_cam05">
+	<Point  coord="2000.475 543.467 1929.861" rotation="0.096 -0.623 -0.077 0.773"/>
+	<Point  coord="1998.489 542.755 1929.443" rotation="0.122 -0.622 -0.099 0.767"/>
+</Path>
+
+<Path Name="AfterFight_cam06">
+	<Point  coord="1994.036 543.451 1934.399" rotation="0.014 0.903 -0.029 -0.428"/>
+	<Point  coord="1987.979 543.576 1938.977" rotation="0.027 0.917 -0.064 -0.392"/>
+</Path>
+
+<Path Name="BlackCam">
+	<Point  coord="2122.619 346.480 1982.165" rotation="-0.021 0.338 -0.008 0.941"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam01">
+	<Point  coord="2002.535 543.635 1934.911" rotation="-0.007 0.980 -0.033 0.198"/>
+	<Point  coord="2002.439 543.618 1934.682" rotation="-0.007 0.980 -0.033 0.198"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam02">
+	<Point  coord="1999.464 542.921 1927.953" rotation="0.075 -0.397 -0.032 0.914"/>
+	<Point  coord="1999.646 542.962 1928.123" rotation="0.075 -0.397 -0.032 0.914"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam03">
+	<Point  coord="2000.181 542.949 1930.701" rotation="0.027 0.905 0.058 0.420"/>
+	<Point  coord="2000.029 542.975 1930.573" rotation="0.027 0.905 0.058 0.420"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam04">
+	<Point  coord="1998.869 543.572 1931.979" rotation="0.010 0.880 -0.018 -0.474"/>
+	<Point  coord="1999.094 543.561 1931.830" rotation="0.010 0.880 -0.018 -0.474"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam05">
+	<Point  coord="2000.483 543.394 1928.632" rotation="-0.059 0.479 -0.032 0.875"/>
+	<Point  coord="1999.964 543.339 1928.614" rotation="-0.056 0.391 -0.024 0.918"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam06">
+	<Point  coord="1999.032 543.130 1930.209" rotation="-0.018 0.871 0.032 -0.490"/>
+	<Point  coord="2001.862 543.393 1928.497" rotation="-0.050 0.902 0.108 -0.414"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam07">
+	<Point  coord="2005.898 543.305 1929.849" rotation="-0.009 0.800 -0.012 0.599"/>
+	<Point  coord="2003.588 543.235 1929.160" rotation="-0.017 0.806 -0.024 0.592"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam08">
+	<Point  coord="2000.038 542.617 1926.734" rotation="0.089 -0.341 -0.033 0.935"/>
+	<Point  coord="2000.207 542.668 1926.935" rotation="0.085 -0.334 -0.030 0.938"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam09">
+	<Point  coord="2000.152 543.960 1931.843" rotation="0.025 0.951 -0.081 -0.296"/>
+	<Point  coord="2000.271 543.924 1931.670" rotation="0.025 0.951 -0.081 -0.296"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam10">
+	<Point  coord="1997.399 543.473 1924.261" rotation="-0.049 -0.379 0.020 0.924"/>
+	<Point  coord="1997.717 543.424 1924.584" rotation="-0.049 -0.379 0.020 0.924"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam11">
+	<Point  coord="2000.131 543.575 1930.568" rotation="0.031 -0.805 -0.043 0.591"/>
+	<Point  coord="2000.290 543.593 1930.518" rotation="0.031 -0.805 -0.043 0.591"/>
+</Path>
+
+<Path Name="AfterVorAtSam_cam12">
+	<Point  coord="1998.735 542.420 1927.198" rotation="0.061 -0.545 -0.040 0.835"/>
+	<Point  coord="1998.126 542.323 1926.930" rotation="0.061 -0.545 -0.040 0.835"/>
+</Path>
+
+<Path Name="ReturnMovies_cam01">
+	<Point  coord="2146.297 342.476 1952.018" rotation="0.131 0.338 0.047 0.931"/>
+	<Point  coord="2146.297 342.466 1952.018" rotation="0.131 0.338 0.047 0.931"/>
+</Path>
+
+<Path Name="ReturnMovies_cam02">
+	<Point  coord="2142.939 359.061 1973.670" rotation="0.008 0.952 -0.306 -0.024"/>
+	<Point  coord="2137.914 359.061 1972.667" rotation="0.058 0.933 -0.308 -0.176"/>
+</Path>
+
+<Path Name="ReturnMovies_cam03">
+	<Point  coord="10 3 -10" />
+	<Point  coord="12 4 0" />
+	<Point  coord="-10 5 10" />
+</Path>
+
+<Path Name="NearFormulaVeh_cam01">
+	<Point  coord="5 1.800 -10" />
+	<Point  coord="-5 1.800 -10" />
+</Path>
+
+<Path Name="NearVor_cam01">
+	<Point  coord="5 2 -10" />
+	<Point  coord="-5 3 -10" />
+</Path>
+
+<Path Name="BeforeGonka_cam01">
+	<Point  coord="1370.635 503.790 3863.971" rotation="0.001 0.989 -0.149 -0.008"/>
+	<Point  coord="1037.607 547.701 3829.292" rotation="0.040 0.932 -0.344 -0.109"/>
+	<Point  coord="643.893 686.225 3794.706" rotation="0.107 0.890 -0.349 -0.272"/>
+	<Point  coord="490.265 596.793 3426.306" rotation="-0.135 -0.587 0.101 0.792"/>
+	<Point  coord="1102.743 369.436 2979.541" rotation="0.142 -0.034 -0.005 0.989"/>
+</Path>
+
+<Path Name="AfterGonka_cam01">
+	<Point  coord="1362.463 523.727 1684.955" rotation="0.063 0.710 0.064 0.698"/>
+	<Point  coord="1359.809 524.409 1684.909" rotation="0.063 0.710 0.064 0.698"/>
+</Path>
+
+<Path Name="RobotGroupsDie_cam01">
+	<Point  coord="2143.946 347.078 1963.964" rotation="0.014 0.986 -0.119 -0.117"/>
+	<Point  coord="2131.802 347.078 1953.235" rotation="-0.073 -0.793 0.097 0.597"/>
+</Path>
+
+<Path Name="PlRunFromLib_cam01">
+	<Point  coord="2000.507 544.392 1929.920" rotation="-0.300 -0.592 0.252 0.704"/>
+	<Point  coord="2000.386 544.519 1929.899" rotation="-0.300 -0.592 0.252 0.704"/>
+</Path>
+
+<Path Name="PlRunFromLib_cam02">
+	<Point  coord="2000.364 542.568 1929.964" rotation="0.108 0.762 0.132 0.625"/>
+	<Point  coord="2000.573 542.492 1930.006" rotation="0.108 0.762 0.132 0.625"/>
+</Path>
+
+<Path Name="PlRunFromLib_cam03">
+	<Point  coord="2001.028 547.401 1932.694" rotation="0.021 0.877 -0.478 -0.039" speed="0.100"/>
+	<Point  coord="1993.906 547.790 1931.992" rotation="0.076 0.849 -0.508 -0.127" speed="0.100"/>
+	<Point  coord="1978.904 553.565 1925.874" rotation="-0.188 -0.644 0.168 0.722" speed="0.600"/>
+	<Point  coord="1973.131 570.154 1879.589" rotation="-0.228 -0.322 0.080 0.915" speed="0.100"/>
+	<Point  coord="2021.844 601.013 1815.273" rotation="-0.289 0.051 -0.015 0.956" speed="0.200"/>
+</Path>
+
+<Path Name="PlRunFromLib_cam04">
+	<Point  coord="2004.247 545.921 1934.825" rotation="-0.072 0.926 -0.224 0.296"/>
+	<Point  coord="2003.840 545.921 1935.093" rotation="-0.057 0.943 -0.230 0.235"/>
+</Path>
+
+<Path Name="PlRunFromLib_cam05">
+	<Point  coord="2000.507 543.537 1929.853" rotation="0.077 -0.624 -0.062 0.775"/>
+	<Point  coord="2000.306 543.495 1929.809" rotation="0.077 -0.624 -0.062 0.775"/>
+</Path>
+
+<Path Name="PlRunFromLib_cam06">
+	<Point  coord="2000.633 543.656 1929.885" rotation="-0.078 0.745 -0.088 0.656"/>
+	<Point  coord="2000.925 543.727 1929.922" rotation="-0.078 0.745 -0.088 0.656"/>
+</Path>
+
+<Path Name="PlRunFromLib_cam07">
+	<Point  coord="1996.474 543.832 1931.711" rotation="-0.038 -0.846 0.061 0.528"/>
+	<Point  coord="1995.540 543.945 1928.994" rotation="-0.048 -0.629 0.039 0.775"/>
+	<Point  coord="1997.198 544.233 1923.567" rotation="-0.072 -0.260 0.019 0.963"/>
+	<Point  coord="1997.198 544.232 1923.567" rotation="-0.072 -0.260 0.019 0.963"/>
+</Path>
+
+<Path Name="Final1_cam01">
+	<Point  coord="2000.697 543.691 1929.921" rotation="0.022 -0.637 -0.018 0.770"/>
+	<Point  coord="2000.347 543.670 1929.854" rotation="0.022 -0.637 -0.018 0.770"/>
+</Path>
+
+<Path Name="Final1_cam011">
+	<Point  coord="2000.347 543.670 1929.854" rotation="0.022 -0.637 -0.018 0.770"/>
+	<Point  coord="1997.676 543.515 1929.344" rotation="0.022 -0.637 -0.018 0.770"/>
+</Path>
+
+<Path Name="Final1_cam02">
+	<Point  coord="1997.676 543.515 1929.344" rotation="0.022 -0.637 -0.018 0.770"/>
+	<Point  coord="1997.030 543.478 1929.221" rotation="0.022 -0.637 -0.018 0.770"/>
+</Path>
+
+<Path Name="Final1_cam021">
+	<Point  coord="1997.030 543.478 1929.221" rotation="0.022 -0.637 -0.018 0.770"/>
+	<Point  coord="1989.463 543.044 1927.782" rotation="0.022 -0.637 -0.018 0.770"/>
+</Path>
+
+<Path Name="Final1_cam03">
+	<Point  coord="1989.463 543.044 1927.782" rotation="0.022 -0.637 -0.018 0.770"/>
+	<Point  coord="1986.890 542.897 1927.291" rotation="0.022 -0.637 -0.018 0.770"/>
+</Path>
+
+<Path Name="Final2_cam01">
+	<Point  coord="2453.234 400.298 3182.889" rotation="0.050 0.891 0.101 0.439"/>
+	<Point  coord="2452.167 400.298 3184.278" rotation="0.050 0.891 0.101 0.439"/>
+</Path>
+
+<Path Name="Final2_cam02">
+	<Point  coord="2116.438 403.004 2985.784" rotation="0.079 -0.469 -0.042 0.879"/>
+	<Point  coord="2127.344 403.004 2969.491" rotation="0.079 -0.469 -0.042 0.879"/>
+</Path>
+
+<Path Name="Final2_cam03">
+	<Point  coord="2205.937 402.073 2994.313" rotation="0.061 0.722 0.064 0.686"/>
+	<Point  coord="2207.431 401.805 2994.391" rotation="0.061 0.722 0.064 0.686"/>
+</Path>
+
+<Path Name="Final2_cam04">
+	<Point  coord="2147.125 415.581 2996.024" rotation="-0.066 -0.715 0.068 0.692"/>
+	<Point  coord="2148.588 415.301 2995.977" rotation="-0.066 -0.715 0.068 0.692"/>
+</Path>
+
+<Path Name="Final2_cam05">
+	<Point  coord="2203.662 402.031 2990.896" rotation="0.042 0.020 0.001 0.999"/>
+	<Point  coord="2201.757 401.995 2990.596" rotation="0.031 -0.243 -0.008 0.970"/>
+</Path>
+
+<Path Name="Final2_cam06">
+	<Point  coord="2154.116 413.841 2996.113" rotation="0.114 0.826 0.180 0.522"/>
+	<Point  coord="2154.408 413.841 2994.695" rotation="0.153 0.664 0.142 0.718"/>
+	<Point  coord="2153.602 413.841 2992.772" rotation="0.178 0.356 0.069 0.915"/>
+</Path>
+
+<Path Name="Final2_cam07">
+	<Point  coord="2207.914 401.632 2994.534" rotation="0.068 0.718 0.071 0.689"/>
+	<Point  coord="2206.854 401.846 2994.490" rotation="0.068 0.718 0.071 0.689"/>
+</Path>
+
+<Path Name="Final2_cam08">
+	<Point  coord="2120.986 419.524 3005.885" rotation="-0.071 -0.808 0.100 0.577"/>
+	<Point  coord="2111.611 422.013 3009.102" rotation="-0.071 -0.808 0.100 0.577"/>
+</Path>
+
+</Paths>

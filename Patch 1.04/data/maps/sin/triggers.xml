@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+	<triggers>
+
+	<trigger Name="FF_tr" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_FF_loc"/>
+		<script>
+			trigger:Deactivate()
+			TActivate("First_ctr")
+			TakeQuest("Sin_Arlekin_qst")
+		</script>
+	</trigger>
+
+	<trigger Name="FF_Kill_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ABand"/>
+		<script>
+			trigger:Deactivate()
+			CompleteQuest("Sin_Arlekin_Band_qst")
+		</script>
+	</trigger>
+
+	<trigger Name="A_Kill_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Arlekin"/>
+		<script>
+			trigger:Deactivate()
+			StopPlayingCustomMusic()
+			CompleteQuest("Sin_Arlekin_Kill_qst")
+			SetTolerance(1194,1100,RS_NEUTRAL)
+			SetTolerance(1192,1100,RS_ENEMY)
+			TActivate("Kitty_ctr")
+		</script>
+	</trigger>
+
+	<trigger Name="E_Kill_tr" active="0">
+		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="Egoist1_vehicle_0"/>
+		<script>
+			trigger:Deactivate()
+			CompleteQuest("Sin_E_qst")
+			TActivate("Caravan_tr")
+			TActivate("Egoist2_ctr")
+			TActivate("KittyRemove_tr")
+		</script>
+	</trigger>
+
+	<trigger Name="KittyRemove_tr" active="0">
+		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="CatHouse_Out"/>
+		<script>
+			trigger:Deactivate()
+
+			local Kit = getObj("Kitty_vehicle_0")
+			if Kit then Kit:Remove() end
+		</script>
+	</trigger>
+
+	<trigger Name="Caravan_tr" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_Caravan_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			TActivate("Caravan_ctr")
+		</script>
+	</trigger>
+
+	<trigger Name="Caravan_Kill_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CaravanGuard"/>
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("Sin_Cat_Caravan_qst")
+
+			TActivate("CaravanRemove_tr")
+		</script>
+	</trigger>
+
+	<trigger Name="CaravanRemove_tr" active="0">
+		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="Caravan_Out"/>
+		<script>
+			trigger:Deactivate()
+			SetTolerance(1190,1100,RS_NEUTRAL)
+			SetTolerance(1191,1100,RS_NEUTRAL)
+			SetTolerance(1192,1100,RS_NEUTRAL)
+			local Cvn = getObj("Caravan_vehicle_0")
+			if Cvn then Cvn:Remove() end
+
+			local Tr1 = getObj("Traitor_vehicle_0")
+			if Tr1 then Tr1:Remove() end
+
+			local Tr2 = getObj("Traitor_vehicle_1")
+			if Tr2 then Tr2:Remove() end
+		</script>
+	</trigger>
+
+	<trigger Name="SanRafael_tr" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_SanRafael_loc"/>
+		<script>
+			trigger:Deactivate()
+
+            SetTolerance(1100,1196,RS_ENEMY)
+			TActivate("SanRafael_ctr")
+		</script>
+	</trigger>
+
+	<trigger Name="SanRafael_Kill_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="EgoistGuard"/>
+		<script>
+			trigger:Deactivate()
+			SetTolerance(1196,1100,RS_NEUTRAL)
+			SetTolerance(1193,1100,RS_ENEMY)
+			TActivate("EgoistLose")
+		</script>
+	</trigger>
+
+	<trigger Name="Cat_Talk_tr" active="0">
+		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1193,1100,RS_ENEMY)
+
+			TActivate("Cross_ctr")
+
+			CompleteQuest("Sin_Cross_Talk_qst")
+		</script>
+	</trigger>
+
+	<trigger Name="Cat_Kill_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Cat"/>
+		<script>
+			trigger:Deactivate()
+			CompleteQuest("Sin_Cross_Fight_qst")
+			TakeQuest("Sin_Cross_Born_qst")
+			StartConversation("Sin_Bulldog3_dlg")
+			TActivate("OldFarm_tr")
+			TActivate("CrossRemove_tr")
+		</script>
+	</trigger>
+
+	<trigger Name="CrossRemove_tr" active="0">
+		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="Cross_Out"/>
+		<script>
+			trigger:Deactivate()
+
+			local Dg1 = getObj("Dog_vehicle_0")
+			if Dg1 then Dg1:Remove() end
+
+			local Dg2 = getObj("Dog_vehicle_1")
+			if Dg2 then Dg2:Remove() end
+
+			SetTolerance(1194,1100,RS_ENEMY)
+		</script>
+	</trigger>
+
+	<trigger Name="OldFarm_tr" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_OldFarm_loc"/>
+		<script>
+			trigger:Deactivate()
+			TActivate("Farm_ctr")
+		</script>
+	</trigger>
+
+	<trigger Name="OldFarm_Kill_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="KittyGuard"/>
+		<script>
+			trigger:Deactivate()
+			SetTolerance(1194,1100,RS_NEUTRAL)
+			StartConversation("Sin_Kitty_Trapped")
+			TActivate("OldFarm_Leave_tr")
+		</script>
+	</trigger>
+
+	<trigger Name="OldFarm_Leave_tr" active="0">
+		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_DogHouse"/>
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("Sin_Cross_Wait_qst")
+			SetTolerance(1192,1100,RS_ENEMY)
+			TActivate("Capture_ctr")
+			TActivate("Jump_tr")
+		</script>
+	</trigger>
+
+	<trigger Name="Jump_tr" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_Jump_loc" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			StopPlayingCustomMusic()
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 0 )
+			StartCinematic()
+			AddCinematicMessage( 6104, 0.25 )
+			AddCinematicMessage( 6200, 0.25 )
+
+			TActivate ("RolikJump")
+			TActivate ("RolikJumpEND")
+ 		</script>
+	</trigger>
+
+	<trigger Name="RolikJump" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("Sin_Church")), CVector(getPos("Sin_Church_loc")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("Sin_Church_loc")))
+
+		</script>
+	</trigger>
+
+	<trigger Name="RolikJumpEND" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+			SetTolerance(1192,1100,RS_ENEMY)
+			SetTolerance(1193,1100,RS_ENEMY)
+			SetTolerance(1194,1100,RS_ENEMY)
+			SetTolerance(1195,1100,RS_ENEMY)
+			CompleteQuest("Sin_Run_qst")
+
+			CreateTeam("JoeGuard", 1194, { CVector(getPos("Sin_JG1_JS_loc")),CVector(getPos("Sin_JG2_JS_loc")),CVector(getPos("Sin_JG3_JS_loc")),CVector(getPos("Sin_JG4_JS_loc"))}, {"Scout01","Scout01","Scout01","Scout01"}, nil, nil, {Quaternion(0.003, -0.855, -0.005, 0.518), Quaternion(0.010, -0.048, -0.000, 0.999), Quaternion(-0.004, 0.861, -0.003, -0.509), Quaternion(0.012, 0.792, -0.000, -0.610)})
+			TActivate("JoeSave_tr")
+
+            TActivate ("ChurchMayor")
+		</script>
+	</trigger>
+
+	<trigger Name="JoeSave_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="JoeGuard"/>
+		<script>
+			trigger:Deactivate()
+			SetTolerance(1192,1100,RS_NEUTRAL)
+			StartConversation("Sin_Joe")
+	</script>
+	</trigger>
+
+	<trigger Name="triggerCustom" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToCustom" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			if IsQuestComplete("Sin_Egoist_Take_qst") then
+
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+				AddCinematicMessage( 6500, 0.25 )
+
+				TActivate ("RolikCustom")
+				TActivate ("RolikCustomEND")
+			end
+			if IsQuestTakenAndNotComplete("Sin_Egoist_Way_qst") then
+				CompleteQuest("Sin_Egoist_Way_qst")
+			end
+
+ 		</script>
+	</trigger>
+	<trigger Name="RolikCustom" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToCustom")), CVector(getPos("FromCustom")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromCustom")))
+		</script>
+	</trigger>
+	<trigger Name="RolikCustomEND" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+<trigger Name="triggerTunnel" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToTunnel" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			if IsQuestTaken("Sin_Egoist_Tunnel_qst") then
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+				AddCinematicMessage( 5600, 0.25 )
+
+				TActivate ("RolikTunnelSR")
+				TActivate ("RolikENDTunnelSR")
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+				AddCinematicMessage( 6500, 0.25 )
+
+				TActivate ("RolikTunnel")
+				TActivate ("RolikENDTunnel")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikTunnel" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToTunnel")), CVector(getPos("FromTunnel")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromTunnel")))
+
+		</script>
+	</trigger>
+	<trigger Name="RolikENDTunnel" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+	<trigger Name="RolikTunnelSR" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToTunnelSR")), CVector(getPos("FromTunnelSR")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromTunnelSR")))
+
+			CompleteQuest("Sin_Egoist_Tunnel_qst")
+		</script>
+	</trigger>
+
+	<trigger Name="RolikENDTunnelSR" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			TActivate("SanRafael_tr")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+	<trigger Name="triggerExitToMap52" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR5M2" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+			AddCinematicMessage( 8802, 0.25 )
+
+			TActivate ("RolikExitToMap52")
+			TActivate ("RolikENDExitToMap52")
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap52" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToR5M2")), CVector(getPos("FromR5M2")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR5M2")))
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap52" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+</triggers>

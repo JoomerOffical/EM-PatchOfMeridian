@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
+-->
+
+<Prototypes>  
+<Folder Name = "Generators">
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r5m1_Generator_good">
+
+			<Object PrototypeName="hornet01" />
+			<Object PrototypeName="specter01" />
+			<Object PrototypeName="pkt01" />
+			<Object PrototypeName="kord01" />
+
+			<Object PrototypeName="hornet01" />
+			<Object PrototypeName="specter01" />
+			<Object PrototypeName="pkt01" />
+			<Object PrototypeName="kord01" />
+
+			<Object PrototypeName="vector01" />
+			<Object PrototypeName="kpvt01" />
+			<Object PrototypeName="ElectroShockMed"/>
+
+			<Object PrototypeName="minePusher"/>
+			<Object PrototypeName="someTurboAccelerationPusher"/>
+			<Object PrototypeName="thorn2"/>
+
+			<Object PrototypeName="anti_missile_system"/>
+			<Object PrototypeName="cooling_system_energy"/>
+			<Object PrototypeName="firing_rate_guns"/>
+			<Object PrototypeName="grouping_angle_guns"/>
+			<Object PrototypeName="add_damage_energy"/>
+			<Object PrototypeName="firing_range_guns"/>
+
+			<Object PrototypeName="cooling_system_guns2"/>
+			<Object PrototypeName="firing_rate_energy2"/>
+			<Object PrototypeName="add_damage_explosion2"/>
+
+			<Object PrototypeName="additional_fuel_tank"/>
+			<Object PrototypeName="additional_durability"/>
+
+			<Object PrototypeName="additional_torque2"/>
+		</Prototype>	
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r5m1_Generator_bad">
+
+			<Object PrototypeName="hornet01" />
+			<Object PrototypeName="storm01" />
+
+			<Object PrototypeName="hornet01" />
+			<Object PrototypeName="storm01" />
+
+			<Object PrototypeName="vulcan01" />
+			<Object PrototypeName="FlameThrowerMed"/>
+
+			<Object PrototypeName="SmokeGun"/>
+			<Object PrototypeName="nailsPusher"/>
+            <Object PrototypeName="engineOilPusher"/>
+			<Object PrototypeName="thorn1"/>
+
+			<Object PrototypeName="cooling_system_guns"/>
+			<Object PrototypeName="cooling_system_explosion"/>
+			<Object PrototypeName="firing_rate_energy"/>
+			<Object PrototypeName="add_damage_guns"/>
+			<Object PrototypeName="add_damage_explosion"/>
+
+			<Object PrototypeName="cooling_system_explosion2"/>
+			<Object PrototypeName="add_damage_guns2"/>
+
+			<Object PrototypeName="additional_torque"/>
+			<Object PrototypeName="additional_stability"/>
+		</Prototype>
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r5m2_Generator_good">
+
+			<Object PrototypeName="specter01" />
+			<Object PrototypeName="pkt01" />
+			<Object PrototypeName="kord01" />
+
+			<Object PrototypeName="vector01" />
+			<Object PrototypeName="flag01" />
+			<Object PrototypeName="rainmetal01" />
+			<Object PrototypeName="FlameThrowerMed"/>
+
+			<Object PrototypeName="vector01" />
+			<Object PrototypeName="flag01" />
+			<Object PrototypeName="rainmetal01" />
+			<Object PrototypeName="FlameThrowerMed"/>
+
+			<Object PrototypeName="cyclops01" />
+			<Object PrototypeName="FlameThrowerGiant" />
+
+			<Object PrototypeName="minePusher"/>
+			<Object PrototypeName="SmokeGun"/>
+			<Object PrototypeName="someTurboAccelerationPusher"/>
+			<Object PrototypeName="thorn3"/>
+
+			<Object PrototypeName="anti_missile_system"/>
+			<Object PrototypeName="firing_rate_guns"/>
+			<Object PrototypeName="add_damage_energy"/>
+
+			<Object PrototypeName="cooling_system_guns2"/>
+			<Object PrototypeName="firing_rate_energy2"/>
+			<Object PrototypeName="add_damage_explosion2"/>
+			<Object PrototypeName="firing_rate_guns2"/>
+			<Object PrototypeName="add_damage_energy2"/>
+
+			<Object PrototypeName="cooling_system_explosion_and_firing_rate_explosion"/>
+			<Object PrototypeName="add_damage_explosion_firing_rate_explosion"/>
+
+			<Object PrototypeName="additional_fuel_tank"/>
+
+			<Object PrototypeName="additional_fuel_tank2"/>
+			<Object PrototypeName="additional_durability2"/>
+
+			<Object PrototypeName="add_speed_and_torque"/>
+
+			<Object PrototypeName="add_damage_energy_sub_damage_guns24"/>
+			<Object PrototypeName="add_damage_explosion_sub_damage_guns24"/>
+
+			<Object PrototypeName="add_maxspeed_sub_armour4"/>
+			<Object PrototypeName="add_maxspeed_sub_fueltank4"/>
+		</Prototype>
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r5m2_Generator_bad">
+
+			<Object PrototypeName="hornet01" />
+			<Object PrototypeName="specter01" />
+			<Object PrototypeName="storm01" />
+
+			<Object PrototypeName="vulcan01" />
+			<Object PrototypeName="rapier01" />
+			<Object PrototypeName="bumblebee01" />
+			<Object PrototypeName="kpvt01" />
+			<Object PrototypeName="ElectroShockMed"/>
+
+			<Object PrototypeName="vulcan01" />
+			<Object PrototypeName="rapier01" />
+			<Object PrototypeName="bumblebee01" />
+			<Object PrototypeName="kpvt01" />
+			<Object PrototypeName="ElectroShockMed"/>
+
+			<Object PrototypeName="big_swingfire01" />
+
+			<Object PrototypeName="minePusher_1"/>
+			<Object PrototypeName="nailsPusher"/>
+			<Object PrototypeName="engineOilPusher"/>
+
+			<Object PrototypeName="cooling_system_energy"/>
+			<Object PrototypeName="grouping_angle_guns"/>
+			<Object PrototypeName="firing_range_guns"/>
+
+			<Object PrototypeName="cooling_system_explosion2"/>
+			<Object PrototypeName="add_damage_guns2"/>
+			<Object PrototypeName="cooling_system_energy2"/>
+			<Object PrototypeName="grouping_angle_guns2"/>
+
+			<Object PrototypeName="firing_rate_explosion_and_add_damage_explosion"/>
+
+			<Object PrototypeName="additional_durability"/>
+
+			<Object PrototypeName="additional_torque2"/>
+
+			<Object PrototypeName="additional_fuel_tank2_add_damage_guns"/>
+
+			<Object PrototypeName="add_damage_guns_sub_damage_energy24"/>
+
+			<Object PrototypeName="add_fueltank_sub_maxspeed4"/>
+			<Object PrototypeName="add_armour_sub_max_speed4"/>
+		</Prototype>
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r6m1_Generator_good">
+
+			<Object PrototypeName="storm01" />
+			<Object PrototypeName="maxim01" />
+
+			<Object PrototypeName="rapier01" />
+			<Object PrototypeName="bumblebee01" />
+			<Object PrototypeName="rainmetal01" />
+			<Object PrototypeName="elephant01" />
+			<Object PrototypeName="ElectroShockMed"/>
+
+			<Object PrototypeName="big_swingfire01" />
+			<Object PrototypeName="cyclops01" />
+			<Object PrototypeName="octopus01" />
+
+			<Object PrototypeName="big_swingfire01" />
+			<Object PrototypeName="cyclops01" />
+			<Object PrototypeName="octopus01" />
+
+			<Object PrototypeName="marsSideGun"/>
+			<Object PrototypeName="zeusSideGun"/>
+
+			<Object PrototypeName="minePusher"/>
+			<Object PrototypeName="minePusher_2"/>
+			<Object PrototypeName="nailsPusher"/>
+			<Object PrototypeName="someTurboAccelerationPusher"/>
+			<Object PrototypeName="thorn2"/>
+
+			<Object PrototypeName="cooling_system_guns"/>
+			<Object PrototypeName="firing_rate_energy"/>
+			<Object PrototypeName="add_damage_explosion"/>
+
+			<Object PrototypeName="cooling_system_explosion2"/>
+			<Object PrototypeName="cooling_system_energy2"/>
+
+			<Object PrototypeName="cooling_system_guns_and_firing_rate_guns"/>
+			<Object PrototypeName="firing_rate_guns_and_add_damage_guns"/>
+			<Object PrototypeName="cooling_system_energy_and_firing_rate_energy"/>
+			<Object PrototypeName="firing_rate_energy_and_add_damage_energy"/>
+			<Object PrototypeName="add_damage_energy_and_firing_rate_energy"/>
+			<Object PrototypeName="cooling_system_energy_and_firing_rate_energy"/>
+
+			<Object PrototypeName="additional_torque"/>
+
+			<Object PrototypeName="additional_fuel_tank2"/>
+
+			<Object PrototypeName="add_speed_and_torque"/>
+			<Object PrototypeName="add_torque_and_stability"/>
+
+			<Object PrototypeName="add_damage_energy_sub_damage_guns"/>
+			<Object PrototypeName="add_damage_explosion_sub_damage_guns"/>
+
+			<Object PrototypeName="add_damage_energy_sub_damage_guns2"/>
+			<Object PrototypeName="add_damage_explosion_sub_damage_guns2"/>
+
+			<Object PrototypeName="add_fueltank_sub_maxspeed"/>
+			<Object PrototypeName="add_maxspeed_sub_fueltank"/>
+
+			<Object PrototypeName="add_damage_energy_sub_damage_guns23"/>
+			<Object PrototypeName="add_damage_explosion_sub_damage_guns23"/>
+		</Prototype>
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r6m1_Generator_bad">
+
+			<Object PrototypeName="fagot01" />
+
+			<Object PrototypeName="flag01" />
+			<Object PrototypeName="kpvt01" />
+			<Object PrototypeName="omega01" />
+			<Object PrototypeName="odin01" />
+			<Object PrototypeName="FlameThrowerMed"/>
+
+			<Object PrototypeName="hurricane01" />
+			<Object PrototypeName="FlameThrowerGiant" />
+
+			<Object PrototypeName="hurricane01" />
+			<Object PrototypeName="FlameThrowerGiant" />
+
+			<Object PrototypeName="hailSideGun" />
+			<Object PrototypeName="hunterSideGun" />
+
+			<Object PrototypeName="minePusher_1"/>
+			<Object PrototypeName="SmokeGun"/>
+            <Object PrototypeName="engineOilPusher"/>
+			<Object PrototypeName="thorn1"/>
+			<Object PrototypeName="thorn3"/>
+
+			<Object PrototypeName="cooling_system_explosion"/>
+			<Object PrototypeName="add_damage_guns"/>
+
+			<Object PrototypeName="add_damage_guns2"/>
+			<Object PrototypeName="grouping_angle_guns2"/>
+
+			<Object PrototypeName="cooling_system_explosion_and_firing_rate_explosion"/>
+			<Object PrototypeName="add_damage_explosion_firing_rate_explosion"/>
+			<Object PrototypeName="firing_rate_explosion_and_add_damage_explosion"/>
+			<Object PrototypeName="firing_rate_energy_and_add_damage_energy"/>
+			<Object PrototypeName="add_damage_energy_and_firing_rate_energy"/>
+			<Object PrototypeName="add_damage_guns_and_grouping_angle_guns"/>
+
+			<Object PrototypeName="additional_stability"/>
+
+			<Object PrototypeName="additional_durability2"/>
+
+			<Object PrototypeName="add_stability_and_speed"/>
+			<Object PrototypeName="additional_fuel_tank2_add_damage_guns"/>
+
+			<Object PrototypeName="add_damage_guns_sub_damage_energy"/>
+
+			<Object PrototypeName="add_damage_guns_sub_damage_energy2"/>
+
+			<Object PrototypeName="add_maxspeed_sub_armour"/>
+			<Object PrototypeName="add_armour_sub_max_speed"/>
+
+			<Object PrototypeName="add_damage_guns_sub_damage_energy23"/>
+		</Prototype>
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r6m2_Generator_good">
+
+			<Object PrototypeName="flag01" />
+			<Object PrototypeName="omega01" />
+			<Object PrototypeName="odin01" />
+			<Object PrototypeName="FlameThrowerMed"/>
+
+			<Object PrototypeName="big_swingfire01" />
+			<Object PrototypeName="cyclops01" />
+			<Object PrototypeName="octopus01" />
+
+			<Object PrototypeName="big_swingfire01" />
+			<Object PrototypeName="cyclops01" />
+			<Object PrototypeName="octopus01" />
+
+			<Object PrototypeName="marsSideGun"/>
+			<Object PrototypeName="zeusSideGun"/>
+
+			<Object PrototypeName="marsSideGun"/>
+			<Object PrototypeName="zeusSideGun"/>
+
+			<Object PrototypeName="minePusher"/>
+			<Object PrototypeName="minePusher_2"/>
+			<Object PrototypeName="nailsPusher"/>
+			<Object PrototypeName="someTurboAccelerationPusher"/>
+			<Object PrototypeName="thorn2"/>
+
+			<Object PrototypeName="anti_missile_system"/>
+			<Object PrototypeName="firing_rate_guns"/>
+			<Object PrototypeName="add_damage_energy"/>
+
+			<Object PrototypeName="cooling_system_guns2"/>
+			<Object PrototypeName="firing_rate_energy2"/>
+			<Object PrototypeName="add_damage_explosion2"/>
+
+			<Object PrototypeName="add_damage_guns_and_grouping_angle_guns"/>
+			<Object PrototypeName="cooling_system_explosion_and_firing_rate_explosion"/>
+			<Object PrototypeName="cooling_system_energy_and_firing_rate_energy"/>
+			<Object PrototypeName="add_damage_energy_and_firing_rate_energy"/>
+
+			<Object PrototypeName="additional_fuel_tank"/>
+
+			<Object PrototypeName="additional_torque2"/>
+
+			<Object PrototypeName="add_speed_and_torque"/>
+
+			<Object PrototypeName="add_damage_energy_sub_damage_guns"/>
+
+			<Object PrototypeName="add_damage_guns_sub_damage_energy2"/>
+
+			<Object PrototypeName="add_fueltank_sub_maxspeed"/>
+
+			<Object PrototypeName="add_damage_guns_sub_damage_energy23"/>
+
+			<Object PrototypeName="add_damage_energy_sub_damage_guns22"/>
+			<Object PrototypeName="add_damage_explosion_sub_damage_guns22"/>
+
+			<Object PrototypeName="add_maxspeed_sub_armour2"/>
+			<Object PrototypeName="add_maxspeed_sub_fueltank2"/>
+
+			<Object PrototypeName="add_maxspeed_sub_armour3"/>
+			<Object PrototypeName="add_maxspeed_sub_fueltank3"/>
+		</Prototype>
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_r6m2_Generator_bad">
+
+			<Object PrototypeName="kpvt01" />
+			<Object PrototypeName="elephant01" />
+			<Object PrototypeName="ElectroShockMed"/>
+
+			<Object PrototypeName="hurricane01" />
+			<Object PrototypeName="hammer01" />
+			<Object PrototypeName="FlameThrowerGiant" />
+
+			<Object PrototypeName="hailSideGun" />
+			<Object PrototypeName="hunterSideGun" />
+
+			<Object PrototypeName="hailSideGun" />
+			<Object PrototypeName="hunterSideGun" />
+
+			<Object PrototypeName="minePusher_1"/>
+			<Object PrototypeName="SmokeGun"/>
+                  <Object PrototypeName="engineOilPusher"/>
+			<Object PrototypeName="thorn1"/>
+			<Object PrototypeName="thorn3"/>
+
+			<Object PrototypeName="cooling_system_energy"/>
+			<Object PrototypeName="grouping_angle_guns"/>
+			<Object PrototypeName="firing_range_guns"/>
+
+			<Object PrototypeName="cooling_system_explosion2"/>
+			<Object PrototypeName="add_damage_guns2"/>
+
+			<Object PrototypeName="cooling_system_guns_and_firing_rate_guns"/>
+			<Object PrototypeName="firing_rate_guns_and_add_damage_guns"/>
+			<Object PrototypeName="add_damage_explosion_firing_rate_explosion"/>
+			<Object PrototypeName="firing_rate_energy_and_add_damage_energy"/>
+
+			<Object PrototypeName="additional_durability"/>
+
+			<Object PrototypeName="add_torque_and_stability"/>
+
+			<Object PrototypeName="add_damage_explosion_sub_damage_guns"/>
+
+			<Object PrototypeName="add_maxspeed_sub_fueltank"/>
+
+			<Object PrototypeName="add_damage_guns_sub_damage_energy22"/>
+
+			<Object PrototypeName="add_fueltank_sub_maxspeed2"/>
+			<Object PrototypeName="add_armour_sub_max_speed2"/>
+
+			<Object PrototypeName="add_fueltank_sub_maxspeed3"/>
+			<Object PrototypeName="add_armour_sub_max_speed3"/>
+		</Prototype>
+
+<!-- AFFIX GUNS -->
+		<Prototype
+			Class="AffixGenerator"
+			Name="gun_affix_Generator_bad">
+
+			<Affix AffixName = "useless_gun" />
+			<Affix AffixName = "rusty_gun" />
+			<Affix AffixName = "slow_gun" />      
+			<Affix AffixName = "without_sight_gun" />
+			<Affix AffixName = "without_cooling_gun"	         />
+			<Affix AffixName = "with_truncated_barrel_gun" />
+			<Affix AffixName = "weak_gun" />
+			<Affix AffixName = "assault_gun" />
+			<Affix AffixName = "with_laser_sight_gun" />
+			<Affix AffixName = "deadly_gun" />
+		</Prototype>
+
+		<Prototype
+			Class="AffixGenerator"
+			Name="gun_affix_Generator_good">
+
+			<Affix AffixName = "with_enlarged_barrel_gun" />
+			<Affix AffixName = "with_water_cooling_gun"/>
+			<Affix AffixName = "excellent_gun" />
+			<Affix AffixName = "advanced_gun" />
+			<Affix AffixName = "rapid_firing_gun" />
+			<Affix AffixName = "deadly_gun" />
+			<Affix AffixName = "destructive_gun" />
+			<Affix AffixName = "with_long_barrel_gun" />
+			<Affix AffixName = "with_electric_sight_gun" />
+			<Affix AffixName = "with_nitro_cooling_gun"	 />
+		</Prototype>
+
+<!-- AFFIX CARS -->
+		<Prototype
+			Class="AffixGenerator"
+			Name="cars_affix_Generator_bad">
+
+			<Affix AffixName = "useless_cabin" />
+			<Affix AffixName = "rusty_cabin" />
+			<Affix AffixName = "useless_basket" />
+			<Affix AffixName = "rusty_basket" />
+		</Prototype>
+		
+		<Prototype
+			Class="AffixGenerator"
+			Name="cars_affix_Generator_good">
+
+			<Affix AffixName = "excellent_cabin" />
+			<Affix AffixName = "advanced_cabin" />
+			<Affix AffixName = "excellent_basket" />
+			<Affix AffixName = "advanced_basket" />
+		</Prototype>
+</Folder>
+		
+
+
+
+
+<!-- TOWNS -->
+		
+<Folder Name = "BigTowns">
+		<Prototype
+			Class		= "Town"
+			Name		= "TownBigHead"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+			LogosAndCosts	= "fetish_skull_01.dds 1900; fetish_punk_01.dds 2100"
+
+			MusicName						= "techno_town1"
+
+			NumCollisionLayersBelowVehicle 		= "1"
+
+			IsIntersecting					= "true"
+			LookRadius						= "200"
+			IntersectionRadius				= "30" 
+
+			GunGenerator					= "gun_r5m1_Generator_good"
+			DesiredGunsInWorkshop				= "33"
+
+			GunAffixGenerator					= "gun_affix_Generator_good"
+			GunAffixesCount					= "1"
+
+			CabinsAndBasketsAffixGenerator		= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount			= "2"
+
+			WeaponPriceMultiplier 				= "1"
+			WeaponPriceDispersion 				= "10"
+
+			Vehicles 						= "Bug">
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "9"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.75"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.45"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "10"
+					ExternalPriceCoefficient	= "0.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "TownMichikar"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+			LogosAndCosts	= "fetish_skull_01.dds 2200"
+
+			MusicName		= "bar"
+			GateModelFile 	= ""
+
+			NumCollisionLayersBelowVehicle = "2"
+
+			IsIntersecting		= "true"
+			LookRadius		= "200"
+			IntersectionRadius	= "50" 
+
+			GunGenerator				= "gun_r5m1_Generator_bad"
+			DesiredGunsInWorkshop			= "26"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles 	= "Bug"	>
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.7"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "9"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.7"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "TownOneEye_prototype"
+			ModelFile	= "Midgard"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_devil_01.dds 8100;fetish_punk_01.dds 2500"
+
+			MusicName		= "trade_town1"
+			GateModelFile 	= ""
+
+			NumCollisionLayersBelowVehicle = "1"
+
+			IsIntersecting		= "true"
+			LookRadius		= "200"
+			IntersectionRadius	= "30" 
+
+			GunGenerator				= "gun_r5m2_Generator_good"
+			DesiredGunsInWorkshop			= "48"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles 	= "Bug">
+
+			<Article	Prototype				= "fuel"				
+				Amount	 			= "12"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.1"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.7"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "TownMapleSheet"
+			ModelFile	= "r3_set-fest"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_punk_01.dds 2700;fetish_devil_01.dds 9000"
+
+			MusicName		= "bar"
+			GateModelFile 	= "druid_gate"
+
+			NumCollisionLayersBelowVehicle = "1"
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "50" 
+                        GunGenerator			= "gun_r6m1_Generator_good"
+			DesiredGunsInWorkshop			= "29"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles 	= "Bug">
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "25"
+					ExternalPriceCoefficient	= "9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "11"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			</Prototype>
+
+
+		<Prototype
+			Class		= "Town"
+			Name		= "SinCity"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+
+			MusicName		= "trade_town1"
+			GateModelFile 	= ""
+
+			NumCollisionLayersBelowVehicle = "1"
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "50"
+
+			Vehicles 	= "Bug"
+
+			GunGenerator				= "gun_r5m1_Generator_good"
+			DesiredGunsInWorkshop			= "22"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "3"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15">
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "50"
+					ExternalPriceCoefficient	= "1.1"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "50"
+					ExternalPriceCoefficient	= "1.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "50"
+					ExternalPriceCoefficient	= "1.3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "50"
+					ExternalPriceCoefficient	= "1.4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount	 			= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+	</Folder>
+
+
+
+
+
+<Folder Name = "Villages">
+	<Prototype
+			Class		= "Town"
+			Name		= "r5m2_Pervomayka_prototype"
+			ModelFile	= "house1"
+			NodeScale	= "1 1 1" 
+
+			LogosAndCosts	= "fetish_qqqr_01.dds 1500"
+
+			MusicName		= "bar"
+			
+			GunGenerator				= "gun_r5m2_Generator_bad"
+			DesiredGunsInWorkshop			= "24"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "10"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.7"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "11"
+					ExternalPriceCoefficient	= "1.4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r5m2_Sagevsal_prototype"
+			ModelFile	= "house1"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_devil_01.dds 8000; fetish_ninja_01.dds 10000"
+
+			MusicName		= "bar"
+			
+			GunGenerator				= "gun_r5m2_Generator_bad"
+			DesiredGunsInWorkshop			= "38"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.45"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.45"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.45"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "18"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r5m2_Cvetograd_prototype"
+			ModelFile	= "house1"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_military_01.dds 1400; fetish_qqqr_01.dds 1600"
+
+			MusicName		= "bar"
+			
+			GunGenerator				= "gun_r5m2_Generator_good"
+			DesiredGunsInWorkshop			= "24"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "19"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r5m2_Mexico_prototype"
+			ModelFile	= "house1"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_punk_01.dds 2500; fetish_ninja_01.dds 11000"
+
+			MusicName		= "bar"
+			
+			GunGenerator				= "gun_r5m2_Generator_good"
+			DesiredGunsInWorkshop			= "36"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "14"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.45"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+	<Prototype
+			Class		= "Town"
+			Name		= "r5m2_Vraska_prototype"
+			ModelFile	= "house1"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_ninja_01.dds 10500; fetish_qqqr_01.dds 1500"
+
+			MusicName		= "bar"
+			
+			GunGenerator				= "gun_r5m2_Generator_bad"
+			DesiredGunsInWorkshop			= "29"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "2.3"
+			WeaponPriceDispersion 			= "5"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "14"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m1_Onto_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_ninja_01.dds 12000; fetish_military_01.dds 1500; fetish_moouse_01.dds 11000"
+
+			MusicName		= "bar"
+			
+			MaxDefenders	="0"
+			GunGenerator				= "gun_r6m1_Generator_bad"
+			DesiredGunsInWorkshop			= "47"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "20"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m1_Lodon_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_military_01.dds 1500; fetish_moouse_01.dds 12000"
+
+			MusicName		= "bar"
+			
+			MaxDefenders	="0"
+
+			GunGenerator				= "gun_r6m1_Generator_good"
+			DesiredGunsInWorkshop			= "56"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles	= "Molokovoz">
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.6"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.7"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.85"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "8"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m1_Real_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_military_01.dds 1500; fetish_devil_01.dds 8500"
+
+			MusicName		= "bar"
+			
+			MaxDefenders	="0"
+
+			GunGenerator				= "gun_r6m1_Generator_good"
+			DesiredGunsInWorkshop			= "42"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "2.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m1_Lost_prototype"
+			ModelFile	= "Lost_Airplane"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_ninja_01.dds 11000; fetish_moouse_01.dds 12000"
+
+			MusicName		= "bar"
+			
+			MaxDefenders	="0"
+
+			GunGenerator				= "gun_r6m1_Generator_bad"
+			DesiredGunsInWorkshop			= "24"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "12"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "6"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+				Amount	 				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m2_Vaypeg_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_devil_01.dds 8000; fetish_peace_01.dds 9500"
+
+			MusicName		= "bar"
+
+			NumCollisionLayersBelowVehicle = "1"
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "50" 
+                        GunGenerator			= "gun_r6m2_Generator_good"
+			DesiredGunsInWorkshop			= "54"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles 	= "Bug" >
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+				Amount	 				= "30"
+					ExternalPriceCoefficient	= "12"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount				= "15"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m2_Gradofaks_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_peace_01.dds 9000; fetish_military_01.dds 1500"
+
+			MusicName		= "bar"
+			
+			MaxDefenders	="0"
+			GunGenerator				= "gun_r6m2_Generator_bad"
+			DesiredGunsInWorkshop			= "23"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "10"
+
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+				Amount	 				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "17"
+					ExternalPriceCoefficient	= "6"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "6"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m2_Tander_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+			LogosAndCosts	= "fetish_peace_01.dds 9500; fetish_punk_01.dds 2500; fetish_devil_01.dds 9000"
+ 
+			MusicName		= "bar"
+			
+			GunGenerator				= "gun_r6m2_Generator_good"
+			DesiredGunsInWorkshop			= "27"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz"> 
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "20"
+					ExternalPriceCoefficient	= "12"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m2_Bey_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_ninja_01.dds 11000; fetish_punk_01.dds 2500"
+
+			MusicName		= "bar"
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "50" 
+
+			GunGenerator				= "gun_r6m2_Generator_bad"
+			DesiredGunsInWorkshop			= "33"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles 	= "Bug">
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "15"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+				Amount	 				= "25"
+					ExternalPriceCoefficient	= "12"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount				= "10"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "0" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r6m2_Kanata_prototype"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1" 
+			LogosAndCosts	= "fetish_devil_01.dds 8000; fetish_ninja_01.dds 1000; fetish_punk_01.dds 2000; fetish_military_01.dds 1000"
+
+			MusicName		= "bar"
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "50" 
+
+                        GunGenerator			= "gun_r5m1_Generator_bad"
+			DesiredGunsInWorkshop			= "44"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_good"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			Vehicles 	= "Bug">
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "15"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "4.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+
+
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r5m1_Apple"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+			LogosAndCosts	= "fetish_military_01.dds 1000"
+
+			MusicName		= "agriculruar_town1"
+			
+			GunGenerator				= "gun_r5m1_Generator_bad"
+			DesiredGunsInWorkshop			= "17"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "10"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz" >
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "8"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.45"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r5m1_Konneks"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+			LogosAndCosts	= "fetish_devil_01.dds 8500"
+
+			MusicName		= "agriculruar_town1"
+			
+			GunGenerator				= "gun_r5m1_Generator_bad"
+			DesiredGunsInWorkshop			= "20"
+
+			GunAffixGenerator				= "gun_affix_Generator_good"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz" >
+
+			<Article	Prototype				= "fuel"				
+					Amount				= "10"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.2"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.8"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.35"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export  = "true" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "r5m1_Pensilvansk"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+			LogosAndCosts	= "fetish_skull_01.dds 2000; fetish_ninja_01.dds 10000"
+
+			MusicName		= "agriculruar_town1"
+			
+			GunGenerator				= "gun_r5m1_Generator_good"
+			DesiredGunsInWorkshop			= "17"
+
+			GunAffixGenerator				= "gun_affix_Generator_bad"
+			GunAffixesCount				= "1"
+
+			CabinsAndBasketsAffixGenerator	= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount		= "2"
+
+			WeaponPriceMultiplier 			= "1"
+			WeaponPriceDispersion 			= "15"
+
+			MaxDefenders	="0"
+			Vehicles	= "Molokovoz" >
+				
+			<Article	Prototype				= "fuel"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "10"
+					ExternalPriceCoefficient	= "1.4"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "1.5"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "0.9"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "99999" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+
+
+
+
+		<Prototype
+			Class		= "Town"
+			Name		= "SinVillage1"
+			ModelFile	= "shell_sml_pulemet01"
+			NodeScale	= "1 1 1"
+
+			MusicName						= "agriculruar_town1"
+
+			GunGenerator					= "gun_r5m1_Generator_bad"
+			DesiredGunsInWorkshop				= "10"
+
+			GunAffixGenerator					= "gun_affix_Generator_bad"
+			GunAffixesCount					= "1"
+
+			CabinsAndBasketsAffixGenerator		= "cars_affix_Generator_bad"
+			CabinsAndBasketsAffixesCount			= "2"
+
+			WeaponPriceMultiplier 				= "1.7"
+			WeaponPriceDispersion 				= "5"
+
+			MaxDefenders					= "0"
+			Vehicles						= "Scout" >
+			<Article	Prototype				= "fuel"				
+					Amount				= "50"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "machinery"				
+					Amount				= "1"
+					ExternalPriceCoefficient	= "6"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "scrap_metal"				
+					Amount				= "1"
+					ExternalPriceCoefficient	= "6"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "true" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "tobacco"				
+					Amount				= "1"
+					ExternalPriceCoefficient	= "6"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "wine"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export  = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "potato"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "oil"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "info_stone"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "cannedfood"				
+					Amount				= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+			<Article	Prototype				= "electronics"				
+					Amount	 			= "0"
+					ExternalPriceCoefficient	= "3"
+					MinCount = "0" MaxCount = "50" RegenerationPeriod = "300" Export = "false" Import = "true" PriceDynamic = "1" />
+		</Prototype>
+
+		<Prototype
+			Class		= "Town"
+			Name		= "PetrolStationTown"
+			ModelFile	= "petrolstation"
+			NodeScale	= "1 1 1" 
+
+			GateModelFile 	= ""
+
+			IsIntersecting		= "true"
+			LookRadius			= "200"
+			IntersectionRadius	= "25" 
+
+			Vehicles 	= ""
+			/>
+	</Folder>
+</Prototypes>

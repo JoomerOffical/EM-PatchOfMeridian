@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+	<trigger	Name="GlobalVar"	active="1">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			local aaa={2,2,2,2,2,2,2,2,2}
+			local rnd=random(3)
+
+			aaa[rnd]=1
+
+			SetVar("LabirStat",aaa)
+
+			for i=1,9 do
+				SetVar("Las"..i.."Point",i)
+			end
+
+			local time  = {42,42,42,12,12,12,12}
+
+			SetVar("Time", time)
+		</script>
+	</trigger>
+
+	<trigger	Name="trStartMap"	active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+-- TEST !!Убрать для нормальной игры!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			TakeQuest("r6m2_ContinueFindRobotsBase_Quest")
+-- TEST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		    if IsQuestTaken("r6m2_ContinueFindRobotsBase_Quest") then
+		    		trigger:Deactivate()
+
+				TActivate("trCreateMechAndRobots")
+			end
+		</script>
+	</trigger>
+
+<!-- Создает роботов и механика, делает их неуязвимыми-->
+	<trigger	Name="trCreateMechAndRobots"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local rbpos = {CVector(getPos("SpawnRobot1_loc")),CVector(getPos("SpawnRobot3_loc"))}
+			local rbteam = CreateTeam("RobotsMTeam", 1118, rbpos, {"Robot4SMALL","Robot4_2SMALL"}, nil, nil, nil)
+			local mech = CreateTeam("Mechanic", 1100, CVector(getPos("MechanikAndRobots_loc")), {"HunterMech"}, nil, nil, nil)
+
+			TActivate("trNearMechanic")
+
+			if rbteam then
+				local i=0
+				while rbteam:GetVehicle(i) do
+					rbteam:GetVehicle(i):setGodMode(1)
+					i = i + 1
+				end
+			end
+
+			if mech then
+				local mveh = mech:GetVehicle(0)
+				if mveh then
+					mveh:setGodMode(1)
+				end
+			end
+		</script>
+	</trigger>
+
+<!-- Подъехали к тусовке с механиком, делаем всех смертными и активируем тригера на смерть-->
+	<trigger	Name="trNearMechanic"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="MechanikAndRobots_loc" />
+		<script>
+			trigger:Deactivate()
+
+			TakeQuest("r6m2_HelpToMechanick_Quest")
+
+			local mteam=getObj("Mechanic")
+			if mteam then
+				TActivate("trMechanikDie")
+
+				local mveh = mteam:GetVehicle(0)
+				if mveh then
+					mveh:setGodMode(0)
+				end
+			end
+
+			local rbteam = getObj("RobotsMTeam")
+		    if rbteam then
+		    	TActivate("trRobotsMTeamDie")
+
+		    	local i=0
+		    	while rbteam:GetVehicle(i) do
+		    		rbteam:GetVehicle(i):setGodMode(0)
+		    		i = i + 1
+		    	end
+			end
+		</script>
+	</trigger>
+
+<!--  Роботы побеждены, механик свободет, показывается ролик сопровожлдения механика до его дома-->
+	<trigger	Name="trRobotsMTeamDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotsMTeam" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance (1153, 1118, RS_NEUTRAL)
+
+	        CompleteQuest("r6m2_HTMKillRobots_Quest")
+
+	        TActivate ("cinMechanic")
+			TActivate ("trCreateMechAndRobotsParts")
+		</script>
+	</trigger>
+
+<!-- Механик помер, гаме овер-->
+	<trigger	Name="trMechanikDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Mechanic" />
+		<script>
+			trigger:Deactivate()
+
+	        FailQuest("r6m2_HTMKillRobots_Quest")
+			SpawnMessageBox(8802)
+
+			ShowDeathMenu()
+		</script>
+	</trigger>
+
+
+<!--Сопровождаем механика до дома-->
+	<trigger	Name="trMechanikSoprovodit" active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="MechanicHouse_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r6m2_HTMMoveToHouseMechanick_Quest")
+			TakeQuest ("r6m2_MakeRoboHuman_Quest")
+
+			TActivate("cinMechanic1")
+
+		</script>
+	</trigger>
+
+<!-- После приезда к механику, создаем 3 группы роботов, в каждой из которых надо убить робота с запчастью-->
+	<trigger	Name="trCreateMechAndRobotsParts"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    trigger:Deactivate()
+
+			for j=1,3 do
+			    local rbpos = {CVector(getPos("SpawnRobot"..j.."_1_loc")),CVector(getPos("SpawnRobot"..j.."_2_loc")),CVector(getPos("SpawnRobot"..j.."_3_loc")),CVector(getPos("SpawnRobot"..j.."_4_loc"))}
+			    local rbteam = CreateTeam("RobotsP"..j.."Team", 1118, rbpos, {"RobotBobot02","Robot4_2SMALL","Robot4_2SMALL","Robot4SMALL"}, nil, nil, nil)
+
+				if rbteam then
+			    		local i=0
+		    			while rbteam:GetVehicle(i) do
+--			    			rbteam:GetVehicle(i):setGodMode(1)
+			    			i = i + 1
+			    		end
+				end
+			end
+
+--			TActivate("trNearPart1")
+--			TActivate("trNearPart2")
+--			TActivate("trNearPart3")
+
+		    	TActivate("trRobotsP1TeamDie")
+		    	TActivate("trRobotsP2TeamDie")
+		    	TActivate("trRobotsP3TeamDie")
+		</script>
+	</trigger>
+
+<!-- Подъехали к первой групепе, делаем ее уязвимой, активируем триггер на смерть-->
+	<trigger	Name="trNearPart1"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="PartRobot1_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local rbteam = getObj("RobotsP1Team")
+		    	if rbteam then
+		    		local i=0
+		    		while rbteam:GetVehicle(i) do
+		    			rbteam:GetVehicle(i):setGodMode(0)
+		    			i = i + 1
+		    		end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trRobotsP1TeamDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotsP1Team_vehicle_0" />
+		<script>
+			trigger:Deactivate()
+
+	        	CompleteQuest("r6m2_MRHPart1_Quest")
+		</script>
+	</trigger>
+
+<!-- Подъехали к второй групепе, делаем ее уязвимой, активируем триггер на смерть-->
+	<trigger	Name="trNearPart2"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="PartRobot2_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local rbteam = getObj("RobotsP2Team")
+		    	if rbteam then
+		    		local i=0
+		    		while rbteam:GetVehicle(i) do
+		    			rbteam:GetVehicle(i):setGodMode(0)
+		    			i = i + 1
+		    		end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trRobotsP2TeamDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotsP2Team_vehicle_0" />
+		<script>
+			trigger:Deactivate()
+
+	        	CompleteQuest("r6m2_MRHPart2_Quest")
+		</script>
+	</trigger>
+
+<!-- Подъехали к третьей групепе, делаем ее уязвимой, активируем триггер на смерть-->
+	<trigger	Name="trNearPart3"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="PartRobot3_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local rbteam = getObj("RobotsP3Team")
+		    	if rbteam then
+		    		local i=0
+		    		while rbteam:GetVehicle(i) do
+		    			rbteam:GetVehicle(i):setGodMode(0)
+		    			i = i + 1
+		    		end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trRobotsP3TeamDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotsP3Team_vehicle_0" />
+		<script>
+			trigger:Deactivate()
+
+	        	CompleteQuest("r6m2_MRHPart3_Quest")
+		</script>
+	</trigger>
+
+<!-- Вернулись к механику, нужно ехать уничтожать генератор-->
+	<trigger	Name="trReturnMechanik"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="MechanicHouse_loc" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1100, 1118, RS_NEUTRAL)
+
+			TActivate("cinWithRobPart")
+			TActivate("trEnterToRobotBase")
+
+			CompleteQuest("r6m2_MRHRetturnToMechanick_Quest")
+		</script>
+	</trigger>
+
+<!-- Смена машины игрока на робота (машина делается неуязвимой и остается там где была)-->
+	<trigger	Name="trChangeToRobot"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    trigger:Deactivate()
+
+			local plveh = GetPlayerVehicle()
+			if plveh then
+				plveh:setGodMode(1)
+			end
+
+			CapturePlayerVehicle (0, "PlayerCarTeam")
+
+			local newveh = CreateVehicleEx ( "RobotPlayer01", "PlayerRobot", CVector(getPos("SpawnPlayerRobot_loc")), 1100)
+			if newveh then
+				g_Player:AddChild(newveh)
+			end
+
+		</script>
+	</trigger>
+
+<!-- Возвращение машины игроку-->
+	<trigger	Name="trReturnPlCar"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			CapturePlayerVehicle (1, "PlRobotTeam")
+
+			local plteam = getObj("PlayerCarTeam")
+			if plteam  then
+				local plcar = plteam:GetVehicle(0)
+				if plcar then
+					plcar:SetCustomControlEnabled(0)
+					g_Player:AddChild(plcar)
+				else
+					LOG("TRIGGER ERROR: Cant find player car")
+				end
+			else
+				LOG("TRIGGER ERROR: Cant find player team")
+			end
+
+			local plveh = GetPlayerVehicle()
+			if plveh then
+				plveh:setGodMode(0)
+			end
+		</script>
+	</trigger>
+
+<!-- Подъехали к базе роботов, активируется вход через доты и движущиеся платформы-->
+	<trigger	Name="trEnterToRobotBase"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate("trCircle")
+			TActivate("trLabirintPlayer")
+			TActivate("trCreateRobot")
+			TActivate("trEndEnterToBase")
+		</script>
+	</trigger>
+
+<!-- Отображение проезда на базу-->
+	<trigger	Name="trCircle"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			local efflist = {}
+			efflist[1] = "ET_PS_ORACUL_SYSTEM2"
+			efflist[2] = "ET_PS_ORACUL_SYSTEM1"
+
+			local locstat = GetVar("LabirStat").AsNumList
+
+		    	for k = 1,9 do
+				local nam	= "ls"..k
+		    		local stat	= locstat[k-1]
+				local eff	= efflist[stat]	
+				local po	= getPos("Labirint"..k.."_loc")
+
+				CreateNewSgNodeObject(eff,nam,-1,1000,CVector(po),Quaternion(0,0,0,1),1.5)
+			end
+
+			TActivate ("trDeleteOldCircles")
+		</script>
+	</trigger>
+
+	<trigger	Name="trDeleteOldCircles"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+		    	for k = 1,9 do
+				local deleff = getObj("old_ls"..k)
+				if deleff then deleff:Remove() end
+			end
+		</script>
+	</trigger>
+
+<!-- Работа проезда - входа на базу роботов-->
+	<trigger	Name="trLabirintPlayer"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint1_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint2_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint3_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint4_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint5_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint6_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint7_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint8_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint9_loc" />
+
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint1Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint2Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint3Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint4Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint5Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint6Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint7Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint8Rob_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Labirint9Rob_loc" />
+
+		<script>
+--			trigger:Deactivate()
+
+			local locstat = GetVar("LabirStat").AsNumList
+			local locname = trigger:GetCallObjName()
+			local locnum = tonumber(strsub(locname,9,9))
+			local endstat = {2,2,2,2,2,2,2,2,2}
+
+--println("locnum = "..locnum)
+			if locstat[locnum-1] == 1 then
+				local rnd = 1
+				if (locnum >= 1) and (3 >= locnum) then
+					rnd = 3 + random(3)
+				elseif (locnum >= 4) and (6 >= locnum) then
+					rnd = 6 + random(3)
+				elseif (locnum >= 7) and (9 >= locnum) then
+					rnd = random(3)
+				end
+
+				endstat[rnd] = 1
+				SetVar("LabirStat",endstat)
+
+		    		for k = 1,9 do
+					local deleff = getObj("ls"..k)
+					if deleff then deleff:SetNameFromScript("old_ls"..k) end
+				end
+
+				TActivate("trCircle")
+			else
+		    		local tstteam = getObj("r6m2_ROBOSCOUTCAR")
+				if tstteam then
+					SetTolerance(1100, 1118, RS_NEUTRAL)
+				else
+					SetTolerance(1100, 1118, RS_ENEMY)
+		    		end
+			end
+		</script>
+	</trigger>
+
+<!-- Создание робота, который показывает, как прохать на базу-->
+	<trigger	Name="trCreateRobot"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToRobotbase_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local tstteam = CreateTeam("r6m2_ROBOSCOUTCAR", 1118, CVector(getPos("SpawnBaseRobot_loc")), {"r6m2_roboscout"})
+			if tstteam then
+				local veh=tstteam:GetVehicle(0)
+				if veh then
+					veh:setGodMode(1)
+
+					TActivate("trStartRobot")
+				end
+			end
+		</script>
+	</trigger>
+
+<!-- Робот поехал и показывает дорогу-->
+	<trigger	Name="trStartRobot"active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearLabirint_loc" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate ("cinNearLabirint")
+
+		    	local tstteam = getObj("r6m2_ROBOSCOUTCAR")
+			if tstteam then
+		      	local veh=tstteam:GetVehicle(0)
+		      	if veh then
+					veh:SetExternalPathByName("BaseRobot2_ExPath")
+
+					TActivate("trRobotEndPath1")
+
+					SetVar("rbase",0)
+		       	end
+		    end
+		</script>
+	</trigger>
+
+<!-- Робот проезжает поочереди барьеры -->
+	<trigger	Name="trRobotEndPath1"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="r6m2_ROBOSCOUTCAR_vehicle_0"/>
+		<script>
+			local stat=GetVar("LabirStat").AsNumList
+		    	local curpoint=GetVar("rbase").AsInt
+		    	local shift = curpoint*3
+
+			SetVar("rbase", curpoint+1)
+
+			local veh
+			local tstteam = getObj("r6m2_ROBOSCOUTCAR")
+			if tstteam == nil then
+				return
+				LOG("ERRORRR!!!!!!!!!")
+			end
+
+		    	veh=tstteam:GetVehicle(0)
+
+			if curpoint>=3 then
+				if veh then
+					veh:SetExternalPathByName("EnterBase_End_ExPath")
+				end
+
+				trigger:Deactivate()
+			else
+			    for i=shift,shift+2 do
+					if stat[i]==1 then
+						if veh then
+							veh:SetExternalPathByName("EnterBase"..(curpoint+1).."_"..(i+1-shift).."_ExPath")
+						end
+					end
+			    end
+			end
+		</script>
+	</trigger>
+
+<!-- игрок заехал на базу-->
+	<trigger	Name="trEndEnterToBase"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EnterToBase_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r6m2_AferaOfHero_Quest")
+
+			TActivate("trCreateMovePaneles")
+			TActivate("trGeneratorDie")
+			TActivate("trSeeGenerator")
+		</script>
+	</trigger>
+
+<!-- игрок видит генератор -->
+	<trigger	Name="trSeeGenerator"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Generator_loc" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate("cinGenerator")
+		</script>
+	</trigger>
+
+<!-- Изменение 1-->
+<!-- Генератор взорван, убираем движущиеся панели и работу входа-->
+	<trigger	Name="trGeneratorDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Generator" />
+		<script>
+			trigger:Deactivate()
+
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(735,392,3471), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(733,393,3469), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(737,394,3473), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(734,395,3470), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(736,396,3472), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+			CreateEffectTTLed("ET_PS_BRIDGE_EXP_MAIN", CVector(736,397,3470), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 600000)
+
+			CreateTeam("RoboTeamGenerator",1118,CVector(780.805, 394.636, 3403.272),{"RobotGuard01","RobotGuard02"})
+
+			TDeactivate("trLabirintPlayer" )
+			TDeactivate("trPanelMove" )
+
+			TActivate ("trBossBattle")
+			TActivate("trSetPanelToLine")
+
+			for i=1,20 do
+				local dot = getObj("OracleDot_"..i)
+				if dot then dot:AddModifier("hp","= -10000") end
+
+				local eff = getObj("OE_"..i)
+				if eff then eff:Remove() end
+
+				if 10 > i then
+					local deleff = getObj("ls"..i)
+					if deleff then deleff:Remove() end
+				end
+			end
+
+			CompleteQuest("r6m2_DestroyRobotsBase_Quest")
+		</script>
+	</trigger>
+
+<!-- Устанока движушихся панелей в линию *повторяется до тех пор, пока они все не встанут в линию, т.к. ими нельзя управлять, пока они не закончит движение) -->
+	<trigger	Name="trSetPanelToLine"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local count = 0
+			for i=1,7 do
+				local cube = GetEntityByName("movecube"..i)
+				if cube then
+					cube:Remove()
+				end
+			end
+
+		    	local cubpos = {}
+		    	cubpos [1] 	= CVector (970.370, 289.00, 3000.160)
+			cubpos [2]	= CVector (956.180, 289.10, 3000.209)
+			cubpos [3] 	= CVector (956.146, 289.10, 3014.426)
+			cubpos [4] 	= CVector (941.825, 289.15, 3014.478)
+			cubpos [5] 	= CVector (927.635, 289.10, 3014.527)
+			cubpos [6] 	= CVector (927.692, 289.00, 3028.768)
+			cubpos [7] 	= CVector (913.464, 289.00, 3028.802)
+		    	cubpos [8] 	= CVector (899.274, 289.00, 3028.852)
+			cubpos [9] 	= CVector (884.982, 289.10, 3028.962)
+			cubpos [10] = CVector (885.037, 289.10, 3043.202)
+			cubpos [11] = CVector (885.133, 289.15, 3057.709)
+			cubpos [12] = CVector (870.823, 289.15, 3057.736)
+			cubpos [13] = CVector (856.500, 289.15, 3057.800)
+			cubpos [14] = CVector (828.050, 289.10, 3072.088)
+		    	cubpos [15] = CVector (813.860, 289.10, 3072.137)
+			cubpos [16] = CVector (813.894, 289.00, 3057.920)
+			cubpos [17] = CVector (799.666, 289.00, 3057.955)
+			cubpos [18] = CVector (785.476, 289.00, 3058.004)
+
+			for i=1,18 do
+				CreateNewDummyObject("oracle_platform_01", "movecubed"..i, -1, -1, cubpos[i], Quaternion(0, 0, 0, 1), 0)
+			end
+		</script>
+	</trigger>
+
+<!-- Создает движущиеся панели-->
+	<trigger	Name="trCreateMovePaneles"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+		    	local cubpos = {}
+		    	cubpos [1] = CVector (777.531, 289, 2974.693)
+			cubpos [2] = CVector (777.555, 289, 2960.209)
+			cubpos [3] = CVector (877.034, 289, 2988.592)
+			cubpos [4] = CVector (805.915, 289, 2988.825)
+			cubpos [5] = CVector (848.727, 289, 3060.098)
+			cubpos [6] = CVector (877.145, 289, 3017.073)
+			cubpos [7] = CVector (905.626, 289, 3059.855)
+
+			local time = GetVar("Time").AsNumList
+
+			for i=1,3 do
+				CreateNewPhysicDummyObject("oracle_platform_01", "movecube"..i, -1, -1, cubpos[i], Quaternion(0, 0, 0, 1), 0, 10000)
+
+				local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "mover"..i }
+				local mover = GetEntityByID( moverId )
+
+				local controlledObj = GetEntityByName("movecube"..i)
+				if mover and controlledObj then
+					controlledObj:SetGravityMode( false )
+					mover:SetObjAndPath( controlledObj:GetId(), "Cube"..i.."Move", time[i-1] )
+				end
+			end
+
+			for i=4,7 do
+				CreateNewDummyObject("oracle_platform_01", "movecube"..i, -1, -1, cubpos[i], Quaternion(0, 0, 0, 1), 0)
+
+				local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "mover"..i }
+				local mover = GetEntityByID( moverId )
+
+				local controlledObj = GetEntityByName("movecube"..i)
+				if mover and controlledObj then
+					mover:SetObjAndPath( controlledObj:GetId(), "Cube"..i.."Move", time[i-1] )
+				end
+			end
+
+			TActivate("trPanelMove")
+		</script>
+	</trigger>
+
+<!-- Работа движущихся панелей-->
+	<trigger	Name="trPanelMove"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local time = GetVar("Time").AsNumList
+
+			for i=1,7 do
+				local mover = getObj("mover"..i)
+				if mover==nil then
+					local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "mover"..i }
+					local mover = GetEntityByID( moverId )
+
+					local controlledObj = GetEntityByName("movecube"..i)
+					if mover and controlledObj then
+						mover:SetObjAndPath( controlledObj:GetId(), "Cube"..i.."Move", time[i-1] )
+					end
+				end
+			end
+		</script>
+	</trigger>
+
+<!-- Изменение 2-->
+<!-- Заехали на арену с боссом -->
+	<trigger	Name="trBossBattle"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="BossArena_loc" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(false)
+
+			CompleteQuest("r6m2_MoveFromRobotBase_Quest")
+
+			local robotpl = GetEntityByName("PlayerRobot_vehicle_0")
+			if robotpl then
+			    robotpl:AddModifier("maxhp")
+			end
+
+			TActivate("cinBoss")
+		</script>
+	</trigger>
+
+<!-- Босс умер :( -->
+	<trigger	Name="trBossDie"	active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="EmissarFlyBoss" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(true)
+
+			CompleteQuest("r6m2_KillBoss3_Quest")
+
+			TActivate("cinDeathBoss")
+			TActivate("trPortToR5M2")
+		</script>
+	</trigger>
+
+<!-- Изменение 3-->
+<!-- Возвращаемся к Механику с двигателем-->
+	<trigger	Name="trComebackMechanic"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="MechanicHouse_loc" />
+		<script>
+			trigger:Deactivate()
+
+			if TakeQuest("r6m1_HSReturn2_Quest") then
+                StartConversation("r6m1_Mechanic_NPC")
+			end
+		</script>
+	</trigger>
+
+<!-- Изменение 4-->
+<!-- Паром -->
+	<trigger	Name="trPortToR5M2"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="PortToR5M2_loc" />
+		<script>
+			if IsQuestTaken("r6m1_HSReturn_Quest") then
+				trigger:Deactivate()
+
+				CompleteQuest ("r6m1_HSReturn2_Quest")
+
+				TActivate ("cinRemParom")
+
+				GetEntityByName("ToR5M2"):SetProperty("Active",1)
+			end
+		</script>
+	</trigger>
+
+
+
+
+<!--  -->
+	<trigger Name="triggerExitToMap52" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR5M2" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			local b = SpawnMessageBox(8801)
+			if b == 1 then
+				PassToMap("r5m2", "FromR6M2", -1 )
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				TActivate ("RolikExitToMap52")
+				TActivate ("RolikENDExitToMap52")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap52" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToR5M2")), CVector(getPos("FromR5M2")))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR5M2")))
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap52" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+<!--  -->
+	<trigger Name="triggerExitToMap61" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR6M1" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			local b = SpawnMessageBox(8801)
+			if b == 1 then
+				PassToMap("r6m1", "FromR6M2", -1 )
+
+				GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				TActivate ("RolikExitToMap61")
+				TActivate ("RolikENDExitToMap61")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap61" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToR6M1")), CVector(getPos("FromR6M1")))
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR6M1")))
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap61" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+
+
+
+
+
+
+
+<!-- Изменение 5-->
+<!-- Опциональный: Создание робота, за которым нужно проследить-->
+	<trigger	Name="trCreateRobotProsledit"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+				SetTolerance(1100,1197,RS_NEUTRAL)
+				SetTolerance(1118,1197,RS_NEUTRAL)
+
+		    	local rbteam = CreateCaravanTeam("RbSledTeam",1197, CVector(getPos("SvatilisheRobot_loc")), {"RobotBobot02"}, nil, nil, nil)
+		    	if rbteam then
+				veh=rbteam:GetVehicle(0)
+		    		if veh then
+					veh:setGodMode(1)
+					veh:SetCruisingSpeed(100)
+				end
+			end
+
+	       	TActivate("trNearRobot")
+		</script>
+	</trigger>
+
+<!-- Опциональный: подъехали к роботу, он поехал по делам-->
+	<trigger	Name="trNearRobot"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="SvatilisheRobot_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local rbveh = getObj("RbSledTeam_vehicle_0")
+			if rbveh then
+				rbveh:SetExternalPathByName("RobotSvat_loc")
+				rbveh:setGodMode(0)
+
+				TActivate("trNearSvatilishe")
+				TActivate("trRobotEndPath")
+				TActivate("trRobotDie")
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trRobotDie"	active="0">
+		<event	eventid="GE_OBJECT_DIE"	ObjName="RbSledTeam" />
+		<script>
+			trigger:Deactivate()
+
+			FailQuest("r6m2_WhereRobotGo")
+
+			TDectivate("trNearSvatilishe")
+			TDectivate("trRobotEndPath")
+		</script>
+	</trigger>
+
+<!-- Изменение 6-->	
+<!-- Опциональный: подъехали к святилищу, дается квест все замочить-->
+	<trigger	Name="trNearSvatilishe"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Svatilishe_loc" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1100,1197,RS_ENEMY)
+
+			CompleteQuest("r6m2_WhereRobotGo_Prosledit")
+
+			TDeactivate("trRobotDie")
+			TActivate("trSvatRobotsDie")
+		</script>
+	</trigger>
+<!-- Опциональный: когда робот доехал, он становиться смертным-->
+	<trigger	Name="trRobotEndPath"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="RbSledTeam_vehicle_0"/>
+		<script>
+			trigger:Deactivate()
+
+			local rbveh = getObj("RbSledTeam_vehicle_0")
+			if rbveh then
+				rbveh:setGodMode(0)
+			end
+		</script>
+	</trigger>
+<!-- Опциональный: Святилище очищено от роботов-->
+	<trigger	Name="trSvatRobotsDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RbSledTeam" />
+		<script>
+			trigger:Deactivate()
+
+	        CompleteQuest("r6m2_WhereRobotGo_DestroySvatilishe")
+		</script>
+	</trigger>
+
+
+
+
+
+<!-- Опциональный: Создание машинки для гонки-->
+	<trigger	Name="trCreateVehGonka"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    trigger:Deactivate()
+
+		    local veh =  CreateVehicleEx("DemoUral3", "gonchik", CVector(getPos("StartGonka_loc")), 1114 )
+		    if veh then
+		       veh:setGodMode(1)
+			   veh:SetReactingOnDisturbingVehicles(false)
+		    end
+
+		    TActivate("trLeaveTownForGonka")
+		</script>
+	</trigger>
+<!-- Опциональный: Игрок выходит из города, машинка опонента поехала-->
+	<trigger	Name="trLeaveTownForGonka"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local veh = getObj("gonchik")
+			if veh then
+				veh:SetExternalPathByName("GonkaVaypegGradofaks_ExPath")
+
+				TActivate("trGonchikEndPath")
+				TActivate("trPlayerEndGonka")
+
+				SetVar("Gonka",0)
+		    	end
+		</script>
+	</trigger>
+<!-- Опциональный: Игрок завершил гонку, если приехал первый, то Gonka будет равно 0, устанавливаем в 1, если приехал второй то Gonka будет равно 2, ничего не делаем, просто начинаем диалог-->
+	<trigger	Name="trPlayerEndGonka"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EndGonka_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="r6m1_Gradofaks_enter" />
+		<script>
+			trigger:Deactivate()
+--println (1)
+			local stat = GetVar("Gonka").AsInt
+			if stat==0 then
+				SetVar("Gonka",1)
+			end
+--println (2)
+			StartConversation("r6m1_Vaypeg_Bar_Gonshik2_NPC")
+--println (3)
+--println (4)
+			local veh = getObj("gonchik")
+			if veh then
+				veh:Remove()
+			end
+--println (5)
+		</script>
+	</trigger>
+<!-- Опциональный: опонент приехал первым-->
+	<trigger	Name="trGonchikEndPath"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="gonchik"/>
+		<script>
+			trigger:Deactivate()
+
+			local stat = GetVar("Gonka").AsInt
+			if stat==0 then
+				SetVar("Gonka",2)
+			end
+		</script>
+	</trigger>
+
+
+
+
+
+<!-- ВОВ: битва-->
+	<trigger	Name="trWowBattle"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearWowBattle_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local poslist = {CVector(getPos("SpawnWowRobot1_loc")), CVector(getPos("SpawnWowRobot2_loc")), CVector(getPos("SpawnWowRobot3_loc")), CVector(getPos("SpawnWowRobot4_loc"))}
+			CreateTeam("WowRobotTeam",1118, poslist, {"Robot4_2SMALL"})
+			CreateTeam("WowPeopleTeam",1115, {CVector(getPos("SpawnWowVeh1_loc")),CVector(getPos("SpawnWowVeh2_loc"))}, {"Scout01","Scout01"})
+		</script>
+	</trigger>
+
+<!-- ВОВ: падение камней: не сделато, т.к. х.з. как делать-->
+	<trigger	Name="trWowStone"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearStoneCrash_loc" />
+		<script>
+			trigger:Deactivate()
+
+-- 			Создание камней
+		</script>
+	</trigger>
+
+<!-- ВОВ: машина наезжает на бочку-->
+	<trigger	Name="trWowBarrel"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearBarrel_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local veh = CreateVehicleEx ("Ural01", "WowVeh", CVector(getPos("SpawnBarrelVeh_loc")), 1107)
+			if veh then
+				veh:SetExternalPathByName("ToBarrel_ExPath")
+			end
+		</script>
+	</trigger>
+
+<!-- ВОВ: машина наезжает на стену разрушаемую -->
+	<trigger	Name="trWowWall"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearWowWall_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local veh = CreateVehicleEx ("Ural01", "WowVeh", CVector(getPos("SpawnWowVehWall_loc")), 1114)
+			if veh then
+				veh:SetExternalPathByName("WowWall_ExPath")
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trPlaceSecret"	active="1">
+		<event	timeout="0.1"			eventid="GE_TIME_PERIOD" />
+		<script>
+			local i=1
+			local gunlist = {"hornet01","specter01","pkt01","kord01","storm01","fagot01","maxim01","vector01","vulcan01","kpvt01","rapier01","flag01","rainmetal01","elephant01","odin01","omega01","bumblebee01","hammer01","hunterSideGun","mrakSideGun","big_swingfire01","cyclops01","octopus01","hailSideGun","hurricane01","rocketLauncher","zeusSideGun","marsSideGun"}
+			local len = getn(gunlist)
+
+			while getObj("chest"..i.."_loc")~=nil do
+				CreateBoxWithAffixGun(CVector(getPos("chest"..i.."_loc")), gunlist[exrandom(len)], random(3))
+				i = i + 1
+			end
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+</triggers>

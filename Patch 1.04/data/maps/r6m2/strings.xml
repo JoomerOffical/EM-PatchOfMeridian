@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="4201"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Так, что здесь происходит?!"
+		sound="data\sounds\Speech\r6m2\r6m2_4201_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="4301"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Благодарю тебя за помощь, друг!"
+		sound="data\sounds\Speech\r6m2\r6m2_4301_mechanic.ogg" 
+		time="2" />
+
+	<string
+		id="4302"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Нет проблем. Я последнее время только и делаю, что спасаю кого-нибудь от этих взбесившихся железяк."
+		sound="data\sounds\Speech\r6m2\r6m2_4302_nomad.ogg" 
+		time="7" />
+
+	<string
+		id="4303"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|У нас тут было довольно спокойное место до тех пор, пока не появились эти штуки."
+		sound="data\sounds\Speech\r6m2\r6m2_4303_mechanic.ogg" 
+		time="5" />
+
+	<string
+		id="4304"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А давно они тут?"
+		sound="data\sounds\Speech\r6m2\r6m2_4304_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="4305"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|О, нет. Не очень. Однако они появились внезапно и в таком большом количестве, что спастись удалось немногим."
+		sound="data\sounds\Speech\r6m2\r6m2_4305_mechanic.ogg" 
+		time="6" />
+
+	<string
+		id="4306"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Послушай, приятель, а ты случаем не знаешь, где их главная база?"
+		sound="data\sounds\Speech\r6m2\r6m2_4306_nomad.ogg" 
+		time="4" />
+
+	<string
+		id="4307"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Конечно! Но нам лучше покинуть это место, пока новые железные твари не примчались сюда. Помоги мне добраться до дома, а там мы обсудим одну идею."
+		sound="data\sounds\Speech\r6m2\r6m2_4307_mechanic.ogg" 
+		time="8" />
+
+	<string
+		id="4308"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Показывай дорогу."
+		sound="data\sounds\Speech\r6m2\r6m2_4308_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="4401"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну, что у тебя за идея?"
+		sound="data\sounds\Speech\r6m2\r6m2_4401_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="4402"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Судя по тому, что я видел на дороге, ты - хороший водитель, отличный стрелок, достойный и храбрый человек."
+		sound="data\sounds\Speech\r6m2\r6m2_4402_mechanic.ogg" 
+		time="7" />
+
+	<string
+		id="4403"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну, да. А что?"
+		sound="data\sounds\Speech\r6m2\r6m2_4403_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="4404"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|У меня есть план, как уничтожить всех роботов. Но чтобы его осуществить, нужен человек вроде тебя."
+		sound="data\sounds\Speech\r6m2\r6m2_4404_mechanic.ogg" 
+		time="6" />
+
+	<string
+		id="4405"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да? И в чем состоит твой гениальный план?"
+		sound="data\sounds\Speech\r6m2\r6m2_4405_nomad.ogg" 
+		time="4" />
+
+	<string
+		id="4406"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Необходимо пробраться на базу, производящую роботов, и остановить их производство."
+		sound="data\sounds\Speech\r6m2\r6m2_4406_mechanic.ogg" 
+		time="5" />
+
+	<string
+		id="4407"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Отличная идея! Главное, свежая и оригинальная. А что, тебе известен какой-нибудь тайный ход, ведущий на их базу?"
+		sound="data\sounds\Speech\r6m2\r6m2_4407_nomad.ogg" 
+		time="8" />
+
+	<string
+		id="4408"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Но это не важно. Недавно мне удалось добыть корпус одного из роботов, я почти починил его и слегка модернизировал. Теперь человек может забраться внутрь робота и управлять им."
+		sound="data\sounds\Speech\r6m2\r6m2_4408_mechanic.ogg" 
+		time="11" />
+
+	<string
+		id="4409"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А для чего такие сложности? Мой грузовик гораздо маневреннее и лучше вооружен."
+		sound="data\sounds\Speech\r6m2\r6m2_4409_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="4410"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Это наверняка так, но тебе придется с боем пробиваться на базу роботов. Я же предлагаю тебе под видом ''своего'' пробраться на базу и уничтожить её изнутри. Почти никакого риска!"
+		sound="data\sounds\Speech\r6m2\r6m2_4410_mechanic.ogg" 
+		time="10" />
+
+	<string
+		id="4411"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Так почему же ты этого до сих пор не сделал?"
+		sound="data\sounds\Speech\r6m2\r6m2_4411_nomad.ogg" 
+		time="3" />
+
+	<string
+		id="4412"		
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Мне не хватает нескольких частей, чтобы завершить работу. Кроме того, я не так храбр, как ты."
+		sound="data\sounds\Speech\r6m2\r6m2_4412_mechanic.ogg" 
+		time="7" />
+
+	<string
+		id="4413"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Хорошо. Расскажи, какие детали надо добыть. А потом поговорим о том, как проникнуть на базу роботов."
+		sound="data\sounds\Speech\r6m2\r6m2_4413_nomad.ogg" 
+		time="7" />
+
+	<string
+		id="4414"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Необходимо добыть набор шлангов для гидравлических систем, аккумулятор и пару камер оптической системы. Все это можно выбить из роботов-ремонтников, наводнивших Стагнум. Я отмечу это место на твоей карте."
+		sound="data\sounds\Speech\r6m2\r6m2_4414_mechanic.ogg" 
+		time="11" />
+
+	<string
+		id="4415"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Отлично."
+		sound="data\sounds\Speech\r6m2\r6m2_4415_nomad.ogg" 
+		time="1" />
+
+	<string
+		id="4501"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Великолепно! Теперь ты сможешь без проблем проникнуть на базу роботов и уничтожить её изнутри."
+		sound="data\sounds\Speech\r6m2\r6m2_4501_mechanic.ogg" 
+		time="6" />
+
+	<string
+		id="4502"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Как проникнуть, я соображу, а вот как ее уничтожать - это отдельный вопрос. Есть идеи, как это сделать?"
+		sound="data\sounds\Speech\r6m2\r6m2_4502_nomad.ogg" 
+		time="8" />
+
+	<string
+		id="4503"
+		modelName="Man_mask"
+		modelSkin="1"
+		modelCfg="148"
+		modelSlot="1"
+		value="МЕХАНИК|Попробуй найти генератор, обеспечивающий всю фабрику энергией. Если разрушить его, то все производство остановится само собой."
+		sound="data\sounds\Speech\r6m2\r6m2_4503_mechanic.ogg" 
+		time="8" />
+
+	<string
+		id="4504"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Неплохая мысль. Попробую."
+		sound="data\sounds\Speech\r6m2\r6m2_4504_nomad.ogg" 
+		time="3" />
+
+	<string
+		id="4601"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А пробраться сюда не так легко, как мне думалось. Надо подражать действиям этих металлических уродов. Одно неверное движение и моего робота спишут в утиль. Вместе со мной."
+		sound="data\sounds\Speech\r6m2\r6m2_4601_nomad.ogg" 
+		time="13" />
+
+	<string
+		id="4701"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Похоже, что это и есть тот генератор, о котором говорил Механик. Ну что ж, сейчас в мире станет одним генератором меньше."
+		sound="data\sounds\Speech\r6m2\r6m2_4701_nomad.ogg" 
+		time="9" />
+
+	<string
+		id="4702"
+		modelName="mask_hero"
+		modelSlot="1"
+		value="ЭМИССАР|Кто ты такой?!"
+		sound="data\sounds\Speech\r6m2\r6m2_4702_emissary.ogg" 
+		time="2" />
+
+	<string
+		id="4703"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Тот, кто испортил всю твою кухню. Зачем тебе подробности?"
+		sound="data\sounds\Speech\r6m2\r6m2_4703_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="4704"
+		modelName="mask_hero"
+		modelSlot="1"
+		value="ЭМИССАР|Как ты посмел?! Ты разрушил всё, над чем я так долго трудился!"
+		sound="data\sounds\Speech\r6m2\r6m2_4704_emissary.ogg" 
+		time="5" />
+
+	<string
+		id="4705"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не преувеличивай, вовсе даже не все. У тебя остался ты сам и твоя машина."
+		sound="data\sounds\Speech\r6m2\r6m2_4705_nomad.ogg" 
+		time="7" />
+
+	<string
+		id="4706"
+		modelName="mask_hero"
+		modelSlot="1"
+		value="ЭМИССАР|Я сотру тебя в порошок, ничтожество! "
+		sound="data\sounds\Speech\r6m2\r6m2_4706_emissary.ogg" 
+		time="4" />
+
+	<string
+		id="4707"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ты меня напугал. Можешь считать, что огонь я открыл с перепугу."
+		sound="data\sounds\Speech\r6m2\r6m2_4707_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="4801"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Похоже, это какие-то архивные записи. Попробую их включить… Получилось!"
+		sound="data\sounds\Speech\r6m2\r6m2_4801_nomad.ogg" 
+		time="6" />
+
+	<string
+		id="4802"
+		modelName="mask_hero"
+		modelSlot="1"
+		value="ЭМИССАР|Выдержка из архива: ''Именно на этом континенте, близ городка Розвелл, в 1974 году совершил посадку неопознанный летающий объект. Место было моментально оцеплено армией и никто так и не смог увидеть пришельца из…"
+		sound="data\sounds\Speech\r6m2\r6m2_4802_emissary.ogg" 
+		time="19" />
+
+	<string
+		id="4803"
+		modelName="mask_hero"
+		value="ЭМИССАР|Эмиссар - Оракулу. Отчет номер 11. Моя миссия по поиску второго летательного аппарата Ньери встретила неожиданное сопротивление местных жителей. Любые мой вопросы встречают насмешки и непонимания."
+		sound="data\sounds\Speech\r6m2\r6m2_4803_emissary.ogg" 
+		time="16" />
+
+	<string
+		id="480312"
+		modelName="mask_hero"
+		modelSlot="1"
+		value="ЭМИССАР|В связи с невозможностью далее тратить время столь бесполезно, считаю  возможным перейти к тактической схеме ''Удар''. На момент отправки этого сообщения мной взят под контроль значительный регион. Летающая тарелка не обнаружена."
+		sound="data\sounds\Speech\r6m2\r6m2_480312_emissary.ogg" 
+		time="17" />
+
+	<string
+		id="4804"
+		modelName="mask_hero"
+		value="ЭМИССАР|Эмиссар – Оракулу. Отчет номер 15. В ходе операции по разведке и зачистке местности мной захвачен в плен местный житель, согласившийся на сотрудничество. Полагаю, это даст мне значительное преимущество в поисках."
+		sound="data\sounds\Speech\r6m2\r6m2_4804_emissary.ogg" 
+		time="17" />
+
+	<string
+		id="4805"
+		modelName="Sam_mask"
+		modelSlot="1"
+		value="СЭМ|Послушай, я тебя, кажется, знаю. Ты тот самый человек, который расспрашивал всех об ангаре с цифрой 18 на боку, верно?"
+		sound="data\sounds\Speech\r6m2\r6m2_4805_sam.ogg" 
+		time="10" />
+
+	<string
+		id="4806"
+		modelName="mask_hero"
+		value="ЭМИССАР|Да, это так. Но я так и не получил помощи в поисках."
+		sound="data\sounds\Speech\r6m2\r6m2_4806_emissary.ogg" 
+		time="4" />
+
+	<string
+		id="4807"
+		modelName="Sam_mask"
+		modelSlot="1"	
+		value="СЭМ|Если бы я знал, что за вами такая сила, сэр, я бы относился к вам совсем по-другому. Но и сейчас еще не поздно."
+		sound="data\sounds\Speech\r6m2\r6m2_4807_sam.ogg" 
+		time="10" />
+
+	<string
+		id="4808"
+		modelName="mask_hero"
+		value="ЭМИССАР|Не поздно? Для чего?"
+		sound="data\sounds\Speech\r6m2\r6m2_4808_emissary.ogg" 
+		time="2" />
+
+	<string
+		id="4809"
+		modelName="Sam_mask"
+		modelSlot="1"
+		value="СЭМ|Вы уже нашли ангар №18?"
+		sound="data\sounds\Speech\r6m2\r6m2_4809_sam.ogg" 
+		time="3" />
+
+	<string
+		id="4810"
+		modelName="mask_hero"
+		value="ЭМИССАР|Нет. Вам известно его месторасположение?"
+		sound="data\sounds\Speech\r6m2\r6m2_4810_emissary.ogg" 
+		time="4" />
+
+	<string
+		id="4811"
+		modelName="Sam_mask"
+		modelSlot="1"	
+		value="СЭМ|Примерно. Мне знакомы территории, прилегающие к землям моей крепости. Я знаю где искать, но, чтобы организовать поиски, нужны силы, которых у меня нет. Между прочим, из-за ваших роботов я теперь потерял власть и в своих землях."
+		sound="data\sounds\Speech\r6m2\r6m2_4811_sam.ogg" 
+		time="18" />
+
+	<string
+		id="4812"
+		modelName="mask_hero"
+		value="ЭМИССАР|Что за информацию об интересующем меня объекте вы хотите?"
+		sound="data\sounds\Speech\r6m2\r6m2_4812_emissary.ogg" 
+		time="4" />
+
+	<string
+		id="4813"
+		modelName="Sam_mask"
+		modelSlot="1"
+		value="СЭМ|Вы, сэр, владеете мощными машинами и грозным оружием. Поделитесь со мной всем этим, и я не только найду вам ваш ангар, но и помогу зачистить территорию вокруг него."
+		sound="data\sounds\Speech\r6m2\r6m2_4813_sam.ogg" 
+		time="14" />
+
+	<string
+		id="4814"
+		modelName="mask_hero"
+		value="ЭМИССАР|Я должен подумать... Ну хорошо, вы получите требуемое."
+		sound="data\sounds\Speech\r6m2\r6m2_4814_emissary.ogg" 
+		time="4" />
+
+	<string
+		id="4815"
+		modelName="Sam_mask"
+		modelSlot="1"	
+		value="СЭМ|Отличное решение, сэр. Да, еще хочу предупредить: тут неподалеку должен болтаться некий тип по кличке «Бродяга». Он один из самых серьезных бойцов, известных мне. Отделайтесь от него при первом же удобном случае."
+		sound="data\sounds\Speech\r6m2\r6m2_4815_sam.ogg" 
+		time="19" />
+
+	<string
+		id="4816"
+		modelName="mask_hero"
+		value="ЭМИССАР|Хорошо. Я учту это."
+		sound="data\sounds\Speech\r6m2\r6m2_4816_emissary.ogg" 
+		time="2" />
+
+	<string
+		id="4817"
+		modelName="mask_hero"
+		modelSlot="1"
+		value="ЭМИССАР|Я не доверяю этому человеку, но он жаждет власти. И, получив оружие и машину, отправится уничтожать противника там, куда еще не добрались мои роботы. Таким образом он выполнит необходимую мне работу."
+		sound="data\sounds\Speech\r6m2\r6m2_4817_emissary.ogg" 
+		time="16" />
+
+	<string
+		id="4818"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну, Сэм! Ну, гад! Лопни твой бензобак! Я достану тебя даже на краю земли!"
+		sound="data\sounds\Speech\r6m2\r6m2_4818_nomad.ogg" 
+		time="6" />
+
+	<string
+		id="4901"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Теперь паром должен заработать! Ну, Сэм! Погоди!"
+		sound="data\sounds\Speech\r6m2\r6m2_4901_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		value="Механик погиб."
+		numButtons="1" />
+</resource>

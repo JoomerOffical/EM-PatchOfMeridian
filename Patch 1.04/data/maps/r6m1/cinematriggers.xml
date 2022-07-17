@@ -1,0 +1,1962 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+
+<!--     -->
+	<trigger Name="cinCanadaWay" active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			SetGameTime (12,00)
+
+			CreateNewDummyObject( "BUGcargo", "camT", -1, -1, CVector(1881.775, 343.945, 941.326), Quaternion(0.000, -0.808, 0.000, 0.590), 0)
+
+--   ,       
+			local most = getObj("BigMost")
+			local Plf = GetPlayerVehicle()
+
+			if Plf and most then
+				Plf:SetGamePositionOnGround(CVector(3444.104, 300, 299.774))
+				Plf:setGodMode(1)
+				CreateVehicle( "Hunter02", 1109, CVector(3448.196, 355.820, 289.682), "vehNaparn1")
+				CreateVehicle( "Fighter02", 1109, CVector(3471.810, 355.300, 297.401), "vehNaparn2")
+				CreateVehicle( "Scout02", 1109, CVector(3475.361, 355.068, 307.355), "vehNaparn3")
+				CreateVehicle( "r1m3_MerScout", 1109, CVector(3460.195, 355.300, 310.193), "vehSem")
+				Plf:SetCruisingSpeed(160)
+			end
+
+			local PlfID = GetPlayerVehicleId()
+			local vehNaparn1 = getObj("vehNaparn1")
+			local vehNaparn2 = getObj("vehNaparn2")
+			local vehNaparn3 = getObj("vehNaparn3")
+			local vehSem = getObj("vehSem")
+			local boss03 = getObj("boss03ForCinema_r6m1")
+			local boss03Id = boss03:GetId()
+			local vehN1Id = vehNaparn1:GetId()
+			local comand = {vehNaparn1, vehNaparn2, vehNaparn3, vehSem, Plf}
+			local path = {"naparn1_path01", "naparn2_path01", "naparn3_path01", "startSam_path01", "startPlayer_path01"}
+			local speed = Plf:GetCruisingSpeed()
+			local MaxSpeed = Plf:GetMaxSpeed(160)
+			local camTId = getObj("camT"):GetId()
+
+			if vehSem then vehSem:SetSkin(1) end
+
+--    ,  
+--    ,    
+			for i=1,5 do
+				if comand[i] then
+					comand[i]:SetCustomControlEnabled(1)
+					comand[i]:SetRotation(Quaternion(-0.011, -0.477, -0.003, 0.879))
+					comand[i]:SetExternalPathByName(path[i])
+					comand[i]:SetCustomLinearVelocity(10)
+					comand[i]:SetThrottle(1)
+					comand[i]:SetMaxSpeed(MaxSpeed)
+					comand[i]:SetCruisingSpeed(speed)
+					comand[i]:SetReactingOnDisturbingVehicles( false )
+					comand[i]:SetCustomControlEnabled(0)
+				end
+			end
+
+			TActivate("cinCanadaWay_FadeIn")
+
+			Fly("Start_cam01", CINEMATIC_NO_AIM, 0, 10, 1, 0 )
+			Fly("Start_cam02", CINEMATIC_NO_AIM, 0, 33, 0, 0 )
+			Fly("Start_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			FlyLinked( "Start_cam04", PlfID , 6, 0, 0, PlfID )
+			FlyLinked( "Start_cam05", camTId , 5, 0, 0, PlfID )
+			FlyLinked( "Start_cam05_1", camTId , 4, 0, 0, boss03Id, 1, 0, 0, 1)
+			FlyLinked( "Start_cam06", boss03Id, 3, 0, 0, PlfID )
+			FlyLinked( "Start_cam06_1", vehN1Id, 2, 0, 0, PlfID )
+			Fly("Start_cam06_2", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("Start_cam07", CINEMATIC_NO_AIM, 0, 4, 0, 1 )
+			StartCinematic(false)
+			UpdateCinematic( 1 )
+
+			TActivate("trStart_cam02")
+			TActivate("trStart_cam03")
+			TActivate("trStart_cam04")
+			TActivate("trStart_cam05")
+			TActivate("trStart_cam06")
+			TActivate("trStart_cam06_1")
+			TActivate("trStart_cam06_2")
+			TActivate("trStart_cam07")
+			TActivate("cinBossInFactory_msg0101")
+			TActivate("cinBossInFactory_msg0102")
+			TActivate("cinBossInFactory_msg0103")
+			TActivate("cinBossInFactory_msg0104")
+			TActivate("cinCanadaWay_End")
+		</script>
+	</trigger>
+	<trigger Name="cinCanadaWay_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+		</script>
+	</trigger>
+<!-- ****************   ,  ********************	 -->
+	<trigger Name="trStart_cam02" active="0">
+		<event flypath="Start_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			local vehNaparn1 = getObj("vehNaparn1")
+			local vehNaparn2 = getObj("vehNaparn2")
+			local vehNaparn3 = getObj("vehNaparn3")
+			local vehSem = getObj("vehSem")
+			local comand = {vehNaparn1, vehNaparn2, vehNaparn3, vehSem, Plf}
+			local path = {"naparn1_path01", "naparn2_path01", "naparn3_path01", "startSam_path01", "startPlayer_path01"}
+
+-- ****************     ,  ************
+			for i=1,5 do
+				if comand[i] then
+					comand[i]:SetCustomControlEnabled(1)
+					comand[i]:PlaceToEndOfPath(path[i])
+					comand[i]:SetThrottle(0)
+					comand[i]:SetCustomLinearVelocity(0)
+					comand[i]:SetCustomControlEnabled(0)
+				end
+			end
+
+-- **************** ******************
+			CreateNewDummyObject( "dweller_new_hero", "humPlayer", -1, -1, CVector(2735.872, 354.442, 752.729), Quaternion(0.000, 0.395, 0.000, 0.919), 0)
+			CreateNewDummyObject( "dweller_sam", "humSem", -1, -1, CVector(2737.211, 354.420, 753.902), Quaternion(0.000, 0.874, 0.000, -0.487), 0)
+
+			AddCinematicMessage( 0101, 0.50 )
+			AddCinematicMessage( 0102, 0.25 )
+			AddCinematicMessage( 0103, 0.25 )
+			AddCinematicMessage( 0104, 0.25 )
+		</script>
+	</trigger>
+
+<!-- 	****************   ********************	 -->
+	<trigger Name="cinBossInFactory_msg0101" active="0">
+		<event msgid="0101" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_PAIN2)
+				humPl:SetNextForAnimation(AT_PAIN2, AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_msg0102" active="0">
+		<event msgid="0102" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_STAND2)
+				humSem:SetNextForAnimation(AT_STAND2, AT_STAND1)
+				humSem:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_msg0103" active="0">
+		<event msgid="0103" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_PAIN2)
+				humPl:SetNextForAnimation(AT_PAIN2, AT_STAND1)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND1)
+			end
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_msg0104" active="0">
+		<event msgid="0104" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_STAND2)
+				humSem:SetNextForAnimation(AT_STAND2, AT_ATTACK1)
+				humSem:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+		</script>
+	</trigger>
+
+<!-- 	****************   ********************	 -->
+<!-- 	****************  ********************	 -->
+	<trigger Name="trStart_cam03" active="0">
+		<event flypath="Start_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			local vehNaparn1 = getObj("vehNaparn1")
+			local vehNaparn2 = getObj("vehNaparn2")
+			local vehNaparn3 = getObj("vehNaparn3")
+			local vehSem = getObj("vehSem")
+			local comand = {vehNaparn1, vehNaparn2, vehNaparn3, vehSem, Plf}
+			local path = {"naparn1_path02", "naparn2_path02", "naparn3_path02", "startSam_path02", "startPlayer_path02"}
+			local humPlayer = getObj("humPlayer")
+			local humSem = getObj("humSem")
+
+			if humPlayer then humPlayer:Remove() end
+			if humSem then humSem:Remove() end
+
+			for i=1,5 do
+				if comand[i] then
+					comand[i]:SetExternalPathByName(path[i])
+				end
+			end
+		</script>
+	</trigger>
+
+<!-- 	****************        ********************	 -->
+<!-- 	****************      ********************	 -->
+	<trigger Name="trStart_cam04" active="0">
+		<event flypath="Start_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("cinematic_spring_coeff 5.7")
+
+			local vehNaparn2 = getObj("vehNaparn2")
+			local vehNaparn3 = getObj("vehNaparn3")
+			local vehSem = getObj("vehSem")
+			local comand = {vehNaparn2, vehNaparn3, vehSem}
+
+			for i=1,3 do
+				if comand[i] then
+					comand[i]:Remove()
+				end
+			end
+
+			AddCinematicMessage( 0105, 0.50 )
+		</script>
+	</trigger>
+
+<!-- 	****************     ********************	 -->
+<!-- 	****************    ********************	 -->
+	<trigger Name="trStart_cam05" active="0">
+		<event flypath="Start_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+
+			RuleConsole("cinematic_spring_coeff 1.7")
+			local Plf = GetPlayerVehicle()
+			local vehNaparn1 = getObj("vehNaparn1")
+
+			if Plf and vehNaparn1 then
+				Plf:PlaceToEndOfPath("startPlayer_path02")
+				Plf:SetExternalPathByName("startPlayer_path03")
+				vehNaparn1:PlaceToEndOfPath("naparn1_path02")
+				vehNaparn1:SetExternalPathByName("naparn1_path03")
+			end
+
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "" }
+			local mover = GetEntityByID( moverId )
+			local controlledObj = GetEntityByName("boss03ForCinema_r6m1")
+
+			if controlledObj then
+				mover:SetObjAndPath( controlledObj:GetId(), "boss03_path01", 20 )
+			end
+
+			TActivate("trFire01")
+		</script>
+	</trigger>
+
+<!-- 	****************     ********************	 -->
+	<trigger Name="trFire01"	active="0">
+		<event	timeout="6"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Passage05")
+
+			AddCinematicMessage( 0106, 0.25 )
+
+			local boss03 = getObj("boss03ForCinema_r6m1")
+			boss03:NoticePlayer()
+
+			for i = 1,5 do --   Wave   
+				local bahID = CreateNewObject{
+					prototypeName = "superBlastWave",
+					objName = "MyWave",
+					belong = 1100
+				}
+				local bah = GetEntityByID(bahID)
+				if bah then
+					bah:SetPosition(CVector(1911.502+i, 344.121, 947.811+i))
+--println("======FIRE1======")
+				end
+			end
+		</script>
+	</trigger>
+
+<!-- 	****************    (  ) ********************	 -->
+	<trigger Name="trStart_cam06" active="0">
+		<event flypath="Start_cam06" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local boss03 = getObj("boss03ForCinema_r6m1")
+			local Plf = GetPlayerVehicle()
+			local vehNaparn1 = getObj("vehNaparn1")
+
+			if Plf and vehNaparn1 then
+				Plf:PlaceToEndOfPath("startPlayer_path03")
+				Plf:SetExternalPathByName("startPlayer_path04")
+				vehNaparn1:PlaceToEndOfPath("naparn1_path03")
+				vehNaparn1:SetExternalPathByName("naparn1_path04")
+			end
+
+			if boss03 then boss03:NoticePlayer() end
+
+			TActivate("trFire02")
+		</script>
+	</trigger>
+
+<!-- 	****************     ( , ) ********************	 -->
+	<trigger Name="trStart_cam06_1" active="0">
+		<event flypath="Start_cam06_1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("cinematic_spring_coeff 10.7")
+
+			TActivate("trFire02")
+			TActivate("trRockDeath1")
+		</script>
+	</trigger>
+
+<!-- 	****************     ********************	 -->
+	<trigger	Name="trFire02"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			for i = 1,5 do
+				CreateEffectTTLed( "ET_PS_VEH_EXP1_MED", CVector(1907.181-i*1.5, 346.000, 914.333-i*1.5), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 15000 )
+				local bahID = CreateNewObject{
+					prototypeName = "superBlastWave",
+					objName = "MyWave",
+					belong = 1100
+				}
+				local bah = GetEntityByID(bahID)
+				if bah then
+					bah:SetPosition(CVector(1907.181-i*1.5, 346.000, 914.333-i*1.5))
+--println("======FIRE2======")
+				end
+			end
+		</script>
+	</trigger>
+
+<!-- 	****************   ********************	 -->
+<!-- 	****************    ,  ********************	 -->
+	<trigger	Name="trRockDeath1"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateNewPhysicDummyObject( "middle_stone_01", "RockDeath1", -1, -1, CVector(1907, 346, 914), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "middle_stone_01", "RockDeath2", -1, -1, CVector(1906, 346, 913), Quaternion(0, 0, 0, 1), 1)
+
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath3", -1, -1, CVector(1908, 346, 914), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath4", -1, -1, CVector(1905, 346, 916), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath5", -1, -1, CVector(1909, 346, 913), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath6", -1, -1, CVector(1907, 346, 915), Quaternion(0, 0, 0, 1), 1)
+
+			for i = 1,6 do
+				local r = GetEntityByName("RockDeath"..i)
+				if r then r:SetMass(random(20)+ 40 ) end
+
+			end
+
+			CreateNewDummyObject( "big_stone_01", "RockDeath", -1, -1, CVector(1882.266, 340.361, 810.625), Quaternion(0, 0, 0, 1), 1)
+			local RockDeath = GetEntityByName("RockDeath")
+			local RockDeathID = RockDeath:GetId()
+			if RockDeath then
+				RockDeath:SetMass (1500)
+			end
+
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "RockMover" }
+			local mover = GetEntityByID( moverId )
+			local controlledObj = GetEntityByName("RockDeath")
+
+			if controlledObj then
+				mover:SetObjAndPath( controlledObj:GetId(), "RockPath", 80 )
+			end
+		</script>
+	</trigger>
+
+<!-- 	****************  ********************	 -->
+	<trigger Name="trRockDeath2"	active="0">
+		<event	timeout="2"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateNewPhysicDummyObject( "middle_stone_01", "RockDeath7", -1, -1, CVector(1791, 425, 1088), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "middle_stone_01", "RockDeath8", -1, -1, CVector(1791, 426, 1088), Quaternion(0, 0, 0, 1), 1)
+
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath9", -1, -1, CVector(1790, 424, 1088), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath10", -1, -1, CVector(1792, 425, 1088), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath11", -1, -1, CVector(1791, 426, 1089), Quaternion(0, 0, 0, 1), 1)
+			CreateNewPhysicDummyObject( "small_stone_01", "RockDeath12", -1, -1, CVector(1792, 425, 1087), Quaternion(0, 0, 0, 1), 1)
+		</script>
+	</trigger>
+
+<!-- 	****************     ********************	 -->
+	<trigger Name="trStart_cam06_2" active="0">
+		<event flypath="Start_cam06_2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate("trRockDeath2")
+
+			local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "boss03P2" }
+			local mover = GetEntityByID( moverId )
+			local controlledObj = GetEntityByName("boss03ForCinema_r6m1")
+			local boss03 = getObj("boss03ForCinema_r6m1")
+
+			if boss03 then boss03:NoticePlayer(false) end
+			if controlledObj then
+				mover:SetObjAndPath( controlledObj:GetId(), "boss03_path02", 15 )
+			end
+		</script>
+	</trigger>
+
+<!-- 	****************       ********************	 -->
+	<trigger Name="trStart_cam07" active="0">
+		<event flypath="Start_cam07" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate("trRockDeath2")
+
+			local Plf = GetPlayerVehicle()
+			local vehNaparn1 = getObj("vehNaparn1")
+
+			if vehNaparn1 then 
+			    vehNaparn1:PlaceToEndOfPath("naparn1_path03") 
+				vehNaparn1:AddModifier("hp", "=10000")
+			end
+			
+			if Plf then 
+			    Plf:PlaceToEndOfPath("startPlayer_path03") 
+			end
+		</script>
+	</trigger>
+	<trigger Name="cinCanadaWay_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			local vehNaparn1 = getObj("vehNaparn1")
+			local vehNaparn2 = getObj("vehNaparn2")
+			local vehNaparn3 = getObj("vehNaparn3")
+			local vehSem = getObj("vehSem")
+			local camT = getObj("camT")
+			local boss03 = getObj("boss03ForCinema_r6m1")
+			local comand = {camT, vehNaparn2, vehNaparn3, vehSem}
+			local RockDeath = getObj("RockDeath")
+			local humPl = getObj("humPlayer")
+			local humSem = getObj("humSem")
+			local r = GetEntityByName("RockDeath7")
+			local RockMover = GetEntityByName("RockMover")
+
+			for i = 1,4 do
+				if comand[i] then --   
+					comand[i]:Remove()
+				end
+			end
+
+			if vehNaparn1 then --  
+				vehNaparn1:SetExternalPathByName("naparn1_path04")
+				vehNaparn1:PlaceToEndOfPath("naparn1_path04")
+			end
+
+			if Plf then -- 
+				Plf:SetExternalPathByName("startPlayer_path04")
+				Plf:PlaceToEndOfPath("startPlayer_path04")
+				Plf:setGodMode(0)
+			end
+
+			if humPl then humPl:Remove() end --  
+			if humSem then humSem:Remove() end
+			if boss03 then boss03:Remove() end --   
+
+			if RockDeath == nil then --  
+				CreateNewDummyObject( "big_stone_01", "RockDeath", -1, -1, CVector(1882.266, 346.361, 888.625), Quaternion(0, 0, 0, 1), 1)
+				RockDeath = getObj("RockDeath")
+				local RockDeathID = RockDeath:GetId()
+				SetCameraDirectionToObj(RockDeathID) --  
+			end
+
+			if RockMover == nil and RockDeath then --  
+				local moverId = CreateNewObject { prototypeName	= "cinematicMover", objName  = "RockMover2" }
+				local mover = GetEntityByID( moverId )
+				local controlledObj = GetEntityByName("RockDeath")
+
+				if controlledObj then
+					mover:SetObjAndPath( controlledObj:GetId(), "RockPath", 60 )
+				end
+			end
+
+			if r == nil then TActivate("trRockDeath2") end --  , 
+
+			RestoreAllToleranceStatus()
+
+			RuleConsole("g_postEffect NoiseOff")
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			TActivate("triggerExitToMap51")
+			TActivate("trRockRemove")
+			TDeactivate("cinCanadaWay_FadeIn")
+			TDeactivate("trStart_cam02")
+			TDeactivate("trStart_cam03")
+			TDeactivate("trStart_cam04")
+			TDeactivate("trStart_cam05")
+			TDeactivate("trStart_cam06")
+			TDeactivate("trStart_cam06_1")
+			TDeactivate("trStart_cam06_2")
+			TDeactivate("trStart_cam07")
+			TDeactivate("cinBossInFactory_msg0101")
+			TDeactivate("cinBossInFactory_msg0102")
+			TDeactivate("cinBossInFactory_msg0103")
+			TDeactivate("cinBossInFactory_msg0104")
+
+		</script>
+	</trigger>
+
+<!-- ************ ,    , ,    ********** -->
+	<trigger Name="trRockRemove" active="0">
+		<event timeout="30" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			for i = 1,12 do
+				local r = GetEntityByName("RockDeath"..i)
+				if r then r:Remove() end
+			end
+		</script>
+	</trigger>
+
+
+
+
+
+<!--       -->
+	<trigger Name="cinTrapInForestShahts" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Techno01")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			local team = CreateTeam("RobotsShahts",1118,CVector(2001.377, 304.349, 3353.644),{"RobotBobot01","Robot4SMALL"})
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local robot = team:GetVehicle(0)
+			local rID = robot:GetId()
+
+			if Plf and PlfID and rID then
+				Plf:SetCustomLinearVelocity( 2 )
+
+				Fly("robot01_cam01", CINEMATIC_NO_AIM, 0, 4, 1, 0 )
+				FlyLinked( "robot01_cam02", PlfID , 6, 0, 1, rID )
+				StartCinematic()
+			else
+				LOG(" ------------- !------------ ")
+			end
+
+			TActivate("cinTrapInForestShahts_FadeIn")
+			TActivate("cinTrapInForestShahts_cam02")
+			TActivate("cinTrapInForestShahts_End")
+		</script>
+	</trigger>
+	<trigger Name="cinTrapInForestShahts_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomLinearVelocity( 0 )
+			end
+
+
+			CreateNewObject{prototypeName = "boxesprefab",objName = "cubzagr",belong = 1100}
+			getObj("cubzagr"):SetPosition( CVector(2085,301,3312))
+
+			local robot1 = GetEntityByName("RobotsShahts_vehicle_0")
+			local robot2 = GetEntityByName("RobotsShahts_vehicle_1")
+			if robot1 then
+				robot1:SetGamePositionOnGround(CVector(2006.171, 302.968, 3363.748))
+				robot1:SetRotation(Quaternion(0.005, -0.785, 0.009, 0.619))
+				robot1:SetExternalPathByName("robot02_path")
+				robot1:SetForcedMaxTorque(70)
+			end
+			if robot2 then
+				robot2:SetGamePositionOnGround(CVector(1984.386, 303.182, 3359.726))
+				robot2:SetRotation(Quaternion(0.006, -0.726, 0.011, 0.688))
+				robot2:SetExternalPathByName("robot01_path")
+				robot2:SetForcedMaxTorque(50)
+			end
+		</script>
+	</trigger>
+	<trigger Name="cinTrapInForestShahts_cam02" active="0">
+		<event flypath="robot01_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 0201, 0.50 )
+		</script>
+	</trigger>
+	<trigger Name="cinTrapInForestShahts_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local robot1 = GetEntityByName("RobotsShahts_vehicle_0")
+			local robot2 = GetEntityByName("RobotsShahts_vehicle_1")
+
+			if robot1 then
+				robot1:SetGamePositionOnGround(CVector(1945.727, 302.966, 3291.282))
+				robot1:SetRotation(Quaternion(0.009, 0.649, -0.005, 0.761))
+				robot1:PlaceToEndOfPath("robot02_path")
+			end
+
+			if robot2 then
+				robot2:SetGamePositionOnGround(CVector(1944.745, 303.393, 3313.135))
+				robot2:SetRotation(Quaternion(-0.056, 0.762, -0.073, 0.641))
+				robot2:PlaceToEndOfPath("robot01_path")
+			end
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("cinTrapInForestShahts_cam02")
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			SetCameraBehindPlayerVehicle()
+
+			TActivate ("triggerRobotsInForestShahtsDie")
+
+			AllowInfectionZoneGeneration( 0 )
+		</script>
+	</trigger>
+
+
+
+
+
+<!--       -->
+	<trigger Name="cinDialogInForestShahts" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("QuietDialogue02")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 20
+			PlfCoor.z = PlfCoor.z + 20
+
+			Fly("humWork_cam01", CINEMATIC_NO_AIM, 0, 10, 1, 0 )
+			Fly("humWork_cam02", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			Fly("humWork_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("humWork_cam04", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
+			Fly("humWork_cam05", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("humWork_cam06", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
+			Fly("humWork_cam07", CINEMATIC_NO_AIM, 0, 16, 0, 1 )
+			StartCinematic()
+
+			TActivate("cinDialogInForestShahts_FadeIn")
+			TActivate("trHumWork_cam02")
+			TActivate("trHumWork_cam03")
+			TActivate("trHumWork_cam04")
+			TActivate("trHumWork_cam05")
+			TActivate("trHumWork_cam06")
+			TActivate("trHumWork_cam07")
+			TActivate("cinDialogInForestShahts_End")
+		</script>
+	</trigger>
+	<trigger Name="cinDialogInForestShahts_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetGamePositionOnGround(CVector(1875.198, 300.000, 3318.641))
+			Plf:SetRotation(Quaternion(0.005, -0.785, 0.009, 0.619))
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+
+			local r = GetEntityByName ("cubzagr")
+			if r then r:Remove() end
+
+			local r = GetEntityByName ("cubzagr2")
+			if r then r:Remove() end
+
+			local humWork1 = CreateHuman("Human7", 1100, CVector(1804.406, 297.536, 3313.002), "humWork1", "humWork1_path")
+			local humWork2 = CreateHuman("Human7", 1100, CVector(1800.924, 296.948, 3314.728), "humWork2", "humWork2_path")
+			local humWork3 = CreateHuman("Human7", 1100, CVector(1801.528, 296.493, 3318.086), "humWork3", "humWork3_path")
+			local humWork4 = CreateHuman("Human7", 1100, CVector(1827.522, 300.000, 3298.149), "humWork4", "humWork4_path")
+
+			humWork1:SetSkin(0)
+			humWork2:SetSkin(1)
+			humWork3:SetSkin(2)
+			humWork4:SetSkin(1)
+
+			TActivate("humWork1_End")
+		</script>
+	</trigger>
+	<trigger Name = "humWork1_End" active = "0" > --    ,   
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork1" />
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork2" />
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork3" />
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork4" />
+		<script>
+			trigger:IncCount()
+
+			local i = trigger:GetCount()
+			if i >= 4 then
+				trigger:Deactivate()
+			end
+
+			local name = trigger:GetCallObjName()
+			local hum = getObj(name)
+			if hum then
+				local humWorkPos = hum:GetPosition()
+				local humWorkRot = hum:GetRotation()
+				local skin = hum:GetSkin()
+
+				CreateNewDummyObject( "dweller07", "humWork"..i.."End", -1, -1, humWorkPos, humWorkRot, skin)
+				hum:Remove()
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="trHumWork_cam02" active="0">
+		<event flypath="humWork_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+
+			CreateNewDummyObject( "dweller_new_hero", "humPlayer", -1, -1, CVector(1836.770, 300.000, 3315.999), Quaternion(0.000, 0.770, 0.000, -0.638), 0)
+
+			AddCinematicMessage( 0301, 0.25 )
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+	<trigger Name="trHumWork_cam03" active="0">
+		<event flypath="humWork_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_PAIN2)
+			end
+
+			AddCinematicMessage( 0302, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="trHumWork_cam04" active="0">
+		<event flypath="humWork_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND1)
+				humPl:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0303, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="trHumWork_cam05" active="0">
+		<event flypath="humWork_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 0304, 0.25 )
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_PAIN2)
+			end
+		</script>
+	</trigger>
+	<trigger Name="trHumWork_cam06" active="0">
+		<event flypath="humWork_cam06" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND1)
+				humPl:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0305, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="trHumWork_cam07" active="0">
+		<event flypath="humWork_cam07" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 0306, 0.25 )
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND2)
+			end
+
+			TActivate("GoHome") --   ,   
+		</script>
+	</trigger>
+
+	<trigger Name = "humWork_Remove" active = "0" > --    , 
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork1" />
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork2" />
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork3" />
+		<event eventid="GE_TARGET_REACHED" ObjName="humWork4" />
+		<script>
+			trigger:Deactivate()
+
+			if getObj("humWork1") then getObj("humWork1"):Remove() end
+			if getObj("humWork2") then getObj("humWork2"):Remove() end
+			if getObj("humWork3") then getObj("humWork3"):Remove() end
+			if getObj("humWork4") then getObj("humWork4"):Remove() end
+		</script>
+	</trigger>
+
+	<trigger	Name="GoHome"	active="0"> --           
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local trA = getObj("humWork1_End"):IsActivated() --   ,   ,    
+
+--println(trA.."=active")
+			if trA == 0 then
+				for i = 1,4 do
+					local hum = getObj("humWork"..i.."End")
+					if  hum then
+						local poz = hum:GetPosition()
+						local skin = hum:GetSkin()
+						hum:Remove()
+						CreateHuman("Human7", 1100, CVector(poz), "humWork"..i, "humWorkEnd_path")
+						getObj("humWork"..i):SetSkin(skin)
+					end
+				end
+				trigger:Deactivate()
+
+				TActivate("humWork_Remove")
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="cinDialogInForestShahts_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			StopPlayingCustomMusic()
+
+			TActivate("GoHome")
+
+			if getObj("humPlayer") then getObj("humPlayer"):Remove() end
+
+			RestoreAllToleranceStatus()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			SetCameraBehindPlayerVehicle()
+
+			AllowInfectionZoneGeneration( 1 )
+		</script>
+	</trigger>
+
+
+
+
+
+
+
+<!--    -->
+	<trigger Name="cinBeforeFactory" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Bio01")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			Fly("factory_cam01", CINEMATIC_NO_AIM, 0, 8, 1, 0 )
+			Fly("factory_cam02", CINEMATIC_NO_AIM, 0, 12, 0, 1 )
+			StartCinematic()
+
+			TActivate("cinBeforeFactory_FadeIn")
+			TActivate("cinBeforeFactory_cam02")
+			TActivate("cinBeforeFactory_End")
+		</script>
+	</trigger>
+	<trigger Name="cinBeforeFactory_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetGamePositionOnGround(CVector(1332.864, 327.401, 2782.100))
+			Plf:SetRotation(Quaternion(-0.011, -0.965, -0.043, 0.259))
+			Plf:SetExternalPathByName("Factory_path")
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+		</script>
+	</trigger>
+	<trigger Name="cinBeforeFactory_cam02" active="0">
+		<event flypath="factory_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			GetPlayerVehicle():PlaceToEndOfPath("Factory_path")
+
+			AddCinematicMessage( 0401, 0.50 )
+		</script>
+	</trigger>
+	<trigger Name="cinBeforeFactory_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			StopPlayingCustomMusic()
+
+			RestoreAllToleranceStatus()
+
+			GetPlayerVehicle():PlaceToEndOfPath("Factory_path")
+
+			CreateNewObject{prototypeName = "Breakable_Barrel1",objName = "Barrels",belong = 1001}
+			getObj("Barrels"):SetPosition( CVector(getPos("locBarrels1100")) )
+
+			TDeactivate("cinBeforeFactory")
+			TDeactivate("cinBeforeFactory_FadeIn")
+			TDeactivate("cinBeforeFactory_cam02")
+			TActivate ("triggerZaborDestroy")
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+
+<!--    -->
+	<trigger Name="cinBossInFactory" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Techno03")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("g_postEffect NoiseOn")
+			CreateTeam("vehSem",1109,CVector(739.067, 329.182, 892.295),{"r1m3_MerScout"})
+			CreateNewDummyObject( "dweller_new_hero", "humPl", -1, -1, CVector(725.166, 235.292, 957.456), Quaternion(0.000, -0.808, 0.000, 0.590), 0)
+			CreateNewDummyObject( "BUGcargo", "camT", -1, -1, CVector(698.897, 330.625, 935.636), Quaternion(0.000, -0.808, 0.000, 0.590), 0)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local vehSem = GetEntityByName("vehSem_vehicle_0")
+			local vehSemId = vehSem:GetId()
+			local camT = getObj("camT")
+			local camTId = camT:GetId()
+
+			if Plf then
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomLinearVelocity( 0 )
+			end
+
+			if vehSem then
+				vehSem:SetRotation( Quaternion(0.000, -0.354, 0.000, 0.935))
+				vehSem:SetSkin(1)
+			end
+
+			Fly("robot02_cam01", CINEMATIC_NO_AIM, 0, 10, 1, 0 )
+			Fly("robot02_cam02", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("robot02_cam03", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("robot02_cam04", CINEMATIC_NO_AIM, 0, 8, 0, 0 )
+			Fly("robot02_cam05", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			Fly("robot02_cam06", CINEMATIC_NO_AIM, 0, 7, 0, 0 )
+			Fly("robot02_cam07", CINEMATIC_NO_AIM, 0, 12, 0, 0 )
+			FlyLinked("robot02_cam08", camTId, 7, 0, 1, vehSemId)
+			StartCinematic()
+
+			TActivate("cinBossInFactory_FadeIn")
+			TActivate("cinBossInFactory_cam02")
+			TActivate("cinBossInFactory_cam03")
+			TActivate("cinBossInFactory_cam04")
+			TActivate("cinBossInFactory_cam05")
+			TActivate("cinBossInFactory_cam06")
+			TActivate("cinBossInFactory_cam07")
+			TActivate("cinBossInFactory_cam08")
+			TActivate("cinBossInFactory_msg705")
+			TActivate("cinBossInFactory_msg706")
+			TActivate("cinBossInFactory_msg710")
+			TActivate("cinBossInFactory_End")
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddPlayerGunsWithRandomAffix ("vulcan01",1,10,"vulcan01")
+
+			CreateTeam("RobotsTeam01",1118,CVector(637.049, 335.834, 953.525),{"Robot4SMALL","Robot4_2SMALL"})
+			CreateTeam("RobotsTeam02",1118,CVector(564.024, 332.095, 894.732),{"Robot4_2SMALL","Robot4SMALL"})
+
+			AddCinematicMessage( 0701, 0.50 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_cam02" active="0">
+		<event flypath="robot02_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local vehSem = getObj("vehSem_vehicle_0")
+			local humPl = getObj("humPl")
+			if vehSem then
+				vehSem:SetExternalPathByName("Sem_Path01") --  - 
+			end
+			if humPl then
+				humPl:SetPosition(CVector(725.166, 335.292, 957.456))
+				humPl:SetRotation(Quaternion(0.000, -0.808, 0.000, 0.590))
+			end
+
+			AddCinematicMessage( 0702, 2.00 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_cam03" active="0">
+		<event flypath="robot02_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateNewDummyObject( "dweller_sam", "humSem", -1, -1, CVector(724.172, 335.260, 956.578), Quaternion(0.000, 0.409, 0.000, 0.913), 0)
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetPosition(CVector(725.166, 235.292, 957.456))
+				humPl:SetRotation(Quaternion(0.000, -0.808, 0.000, 0.590))
+			end
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_ATTACK1)
+				humSem:SetNextForAnimation(AT_ATTACK1, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0703, 0.50 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_cam04" active="0">
+		<event flypath="robot02_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetPosition(CVector(725.166, 335.292, 957.456))
+				humPl:SetRotation(Quaternion(0.000, -0.808, 0.000, 0.590))
+				humPl:SetNodeAction(AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND2)
+			end
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_STAND1)
+				humSem:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0704, 0.25 )
+			AddCinematicMessage( 0705, 0.25)
+			AddCinematicMessage( 0706, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_msg705" active="0">
+		<event msgid="0705" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_ATTACK1)
+				humSem:SetNextForAnimation(AT_ATTACK1, AT_ATTACK1)
+			end
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND2)
+			end
+
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_msg706" active="0">
+		<event msgid="0706" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetNodeAction(AT_PAIN2)
+				humPl:SetNextForAnimation(AT_PAIN2, AT_STAND1)
+			end
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_STAND1)
+				humSem:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_cam05" active="0">
+		<event flypath="robot02_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_ATTACK1)
+				humSem:SetNextForAnimation(AT_ATTACK1, AT_ATTACK1)
+			end
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND1)
+				humPl:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0707, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_cam06" active="0">
+		<event flypath="robot02_cam06" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetNodeAction(AT_PAIN2)
+				humPl:SetNextForAnimation(AT_PAIN2, AT_STAND1)
+			end
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_STAND1)
+				humSem:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0708, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_cam07" active="0">
+		<event flypath="robot02_cam07" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_ATTACK1)
+				humSem:SetNextForAnimation(AT_ATTACK1, AT_ATTACK2)
+				humSem:SetNextForAnimation(AT_ATTACK2, AT_ATTACK1)
+			end
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND1)
+				humPl:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0709, 0.25 )
+			AddCinematicMessage( 0710, 0.20 )
+		</script>
+	</trigger>
+		<trigger Name="cinBossInFactory_msg710" active="0">
+		<event msgid="0710" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetNodeAction(AT_PAIN2)
+				humPl:SetNextForAnimation(AT_PAIN2, AT_STAND1)
+			end
+
+			local humSem = getObj("humSem")
+			if humSem then
+				humSem:SetNodeAction(AT_STAND1)
+				humSem:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="cinBossInFactory_cam08" active="0">
+		<event flypath="robot02_cam08" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			getObj("humPl"):Remove()
+
+			SetTolerance(1118, 1109, RS_ENEMY)
+
+			local humPl2 = CreateHuman("human_new_hero",1100, CVector(725.166, 335.292, 957.456),"humPl2", "humPl2_path")
+			if humPl2 then humPl2:SetRotation(Quaternion(0.000, -0.808, 0.000, 0.590)) end
+
+			local vehSem = getObj("vehSem_vehicle_0")
+			local vehPlayer = GetPlayerVehicle()
+			local robot1 = GetEntityByName("RobotsTeam02_vehicle_0")
+			local robot2 = GetEntityByName("RobotsTeam02_vehicle_1")
+			local humSem = getObj("humSem")
+
+			if humSem then humSem:Remove() end
+
+			if vehSem then
+				vehSem:SetExternalPathByName("Sem_Path02") --   
+				vehSem:setImmortalMode(1)
+			end
+
+			if robot1 then   --   
+				robot1:SetGamePositionOnGround(CVector(556.668, 331.036, 911.768))
+				robot1:SetRotation(Quaternion(-0.016, -0.723, -0.053, -0.688))
+				robot1:SetExternalPathByName("robot02_path01")
+			end
+			if robot2 then
+				robot2:SetGamePositionOnGround(CVector(555.551, 331.918, 896.249))
+				robot2:SetRotation(Quaternion(-0.001, -0.657, -0.012, -0.753))
+				robot2:SetExternalPathByName("robot02_path02")
+			end
+
+			TActivate("cinBossInFactory_SemDie")
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_SemDie" active="0">
+		<event timeout="4" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local vehSem = getObj("vehSem_vehicle_0")
+			if vehSem then
+				vehSem:setImmortalMode(0)
+				vehSem:AddModifier("hp", "-1000") --  ()
+			end
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactory_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			local vehPlayer = GetPlayerVehicle()
+
+			local humPl = getObj("humPl")
+			if humPl then humPl:Remove() end
+
+			local humPl2 = getObj("humPl2")
+			if humPl2 then humPl2:Remove() end
+
+			local humSem = getObj("humSem")
+			if humSem then humSem:Remove() end
+
+			local camT = getObj("camT")
+			if camT then camT:Remove() end
+
+			local vehSem = getObj("vehSem_vehicle_0")
+			if vehSem then
+				vehSem:SetExternalPathByName("Sem_Path02")
+				vehSem:PlaceToEndOfPath("Sem_Path02")
+				vehSem:setImmortalMode(0)
+				vehSem:AddModifier("hp", "-1000")
+			end
+
+			local robot1 = getObj("RobotsTeam01")
+			local robot2 = getObj("RobotsTeam02")
+			if robot1 == nil and robot2 == nil  then
+				CreateTeam("RobotsTeam01",1118,CVector(637.049, 335.834, 953.525),{"RobotBobot01","RobotBobot01"})
+				CreateTeam("RobotsTeam02",1118,CVector(564.024, 332.095, 894.732),{"RobotBobot01","RobotBobot01"})
+			end
+
+			local boss02 = GetEntityByName("Boss2")
+			local boss02ID = boss02:GetId()
+			if boss02 then
+				boss02:NextState()
+				boss02:SetJustMovedContainerToBlock()
+
+				ShowBossIndicator(boss02ID)
+				SetCameraDirectionToObj(boss02ID)
+			end
+
+			CreateNewDummyObject( "concrete_tube1", "bosszagr", -1, -1, CVector(814,327,972), Quaternion(0, 0, 0, 1), 0)
+
+			TDeactivate("cinBossInFactory_FadeIn")
+			TDeactivate("cinBossInFactory_cam02")
+			TDeactivate("cinBossInFactory_cam03")
+			TDeactivate("cinBossInFactory_cam04")
+			TDeactivate("cinBossInFactory_cam05")
+			TDeactivate("cinBossInFactory_cam06")
+			TDeactivate("cinBossInFactory_cam07")
+			TDeactivate("cinBossInFactory_cam08")
+			TDeactivate("cinBossInFactory_msg705")
+			TDeactivate("cinBossInFactory_msg706")
+			TActivate ("triggerBossInFactoryDie")
+
+			PlayCustomMusic("Battle01")
+
+			AllowInfectionZoneGeneration( 0 )
+
+			local Plf = GetPlayerVehicle()
+			Plf:AddModifier( "hp", "+ 1000000" )
+			local cab = Plf:GetCabin()
+			if cab then cab:AddModifier( "dur", "+ 1000000" ) end	
+			local basket = Plf:GetBasket()
+			if basket then basket:AddModifier( "dur", "+ 1000000" ) end
+		</script>
+	</trigger>
+
+
+
+
+<!--    -->
+	<trigger Name="cinBossInFactoryDie" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Sadness1")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			local r = GetEntityByName ("bosszagr")
+			if r then r:Remove() end
+
+			local r = GetEntityByName ("zaval")
+			if r then r:Remove() end
+
+			local r = GetEntityByName ("boss_vagon")
+			if r then r:Remove() end
+
+			Fly("BossDie_cam01", CINEMATIC_NO_AIM, 0, 5, 1, 0 )
+			Fly("BossDie_cam02", CINEMATIC_NO_AIM, 0, 15, 0, 0 )
+			Fly("BossDie_cam03", CINEMATIC_NO_AIM, 0, 17, 0, 0 )
+			Fly("BossDie_cam04", CINEMATIC_NO_AIM, 0, 12, 0, 1 )
+			StartCinematic()
+
+			TActivate("cinBossInFactoryDie_FadeIn")
+			TActivate("cinBossInFactoryDie_cam02")
+			TActivate("cinBossInFactoryDie_cam03")
+			TActivate("cinBossInFactoryDie_cam04")
+			TActivate("cinBossInFactoryDie_End")
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactoryDie_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("RobotsTeam03",1118,CVector(397.005, 324.809, 939.418),{"Robot4SMALL","Robot4_2SMALL"})
+
+			local Plf = GetPlayerVehicle()
+			local robot1 = getObj("RobotsTeam03_vehicle_0")
+			local robot2 = getObj("RobotsTeam03_vehicle_1")
+
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetGamePositionOnGround(CVector(525.389, 329.275, 876.658))
+				Plf:SetRotation(Quaternion(0.033, 0.702, -0.064, -0.709))
+				Plf:SetCruisingSpeed(60)
+				Plf:SetExternalPathByName("Player_path02")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			if robot1 and robot2 then
+				robot1:SetGamePositionOnGround(CVector(397.005, 324.809, 939.418))
+				robot1:SetRotation(Quaternion(0.000, 0.981, 0.000, 0.195))
+				robot2:SetGamePositionOnGround(CVector(408.615, 324.993, 921.443))
+				robot2:SetRotation(Quaternion(0.000, 0.981, 0.000, 0.193))
+				robot1:SetExternalPathByName("robot03_path01")
+			end
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactoryDie_cam02" active="0">
+		<event flypath="BossDie_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateNewDummyObject( "dweller_new_hero", "humPl", -1, -1, CVector(466.623, 327.161, 881.918), Quaternion(0.000, -0.956, 0.000, 0.292), 0)
+
+			local robot2 = getObj("RobotsTeam03_vehicle_1")
+			local Plf = GetPlayerVehicle()
+
+			if robot2 then robot2:SetExternalPathByName("robot03_path02") end
+
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:PlaceToEndOfPath("Player_path02")
+				Plf:SetGamePositionOnGround(CVector(476.086, 350, 879.310))
+				Plf:SetRotation(Quaternion(0.033, 0.702, -0.064, -0.709))
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetNodeAction(AT_MOVE2)
+				humPl:SetNextForAnimation(AT_MOVE2, AT_STAND1)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0501, 3 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactoryDie_cam03" active="0">
+		<event flypath="BossDie_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Death01")
+
+			local humPl = getObj("humPl")
+			if humPl then
+				humPl:SetRotation(Quaternion(0.000, -0.595, 0.000, 0.804))
+				humPl:SetNodeAction(AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND1)
+			end
+
+			AddCinematicMessage( 0502, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactoryDie_cam04" active="0">
+		<event flypath="BossDie_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 0503, 1 )
+		</script>
+	</trigger>
+	<trigger Name="cinBossInFactoryDie_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			StopPlayingCustomMusic()
+
+			RestoreAllToleranceStatus()
+
+			local humPl = getObj("humPl")
+			if humPl then humPl:Remove() end
+
+			local robot1 = getObj("RobotsTeam03_vehicle_0")
+			local robot2 = getObj("RobotsTeam03_vehicle_1")
+			if robot1 then robot1:Remove() end
+			if robot2 then robot2:Remove() end
+
+			TDeactivate("cinBossInFactoryDie")
+			TDeactivate("cinBossInFactoryDie_cam02")
+			TDeactivate("cinBossInFactoryDie_cam03")
+			TDeactivate("cinBossInFactoryDie_cam04")
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			AllowInfectionZoneGeneration( 1 )
+		</script>
+	</trigger>
+
+
+
+
+<!--     -->
+	<trigger Name="cinBackAfterEmissar" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Passage03")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			RuleConsole("cinematic_spring_coeff 10.7")
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+
+			FlyLinked( "BrokenBridge_cam01", PlfID , 6, 1, 0, PlfID )
+			FlyLinked( "BrokenBridge_cam02", PlfID , 4, 0, 0, PlfID )
+			Fly("BrokenBridge_cam03", CINEMATIC_NO_AIM, 0, 5, 0, 0 )
+			Fly("BrokenBridge_cam04", CINEMATIC_NO_AIM, 0, 6, 0, 0 )
+			Fly("BrokenBridge_cam05", CINEMATIC_NO_AIM, 0, 9, 0, 0 )
+			Fly("BrokenBridge_cam06", CINEMATIC_NO_AIM, 0, 11, 0, 0 )
+			Fly("BrokenBridge_cam07", CINEMATIC_NO_AIM, 0, 4, 0, 0 )
+			Fly("BrokenBridge_cam08", CINEMATIC_NO_AIM, 0, 17, 0, 0 )
+			Fly("BrokenBridge_cam09", CINEMATIC_NO_AIM, 0, 18, 0, 0 )
+			Fly("BrokenBridge_cam10", CINEMATIC_NO_AIM, 0, 11, 0, 1 )
+			StartCinematic()
+
+			TActivate("cinBackAfterEmissar_FadeIn")
+			TActivate("trBrokenBridge_cam02")
+			TActivate("trBrokenBridge_cam03")
+			TActivate("trBrokenBridge_cam04")
+			TActivate("trBrokenBridge_cam05")
+			TActivate("trBrokenBridge_cam06")
+			TActivate("trBrokenBridge_cam07")
+			TActivate("trBrokenBridge_cam08")
+			TActivate("trBrokenBridge_cam09")
+			TActivate("trBrokenBridge_cam10")
+			TActivate("trBrokenBridge_msg0611")
+			TActivate("trBrokenBridge_msg0612")
+			TActivate("trBrokenBridge_msg0603")
+			TActivate("cinBackAfterEmissar_End")
+		</script>
+	</trigger>
+	<trigger Name="cinBackAfterEmissar_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			local Plf = GetPlayerVehicle()
+
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround(CVector(3047.106, 352.189, 546.725))
+				Plf:SetRotation(Quaternion(-0.007, -0.868, 0.008, -0.497))
+				Plf:SetCustomLinearVelocity( 10 )
+				Plf:SetThrottle( 1 )
+				Plf:SetExternalPathByName("BrokenBridge_path01")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam02" active="0">
+		<event flypath="BrokenBridge_cam02" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 ) --     
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam03" active="0">
+		<event flypath="BrokenBridge_cam03" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			CreateNewDummyObject( "dweller_new_hero", "humPlayer", -1, -1, CVector(3326.000, 358.180, 380.000), Quaternion(0.004, -0.878, -0.011, -0.478), 0)
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:PlaceToEndOfPath("BrokenBridge_path01")
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND2, AT_STAND2)
+				humPl:SetNextForAnimation(AT_STAND1, AT_STAND1)
+			end
+
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam04" active="0">
+		<event flypath="BrokenBridge_cam04" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("IntenseDialogue01")
+
+			AddCinematicMessage( 0601, 1.00 )
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam05" active="0">
+		<event flypath="BrokenBridge_cam05" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_DEATH1)
+				humPl:SetNextForAnimation(AT_DEATH1, AT_DEATH1)
+				humPl:SetNextForAnimation(AT_DEATH2, AT_DEATH2)
+			end
+
+			AddCinematicMessage( 0602, 0.25 )
+			AddCinematicMessage( 0603, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_msg0603" active="0">
+		<event msgid="0603" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_DEATH2)
+				humPl:SetNextForAnimation(AT_DEATH2, AT_DEATH2)
+			end
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam06" active="0">
+		<event flypath="BrokenBridge_cam06" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_DEATH1)
+				humPl:SetNextForAnimation(AT_DEATH1, AT_DEATH1)
+				humPl:SetNextForAnimation(AT_DEATH2, AT_DEATH2)
+			end
+
+			AddCinematicMessage( 0604, 0.25 )
+			AddCinematicMessage( 0605, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam07" active="0">
+		<event flypath="BrokenBridge_cam07" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_DEATH1)
+				humPl:SetNextForAnimation(AT_DEATH1, AT_DEATH2)
+			end
+
+			AddCinematicMessage( 0606, 0.25 )
+		</script>
+	</trigger>
+
+	<trigger Name="trBrokenBridge_cam08" active="0">
+		<event flypath="BrokenBridge_cam08" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 0607, 0.25 )
+			AddCinematicMessage( 0608, 0.25 )
+			AddCinematicMessage( 0609, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam09" active="0">
+		<event flypath="BrokenBridge_cam09" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_DEATH2)
+				humPl:SetNextForAnimation(AT_DEATH2, AT_DEATH2)
+				humPl:SetNextForAnimation(AT_DEATH1, AT_DEATH1)
+			end
+
+			AddCinematicMessage( 0610, 0.25 )
+			AddCinematicMessage( 0611, 0.25 )
+			AddCinematicMessage( 0612, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_msg0611" active="0">
+		<event msgid="0611" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_DEATH1)
+				humPl:SetNextForAnimation(AT_DEATH1, AT_DEATH1)
+				humPl:SetNextForAnimation(AT_DEATH1, AT_DEATH2)
+			end
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_msg0612" active="0">
+		<event msgid="0612" eventid="GE_START_CINEMATIC_MSG" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = getObj("humPlayer")
+			if humPl then
+				humPl:SetNodeAction(AT_DEATH2)
+				humPl:SetNextForAnimation(AT_DEATH2, AT_DEATH2)
+				humPl:SetNextForAnimation(AT_DEATH2, AT_DEATH1)
+			end
+		</script>
+	</trigger>
+	<trigger Name="trBrokenBridge_cam10" active="0">
+		<event flypath="BrokenBridge_cam10" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			local humPl = getObj("humPlayer")
+
+			if humPl then humPl:Remove() end
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetGamePositionOnGround(CVector(3320.695, 358.954, 378.063))
+				Plf:SetRotation(Quaternion(0.011, -0.485, 0.006, 0.874))
+				Plf:SetExternalPathByName("BrokenBridge_path02")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 0613, 0.25 )
+		</script>
+	</trigger>
+	<trigger Name="cinBackAfterEmissar_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			StopPlayingCustomMusic()
+
+			local Plf = GetPlayerVehicle()
+			local humPl = getObj("humPlayer")
+
+			if Plf then
+				Plf:SetExternalPathByName("BrokenBridge_path02")
+				Plf:PlaceToEndOfPath("BrokenBridge_path02")
+			end
+
+			if humPl then humPl:Remove() end
+
+			RestoreAllToleranceStatus()
+
+			RuleConsole("g_postEffect NoiseOff")
+			RuleConsole("cinematic_spring_coeff 0.7")
+
+			TDeactivate("cinBackAfterEmissar_FadeIn")
+			TDeactivate("trBrokenBridge_cam02")
+			TDeactivate("trBrokenBridge_cam03")
+			TDeactivate("trBrokenBridge_cam04")
+			TDeactivate("trBrokenBridge_cam05")
+			TDeactivate("trBrokenBridge_cam06")
+			TDeactivate("trBrokenBridge_cam07")
+			TDeactivate("trBrokenBridge_cam08")
+			TDeactivate("trBrokenBridge_cam09")
+			TDeactivate("trBrokenBridge_cam10")
+			TDeactivate("trBrokenBridge_msg0611")
+			TDeactivate("trBrokenBridge_msg0612")
+			TDeactivate("trBrokenBridge_msg0603")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+
+<!--    -->
+	<trigger Name="cinSeeSigns" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			PlayCustomMusic("Bio02")
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly("ZnakPole_cam0", CINEMATIC_NO_AIM, 0, 10, 1, 1 )
+			StartCinematic()
+
+			AddCinematicMessage( 0801, 0.50 )
+
+			TActivate("cinSeeSigns_FadeIn")
+			TActivate("cinSeeSigns_End")
+		</script>
+	</trigger>
+	<trigger Name="cinSeeSigns_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+		</script>
+	</trigger>
+	<trigger Name="cinSeeSigns_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			StopPlayingCustomMusic()
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+
+<!--     -->
+	<trigger Name="cinYouWin" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 20
+			PlfCoor.z = PlfCoor.z + 20
+
+			FlyAround(1, 0, 18, 3, PlfCoor, PlfID, 1, 1)
+			StartCinematic()
+
+			AddCinematicMessage( 0901, 0.50 )
+
+			TActivate("cinYouWin_FadeIn")
+			TActivate("cinYouWin_End")
+		</script>
+	</trigger>
+	<trigger Name="cinYouWin_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+		</script>
+	</trigger>
+	<trigger Name="cinYouWin_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+
+<!--     -->
+	<trigger Name="cinYouLose" active="0">
+		<event timeout="0" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			local Plf = GetPlayerVehicle()
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 20
+			PlfCoor.z = PlfCoor.z + 20
+
+			FlyAround(3, 0.3, 25, 3, PlfCoor, PlfID, 1, 1)
+			StartCinematic()
+
+			AddCinematicMessage( 0902, 0.50 )
+
+			TActivate("cinYouLose_FadeIn")
+			TActivate("cinYouLose_End")
+		</script>
+	</trigger>
+	<trigger Name="cinYouLose_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomControlEnabled( false )
+		</script>
+	</trigger>
+	<trigger Name="cinYouLose_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+</triggers>

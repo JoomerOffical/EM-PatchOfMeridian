@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<ObjectNames>
+	<Object	Name = "ToR6M1"						FullName = "Дорога в Ле Канаду" />
+	<Object	Name = "ToR5M2"						FullName = "Дорога в Нефтяные леса" />
+
+	<Object	Name = "PetrolStationTown1"				FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown1_Workshop"		FullName = "Мастерская" />
+	<Object	Name = "PetrolStationTown2"				FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown2_Workshop"		FullName = "Мастерская" />
+
+	<Object	Name = "TheTownBigHead_enter"				FullName = "Большая голова" />
+	<Object	Name = "TheApple_enter"					FullName = "Малое яблоко" />
+	<Object	Name = "TheKonneks_enter"				FullName = "Коннектск" />
+	<Object	Name = "TheTownMichikar_enter"			FullName = "Мичикар" />
+	<Object	Name = "ThePensilvansk_enter"				FullName = "Пенсильванск" />
+	<Object	Name = "r5m1_RaceVillage_enter"				FullName = "Гоночный лагерь" />
+
+	<Object	Name = "TownBigHead_enter"				FullName = "Большая голова" />
+	<Object	Name = "r5m1_Konneks4110_enter"			FullName = "Коннектск" />
+
+	<Object	Name = "TheTownBigHead"					FullName = "Большая голова" />
+	<Object	Name = "TheTownBigHead_Bar"				FullName = "Бар ''Независимый''" />
+	<Object	Name = "TheTownBigHead_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "TheTownBigHead_Shop"				FullName = "Магазин" />
+	<Object	Name = "TheTownBigHead_Bar_Barman"			FullName = "Бармен Абрахам" />
+	<Object	Name = "TheTownBigHead_Bar_LotteryMan_NPC"	FullName = "Игрок Алекс" />
+
+	<Object	Name = "TheKonneks"					FullName = "Коннектск" />
+	<Object	Name = "TheKonneks_Bar"					FullName = "Бар ''Хилл''" />
+	<Object	Name = "TheKonneks_Workshop"				FullName = "Мастерская" />
+	<Object	Name = "TheKonneks_Shop"				FullName = "Магазин" />
+	<Object	Name = "TheKonneks_Bar_Barman"			FullName = "Бармен Брюс" />
+	<Object	Name = "TheKonneks_Bar_ExGonchik_NPC"		FullName = "Грубиян Си Джей" />
+	<Object	Name = "TheKonneks_Bar_Posilka_NPC"			FullName = "Посетитель Билли Боб" />
+
+	<Object	Name = "r5m1_RaceVillage"					FullName = "Гоночный лагерь" />
+	<Object	Name = "r5m1_RaceVillage_Bar"					FullName = "Столовая ''Колесо''" />
+	<Object	Name = "r5m1_RaceVillage_Workshop"				FullName = "Мастерская" />
+	<Object	Name = "r5m1_RaceVillage_Shop"				FullName = "Магазин" />
+	<Object	Name = "r5m1_RaceVillage_Bar_Barman"			FullName = "Повар Джеимс" />
+
+	<Object	Name = "TheTownMichikar"				FullName = "Мичикар" />
+	<Object	Name = "TheTownMichikar_Bar"				FullName = "Бар ''Ганз''" />
+	<Object	Name = "TheTownMichikar_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "TheTownMichikar_Shop"				FullName = "Магазин" />
+	<Object	Name = "TheTownMichikar_Bar_Barman"			FullName = "Бармен Вуди" />
+	<Object	Name = "TheTownMichikar_MisterEko_NPC"		FullName = "Здоровяк Эко" />
+	<Object	Name = "TheTownMichikar_DirectorTrack_NPC"		FullName = "Директор Перси" />
+
+	<Object	Name = "ThePensilvansk"					FullName = "Пенсильванск" />
+	<Object	Name = "ThePensilvansk_Bar"				FullName = "Бар ''Кровавый''" />
+	<Object	Name = "ThePensilvansk_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "ThePensilvansk_Shop"				FullName = "Магазин" />
+	<Object	Name = "ThePensilvansk_Bar_Barman"			FullName = "Бармен Конрад" />
+	<Object	Name = "ThePensilvansk_Bar_LotteryMan_NPC"	FullName = "Игрок Джей" />
+	<Object	Name = "ThePensilvansk_Bratello_NPC"		FullName = "Нелегал Слевин" />
+	<Object	Name = "ThePensilvansk_KillContra_NPC"		FullName = "Шериф Клинт" />
+
+	<Object	Name = "TheApple"						FullName = "Малое яблоко" />
+	<Object	Name = "TheApple_Bar"					FullName = "Бар ''Хилл''" />
+	<Object	Name = "TheApple_Workshop"				FullName = "Мастерская" />
+	<Object	Name = "TheApple_Shop"					FullName = "Магазин" />
+	<Object	Name = "TheApple_Bar_Barman"				FullName = "Бармен Пако" />
+	<Object	Name = "TheApple_Bar_Ralf_NPC"			FullName = "Вождь Янки" />
+	<Object	Name = "TheApple_Bar_TreasureMan_NPC"		FullName = "Авантюрист Нодин" />
+	<Object	Name = "TheApple_BuyerNarkota_NPC"			FullName = "Пройдоха Керси" />
+
+	<Object	Name = "DynQEnemy01"					FullName = "Гарольд" />
+	<Object	Name = "DynQEnemy02"					FullName = "Сизый Билл" />
+	<Object	Name = "DynQEnemy03"					FullName = "Гудвин" />
+	<Object	Name = "DynQEnemy04"					FullName = "Жорж Добробуш" />
+	<Object	Name = "DynQEnemy05"					FullName = "Ленивый Хьюго" />
+	<Object	Name = "DynQEnemy06"					FullName = "Кровавый Грэг" />
+	<Object	Name = "DynQEnemy07"					FullName = "Николас" />
+	<Object	Name = "DynQEnemy08"					FullName = "Грязный Том" />
+	<Object	Name = "DynQEnemy09"					FullName = "Джон С. Смит" />
+	<Object	Name = "DynQEnemy10"					FullName = "Клинт Уэйн" />
+	<Object	Name = "DynQEnemy11"					FullName = "Джон Иствуд" />
+	<Object	Name = "DynQEnemy12"					FullName = "Макс Гибсон" />
+	<Object	Name = "DynQEnemy13"					FullName = "Чистый Эл" />
+	<Object	Name = "DynQEnemy14"					FullName = "Однорукий Соер" />
+	<Object	Name = "DynQEnemy15"					FullName = "Мошенник Чарли" />
+	<Object	Name = "DynQEnemy16"					FullName = "Бор Рис" />
+	<Object	Name = "DynQEnemy17"					FullName = "Ловкач Бэн" />
+	<Object	Name = "DynQEnemy18"					FullName = "Шулер Смит" />
+	<Object	Name = "DynQEnemy19"					FullName = "Картежник Питер" />
+	<Object	Name = "DynQEnemy20"					FullName = "Стрелок Жан" />
+	<Object	Name = "DynQEnemy21"					FullName = "Одноглазый Джонни" />
+	<Object	Name = "DynQEnemy22"					FullName = "Маньяк Энтони" />
+	<Object	Name = "DynQEnemy23"					FullName = "Большой Вилли" />
+	<Object	Name = "DynQEnemy24"					FullName = "Билл" />
+	<Object	Name = "DynQEnemy25"					FullName = "Вспыльчивый Майк" />
+</ObjectNames>

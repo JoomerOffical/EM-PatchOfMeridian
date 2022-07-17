@@ -1,0 +1,4591 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<DynamicScene
+	LastId="338">
+	<TargetNamesForDestroy
+		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
+
+	<AllowedWaresForDrop
+		Prototypes="fuel scrap_metal machinery info_stone electronics" />
+
+	<Object
+		Name="Player1"
+		Belong="1100"
+		Prototype="player">
+		<Object
+			Name="MyCar"
+			Belong="1100"
+			Prototype="Belaz01"
+			Pos="3511.692 364.047 1219.632"
+			Rot="-0.024 0.000 -0.011 1.000"
+			Skin="36">
+			<Parts />
+
+			<Repository />
+		</Object>
+
+		<Object
+			Belong="1100"
+			Prototype="radioManager" />
+	</Object>
+
+	<Object
+		Name="bridge_metal_1"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="1895.546 319.180 2467.608"
+		Rot="0.000 0.231 0.000 0.973"
+		Mass="2.438"
+		NodeScale="1.346"
+		ModelName="bridge_metal" />
+
+	<Object
+		Name="bridge_metal_2"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="2578.643 326.757 2092.542"
+		Rot="0.000 0.255 0.000 0.967"
+		Mass="3.461"
+		NodeScale="1.513"
+		ModelName="bridge_metal" />
+
+	<Object
+		Name="platform11"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="998.812 289.000 2985.592"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform12"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="984.621 289.000 2985.642"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform13"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="984.598 289.000 3000.126"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform14"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="998.788 289.000 3000.076"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform21"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="842.262 289.000 3086.207"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform22"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="842.205 289.000 3071.966"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform23"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="856.491 289.000 3086.228"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform24"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="856.460 289.000 3071.989"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform31"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="756.835 289.000 3072.244"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform32"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="771.026 289.000 3072.154"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform33"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="756.863 289.000 3058.027"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform34"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="771.060 289.000 3057.978"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="platform4"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="956.257 289.000 3085.850"
+		ModelName="oracle_platform_01" />
+
+	<Object
+		Name="PLOTNOT"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="577.375 290.000 562.237"
+		Rot="0.000 0.725 0.000 0.688"
+		ModelName="ferry_01" />
+
+	<Object
+		Name="r6m1_Vaypeg"
+		Belong="1114"
+		Prototype="r6m2_Vaypeg_prototype"
+		Pos="1481.500 378.839 807.452"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravanLocations=""
+		CaravanPaths=""
+		TreasureLocations="DynKlad_loc_6 DynKlad_loc_8"
+		ReachLocations="r6m1_Tander r6m1_Gradofaks r6m1_Bey r6m1_Kanata"
+		DestroyLocations="InfectionZoneZ18"
+		IsSellingDrugs="0"
+		IsBuyingDrugs="0">
+		<Object
+			Name="r6m1_Vaypeg_Shop"
+			Belong="1114"
+			Prototype="shop">
+			<GunsAndGadgets />
+		</Object>
+
+		<Object
+			Name="r6m1_Vaypeg_Bar"
+			Belong="1114"
+			Prototype="bar">
+			<Object
+				Name="r6m1_Vaypeg_Bar_Barman"
+				Belong="1114"
+				Prototype="NPC"
+				ModelName="r3_man"
+				skin="2"
+				cfg="3067"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+
+			<Object
+				Name="r6m1_Vaypeg_Bar_Gonshik1_NPC"
+				Belong="1114"
+				Prototype="NPC"
+				ModelName="r3_man"
+				cfg="1905"
+				helloReplyNames="r6m2_Gonka_1_N01"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="r6m1_Vaypeg_Workshop"
+			Belong="1114"
+			Prototype="workshop">
+			<CabinsAndBaskets>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="uralCab03" />
+
+				<Item
+					PosX="5"
+					PosY="0"
+					Flags="16"
+					Prototype="uralCab04" />
+
+				<Item
+					PosX="0"
+					PosY="5"
+					Flags="16"
+					Prototype="uralCab05" />
+
+				<Item
+					PosX="5"
+					PosY="5"
+					Flags="16"
+					Prototype="uralCargo03" />
+
+				<Item
+					PosX="0"
+					PosY="10"
+					Flags="16"
+					Prototype="uralCargo04" />
+
+				<Item
+					PosX="5"
+					PosY="10"
+					Flags="16"
+					Prototype="uralCargo05" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="belazCab04" />
+
+				<Item
+					PosX="5"
+					PosY="15"
+					Flags="16"
+					Prototype="belazCab04" />
+
+				<Item
+					PosX="0"
+					PosY="20"
+					Flags="16"
+					Prototype="belazCab05" />
+
+				<Item
+					PosX="5"
+					PosY="20"
+					Flags="16"
+					Prototype="belazCargo04" />
+
+				<Item
+					PosX="0"
+					PosY="25"
+					Flags="16"
+					Prototype="belazCargo04" />
+
+				<Item
+					PosX="5"
+					PosY="25"
+					Flags="16"
+					Prototype="belazCargo05" />
+
+				<Item
+					PosX="0"
+					PosY="30"
+					Flags="16"
+					Prototype="mirotvorecCab01" />
+
+				<Item
+					PosX="5"
+					PosY="30"
+					Flags="16"
+					Prototype="mirotvorecCab02" />
+
+				<Item
+					PosX="0"
+					PosY="35"
+					Flags="16"
+					Prototype="mirotvorecCab02" />
+
+				<Item
+					PosX="5"
+					PosY="35"
+					Flags="16"
+					Prototype="mirotvorecCargo01" />
+
+				<Item
+					PosX="0"
+					PosY="40"
+					Flags="16"
+					Prototype="mirotvorecCargo02" />
+
+				<Item
+					PosX="5"
+					PosY="40"
+					Flags="16"
+					Prototype="mirotvorecCargo02" />
+			</CabinsAndBaskets>
+
+			<Vehicles>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="UralForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="uralCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="uralCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="uralChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="BelazForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="belazCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="belazCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="belazChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="2"
+					PosY="0"
+					Flags="16"
+					Prototype="MirotvorecForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+			</Vehicles>
+		</Object>
+
+		<Object
+			Name="r6m1_Vaypeg0_deploy"
+			Belong="1114"
+			Prototype="location"
+			Pos="1547.908 366.042 746.279"
+			Radius="18.959" />
+
+		<Object
+			Name="r6m1_Vaypeg0_enter"
+			Belong="1114"
+			Prototype="location"
+			Pos="1396.815 390.926 813.119"
+			Radius="85.344" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+
+			<DefendTeam
+				present="yes"
+				Name="r6m1_Vaypeg_DefendTeam"
+				Belong="1114"
+				Prototype="settlementTeam">
+				<Formation
+					Belong="1114"
+					Prototype="caravanFormation"
+					DistBetweenVehicles="30.000"
+					Pos="0.000 0.000 0.000"
+					Direction="0.000 0.000 1.000"
+					LinearVelocity="100.000"
+					AngularVelocity="0.500"
+					NumPathPoint="-1" />
+			</DefendTeam>
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="r6m1_Tander"
+		Belong="1114"
+		Prototype="r6m2_Tander_prototype"
+		Pos="3570.462 402.416 3427.901"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravanLocations=""
+		CaravanPaths=""
+		TreasureLocations="DynKlad_loc_3 DynKlad_loc_4"
+		ReachLocations="r6m1_Vaypeg r6m1_Gradofaks r6m1_Bey r6m1_Kanata"
+		DestroyLocations="InfectionZoneZ16"
+		IsSellingDrugs="1"
+		IsBuyingDrugs="0">
+		<Object
+			Name="r6m1_Tander_Shop"
+			Belong="1114"
+			Prototype="shop">
+			<GunsAndGadgets />
+		</Object>
+
+		<Object
+			Name="r6m1_Tander_Bar"
+			Belong="1114"
+			Prototype="bar">
+			<Object
+				Name="r6m1_Tander_Bar_Barman"
+				Belong="1114"
+				Prototype="NPC"
+				ModelName="r3_man"
+				skin="2"
+				cfg="2025"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+
+			<Object
+				Name="r6m2_Tander_Bar_SearchMan_NPC"
+				Belong="1114"
+				Prototype="NPC"
+				ModelName="r3_man"
+				skin="2"
+				cfg="1530"
+				helloReplyNames="r6m2_SearchRobot_1_N01"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="r6m1_Tander_Workshop"
+			Belong="1114"
+			Prototype="workshop">
+			<CabinsAndBaskets>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="belazCab04" />
+
+				<Item
+					PosX="5"
+					PosY="0"
+					Flags="16"
+					Prototype="belazCab04" />
+
+				<Item
+					PosX="0"
+					PosY="5"
+					Flags="16"
+					Prototype="belazCab05" />
+
+				<Item
+					PosX="5"
+					PosY="5"
+					Flags="16"
+					Prototype="belazCargo04" />
+
+				<Item
+					PosX="0"
+					PosY="10"
+					Flags="16"
+					Prototype="belazCargo04" />
+
+				<Item
+					PosX="5"
+					PosY="10"
+					Flags="16"
+					Prototype="belazCargo05" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="mirotvorecCab03" />
+
+				<Item
+					PosX="5"
+					PosY="15"
+					Flags="16"
+					Prototype="mirotvorecCab04" />
+
+				<Item
+					PosX="0"
+					PosY="20"
+					Flags="16"
+					Prototype="mirotvorecCab05" />
+
+				<Item
+					PosX="5"
+					PosY="20"
+					Flags="16"
+					Prototype="mirotvorecCargo03" />
+
+				<Item
+					PosX="0"
+					PosY="25"
+					Flags="16"
+					Prototype="mirotvorecCargo04" />
+
+				<Item
+					PosX="5"
+					PosY="25"
+					Flags="16"
+					Prototype="mirotvorecCargo05" />
+			</CabinsAndBaskets>
+
+			<Vehicles>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="MolokovozForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="molokovozCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="molokovozCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="molokovozChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="UralForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="uralCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="uralCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="uralChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="2"
+					PosY="0"
+					Flags="16"
+					Prototype="BelazForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="belazCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="belazCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="belazChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+			</Vehicles>
+		</Object>
+
+		<Object
+			Name="r6m1_Tander_deploy"
+			Belong="1114"
+			Prototype="location"
+			Pos="3542.250 371.861 3342.160"
+			Radius="18.959" />
+
+		<Object
+			Name="r6m1_Tander_enter"
+			Belong="1114"
+			Prototype="location"
+			Pos="3687.119 418.100 3449.923"
+			Radius="50.000" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+
+			<DefendTeam
+				present="yes"
+				Name="r6m1_Tander_DefendTeam"
+				Belong="1114"
+				Prototype="settlementTeam">
+				<Formation
+					Belong="1114"
+					Prototype="caravanFormation"
+					DistBetweenVehicles="30.000"
+					Pos="0.000 0.000 0.000"
+					Direction="0.000 0.000 1.000"
+					LinearVelocity="100.000"
+					AngularVelocity="0.500"
+					NumPathPoint="-1" />
+			</DefendTeam>
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="r6m1_Gradofaks"
+		Belong="1115"
+		Prototype="r6m2_Gradofaks_prototype"
+		Pos="3069.118 390.995 2414.100"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravanLocations=""
+		CaravanPaths=""
+		TreasureLocations="DynKlad_loc_1 DynKlad_loc_2"
+		ReachLocations="r6m1_Vaypeg r6m1_Tander r6m1_Bey r6m1_Kanata"
+		DestroyLocations="InfectionZoneZ16"
+		IsSellingDrugs="0"
+		IsBuyingDrugs="1">
+		<Object
+			Name="r6m1_Gradofaks_Shop"
+			Belong="1115"
+			Prototype="shop">
+			<GunsAndGadgets />
+		</Object>
+
+		<Object
+			Name="r6m1_Gradofaks_Bar"
+			Belong="1115"
+			Prototype="bar">
+			<Object
+				Name="r6m1_Gradofaks_Bar_Barman"
+				Belong="1115"
+				Prototype="NPC"
+				ModelName="r3_man"
+				skin="2"
+				cfg="760"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+
+			<Object
+				Name="r6m1_Vaypeg_Bar_Gonshik2_NPC"
+				Belong="1115"
+				Prototype="NPC"
+				ModelName="r3_man"
+				cfg="1905"
+				helloReplyNames="r6m2_Gonka_2_N01"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="r6m1_Gradofaks_Workshop"
+			Belong="1115"
+			Prototype="workshop">
+			<CabinsAndBaskets>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="belazCab04" />
+
+				<Item
+					PosX="5"
+					PosY="0"
+					Flags="16"
+					Prototype="belazCab04" />
+
+				<Item
+					PosX="0"
+					PosY="5"
+					Flags="16"
+					Prototype="belazCab05" />
+
+				<Item
+					PosX="5"
+					PosY="5"
+					Flags="16"
+					Prototype="belazCargo04" />
+
+				<Item
+					PosX="0"
+					PosY="10"
+					Flags="16"
+					Prototype="belazCargo04" />
+
+				<Item
+					PosX="5"
+					PosY="10"
+					Flags="16"
+					Prototype="belazCargo05" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="mirotvorecCab04" />
+
+				<Item
+					PosX="5"
+					PosY="15"
+					Flags="16"
+					Prototype="mirotvorecCab04" />
+
+				<Item
+					PosX="0"
+					PosY="20"
+					Flags="16"
+					Prototype="mirotvorecCab05" />
+
+				<Item
+					PosX="5"
+					PosY="20"
+					Flags="16"
+					Prototype="mirotvorecCargo04" />
+
+				<Item
+					PosX="0"
+					PosY="25"
+					Flags="16"
+					Prototype="mirotvorecCargo04" />
+
+				<Item
+					PosX="5"
+					PosY="25"
+					Flags="16"
+					Prototype="mirotvorecCargo05" />
+			</CabinsAndBaskets>
+
+			<Vehicles>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="FighterForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="fighterCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="fighterCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="fighterChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="UralForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="uralCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="uralCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="uralChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="2"
+					PosY="0"
+					Flags="16"
+					Prototype="BelazForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="belazCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="belazCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="belazChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+			</Vehicles>
+		</Object>
+
+		<Object
+			Name="r6m1_Gradofaks_deploy"
+			Belong="1115"
+			Prototype="location"
+			Pos="3086.511 392.062 2374.622"
+			Radius="14.003" />
+
+		<Object
+			Name="r6m1_Gradofaks_enter"
+			Belong="1115"
+			Prototype="location"
+			Pos="2976.510 398.768 2414.123"
+			Radius="87.051" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+
+			<DefendTeam
+				present="yes"
+				Name="r6m1_Gradofaks_DefendTeam"
+				Belong="1115"
+				Prototype="settlementTeam">
+				<Formation
+					Belong="1115"
+					Prototype="caravanFormation"
+					DistBetweenVehicles="30.000"
+					Pos="0.000 0.000 0.000"
+					Direction="0.000 0.000 1.000"
+					LinearVelocity="100.000"
+					AngularVelocity="0.500"
+					NumPathPoint="-1" />
+			</DefendTeam>
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="r6m1_Bey"
+		Belong="1115"
+		Prototype="r6m2_Bey_prototype"
+		Pos="2349.519 417.376 3294.705"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravanLocations=""
+		CaravanPaths=""
+		TreasureLocations="DynKlad_loc_3 DynKlad_loc_4 DynKlad_loc_5"
+		ReachLocations="r6m1_Vaypeg r6m1_Tander r6m1_Gradofaks r6m1_Kanata"
+		DestroyLocations="InfectionZoneZ16"
+		IsSellingDrugs="1"
+		IsBuyingDrugs="0">
+		<Object
+			Name="r6m1_Bey_Shop"
+			Belong="1115"
+			Prototype="shop">
+			<GunsAndGadgets />
+		</Object>
+
+		<Object
+			Name="r6m1_Bey_Bar"
+			Belong="1115"
+			Prototype="bar">
+			<Object
+				Name="r6m1_Bey_Bar_Barman"
+				Belong="1115"
+				Prototype="NPC"
+				ModelName="r3_man"
+				skin="2"
+				cfg="1416"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="r6m1_Bey_Workshop"
+			Belong="1115"
+			Prototype="workshop">
+			<CabinsAndBaskets>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="belazCab03" />
+
+				<Item
+					PosX="5"
+					PosY="0"
+					Flags="16"
+					Prototype="belazCab03" />
+
+				<Item
+					PosX="0"
+					PosY="5"
+					Flags="16"
+					Prototype="belazCab04" />
+
+				<Item
+					PosX="5"
+					PosY="5"
+					Flags="16"
+					Prototype="belazCargo03" />
+
+				<Item
+					PosX="0"
+					PosY="10"
+					Flags="16"
+					Prototype="belazCargo03" />
+
+				<Item
+					PosX="5"
+					PosY="10"
+					Flags="16"
+					Prototype="belazCargo04" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="mirotvorecCab03" />
+
+				<Item
+					PosX="5"
+					PosY="15"
+					Flags="16"
+					Prototype="mirotvorecCab04" />
+
+				<Item
+					PosX="0"
+					PosY="20"
+					Flags="16"
+					Prototype="mirotvorecCab04" />
+
+				<Item
+					PosX="5"
+					PosY="20"
+					Flags="16"
+					Prototype="mirotvorecCargo03" />
+
+				<Item
+					PosX="0"
+					PosY="25"
+					Flags="16"
+					Prototype="mirotvorecCargo03" />
+
+				<Item
+					PosX="5"
+					PosY="25"
+					Flags="16"
+					Prototype="mirotvorecCargo04" />
+			</CabinsAndBaskets>
+
+			<Vehicles>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="UralForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="uralCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="uralCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="uralChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="MirotvorecForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+			</Vehicles>
+		</Object>
+
+		<Object
+			Name="r6m1_Bey_deploy"
+			Belong="1115"
+			Prototype="location"
+			Pos="2457.984 405.777 3281.891"
+			Radius="12.916" />
+
+		<Object
+			Name="r6m1_Bey_enter"
+			Belong="1115"
+			Prototype="location"
+			Pos="2361.792 414.581 3314.000"
+			Radius="50.000" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+
+			<DefendTeam
+				present="yes"
+				Name="r6m1_Bey_DefendTeam"
+				Belong="1115"
+				Prototype="settlementTeam">
+				<Formation
+					Belong="1115"
+					Prototype="caravanFormation"
+					DistBetweenVehicles="30.000"
+					Pos="0.000 0.000 0.000"
+					Direction="0.000 0.000 1.000"
+					LinearVelocity="100.000"
+					AngularVelocity="0.500"
+					NumPathPoint="-1" />
+			</DefendTeam>
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="r6m1_Kanata"
+		Belong="1115"
+		Prototype="r6m2_Kanata_prototype"
+		Pos="850.720 332.999 2327.187"
+		PointOfViewInInterface="50.000 50.000 50.000"
+		CaravanLocations=""
+		CaravanPaths=""
+		TreasureLocations="DynKlad_loc_6 DynKlad_loc_7 DynKlad_loc_8"
+		ReachLocations="r6m1_Vaypeg r6m1_Tander r6m1_Gradofaks r6m1_Bey"
+		DestroyLocations="InfectionZoneZ18"
+		IsSellingDrugs="0"
+		IsBuyingDrugs="1">
+		<Object
+			Name="r6m1_Kanata_Shop"
+			Belong="1115"
+			Prototype="shop">
+			<GunsAndGadgets />
+		</Object>
+
+		<Object
+			Name="r6m1_Kanata_Bar"
+			Belong="1115"
+			Prototype="bar">
+			<Object
+				Name="r6m1_Kanata_Bar_Barman"
+				Belong="1115"
+				Prototype="NPC"
+				ModelName="r3_man"
+				skin="2"
+				cfg="2811"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="r6m1_Kanata_Workshop"
+			Belong="1115"
+			Prototype="workshop">
+			<CabinsAndBaskets>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="mirotvorecCab02" />
+
+				<Item
+					PosX="5"
+					PosY="0"
+					Flags="16"
+					Prototype="mirotvorecCab03" />
+
+				<Item
+					PosX="0"
+					PosY="5"
+					Flags="16"
+					Prototype="mirotvorecCab03" />
+
+				<Item
+					PosX="5"
+					PosY="5"
+					Flags="16"
+					Prototype="mirotvorecCargo02" />
+
+				<Item
+					PosX="0"
+					PosY="10"
+					Flags="16"
+					Prototype="mirotvorecCargo03" />
+
+				<Item
+					PosX="5"
+					PosY="10"
+					Flags="16"
+					Prototype="mirotvorecCargo03" />
+			</CabinsAndBaskets>
+
+			<Vehicles>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="ScoutForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="scoutCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="scoutCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="scoutChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="BugForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="bugCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="bugCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="bugChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="2"
+					PosY="0"
+					Flags="16"
+					Prototype="FighterForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="fighterCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="fighterCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="fighterChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="3"
+					PosY="0"
+					Flags="16"
+					Prototype="MolokovozForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="molokovozCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="molokovozCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="molokovozChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="4"
+					PosY="0"
+					Flags="16"
+					Prototype="UralForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="uralCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="uralCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="uralChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="5"
+					PosY="0"
+					Flags="16"
+					Prototype="BelazForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="belazCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="belazCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="belazChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="6"
+					PosY="0"
+					Flags="16"
+					Prototype="MirotvorecForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="mirotvorecChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+			</Vehicles>
+		</Object>
+
+		<Object
+			Name="r6m1_Kanata_deploy"
+			Belong="1115"
+			Prototype="location"
+			Pos="823.839 334.000 2358.455"
+			Radius="23.677" />
+
+		<Object
+			Name="r6m1_Kanata_enter"
+			Belong="1115"
+			Prototype="location"
+			Pos="662.614 396.225 2281.929"
+			Radius="50.000" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+
+			<DefendTeam
+				present="yes"
+				Name="r6m1_Kanata_DefendTeam"
+				Belong="1115"
+				Prototype="settlementTeam">
+				<Formation
+					Belong="1115"
+					Prototype="caravanFormation"
+					DistBetweenVehicles="30.000"
+					Pos="0.000 0.000 0.000"
+					Direction="0.000 0.000 1.000"
+					LinearVelocity="100.000"
+					AngularVelocity="0.500"
+					NumPathPoint="-1" />
+			</DefendTeam>
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="ToR5M2"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="602.700 289.379 612.786"
+		Radius="65.815"
+		Active="0"
+		PassageAddress="r5m2 FromR6M2"
+		PassageActive="0" />
+
+	<Object
+		Name="FromR5M2"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="676.585 299.842 671.068"
+		Radius="10.000"
+		ExitLocation="ToR5M2" />
+
+	<Object
+		Name="ToR6M1"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3728.065 354.824 1110.000"
+		Radius="181.850"
+		PassageAddress="r6m1 FromR6M2"
+		PassageActive="0" />
+
+	<Object
+		Name="FromR6M1"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3511.746 356.695 1219.995"
+		Radius="10.000"
+		ExitLocation="ToR6M1" />
+
+	<Object
+		Name="MechanikAndRobots_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3533.626 348.650 1658.368"
+		Radius="287.056" />
+
+	<Object
+		Name="MechanicHouse_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3007.379 319.768 772.080"
+		Radius="64.292">
+		<Object
+			Name="r6m1_Mechanic_NPC"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="Man_Mask"
+			skin="1"
+			cfg="148"
+			helloReplyNames="r6m2_Mechanic_dlg"
+			SpokenCount="0" />
+	</Object>
+
+	<Object
+		Name="MechanicHouse1_loc"
+		Belong="1115"
+		Prototype="genericLocation"
+		Pos="3007.379 319.768 772.080"
+		Radius="64.292" />
+
+	<Object
+		Name="PartRobot1_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1803.690 387.584 1534.309"
+		Radius="111.063" />
+
+	<Object
+		Name="PartRobot2_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3614.625 388.191 2912.836"
+		Radius="140.630" />
+
+	<Object
+		Name="PartRobot3_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1843.219 393.893 3433.962"
+		Radius="122.770" />
+
+	<Object
+		Name="PortToR5M2_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="631.068 294.606 604.607"
+		Radius="131.940" />
+
+	<Object
+		Name="SpawnMechanic1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3531.532 349.022 1665.965"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3465.525 351.029 1691.548"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot4_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3490.846 344.960 1609.012"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot3_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3580.459 345.802 1637.066"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3549.742 348.236 1725.851"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot1_1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1832.778 387.584 1483.042"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot1_2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1811.085 387.584 1562.794"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot1_3_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1741.871 387.627 1561.746"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot1_4_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1751.051 387.584 1480.356"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot2_1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3603.332 388.191 2987.240"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot2_2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3666.845 388.191 2916.160"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot2_3_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3552.443 388.191 2912.662"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot2_4_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3633.545 388.187 2888.033"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot3_1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1832.039 393.893 3486.819"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot3_2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1888.289 393.993 3486.341"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot3_3_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1836.429 393.893 3393.497"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnRobot3_4_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1918.488 394.844 3442.505"
+		Radius="10.000" />
+
+	<Object
+		Name="BossArena_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2220.830 334.000 2279.292"
+		Radius="284.072" />
+
+	<Object
+		Name="EnterToRobotbase_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1995.873 334.000 2416.034"
+		Radius="42.444" />
+
+	<Object
+		Name="Labirint1_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1754.447 334.000 2507.452"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint2_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1781.547 334.000 2542.905"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint3_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1807.384 334.000 2579.387"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint4_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1719.848 334.000 2544.800"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint5_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1746.990 334.000 2583.607"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint6_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1774.530 334.000 2622.354"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint7_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1664.996 334.000 2546.916"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint8_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1690.700 334.000 2583.709"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint9_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1716.759 334.000 2621.863"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint1Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1754.505 334.000 2507.401"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint2Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1781.655 334.000 2542.984"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint3Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1807.287 334.000 2579.408"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint4Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1719.871 334.000 2544.714"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint5Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1746.990 334.000 2583.607"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint6Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1774.620 334.000 2622.253"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint7Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1664.943 334.000 2546.918"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint8Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1690.623 334.000 2583.580"
+		Radius="5.000" />
+
+	<Object
+		Name="Labirint9Rob_loc"
+		Belong="1118"
+		Prototype="genericLocation"
+		Pos="1716.688 334.000 2621.741"
+		Radius="5.000" />
+
+	<Object
+		Name="SpawnBaseRobot_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1826.715 334.000 2536.599"
+		Radius="10.000" />
+
+	<Object
+		Name="OracleDot_1"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1703.926 334.000 2601.917"
+		Rot="-0.013 0.305 -0.013 0.952">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_2"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1766.973 334.000 2524.412"
+		Rot="0.000 0.301 0.000 0.954">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_3"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1793.807 334.000 2562.073"
+		Rot="-0.001 0.332 -0.004 0.943">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_4"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1730.328 334.000 2641.264"
+		Rot="0.000 0.297 0.000 0.955">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_5"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1676.782 334.000 2563.443"
+		Rot="0.000 0.293 0.000 0.956">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_6"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="1734.511 334.000 2564.433"
+		Rot="0.002 0.276 -0.001 0.961">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_7"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="1761.005 334.000 2602.484"
+		Rot="0.000 0.309 0.000 0.951">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_8"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="1705.817 334.000 2524.289"
+		Rot="0.000 0.296 0.000 0.955">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="Generator_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="829.091 392.000 3363.995"
+		Radius="55.491" />
+
+	<Object
+		Name="NearLabirint_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1836.649 329.142 2500.364"
+		Radius="45.000" />
+
+	<Object
+		Name="EnterToArena_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2447.077 339.829 2163.770"
+		Radius="73.895" />
+
+	<Object
+		Name="Generator"
+		Belong="1118"
+		Prototype="OracleDot_Generator"
+		Pos="731.984 392.000 3475.031"
+		Rot="0.000 0.297 0.000 0.955">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="EnterToBase_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1514.628 353.350 2541.928"
+		Radius="76.000" />
+
+	<Object
+		Name="EndGonka_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3128.012 384.908 2418.601"
+		Radius="40.795" />
+
+	<Object
+		Name="BrokenVeh_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2831.262 334.000 2787.027"
+		Radius="45.041">
+		<Object
+			Name="r6m1_BrokenVeh_Voditel_NPC"
+			Belong="1100"
+			Prototype="NPC"
+			ModelName="r3_man"
+			cfg="353"
+			helloReplyNames="r6m2_BrokenCar_1_N01 r6m2_BrokenCar_2_N01"
+			SpokenCount="0" />
+	</Object>
+
+	<Object
+		Name="Svatilishe_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2750.603 377.922 1141.497"
+		Radius="75.796" />
+
+	<Object
+		Name="SvatilisheRobot_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3153.718 360.637 2976.461"
+		Radius="100.000" />
+
+	<Object
+		Name="StartGonka_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1518.313 372.640 828.094"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnPlayerRobot_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2220.830 334.000 2279.292"
+		Radius="10.000" />
+
+	<Object
+		Name="StoneFromHolm_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2033.176 412.699 1114.414"
+		Radius="10.000" />
+
+	<Object
+		Name="NearBarrel_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3505.138 341.505 2146.590"
+		Radius="90.078" />
+
+	<Object
+		Name="SpawnBarrelVeh_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3162.641 376.281 2381.184"
+		Radius="10.000" />
+
+	<Object
+		Name="NearWowBattle_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2223.740 391.855 3044.939"
+		Radius="262.438" />
+
+	<Object
+		Name="SpawnWowRobot1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2111.298 397.125 3060.090"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnWowRobot2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2038.354 423.080 3132.793"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnWowVeh1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2242.996 396.681 3060.981"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnWowVeh2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2281.130 382.037 3029.673"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnWowRobot3_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2106.735 410.993 3108.979"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnWowRobot4_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2040.643 411.584 3090.587"
+		Radius="10.000" />
+
+	<Object
+		Name="NearStoneCrash_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2061.440 378.915 1054.711"
+		Radius="139.259" />
+
+	<Object
+		Name="SpawnWowVehWall_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3337.038 345.275 3425.815"
+		Radius="10.000" />
+
+	<Object
+		Name="NearWowWall_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3200.193 347.560 3162.780"
+		Radius="121.233" />
+
+	<Object
+		Name="EmissarFlyBoss"
+		Belong="1118"
+		Prototype="boss03"
+		Pos="2366.510 0.000 1622.421"
+		PathNameForFlyingWithWings="FLYANDKILL_boss03">
+		<Object
+			Belong="1118"
+			Prototype="settlementTeam">
+			<Formation
+				Belong="1118"
+				Prototype="caravanFormation"
+				DistBetweenVehicles="30.000"
+				Pos="0.000 0.000 0.000"
+				Direction="0.000 0.000 1.000"
+				LinearVelocity="100.000"
+				AngularVelocity="0.500"
+				NumPathPoint="-1" />
+		</Object>
+
+		<Parts />
+
+		<DronePlaces />
+
+		<ShootPlaces>
+			<Point
+				Pos="2201.711 384.113 2102.131" />
+
+			<Point
+				Pos="2102.591 384.000 2341.856" />
+
+			<Point
+				Pos="2350.443 384.000 2319.848" />
+		</ShootPlaces>
+	</Object>
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="2971.876 332.818 774.588"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3691.864 431.214 3471.712"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1343.002 407.825 827.439"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1440.389 400.137 850.753"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1409.613 397.778 787.141"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="633.014 430.892 2264.594"
+		Rot="1.195 0.000 0.000 0.079" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1815.509 353.626 2492.324"
+		Rot="1.195 0.000 0.000 0.079" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1748.495 354.865 2500.333"
+		Rot="1.195 0.000 0.000 0.079" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1811.989 355.972 2585.816"
+		Rot="1.195 0.000 0.000 0.079" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3700.762 432.113 3426.512"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="743.419 311.529 598.530"
+		Rot="1.120 0.000 0.000 0.072" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="612.050 311.099 619.941"
+		Rot="1.120 0.000 0.000 0.072" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="571.606 311.529 665.476"
+		Rot="1.120 0.000 0.000 0.072" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="2971.876 332.818 774.588"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3040.782 326.703 745.546"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="2946.840 416.862 2370.371"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="2956.309 413.599 2424.561"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3009.157 405.324 2442.105"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3568.732 399.551 3401.546"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3509.828 399.056 3442.510"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3456.093 376.238 3367.803"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="3444.339 383.219 3475.341"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="691.460 407.196 2295.073"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1102.035 306.444 2961.814"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1035.628 306.444 2888.957"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject2"
+		Pos="1080.876 306.444 2909.625"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="LightObject"
+		Pos="1747.990 353.422 2503.012"
+		Rot="1.195 0.000 0.000 0.079" />
+
+	<Object
+		Name="OracleDot_9"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="1301.307 335.046 2577.955"
+		Rot="0.000 0.326 0.000 0.945">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_20"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="1422.446 335.046 2666.127">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_10"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1270.695 333.106 2706.933">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_11"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1358.097 333.106 2747.415">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_12"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="1183.838 333.106 2918.533">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_13"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1151.651 333.106 2784.587">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_14"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="1061.962 333.106 2784.642">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_15"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="671.094 468.594 3381.661"
+		Rot="0.000 0.000 -0.109 0.994">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_16"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="686.458 294.046 3034.347">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_18"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="713.239 294.046 3160.797">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_17"
+		Belong="1118"
+		Prototype="OracleDot1_kpvt"
+		Pos="624.850 294.046 3128.489">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot_19"
+		Belong="1118"
+		Prototype="OracleDot2_vulcan"
+		Pos="536.848 308.000 3240.553">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OE_1"
+		Prototype="SgNodeObject"
+		Pos="1335.923 335.878 2626.417"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_2"
+		Prototype="SgNodeObject"
+		Pos="1268.971 334.000 2958.430"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_3"
+		Prototype="SgNodeObject"
+		Pos="1212.832 347.771 2621.028"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_4"
+		Prototype="SgNodeObject"
+		Pos="3565.952 401.274 2979.471"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_5"
+		Prototype="SgNodeObject"
+		Pos="1080.181 307.813 2953.080"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_6"
+		Prototype="SgNodeObject"
+		Pos="1915.084 407.070 3510.085"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_7"
+		Prototype="SgNodeObject"
+		Pos="1793.104 409.629 3467.265"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_8"
+		Prototype="SgNodeObject"
+		Pos="3632.354 414.915 2955.180"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_9"
+		Prototype="SgNodeObject"
+		Pos="3691.780 406.371 2877.408"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_10"
+		Prototype="SgNodeObject"
+		Pos="1858.554 428.910 3443.132"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_11"
+		Prototype="SgNodeObject"
+		Pos="1833.690 410.614 1441.695"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_12"
+		Prototype="SgNodeObject"
+		Pos="1834.304 419.981 1525.462"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_13"
+		Prototype="SgNodeObject"
+		Pos="1866.715 408.276 1565.493"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_14"
+		Prototype="SgNodeObject"
+		Pos="1734.268 396.109 2482.991"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_15"
+		Prototype="SgNodeObject"
+		Pos="1825.599 353.758 2602.442"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_16"
+		Prototype="SgNodeObject"
+		Pos="1733.938 351.151 2481.721"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_17"
+		Prototype="SgNodeObject"
+		Pos="1826.502 401.467 2600.265"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_18"
+		Prototype="SgNodeObject"
+		Pos="1355.935 346.993 3093.004"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_19"
+		Prototype="SgNodeObject"
+		Pos="1329.775 352.123 2959.894"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="OE_20"
+		Prototype="SgNodeObject"
+		Pos="1386.193 352.054 2790.522"
+		ModelFile="ET_PS_ORACUL_MAIN4" />
+
+	<Object
+		Name="druid_dot1_kord01191"
+		Belong="1114"
+		Prototype="druid_dot1_kord01"
+		Pos="1485.430 378.715 790.364">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot1_kord01192"
+		Belong="1114"
+		Prototype="druid_dot1_kord01"
+		Pos="1486.207 378.170 832.918">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK193"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="1433.206 405.671 788.287"
+		Skin="3">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK194"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="1466.969 401.941 859.992"
+		Skin="3">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK195"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="1320.433 407.998 817.095"
+		Skin="3">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK196"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="670.009 408.671 2227.682"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK197"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="838.206 403.797 2207.200"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK198"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="690.681 398.489 2290.105"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot2_omega01199"
+		Belong="1115"
+		Prototype="druid_dot2_omega01"
+		Pos="783.699 390.063 2153.171"
+		Rot="0.000 0.876 0.000 0.483">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot2_omega01200"
+		Belong="1115"
+		Prototype="druid_dot2_omega01"
+		Pos="840.669 400.178 2197.607"
+		Rot="0.000 0.968 0.000 -0.252">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot2_omega01201"
+		Belong="1115"
+		Prototype="druid_dot2_omega01"
+		Pos="693.059 393.763 2280.924"
+		Rot="0.000 0.829 0.000 0.559">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot2_omega01202"
+		Belong="1115"
+		Prototype="druid_dot2_omega01"
+		Pos="683.318 393.213 2239.263"
+		Rot="0.000 0.855 0.000 0.519">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot2_vulcan206"
+		Belong="1115"
+		Prototype="OracleDot2_vulcan"
+		Pos="2369.547 416.169 3225.482"
+		Rot="0.000 0.716 0.000 0.698">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot2_vulcan208"
+		Belong="1115"
+		Prototype="OracleDot2_vulcan"
+		Pos="2429.747 410.839 3359.075"
+		Rot="0.000 0.704 0.000 0.710">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK209"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="2363.814 429.548 3253.417"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK210"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="2353.740 431.776 3357.461"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK211"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="2311.067 436.656 3319.870"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot2_omega01212"
+		Belong="1114"
+		Prototype="druid_dot2_omega01"
+		Pos="3683.505 418.061 3473.486"
+		Rot="0.000 -0.791 0.000 0.612">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot2_omega01213"
+		Belong="1114"
+		Prototype="druid_dot2_omega01"
+		Pos="3693.702 417.079 3423.335"
+		Rot="-0.012 -0.798 0.060 0.600">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot1_kord01214"
+		Belong="1114"
+		Prototype="druid_dot1_kord01"
+		Pos="3560.413 401.571 3461.021"
+		Rot="-0.004 0.992 -0.001 -0.128">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot1_kord01215"
+		Belong="1114"
+		Prototype="druid_dot1_kord01"
+		Pos="3600.068 401.763 3429.873"
+		Rot="0.000 0.685 0.000 0.728">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot1_kord01216"
+		Belong="1114"
+		Prototype="druid_dot1_kord01"
+		Pos="3640.459 399.145 3396.567"
+		Rot="0.000 -0.990 0.000 -0.139">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="druid_dot1_kord01217"
+		Belong="1114"
+		Prototype="druid_dot1_kord01"
+		Pos="3605.916 409.355 3493.998"
+		Rot="0.000 0.998 0.000 -0.055">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot2_vulcan219"
+		Belong="1115"
+		Prototype="OracleDot2_vulcan"
+		Pos="3088.577 392.928 2477.493"
+		Rot="0.000 0.914 0.000 0.405">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot2_vulcan220"
+		Belong="1115"
+		Prototype="OracleDot2_vulcan"
+		Pos="3059.359 394.508 2341.326"
+		Rot="0.000 0.713 0.000 0.701">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot2_vulcan221"
+		Belong="1115"
+		Prototype="OracleDot2_vulcan"
+		Pos="2981.861 394.271 2470.756"
+		Rot="0.000 0.887 0.000 0.462">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="OracleDot2_vulcan222"
+		Belong="1115"
+		Prototype="OracleDot2_vulcan"
+		Pos="2936.667 406.040 2330.590"
+		Rot="0.000 -0.197 0.000 0.980">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK223"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="2948.840 415.811 2411.529"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK224"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="3038.344 403.453 2457.445"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK225"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="3029.214 405.237 2362.724"
+		Skin="4">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK226"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="3723.740 466.134 3440.919"
+		Skin="3">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK227"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="3740.216 456.046 3527.168"
+		Skin="3">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="heavy_dot4_FLAGSHTOK228"
+		Belong="1100"
+		Prototype="heavy_dot4_FLAGSHTOK"
+		Pos="3612.418 410.778 3486.403"
+		Skin="3">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="InfectionZoneZ15"
+		Belong="1118"
+		Prototype="InfectionZone"
+		InfectionTeamPrototypeName="IZG_Z15"
+		MinTeamSchwartz="230000"
+		MaxTeamSchwartz="265000">
+		<Polygon>
+			<Point
+				x="3583.881"
+				y="1756.364" />
+
+			<Point
+				x="2777.886"
+				y="2072.504" />
+
+			<Point
+				x="2649.360"
+				y="1788.558" />
+
+			<Point
+				x="2629.065"
+				y="1174.960" />
+
+			<Point
+				x="2750.904"
+				y="901.404" />
+
+			<Point
+				x="3026.772"
+				y="928.537" />
+
+			<Point
+				x="3435.561"
+				y="1762.089" />
+
+			<Point
+				x="3642.301"
+				y="1795.697" />
+
+			<Point
+				x="3618.719"
+				y="1346.312" />
+
+			<Point
+				x="3857.682"
+				y="1349.892" />
+		</Polygon>
+
+		<DropOut>
+			<Point
+				name="Point17"
+				Paths=""
+				x="2767.668"
+				y="1151.720" />
+
+			<Point
+				name="Point0"
+				Paths=""
+				x="2729.769"
+				y="1100.131" />
+
+			<Point
+				name="Point62"
+				Paths=""
+				x="2842.976"
+				y="979.513" />
+
+			<Point
+				name="Point48"
+				Paths=""
+				x="2877.177"
+				y="935.429" />
+
+			<Point
+				name="Point80"
+				Paths=""
+				x="3039.747"
+				y="1125.566" />
+
+			<Point
+				name="Point9"
+				Paths=""
+				x="2987.375"
+				y="1234.043" />
+
+			<Point
+				name="Point44"
+				Paths=""
+				x="3068.354"
+				y="1239.135" />
+
+			<Point
+				name="Point66"
+				Paths=""
+				x="2949.620"
+				y="1348.155" />
+
+			<Point
+				name="Point79"
+				Paths=""
+				x="2874.722"
+				y="1400.063" />
+
+			<Point
+				name="Point4"
+				Paths=""
+				x="2661.628"
+				y="1520.943" />
+
+			<Point
+				name="Point88"
+				Paths=""
+				x="2694.731"
+				y="1448.037" />
+
+			<Point
+				name="Point98"
+				Paths=""
+				x="3120.567"
+				y="1490.214" />
+
+			<Point
+				name="Point7"
+				Paths=""
+				x="3240.777"
+				y="1532.308" />
+
+			<Point
+				name="Point2"
+				Paths=""
+				x="3261.146"
+				y="1635.928" />
+
+			<Point
+				name="Point72"
+				Paths=""
+				x="3700.186"
+				y="1617.205" />
+
+			<Point
+				name="Point38"
+				Paths=""
+				x="3634.266"
+				y="1696.819" />
+
+			<Point
+				name="Point90"
+				Paths=""
+				x="3510.389"
+				y="1848.189" />
+
+			<Point
+				name="Point37"
+				Paths=""
+				x="3466.707"
+				y="2056.771" />
+
+			<Point
+				name="Point94"
+				Paths=""
+				x="3557.897"
+				y="2154.439" />
+
+			<Point
+				name="Point23"
+				Paths=""
+				x="3388.541"
+				y="2158.534" />
+
+			<Point
+				name="Point52"
+				Paths=""
+				x="3457.802"
+				y="2133.675" />
+
+			<Point
+				name="Point41"
+				Paths=""
+				x="3199.282"
+				y="2067.873" />
+
+			<Point
+				name="Point35"
+				Paths=""
+				x="2863.083"
+				y="1846.828" />
+
+			<Point
+				name="Point21"
+				Paths=""
+				x="2971.026"
+				y="1806.198" />
+
+			<Point
+				name="Point58"
+				Paths=""
+				x="3110.399"
+				y="1934.881" />
+
+			<Point
+				name="Point67"
+				Paths=""
+				x="2751.632"
+				y="1909.574" />
+
+			<Point
+				name="Point8"
+				Paths=""
+				x="3710.792"
+				y="2104.360" />
+		</DropOut>
+	</Object>
+
+	<Object
+		Name="InfectionZoneZ16"
+		Belong="1105"
+		Prototype="InfectionZone"
+		InfectionTeamPrototypeName="IZG_Z16"
+		MinTeamSchwartz="250000"
+		MaxTeamSchwartz="320000">
+		<Polygon>
+			<Point
+				x="3829.439"
+				y="3200.511" />
+
+			<Point
+				x="3506.761"
+				y="3325.321" />
+
+			<Point
+				x="3313.545"
+				y="3917.254" />
+
+			<Point
+				x="3031.063"
+				y="3090.229" />
+
+			<Point
+				x="2949.675"
+				y="2662.349" />
+
+			<Point
+				x="3888.306"
+				y="2248.547" />
+		</Polygon>
+
+		<DropOut>
+			<Point
+				name="Point50"
+				Paths=""
+				x="3475.965"
+				y="2503.120" />
+
+			<Point
+				name="Point71"
+				Paths=""
+				x="3423.727"
+				y="2511.748" />
+
+			<Point
+				name="Point0"
+				Paths=""
+				x="3241.060"
+				y="2656.198" />
+
+			<Point
+				name="Point8"
+				Paths=""
+				x="3245.318"
+				y="2758.115" />
+
+			<Point
+				name="Point88"
+				Paths=""
+				x="3089.753"
+				y="2913.440" />
+
+			<Point
+				name="Point9"
+				Paths=""
+				x="2992.024"
+				y="2771.636" />
+
+			<Point
+				name="Point31"
+				Paths=""
+				x="2936.187"
+				y="2843.133" />
+
+			<Point
+				name="Point62"
+				Paths=""
+				x="2844.364"
+				y="2787.754" />
+
+			<Point
+				name="Point35"
+				Paths=""
+				x="3259.234"
+				y="2896.505" />
+
+			<Point
+				name="Point79"
+				Paths=""
+				x="3270.941"
+				y="2983.390" />
+
+			<Point
+				name="Point1"
+				Paths=""
+				x="3149.001"
+				y="3149.793" />
+
+			<Point
+				name="Point21"
+				Paths=""
+				x="3265.830"
+				y="3189.333" />
+
+			<Point
+				name="Point84"
+				Paths=""
+				x="3375.782"
+				y="3468.132" />
+
+			<Point
+				name="Point39"
+				Paths=""
+				x="3347.037"
+				y="3515.757" />
+
+			<Point
+				name="Point73"
+				Paths=""
+				x="3188.210"
+				y="3425.525" />
+
+			<Point
+				name="Point72"
+				Paths=""
+				x="3223.987"
+				y="3510.701" />
+
+			<Point
+				name="Point78"
+				Paths=""
+				x="3725.608"
+				y="2949.271" />
+		</DropOut>
+	</Object>
+
+	<Object
+		Name="InfectionZoneZ17"
+		Belong="1118"
+		Prototype="InfectionZone"
+		InfectionTeamPrototypeName="IZG_Z17"
+		MinTeamSchwartz="320000"
+		MaxTeamSchwartz="370000">
+		<Polygon>
+			<Point
+				x="2550.571"
+				y="3122.758" />
+
+			<Point
+				x="2192.385"
+				y="3223.855" />
+
+			<Point
+				x="2193.179"
+				y="3364.414" />
+
+			<Point
+				x="2356.423"
+				y="3461.230" />
+
+			<Point
+				x="2714.410"
+				y="3428.021" />
+
+			<Point
+				x="2866.806"
+				y="3619.218" />
+
+			<Point
+				x="2388.900"
+				y="3695.374" />
+
+			<Point
+				x="1984.603"
+				y="3671.127" />
+
+			<Point
+				x="1674.027"
+				y="3555.217" />
+
+			<Point
+				x="1661.370"
+				y="3198.901" />
+
+			<Point
+				x="1766.034"
+				y="2832.040" />
+
+			<Point
+				x="2010.074"
+				y="2797.720" />
+
+			<Point
+				x="2372.904"
+				y="2837.913" />
+		</Polygon>
+
+		<DropOut>
+			<Point
+				name="Point45"
+				Paths=""
+				x="2822.329"
+				y="3613.122" />
+
+			<Point
+				name="Point69"
+				Paths=""
+				x="2708.149"
+				y="3638.929" />
+
+			<Point
+				name="Point36"
+				Paths=""
+				x="2695.159"
+				y="3579.727" />
+
+			<Point
+				name="Point10"
+				Paths=""
+				x="2603.951"
+				y="3537.659" />
+
+			<Point
+				name="Point76"
+				Paths=""
+				x="2477.086"
+				y="3582.288" />
+
+			<Point
+				name="Point79"
+				Paths=""
+				x="2425.161"
+				y="3649.474" />
+
+			<Point
+				name="Point49"
+				Paths=""
+				x="2240.825"
+				y="3658.483" />
+
+			<Point
+				name="Point18"
+				Paths=""
+				x="2007.632"
+				y="3543.382" />
+
+			<Point
+				name="Point77"
+				Paths=""
+				x="1855.050"
+				y="3174.072" />
+
+			<Point
+				name="Point44"
+				Paths=""
+				x="1995.949"
+				y="3100.681" />
+
+			<Point
+				name="Point98"
+				Paths=""
+				x="2014.471"
+				y="3159.196" />
+
+			<Point
+				name="Point1"
+				Paths=""
+				x="2144.247"
+				y="3008.746" />
+
+			<Point
+				name="Point81"
+				Paths=""
+				x="2377.096"
+				y="3116.441" />
+
+			<Point
+				name="Point29"
+				Paths=""
+				x="2308.570"
+				y="2959.386" />
+		</DropOut>
+	</Object>
+
+	<Object
+		Name="InfectionZoneZ18"
+		Belong="1118"
+		Prototype="InfectionZone"
+		InfectionTeamPrototypeName="IZG_Z18"
+		MinTeamSchwartz="350000"
+		MaxTeamSchwartz="450000">
+		<Polygon>
+			<Point
+				x="1899.594"
+				y="558.280" />
+
+			<Point
+				x="1678.801"
+				y="666.708" />
+
+			<Point
+				x="1650.183"
+				y="880.727" />
+
+			<Point
+				x="1224.055"
+				y="1027.353" />
+
+			<Point
+				x="1030.289"
+				y="618.383" />
+
+			<Point
+				x="840.833"
+				y="907.197" />
+
+			<Point
+				x="535.523"
+				y="889.383" />
+
+			<Point
+				x="488.714"
+				y="1454.513" />
+
+			<Point
+				x="832.300"
+				y="1476.228" />
+
+			<Point
+				x="1173.939"
+				y="1609.219" />
+
+			<Point
+				x="1764.727"
+				y="1759.113" />
+
+			<Point
+				x="2152.375"
+				y="1492.293" />
+
+			<Point
+				x="2240.211"
+				y="1084.167" />
+
+			<Point
+				x="2278.028"
+				y="651.830" />
+		</Polygon>
+
+		<DropOut>
+			<Point
+				name="Point64"
+				Paths=""
+				x="2188.949"
+				y="1176.660" />
+
+			<Point
+				name="Point5"
+				Paths=""
+				x="2224.461"
+				y="1036.867" />
+
+			<Point
+				name="Point28"
+				Paths=""
+				x="2067.409"
+				y="937.261" />
+
+			<Point
+				name="Point42"
+				Paths=""
+				x="2000.604"
+				y="988.394" />
+
+			<Point
+				name="Point94"
+				Paths=""
+				x="1938.921"
+				y="776.448" />
+
+			<Point
+				name="Point89"
+				Paths=""
+				x="1877.379"
+				y="753.698" />
+
+			<Point
+				name="Point81"
+				Paths=""
+				x="1901.422"
+				y="827.657" />
+
+			<Point
+				name="Point3"
+				Paths=""
+				x="1786.116"
+				y="1083.913" />
+
+			<Point
+				name="Point27"
+				Paths=""
+				x="1714.396"
+				y="1167.133" />
+
+			<Point
+				name="Point46"
+				Paths=""
+				x="1771.659"
+				y="1299.955" />
+
+			<Point
+				name="Point30"
+				Paths=""
+				x="1527.867"
+				y="1488.822" />
+
+			<Point
+				name="Point51"
+				Paths=""
+				x="1570.631"
+				y="1394.693" />
+
+			<Point
+				name="Point38"
+				Paths=""
+				x="1382.063"
+				y="1411.252" />
+
+			<Point
+				name="Point35"
+				Paths=""
+				x="1342.294"
+				y="1256.026" />
+
+			<Point
+				name="Point22"
+				Paths=""
+				x="1284.641"
+				y="1292.345" />
+
+			<Point
+				name="Point87"
+				Paths=""
+				x="1234.732"
+				y="1227.083" />
+
+			<Point
+				name="Point86"
+				Paths=""
+				x="1693.942"
+				y="822.777" />
+
+			<Point
+				name="Point9"
+				Paths=""
+				x="1715.215"
+				y="746.928" />
+
+			<Point
+				name="Point73"
+				Paths=""
+				x="1113.579"
+				y="1452.743" />
+
+			<Point
+				name="Point34"
+				Paths=""
+				x="1332.734"
+				y="1601.280" />
+
+			<Point
+				name="Point92"
+				Paths=""
+				x="1020.443"
+				y="1525.397" />
+
+			<Point
+				name="Point98"
+				Paths=""
+				x="901.117"
+				y="1492.810" />
+
+			<Point
+				name="Point60"
+				Paths=""
+				x="906.858"
+				y="1383.803" />
+
+			<Point
+				name="Point19"
+				Paths=""
+				x="880.282"
+				y="1239.469" />
+
+			<Point
+				name="Point2"
+				Paths=""
+				x="1031.170"
+				y="1068.389" />
+
+			<Point
+				name="Point10"
+				Paths=""
+				x="939.083"
+				y="971.582" />
+
+			<Point
+				name="Point50"
+				Paths=""
+				x="978.452"
+				y="858.089" />
+
+			<Point
+				name="Point45"
+				Paths=""
+				x="1005.210"
+				y="757.627" />
+		</DropOut>
+	</Object>
+
+	<Object
+		Name="InfectionZoneZ20"
+		Belong="1106"
+		Prototype="InfectionZone"
+		InfectionTeamPrototypeName="IZG_Z20"
+		MinTeamSchwartz="440000"
+		MaxTeamSchwartz="540000">
+		<Polygon>
+			<Point
+				x="524.483"
+				y="1927.733" />
+
+			<Point
+				x="481.067"
+				y="2170.479" />
+
+			<Point
+				x="610.283"
+				y="2110.679" />
+
+			<Point
+				x="740.489"
+				y="2227.875" />
+
+			<Point
+				x="753.196"
+				y="2362.277" />
+
+			<Point
+				x="520.641"
+				y="2367.926" />
+
+			<Point
+				x="806.557"
+				y="2629.430" />
+
+			<Point
+				x="1342.414"
+				y="2429.476" />
+
+			<Point
+				x="1486.446"
+				y="2231.582" />
+
+			<Point
+				x="1405.462"
+				y="2075.469" />
+
+			<Point
+				x="1095.446"
+				y="1970.965" />
+
+			<Point
+				x="783.725"
+				y="1915.290" />
+		</Polygon>
+
+		<DropOut>
+			<Point
+				name="Point41"
+				Paths=""
+				x="995.578"
+				y="2129.864" />
+
+			<Point
+				name="Point69"
+				Paths=""
+				x="953.353"
+				y="2147.556" />
+
+			<Point
+				name="Point20"
+				Paths=""
+				x="971.754"
+				y="2247.573" />
+
+			<Point
+				name="Point48"
+				Paths=""
+				x="1003.675"
+				y="2286.185" />
+
+			<Point
+				name="Point8"
+				Paths=""
+				x="890.559"
+				y="2376.723" />
+
+			<Point
+				name="Point73"
+				Paths=""
+				x="830.109"
+				y="2428.407" />
+
+			<Point
+				name="Point38"
+				Paths=""
+				x="638.489"
+				y="2076.941" />
+
+			<Point
+				name="Point81"
+				Paths=""
+				x="654.163"
+				y="1986.667" />
+
+			<Point
+				name="Point88"
+				Paths=""
+				x="742.831"
+				y="2001.434" />
+
+			<Point
+				name="Point93"
+				Paths=""
+				x="800.072"
+				y="2078.491" />
+		</DropOut>
+	</Object>
+
+	<Object
+		Belong="-1"
+		Prototype="Light_Yellow_Lens"
+		Pos="191.419 389.737 3859.741"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="Light_Yellow_Lens"
+		Pos="733.457 418.547 3473.992"
+		Rot="0.000 0.297 0.000 0.955" />
+
+	<Object
+		Belong="-1"
+		Prototype="Light_Yellow_Lens"
+		Pos="2313.209 344.844 2208.942"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Belong="-1"
+		Prototype="Light_Yellow_Lens"
+		Pos="3737.004 448.510 2349.249"
+		Rot="0.998 0.000 0.000 0.060" />
+
+	<Object
+		Name="lamppost3229"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="2313.109 337.099 2208.916" />
+
+	<Object
+		Name="brokvehicle1230"
+		Belong="-1"
+		Prototype="brokvehicle1_breakable"
+		Pos="3035.774 314.154 740.201"
+		Rot="-0.074 -0.224 0.017 0.972" />
+
+	<Object
+		Name="barrel1231"
+		Belong="-1"
+		Prototype="Breakable_Barrel1"
+		Pos="3060.314 314.143 762.555"
+		Rot="0.000 -0.788 0.000 0.616" />
+
+	<Object
+		Name="barrel1232"
+		Belong="-1"
+		Prototype="Breakable_Barrel1"
+		Pos="3060.272 314.143 763.538" />
+
+	<Object
+		Name="barrel1233"
+		Belong="-1"
+		Prototype="Breakable_Barrel1"
+		Pos="3059.453 314.143 763.031"
+		Rot="0.000 -0.046 0.000 0.999" />
+
+	<Object
+		Name="barrel3234"
+		Belong="-1"
+		Prototype="Breakable_Barrel3"
+		Pos="3060.588 314.143 764.269"
+		Rot="0.701 0.000 0.000 0.713" />
+
+	<Object
+		Name="lamppost3236"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="2971.776 320.257 774.562" />
+
+	<Object
+		Name="lamppost3237"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="2972.014 320.409 795.857" />
+
+	<Object
+		Name="factory_box238"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="569.667 294.624 671.258" />
+
+	<Object
+		Name="pack239"
+		Belong="-1"
+		Prototype="pack_breakable"
+		Pos="747.733 294.624 597.300"
+		Rot="0.000 0.294 0.000 0.956" />
+
+	<Object
+		Name="pack240"
+		Belong="-1"
+		Prototype="pack_breakable"
+		Pos="747.560 294.624 599.508"
+		Rot="0.000 0.294 0.000 0.956" />
+
+	<Object
+		Name="pack241"
+		Belong="-1"
+		Prototype="pack_breakable"
+		Pos="750.212 294.624 598.688"
+		Rot="0.000 -0.470 0.000 0.883" />
+
+	<Object
+		Name="agro_tech2242"
+		Belong="-1"
+		Prototype="agro_tech2_breakable"
+		Pos="1528.216 338.242 2896.719"
+		Rot="0.000 0.704 0.000 0.710" />
+
+	<Object
+		Name="agro_tech2243"
+		Belong="-1"
+		Prototype="agro_tech2_breakable"
+		Pos="1546.813 338.417 2892.638"
+		Rot="0.000 0.815 0.000 0.579"
+		Mass="35.059"
+		NodeScale="0.957" />
+
+	<Object
+		Name="agro_tech1244"
+		Belong="-1"
+		Prototype="agro_tech1_breakable"
+		Pos="1550.826 337.949 2895.790"
+		Rot="0.000 -0.946 0.000 0.324" />
+
+	<Object
+		Name="agro_tech1245"
+		Belong="-1"
+		Prototype="agro_tech1_breakable"
+		Pos="1542.216 338.864 2898.266"
+		Rot="0.000 0.699 0.000 0.715"
+		Mass="39.284"
+		NodeScale="0.994" />
+
+	<Object
+		Name="wood_fence2246"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1538.173 338.953 2880.456" />
+
+	<Object
+		Name="wood_fence2247"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1548.449 339.138 2880.340" />
+
+	<Object
+		Name="wood_fence2248"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1557.898 339.283 2880.203" />
+
+	<Object
+		Name="wood_fence2249"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1562.990 337.973 2899.336"
+		Rot="0.000 0.709 0.000 0.706" />
+
+	<Object
+		Name="wood_fence2250"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1562.814 338.716 2889.885"
+		Rot="0.000 0.709 0.000 0.706" />
+
+	<Object
+		Name="wood_fence2251"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1563.259 339.739 2919.395"
+		Rot="0.000 0.709 0.000 0.706" />
+
+	<Object
+		Name="brick_wall1252"
+		Belong="-1"
+		Prototype="Breakable_BrickWall1"
+		Pos="1556.169 344.781 2847.563"
+		Rot="0.000 0.193 0.000 0.981" />
+
+	<Object
+		Name="wood_fence2253"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1583.313 343.498 2942.536"
+		Rot="-0.020 0.304 0.062 0.950" />
+
+	<Object
+		Name="wood_fence2254"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1591.885 344.974 2939.150"
+		Rot="0.000 0.000 0.074 0.997" />
+
+	<Object
+		Name="wood_fence2255"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1600.547 347.331 2936.769"
+		Rot="0.020 0.198 0.096 0.975" />
+
+	<Object
+		Name="wood_fence2256"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1650.978 347.882 2898.235"
+		Rot="-0.057 0.891 0.029 -0.449" />
+
+	<Object
+		Name="wood_fence2257"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1653.211 349.827 2888.587"
+		Rot="-0.060 0.688 0.044 -0.722" />
+
+	<Object
+		Name="wood_fence2258"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1645.715 347.236 2907.027"
+		Rot="-0.017 0.838 -0.005 -0.546" />
+
+	<Object
+		Name="wood_fence2259"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1630.899 347.171 2917.714"
+		Rot="0.043 0.837 -0.045 -0.544" />
+
+	<Object
+		Name="wood_fence2260"
+		Belong="-1"
+		Prototype="Breakable_WoodFence2"
+		Pos="1624.353 347.971 2922.586"
+		Rot="-0.042 0.992 -0.110 0.040" />
+
+	<Object
+		Name="lamppost3261"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3688.352 418.657 3465.185" />
+
+	<Object
+		Name="lamppost3262"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1342.901 395.969 827.412" />
+
+	<Object
+		Name="lamppost3263"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1440.289 387.654 850.727" />
+
+	<Object
+		Name="lamppost3264"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1409.513 385.190 787.114" />
+
+	<Object
+		Name="lamppost3265"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="632.856 410.931 2264.552"
+		Mass="784.377"
+		NodeScale="1.577" />
+
+	<Object
+		Name="lamppost3266"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1815.351 334.000 2492.283"
+		Mass="784.377"
+		NodeScale="1.577" />
+
+	<Object
+		Name="lamppost3267"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1748.104 397.822 2498.662"
+		Mass="784.377"
+		NodeScale="1.577" />
+
+	<Object
+		Name="lamppost3268"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1811.831 403.872 2585.775"
+		Mass="784.377"
+		NodeScale="1.577" />
+
+	<Object
+		Name="lamppost3269"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3700.662 419.323 3426.485" />
+
+	<Object
+		Name="lamppost3270"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1821.122 393.893 3370.296"
+		Mass="487.714"
+		NodeScale="1.346" />
+
+	<Object
+		Name="lamppost3271"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="744.137 294.624 598.680"
+		Mass="487.714"
+		NodeScale="1.346" />
+
+	<Object
+		Name="lamppost3272"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="611.915 293.994 619.906"
+		Mass="487.714"
+		NodeScale="1.346" />
+
+	<Object
+		Name="lamppost3273"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="571.472 294.624 665.440"
+		Mass="487.714"
+		NodeScale="1.346" />
+
+	<Object
+		Name="lamppost3274"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3040.682 314.143 745.519" />
+
+	<Object
+		Name="lamppost3275"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="2946.740 404.301 2370.345" />
+
+	<Object
+		Name="lamppost3276"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="2956.209 401.038 2424.535" />
+
+	<Object
+		Name="lamppost3277"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3009.057 392.764 2442.079" />
+
+	<Object
+		Name="lamppost3278"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3568.632 386.914 3401.520" />
+
+	<Object
+		Name="lamppost3279"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3509.728 386.530 3442.484" />
+
+	<Object
+		Name="lamppost3280"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3455.992 363.677 3367.777" />
+
+	<Object
+		Name="lamppost3281"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3444.239 370.666 3475.315" />
+
+	<Object
+		Name="lamppost3282"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3164.964 258.361 3731.148" />
+
+	<Object
+		Name="lamppost3283"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="3167.123 334.998 3520.600" />
+
+	<Object
+		Name="lamppost3284"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="691.360 394.869 2295.047" />
+
+	<Object
+		Name="lamppost3285"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1035.528 293.884 2888.930" />
+
+	<Object
+		Name="lamppost3286"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1101.935 293.884 2961.788" />
+
+	<Object
+		Name="lamppost3287"
+		Belong="-1"
+		Prototype="lamppost3"
+		Pos="1081.389 295.133 2909.500" />
+
+	<Object
+		Name="pack288"
+		Belong="-1"
+		Prototype="pack_breakable"
+		Pos="1336.655 394.494 822.300"
+		Rot="0.000 -0.452 0.000 0.892" />
+
+	<Object
+		Name="factory_box289"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1374.267 397.542 875.617" />
+
+	<Object
+		Name="factory_box290"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1376.938 397.470 875.563"
+		Rot="0.000 -0.068 0.000 0.998" />
+
+	<Object
+		Name="factory_box291"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1374.787 397.543 875.532"
+		Rot="0.000 -0.013 0.000 1.000" />
+
+	<Object
+		Name="factory_box292"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1377.042 397.458 876.228"
+		Rot="0.000 0.128 0.000 0.992" />
+
+	<Object
+		Name="pack293"
+		Belong="-1"
+		Prototype="pack_breakable"
+		Pos="1338.529 397.569 842.108"
+		Rot="0.000 -0.598 0.000 0.801" />
+
+	<Object
+		Name="factory_box294"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1335.998 395.614 829.961"
+		Mass="96.025"
+		NodeScale="1.243" />
+
+	<Object
+		Name="factory_box295"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1335.532 395.243 827.707"
+		Mass="96.025"
+		NodeScale="1.243" />
+
+	<Object
+		Name="factory_box296"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1332.975 395.405 829.279"
+		Mass="96.025"
+		NodeScale="1.243" />
+
+	<Object
+		Name="factory_box297"
+		Belong="-1"
+		Prototype="factory_box"
+		Pos="1334.254 395.457 829.426"
+		Mass="96.025"
+		NodeScale="1.243" />
+
+	<Object
+		Name="lamppost2298"
+		Belong="-1"
+		Prototype="lamppost2"
+		Pos="1530.465 338.875 2878.612"
+		Rot="0.000 -0.319 0.000 0.948">
+		<Object
+			Belong="-1"
+			Prototype="Light_Yellow_Lens"
+			Pos="1529.678 345.822 2878.013"
+			Rot="0.000 -0.319 0.000 0.948" />
+	</Object>
+
+	<Object
+		Name="lamppost2299"
+		Belong="-1"
+		Prototype="lamppost2"
+		Pos="1558.103 340.126 2874.337"
+		Rot="0.000 -0.500 0.000 0.866" />
+
+	<Object
+		Name="lamppost2300"
+		Belong="-1"
+		Prototype="lamppost2"
+		Pos="1505.854 335.856 2896.075"
+		Rot="0.000 -0.554 0.000 0.833" />
+
+	<Object
+		Name="barrel1301"
+		Belong="-1"
+		Prototype="Breakable_Barrel1"
+		Pos="3422.869 337.649 2342.674" />
+
+	<Object
+		Name="barrel1302"
+		Belong="-1"
+		Prototype="Breakable_Barrel1"
+		Pos="3417.728 337.025 2338.549" />
+
+	<Object
+		Name="barrel1303"
+		Belong="-1"
+		Prototype="Breakable_Barrel1"
+		Pos="3426.782 337.408 2339.672" />
+
+	<Object
+		Name="barrel1304"
+		Belong="-1"
+		Prototype="Breakable_Barrel1"
+		Pos="3430.478 338.395 2344.328" />
+
+	<Object
+		Name="watch_tower305"
+		Belong="-1"
+		Prototype="Breakable_america_watch_tower"
+		Pos="3315.783 340.109 3273.769" />
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="lamppost2300"
+			NodesNameHierarchy=""
+			PostTiePos="1505.487 343.489 2895.159"
+			LpName="LP_PART01" />
+
+		<Post
+			ServerObjName="lamppost2298"
+			NodesNameHierarchy=""
+			PostTiePos="1529.689 346.508 2878.003"
+			LpName="LP_PART01" />
+	</Object>
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="lamppost2300"
+			NodesNameHierarchy=""
+			PostTiePos="1506.258 343.489 2896.997"
+			LpName="LP_PART02" />
+
+		<Post
+			ServerObjName="lamppost2298"
+			NodesNameHierarchy=""
+			PostTiePos="1531.277 346.508 2879.208"
+			LpName="LP_PART02" />
+	</Object>
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="lamppost2298"
+			NodesNameHierarchy=""
+			PostTiePos="1529.689 346.508 2878.003"
+			LpName="LP_PART01" />
+
+		<Post
+			ServerObjName="lamppost2299"
+			NodesNameHierarchy=""
+			PostTiePos="1557.624 347.759 2873.475"
+			LpName="LP_PART01" />
+	</Object>
+
+	<Object
+		Belong="-1"
+		Prototype="Cable">
+		<Post
+			ServerObjName="lamppost2298"
+			NodesNameHierarchy=""
+			PostTiePos="1531.277 346.508 2879.208"
+			LpName="LP_PART02" />
+
+		<Post
+			ServerObjName="lamppost2299"
+			NodesNameHierarchy=""
+			PostTiePos="1558.620 347.759 2875.201"
+			LpName="LP_PART02" />
+	</Object>
+
+	<Object
+		Name="Human01"
+		Belong="1001"
+		Prototype="Human"
+		Pos="1398.588 384.010 740.287"
+		PathsNames="hum1" />
+
+	<Object
+		Name="Human02"
+		Belong="1001"
+		Prototype="Human"
+		Pos="1355.837 393.402 802.228"
+		PathsNames="hum2" />
+
+	<Object
+		Name="Human03"
+		Belong="1001"
+		Prototype="Human"
+		Pos="1463.127 380.083 831.298"
+		PathsNames="hum3" />
+
+	<Object
+		Name="Human04"
+		Belong="1001"
+		Prototype="Human"
+		Pos="2968.650 399.374 2417.343"
+		PathsNames="hum4" />
+
+	<Object
+		Name="Human05"
+		Belong="1001"
+		Prototype="Human"
+		Pos="2970.124 398.005 2436.273"
+		PathsNames="hum5" />
+
+	<Object
+		Name="Human06"
+		Belong="1001"
+		Prototype="Human"
+		Pos="2932.235 405.909 2364.036"
+		PathsNames="hum6" />
+
+	<Object
+		Name="Human07"
+		Belong="1001"
+		Prototype="Human"
+		Pos="3616.481 409.332 3493.895"
+		PathsNames="hum7" />
+
+	<Object
+		Name="Human08"
+		Belong="1001"
+		Prototype="Human"
+		Pos="3572.007 401.763 3447.657"
+		PathsNames="hum8" />
+
+	<Object
+		Name="Human09"
+		Belong="1001"
+		Prototype="Human"
+		Pos="3669.267 412.679 3455.716"
+		PathsNames="hum9" />
+
+	<Object
+		Name="Human10"
+		Belong="1001"
+		Prototype="Human"
+		Pos="2317.357 424.691 3318.119"
+		PathsNames="hum10" />
+
+	<Object
+		Name="Human11"
+		Belong="1001"
+		Prototype="Human"
+		Pos="2379.521 411.304 3336.732"
+		PathsNames="hum11" />
+
+	<Object
+		Name="Human12"
+		Belong="1001"
+		Prototype="Human"
+		Pos="2367.324 416.175 3284.871"
+		PathsNames="hum12" />
+
+	<Object
+		Name="Human13"
+		Belong="1001"
+		Prototype="Human"
+		Pos="687.656 393.883 2267.924"
+		PathsNames="hum13" />
+
+	<Object
+		Name="Human14"
+		Belong="1001"
+		Prototype="Human"
+		Pos="800.393 391.256 2162.581"
+		PathsNames="hum14" />
+
+	<Object
+		Name="Human15"
+		Belong="1001"
+		Prototype="Human"
+		Pos="690.154 395.360 2301.092"
+		PathsNames="hum15" />
+
+	<Object
+		Name="chest1_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2977.549 318.322 753.870"
+		Radius="10.000" />
+
+	<Object
+		Name="chest2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2744.336 382.639 1163.037"
+		Radius="10.000" />
+
+	<Object
+		Name="chest3_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3706.612 399.889 2316.963"
+		Radius="10.000" />
+
+	<Object
+		Name="chest4_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1863.747 363.400 2938.159"
+		Radius="10.000" />
+
+	<Object
+		Name="chest5_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1216.674 343.561 2329.700"
+		Radius="10.000" />
+
+	<Object
+		Name="chest6_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1261.546 334.000 1565.610"
+		Radius="10.000" />
+
+	<Object
+		Name="chest7_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2229.082 350.415 701.031"
+		Radius="10.000" />
+
+	<Object
+		Name="chest8_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1776.042 316.588 507.061"
+		Radius="10.000" />
+
+	<Object
+		Name="chest9_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1588.810 338.916 2897.475"
+		Radius="10.000" />
+
+	<Object
+		Name="Human306"
+		Belong="1001"
+		Prototype="Human"
+		Pos="2840.433 334.000 2795.033"
+		Rot="0.000 0.481 0.000 0.877" />
+
+	<Object
+		Name="brokvehicle2_breakable308"
+		Belong="1001"
+		Prototype="brokvehicle2_breakable"
+		Pos="2840.036 334.000 2791.037"
+		Rot="-0.026 -0.927 -0.082 -0.364" />
+
+	<Object
+		Name="DynKlad_loc_1"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3008.704 354.438 997.688"
+		Radius="15.000" />
+
+	<Object
+		Name="DynKlad_loc_2"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3699.520 379.851 2074.369"
+		Radius="15.000" />
+
+	<Object
+		Name="DynKlad_loc_3"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3362.265 356.058 3499.152"
+		Radius="15.000" />
+
+	<Object
+		Name="DynKlad_loc_4"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2979.675 337.558 1824.762"
+		Radius="15.000" />
+
+	<Object
+		Name="DynKlad_loc_5"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2574.000 355.151 3613.766"
+		Radius="15.000" />
+
+	<Object
+		Name="DynKlad_loc_6"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="881.641 334.000 2357.668"
+		Radius="15.000" />
+
+	<Object
+		Name="DynKlad_loc_7"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1961.393 366.959 1676.829"
+		Radius="15.000" />
+
+	<Object
+		Name="DynKlad_loc_8"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1028.721 336.168 1550.999"
+		Radius="15.000" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2317"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2715.559 390.265 1200.327" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2318"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2717.067 389.984 1200.456" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2319"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2716.563 390.060 1197.795" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2320"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2718.529 389.716 1197.428" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2321"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2717.438 389.903 1194.540" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2322"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2701.206 386.862 1158.439" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2323"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2699.367 386.591 1155.893" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2324"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2702.374 386.582 1157.788" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2325"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2701.336 386.163 1155.306" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive2326"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2700.352 386.787 1157.532" />
+
+	<Object
+		Belong="1100"
+		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="chest10_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3780.836 400.269 2999.002"
+		Radius="10.000" />
+
+	<Object
+		Name="chest11_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2003.901 408.554 3554.315"
+		Radius="10.000" />
+
+	<Object
+		Name="chest12_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2771.161 333.984 2763.884"
+		Radius="10.000" />
+
+	<Object
+		Name="chest13_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3531.416 346.128 2420.634"
+		Radius="10.000" />
+
+	<Object
+		Name="chest14_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2881.419 386.694 2184.640"
+		Radius="10.000" />
+
+	<Object
+		Name="chest15_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2930.048 338.164 1828.444"
+		Radius="10.000" />
+
+	<Object
+		Name="chest16_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2655.312 336.284 1414.900"
+		Radius="10.000" />
+
+	<Object
+		Name="chest17_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1990.715 370.778 1653.523"
+		Radius="10.000" />
+
+	<Object
+		Name="chest18_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="794.349 296.088 656.288"
+		Radius="10.000" />
+
+	<Object
+		Name="chest19_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1059.775 334.892 1640.387"
+		Radius="10.000" />
+
+	<Object
+		Name="chest20_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="856.938 334.000 2502.853"
+		Radius="10.000" />
+</DynamicScene>

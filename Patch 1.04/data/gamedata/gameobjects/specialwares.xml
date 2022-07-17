@@ -1,0 +1,53 @@
+<Prototypes>
+	<Prototype
+		Class			= "SpecialWare"
+		Name			= "fuel"
+		SwareType 		= "0"
+
+		Price			= "100"
+		Durability		= "100"
+		PriceDispersion	= "5"
+
+		AidPercent		= "10"
+		ModelFile		= "kanistr"
+		ResourceType	= "FUEL" />
+		
+	<Prototype
+		Class			= "SpecialWare"
+		Name			= "scrap_metal"
+		SwareType 		= "2"
+
+		Price			= "120"
+		Durability		= "100"
+		PriceDispersion	= "5"
+
+		AidPercent		= "7"
+		ModelFile		= "lom"
+		ResourceType	= "SCRAP_METAL" />
+	
+	<Prototype
+		Class			= "SpecialWare"
+		Name			= "machinery"
+		SwareType 		= "1"
+
+		Price			= "150"
+		Durability		= "100"
+		PriceDispersion	= "5"
+
+		AidPercent		= "7"
+		ModelFile		= "rabochee_oborudovanie"
+		ResourceType	= "MACHINERY" />	
+	
+	<Prototype
+		Class			= "SpecialWare"
+		Name			= "electronics"
+		SwareType 		= "1"
+
+		Price			= "10000"
+		Durability		= "90"
+		PriceDispersion	= "5"
+
+		AidPercent		= "7"
+		ModelFile		= "mikro"
+		ResourceType	= "ELECTRONICS" />
+</Prototypes>

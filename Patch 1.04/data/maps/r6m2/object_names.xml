@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<ObjectNames>
+	<Object	Name = "ToR6M1"						FullName = "Дорога в Живые джунгли" />
+	<Object	Name = "ToR5M2"						FullName = "Переправа" />
+
+	<Object	Name = "PetrolStationTown1"				FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown1_Workshop"		FullName = "Мастерская" />
+	<Object	Name = "PetrolStationTown2"				FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown2_Workshop"		FullName = "Мастерская" />
+
+	<Object	Name = "r6m1_Vaypeg"					FullName = "Вайнпег" />
+	<Object	Name = "r6m1_Vaypeg_Bar"				FullName = "Паб ''Эль''" />
+	<Object	Name = "r6m1_Vaypeg_Workshop"				FullName = "Мастерская" />
+	<Object	Name = "r6m1_Vaypeg_Shop"				FullName = "Магазин" />
+	<Object	Name = "r6m1_Vaypeg_Bar_Barman"			FullName = "Бармен Натан" />
+	<Object	Name = "r6m1_Vaypeg_Bar_Gonshik1_NPC"		FullName = "Авантюрист Ктулх" />
+
+	<Object	Name = "r6m1_Tander"					FullName = "Тандер" />
+	<Object	Name = "r6m1_Tander_Bar"				FullName = "Бар ''Болт''" />
+	<Object	Name = "r6m1_Tander_Workshop"				FullName = "Мастерская" />
+	<Object	Name = "r6m1_Tander_Shop"				FullName = "Магазин" />
+	<Object	Name = "r6m1_Tander_Bar_Barman"			FullName = "Бармен Эдвард" />
+	<Object	Name = "r6m2_Tander_Bar_SearchMan_NPC"		FullName = "Нервный Марк" />
+
+	<Object	Name = "r6m1_Gradofaks"					FullName = "Градофакс" />
+	<Object	Name = "r6m1_Gradofaks_Bar"				FullName = "Бар ''Ржавь''" />
+	<Object	Name = "r6m1_Gradofaks_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "r6m1_Gradofaks_Shop"				FullName = "Магазин" />
+	<Object	Name = "r6m1_Gradofaks_Bar_Barman"			FullName = "Бармен Поль" />
+	<Object	Name = "r6m1_Vaypeg_Bar_Gonshik2_NPC"		FullName = "Авантюрист Ктулх" />
+
+	<Object	Name = "r6m1_Bey"						FullName = "Бей" />
+	<Object	Name = "r6m1_Bey_Bar"					FullName = "Бар ''Одинокий волк''" />
+	<Object	Name = "r6m1_Bey_Workshop"				FullName = "Мастерская" />
+	<Object	Name = "r6m1_Bey_Shop"					FullName = "Магазин" />
+	<Object	Name = "r6m1_Bey_Bar_Barman"				FullName = "Бармен Жак" />
+
+	<Object	Name = "r6m1_Kanata"					FullName = "Каната" />
+	<Object	Name = "r6m1_Kanata_Bar"				FullName = "Бар ''Патриот''" />
+	<Object	Name = "r6m1_Kanata_Workshop"				FullName = "Мастерская" />
+	<Object	Name = "r6m1_Kanata_Shop"				FullName = "Магазин" />
+	<Object	Name = "r6m1_Kanata_Bar_Barman"			FullName = "Бармен Джимми" />
+
+	<Object	Name = "r6m1_BrokenVeh_Voditel_NPC"			FullName = "Неудачник Карл" />
+	<Object	Name = "r6m1_Mechanic_NPC"			FullName = "Механик" />
+
+
+	<Object	Name = "DynQEnemy01"					FullName = "Гарольд" />
+	<Object	Name = "DynQEnemy02"					FullName = "Сизый Билл" />
+	<Object	Name = "DynQEnemy03"					FullName = "Гудвин" />
+	<Object	Name = "DynQEnemy04"					FullName = "Жорж Добробуш" />
+	<Object	Name = "DynQEnemy05"					FullName = "Ленивый Хьюго" />
+	<Object	Name = "DynQEnemy06"					FullName = "Кровавый Грэг" />
+	<Object	Name = "DynQEnemy07"					FullName = "Николас" />
+	<Object	Name = "DynQEnemy08"					FullName = "Грязный Том" />
+	<Object	Name = "DynQEnemy09"					FullName = "Джон С. Смит" />
+	<Object	Name = "DynQEnemy10"					FullName = "Клинт Уэйн" />
+	<Object	Name = "DynQEnemy11"					FullName = "Джон Иствуд" />
+	<Object	Name = "DynQEnemy12"					FullName = "Макс Гибсон" />
+	<Object	Name = "DynQEnemy13"					FullName = "Чистый Эл" />
+	<Object	Name = "DynQEnemy14"					FullName = "Однорукий Соер" />
+	<Object	Name = "DynQEnemy15"					FullName = "Мошенник Чарли" />
+	<Object	Name = "DynQEnemy16"					FullName = "Бор Рис" />
+	<Object	Name = "DynQEnemy17"					FullName = "Ловкач Бэн" />
+	<Object	Name = "DynQEnemy18"					FullName = "Шулер Смит" />
+	<Object	Name = "DynQEnemy19"					FullName = "Картежник Питер" />
+	<Object	Name = "DynQEnemy20"					FullName = "Стрелок Жан" />
+	<Object	Name = "DynQEnemy21"					FullName = "Одноглазый Джонни" />
+	<Object	Name = "DynQEnemy22"					FullName = "Маньяк Энтони" />
+	<Object	Name = "DynQEnemy23"					FullName = "Большой Вилли" />
+	<Object	Name = "DynQEnemy24"					FullName = "Билл" />
+	<Object	Name = "DynQEnemy25"					FullName = "Вспыльчивый Майк" />
+</ObjectNames>
