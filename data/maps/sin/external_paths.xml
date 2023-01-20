@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<Paths>
+	<Path
+		Name="B_C">
+		<Point
+			coord="2174.454 759.560" />
+
+		<Point
+			coord="2157.009 704.492" />
+
+		<Point
+			coord="2134.220 685.235" />
+	</Path>
+
+	<Path
+		Name="Bulldog_Tube">
+		<Point
+			coord="1947.963 650.626" />
+
+		<Point
+			coord="1906.774 630.814" />
+
+		<Point
+			coord="1855.431 628.409" />
+	</Path>
+
+	<Path
+		Name="Caravan_A">
+		<Point
+			coord="1555.231 1524.872" />
+
+		<Point
+			coord="1506.877 1552.990" />
+
+		<Point
+			coord="1473.116 1584.327" />
+	</Path>
+
+	<Path
+		Name="Caravan_D">
+		<Point
+			coord="1597.538 1515.258" />
+
+		<Point
+			coord="1549.500 1528.889" />
+
+		<Point
+			coord="1525.303 1540.212" />
+	</Path>
+
+	<Path
+		Name="Caravan_T1">
+		<Point
+			coord="1552.007 1499.005" />
+
+		<Point
+			coord="1500.065 1521.903" />
+
+		<Point
+			coord="1475.099 1551.433" />
+	</Path>
+
+	<Path
+		Name="Caravan_T2">
+		<Point
+			coord="1570.339 1548.681" />
+
+		<Point
+			coord="1526.971 1563.208" />
+
+		<Point
+			coord="1511.396 1583.001" />
+	</Path>
+
+	<Path
+		Name="D1_C">
+		<Point
+			coord="2170.216 729.405" />
+
+		<Point
+			coord="2128.971 715.207" />
+
+		<Point
+			coord="2111.894 701.875" />
+	</Path>
+
+	<Path
+		Name="D2_C">
+		<Point
+			coord="2202.847 762.343" />
+
+		<Point
+			coord="2181.482 720.478" />
+
+		<Point
+			coord="2157.989 682.837" />
+
+		<Point
+			coord="2125.169 663.316" />
+
+		<Point
+			coord="2090.222 658.989" />
+	</Path>
+
+	<Path
+		Name="D3_C">
+		<Point
+			coord="2203.805 779.418" />
+
+		<Point
+			coord="2188.500 742.609" />
+
+		<Point
+			coord="2167.861 700.109" />
+
+		<Point
+			coord="2142.691 678.603" />
+	</Path>
+
+	<Path
+		Name="D4_C">
+		<Point
+			coord="2188.539 808.411" />
+
+		<Point
+			coord="2173.975 757.419" />
+
+		<Point
+			coord="2170.158 722.466" />
+
+		<Point
+			coord="2147.226 710.272" />
+	</Path>
+
+	<Path
+		Name="D5_C">
+		<Point
+			coord="2084.208 834.248" />
+
+		<Point
+			coord="2024.513 786.788" />
+
+		<Point
+			coord="2024.023 730.821" />
+
+		<Point
+			coord="2063.210 681.143" />
+	</Path>
+
+	<Path
+		Name="Dog1_Cross">
+		<Point
+			coord="2851.372 1897.205" />
+
+		<Point
+			coord="2905.224 1949.396" />
+
+		<Point
+			coord="2945.392 1991.883" />
+	</Path>
+
+	<Path
+		Name="Dog1_Tube">
+		<Point
+			coord="1952.482 604.643" />
+
+		<Point
+			coord="1937.480 622.247" />
+
+		<Point
+			coord="1862.299 606.727" />
+	</Path>
+
+	<Path
+		Name="Dog2_Cross">
+		<Point
+			coord="2886.737 1840.063" />
+
+		<Point
+			coord="2956.430 1912.324" />
+
+		<Point
+			coord="3025.040 1961.442" />
+	</Path>
+
+	<Path
+		Name="Dog2_Tube">
+		<Point
+			coord="1950.995 648.461" />
+
+		<Point
+			coord="1924.711 621.815" />
+
+		<Point
+			coord="1858.107 622.837" />
+	</Path>
+
+	<Path
+		Name="Egoist_Coming">
+		<Point
+			coord="1424.405 2102.867" />
+
+		<Point
+			coord="1395.746 2103.108" />
+	</Path>
+
+	<Path
+		Name="FF_A">
+		<Point
+			coord="3502.850 711.735" />
+	</Path>
+
+	<Path
+		Name="FF_AB1">
+		<Point
+			coord="3558.874 696.564" />
+	</Path>
+
+	<Path
+		Name="FF_AB2">
+		<Point
+			coord="3537.043 720.255" />
+	</Path>
+
+	<Path
+		Name="FF_AB3">
+		<Point
+			coord="3503.490 673.781" />
+	</Path>
+
+	<Path
+		Name="FF_A_Out">
+		<Point
+			coord="3510.807 742.341" />
+
+		<Point
+			coord="3442.021 770.459" />
+
+		<Point
+			coord="3395.955 818.561" />
+	</Path>
+
+	<Path
+		Name="FF_H">
+		<Point
+			coord="3532.913 677.492" />
+	</Path>
+
+	<Path
+		Name="Hero_Arlekin">
+		<Point
+			coord="2662.265 1549.469" />
+
+		<Point
+			coord="2651.027 1517.989" />
+
+		<Point
+			coord="2627.841 1507.704" />
+	</Path>
+
+	<Path
+		Name="Hero_Coming">
+		<Point
+			coord="1345.897 2090.996" />
+
+		<Point
+			coord="1377.474 2100.114" />
+	</Path>
+
+	<Path
+		Name="Hero_Cross">
+		<Point
+			coord="2869.689 1871.896" />
+
+		<Point
+			coord="2927.383 1925.940" />
+
+		<Point
+			coord="2982.700 1975.023" />
+	</Path>
+
+	<Path
+		Name="Hero_Exsh">
+		<Point
+			coord="3005.513 1990.902" />
+
+		<Point
+			coord="3054.068 2028.776" />
+	</Path>
+
+	<Path
+		Name="Hero_Tube">
+		<Point
+			coord="1945.434 624.140" />
+
+		<Point
+			coord="1892.469 616.360" />
+
+		<Point
+			coord="1856.812 619.829" />
+	</Path>
+
+	<Path
+		Name="Kitty_Exsh">
+		<Point
+			coord="3029.867 2028.071" />
+
+		<Point
+			coord="2997.609 2001.597" />
+	</Path>
+
+	<Path
+		Name="Kitty_Out">
+		<Point
+			coord="2550.238 1574.670" />
+
+		<Point
+			coord="2521.323 1634.944" />
+
+		<Point
+			coord="2475.092 1711.763" />
+
+		<Point
+			coord="2331.531 1911.162" />
+	</Path>
+
+	<Path
+		Name="Start">
+		<Point
+			coord="2200.275 2779.000" />
+
+		<Point
+			coord="2124.269 2846.360" />
+
+		<Point
+			coord="2078.586 2915.311" />
+
+		<Point
+			coord="2050.393 2973.167" />
+	</Path>
+
+	<Path
+		Name="Finish">
+		<Point
+			coord="2078.586 2915.311" />
+
+		<Point
+			coord="2124.269 2846.360" />
+
+		<Point
+			coord="2200.275 2779.000" />
+
+		<Point
+			coord="2323.746 2723.532" />
+	</Path>
+
+	<Path
+		Name="Start2">
+		<Point
+			coord="3725.091 251.997" />
+
+		<Point
+			coord="3717.618 303.895" />
+
+		<Point
+			coord="3701.334 378.677" />
+	</Path>
+
+	<Path
+		Name="Finish2">
+		<Point
+			coord="3717.618 303.895" />
+
+		<Point
+			coord="3725.091 251.997" />
+		<Point
+			coord="3733.592 186.921" />
+	</Path>
+
+	<Path
+		Name="OldFarmHero">
+		<Point
+			coord="2186.583 801.741" />
+
+		<Point
+			coord="2173.746 767.235" />
+		
+		<Point
+			coord="2168.374 720.874" />
+		
+		<Point
+			coord="2095.024 633.075" />
+	</Path>
+
+	<Path
+		Name="FinalBorn">
+		<Point
+			coord="3540.703 664.519" />
+
+		<Point
+			coord="3614.601 566.924" />
+	</Path>
+
+	<Path
+		Name="FinalBorn1">
+		<Point
+			coord="3549.892 634.622" />
+
+		<Point
+			coord="3597.607 565.134" />
+	</Path>
+</Paths>

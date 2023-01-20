@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: uniqweps.xml 286 2006-04-22 11:19:20Z anton $
+-->
+
+<Prototypes>
+
+       	<Prototype
+		Class			= "BulletLauncher"
+		Name			= "pktS01"
+		ModelFile		= "pkt01"
+		ResourceType		= "SMALL_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		TracerEffect ="ET_PS_TRACER1"
+		TracerRange = "1" 
+	
+		BulletPrototype		= "raybullet"
+		ExplosionType		= "MACHINEGUN"
+		FiringEffect		= "none"
+		Damage		= "8"
+		FiringRate		= "650"
+		GroupingAngle		= "0.4"
+		FiringRange		= "1000"
+		RecoilForce		= "1"
+		FiringType		= "MachineGun"
+		Price			= "1670"
+		
+		Decal			= "DC_SML_MACHINEGUN"
+
+		ChargeSize     = "80"
+		RechargingTime = "3"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "250"/>
+
+	<Prototype
+		Class			= "BulletLauncher"
+		Name			= "specterS01"
+		ModelFile			= "specter01"
+		ResourceType		= "SMALL_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+				
+		TracerEffect ="ET_PS_TRACER1"
+		TracerRange = "1" 
+			
+		BulletPrototype		= "raybullet"
+		ExplosionType		= "MACHINEGUN"
+		FiringEffect		= "none"
+		Damage			= "7"
+		FiringRate			= "600"
+		GroupingAngle		= "0.6"
+		FiringRange		= "500"
+		RecoilForce		= "2"
+		FiringType		= "MachineGun"
+		Price			= "590"
+		
+		Decal				= "DC_SML_MACHINEGUN"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		ChargeSize     = "70"
+		RechargingTime = "2.5"
+
+		Durability			= "200" />
+
+	<Prototype
+		Class			= "BulletLauncher"
+		Name			= "kordS01"
+		ModelFile		= "kord01"
+		ResourceType		= "SMALL_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		TracerEffect ="ET_PS_TRACER1"
+		TracerRange = "1" 
+	
+		BulletPrototype		= "raybullet"
+		ExplosionType		= "MACHINEGUN"
+		FiringEffect		= "none"
+		Damage		= "13"
+		FiringRate		= "450"
+		GroupingAngle		= "0.6"
+		FiringRange		= "1000"
+		RecoilForce		= "2"
+                FiringType		= "MachineGun"
+		Price			= "3680"
+		
+		Decal				= "DC_SML_MACHINEGUN"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		ChargeSize     = "55"
+		RechargingTime = "3"
+
+		Durability		= "250"/>
+
+	<Prototype
+		Class			= "PlasmaBunchLauncher"
+		Name			= "fagotS01"
+		ModelFile		= "fagot01"
+		ResourceType		= "SMALL_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		BulletPrototype		= "somePlasmaBunch"
+		ExplosionType		= "PLASMA"
+		FiringEffect		= "none"
+		Damage			= "400"
+		FiringRate		= "20"
+		GroupingAngle		= "0.1"
+		FiringRange		= "2000"
+		RecoilForce		= "1"
+                FiringType		= "Plasma"
+		Price			= "51000"
+				
+		Decal				= "DC_LASER"
+
+		ChargeSize     = "1"
+		RechargingTime = "3"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "400"/>
+
+
+	<Prototype
+		Class			= "BulletLauncher"
+		Name			= "flagS01"
+		ModelFile		= "flag01"
+		ResourceType		= "BIG_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+
+		BulletPrototype		= "raybullet"
+		ExplosionType		= "MACHINEGUN"
+		FiringEffect		= "none"
+		Damage			= "380"
+		NumBulletsInShot	= "20"
+		FiringRate		= "14"
+		GroupingAngle		= "2.7"
+		FiringRange		= "2000"
+		RecoilForce		= "1000"
+
+		Decal			= "DC_BIG_MACHINEGUN"
+
+		ChargeSize     		= "1"
+		RechargingTime 		= "4"
+
+		Price			= "8960"
+                FiringType		= "ShotGun"
+		BlastWavePrototype      = "smallBlastWave"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "2000"/>
+
+	<Prototype
+		Class			= "BulletLauncher"
+		Name			= "kpvtS01"
+		ModelFile		= "kpvt01"
+		ResourceType		= "BIG_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		BulletPrototype		= "raybullet"
+		ExplosionType		= "AUTOCANNON"
+		FiringEffect		= "none"
+		Damage		= "10"
+		FiringRate		= "700"
+		GroupingAngle		= "0.9"
+		FiringRange		= "1000"
+		RecoilForce		= "300"
+		
+		Decal				= "DC_BIG_MACHINEGUN"
+
+		ChargeSize     = "130"
+		RechargingTime = "5"
+
+		Price			= "6400"
+                FiringType		= "MachineGun"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "1000"/>
+
+
+	<Prototype
+		Class			= "PlasmaBunchLauncher"
+		Name			= "elephantS01"
+		ModelFile		= "big_elephant01"
+		ResourceType		= "BIG_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+
+		BulletPrototype	= "somePlasmaBunch"
+		ExplosionType	= "PLASMA"
+		FiringEffect		= "none"
+		Damage		= "800"
+		FiringRate		= "14"
+		GroupingAngle		= "0.6"
+		FiringRange		= "200"
+		RecoilForce		= "500"
+		
+		ChargeSize     = "1"
+		RechargingTime = "4.5"
+
+		Decal				= "DC_LASER"
+                FiringType		= "Plasma"
+		Price			= "90200"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "2500"/>
+	
+
+
+	<Prototype
+		Class			= "BulletLauncher"
+		Name			= "octopusS01"
+		ModelFile		= "octopus01"
+		ResourceType		= "GIANT_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		Decal			= "DC_GUN"
+
+		BulletPrototype		= "raybullet"
+		ExplosionType		= "AUTOCANNON"
+		FiringEffect		= "none"
+		Damage			= "25"
+		FiringRate		= "400"
+		GroupingAngle		= "1.8"
+		FiringRange		= "900"
+		RecoilForce		= "400"
+		
+		ChargeSize     		= "120"
+		RechargingTime 		= "6"
+                FiringType		= "MachineGun"
+		Price		= "32900"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "1500" />
+
+
+	<Prototype
+        
+		Class			= "PlasmaBunchLauncher"
+		Name			= "hammerS01"
+		ModelFile		= "big_hammer01"
+		ResourceType		= "GIANT_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		Decal			= "DC_LASER"
+
+		BulletPrototype		= "somePlasmaBunchBig"
+		ExplosionType		= "PLASMA"
+		FiringEffect		= "none"
+		Damage			= "1700"
+		FiringRate		= "15"
+		GroupingAngle		= "0.1"
+		FiringRange		= "200"
+		RecoilForce		= "550"
+		FiringType		= "Plasma"
+		ChargeSize     		= "1"
+		RechargingTime 		= "4"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+                CanBeUsedInAutogenerating  =  "0"
+		Price			= "174000"
+
+		Durability		= "5000"/>
+
+
+	<Prototype
+		Class			= "MortarVolleyLauncher"
+		Name			= "mars01SR"
+		ModelFile		= "mars01L"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		ActionDist		= "1000"		
+		InitialVelocity		= "70"
+     		ApplyAffixes	= "false"
+		BulletPrototype		= "marsMortarShell"
+		ExplosionType		= "GRENADE"
+		FiringEffect		= "none"
+		Damage			= "1800"
+		FiringRate		= "5"
+		GroupingAngle		= "0.8"
+		FiringRange		= "100"
+                FiringType		= "Artillery"
+		Decal				= "DC_GUN"
+
+		ChargeSize     = "3"
+		RechargingTime = "12"
+
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "4000"
+		
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		IgnoreStopAnglesWhenFire = "true"
+		CanBeUsedInAutogenerating  =  "0"
+		/>
+
+	<Prototype
+		Class			= "MortarVolleyLauncher"
+		Name			= "mars01SL"
+		ModelFile		= "mars01R"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		ActionDist		= "1000"		
+		InitialVelocity		= "70"
+     		ApplyAffixes	= "false"
+		BulletPrototype		= "marsMortarShell"
+		ExplosionType		= "GRENADE"
+		FiringEffect		= "none"
+		Damage			= "1800"
+		FiringRate		= "5"
+		GroupingAngle		= "0.8"
+		FiringRange		= "100"
+                FiringType		= "Artillery"
+		Decal				= "DC_GUN"
+
+		ChargeSize     = "3"
+		RechargingTime = "12"
+
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "4000"
+		CanBeUsedInAutogenerating  =  "0"		
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		IgnoreStopAnglesWhenFire = "true"
+		/>
+	<Prototype
+		Class			= "CompoundGun"
+		Name				= "marsSideGunS"
+		Price		= "14800"
+
+		Decal				= "DC_GUN"
+     		ApplyAffixes	= "false"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		ResourceType		= "SIDE_GUN">	
+
+		<Part id = "BASKET_SIDE_GUN_L"	Prototype = "mars01SL" /> 
+		<Part id = "BASKET_SIDE_GUN_R"	Prototype = "mars01SR" /> 
+	</Prototype>
+
+	<Prototype
+		Class			= "ThunderboltLauncher"
+		Name			= "zeus01SR"
+		ModelFile		= "zeus01R"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+     		ApplyAffixes	= "false"		
+		BulletPrototype		= "zeusThunderbolt"
+		ExplosionType		= "PLASMA"
+		FiringEffect		= "none"
+		Damage		= "1600"
+		FiringRate		= "4"
+		GroupingAngle		= "0.6"
+		FiringRange		= "100"
+		ActionDist		= "100"		
+                FiringType		= "Plasma"
+		ChargeSize     = "1"
+		RechargingTime = "15"
+
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+
+		CanBeUsedInAutogenerating  =  "0"
+		Durability		= "6000"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		IgnoreStopAnglesWhenFire = "true"
+		/>
+
+	<Prototype
+		Class			= "ThunderboltLauncher"
+		Name			= "zeus01SL"
+		ModelFile		= "zeus01L"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+     		ApplyAffixes	= "false"		
+		BulletPrototype		= "zeusThunderbolt"
+		ExplosionType		= "PLASMA"
+		FiringEffect		= "none"
+		Damage		= "1600"
+		FiringRate		= "4"
+		GroupingAngle		= "0.6"
+		FiringRange		= "100"
+		ActionDist		= "100"		
+                FiringType		= "Plasma"
+		ChargeSize     = "1"
+		RechargingTime = "15"
+
+		CanBeUsedInAutogenerating  =  "0"
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "6000"
+
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		IgnoreStopAnglesWhenFire = "true"
+		/>
+
+
+
+	<Prototype
+		Class			= "CompoundGun"
+		Name				= "zeusSideGunS"
+		Price		= "160000"
+		Decal				= "DC_LASER"
+		VisibleInEncyclopedia 	= "false"
+		CanBeDroppedFromEnemies	= "false"
+		CanBeUsedInAutogenerating  =  "0"
+     		ApplyAffixes	= "false"
+		ResourceType		= "SIDE_GUN">	
+
+		<Part id = "BASKET_SIDE_GUN_L"	Prototype = "zeus01SL" /> 
+		<Part id = "BASKET_SIDE_GUN_R"	Prototype = "zeus01SR" /> 
+
+
+	</Prototype>
+        
+</Prototypes>

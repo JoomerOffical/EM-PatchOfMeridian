@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<ObjectNames>
+
+	<Object
+		Name="r5m2_PetrolStation1"
+		FullName="Заправка" />
+
+	<Object
+		Name="r5m2_Sagevsal_enter"
+		FullName="Саг-Евсал" />
+
+	<Object
+		Name="r5m2_Mexico_enter"
+		FullName="Мехико" />
+
+	<Object
+		Name="r5m2_Vraska_enter"
+		FullName="Враска" />
+
+	<Object
+		Name="r5m2_Cvetograd_enter"
+		FullName="Цветноград" />
+
+	<Object
+		Name="ToR5M1"
+		FullName="Шоссе" />
+
+	<Object
+		Name="ToR6M2"
+		FullName="Переправа" />
+
+	<Object
+		Name="r5m2_Pervomayka"
+		FullName="Первомайская" />
+
+	<Object
+		Name="r5m2_Pervomayka_Bar"
+		FullName="Бар" />
+
+	<Object
+		Name="r5m2_Pervomayka_Bar_Barman"
+		FullName="Бармен Джонни" />
+
+	<Object
+		Name="r5m2_Pervomayka_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="r5m2_Pervomayka_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="r5m2_Pervomayka_Bar_Charli_NPC"
+		FullName="Пьяница Чарли" />
+
+	<Object
+		Name="r5m2_Sagevsal"
+		FullName="Саг-Евсал" />
+
+	<Object
+		Name="r5m2_Sagevsal_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="r5m2_Sagevsal_Bar"
+		FullName="Бар ''Азартный''" />
+
+	<Object
+		Name="r5m2_Sagevsal_Bar_Barman"
+		FullName="Бармен Элл" />
+
+	<Object
+		Name="r5m2_Sagevsal_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="r5m2_Cvetograd"
+		FullName="Цветноград" />
+
+	<Object
+		Name="r5m2_Cvetograd_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="r5m2_Cvetograd_Bar"
+		FullName="Закусочная ''Мак''" />
+
+	<Object
+		Name="r5m2_Cvetograd_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="r5m2_Cvetograd_Bar_Barman"
+		FullName="Бармен Дак" />
+
+	<Object
+		Name="r5m2_Cvetograd_Drunk"
+		FullName="Пьяница Вильям" />
+
+	<Object
+		Name="r5m2_Mexico"
+		FullName="Мехико" />
+
+	<Object
+		Name="r5m2_Mexico_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="r5m2_Mexico_Bar"
+		FullName="Салун ''От Заката''" />
+
+	<Object
+		Name="r5m2_Mexico_Bar_Barman"
+		FullName="Бармен Луис" />
+
+	<Object
+		Name="r5m2_Mexico_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="r5m2_Vraska"
+		FullName="Враска" />
+
+	<Object
+		Name="r5m2_Vraska_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="r5m2_Vraska_Bar"
+		FullName="Бар ''До рассвета''" />
+
+	<Object
+		Name="TheOneEyeBase_House"
+		FullName="База" />
+
+	<Object
+		Name="r5m2_Vraska_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="r5m2_Vraska_Bar_Barman"
+		FullName="Бармен Бун" />
+
+	<Object
+		Name="TheOneEyeBase"
+		FullName="База Одноглазой" />
+
+	<Object
+		Name="TheOneEyeBase_Shop"
+		FullName="Магазин" />
+
+	<Object
+		Name="TheOneEyeBase_Bar"
+		FullName="Бар ''Свободный''" />
+
+	<Object
+		Name="TheOneEyeBase_Bar_Barman"
+		FullName="Бармен Джордж" />
+
+	<Object
+		Name="Defender_NPC"
+		FullName="Лейтенант Кайл" />
+
+	<Object
+		Name="Defender1_NPC"
+		FullName="Лейтенант Кайл" />
+
+	<Object
+		Name="Defender2_NPC"
+		FullName="Лейтенант Кайл" />
+
+	<Object
+		Name="TheOneEyeBase_Workshop"
+		FullName="Мастерская" />
+
+	<Object
+		Name="TheOneEyeBase_Bar_OneEye_NPC"
+		FullName="Одноглазая" />
+
+	<Object
+		Name="TheOneEyeBase_Amerigo_NPC"
+		FullName="Капитан Америго" />
+
+	<Object
+		Name="Starievshik_loc"
+		FullName="Дом Старьевщика" />
+
+	<Object
+		Name="Starievshik_NPC"
+		FullName="Старьевщик Рок" />
+
+	<Object
+		Name="r5m2_Sagevsal_Bar_Shumaher1"
+		FullName="Водитель Михаэль" />
+
+	<Object
+		Name="r5m2_Mexico_Bar_Shumaher2"
+		FullName="Водитель Михаэль" />
+
+	<Object
+		Name="r5m2_Cvetograd_Bar_Plemaynik"
+		FullName="Механик Майклз" />
+
+	<Object
+		Name="r5m2_Mexico_Bar_KladMan"
+		FullName="Бродяга Юджин" />
+
+	<Object
+		Name="r5m2_Vraska_Bar_Zamucheniy"
+		FullName="Фермер Том" />
+
+	<Object	Name = "DynQEnemy01"					FullName = "Гарольд" />
+	<Object	Name = "DynQEnemy02"					FullName = "Сизый Билл" />
+	<Object	Name = "DynQEnemy03"					FullName = "Гудвин" />
+	<Object	Name = "DynQEnemy04"					FullName = "Жорж Добробуш" />
+	<Object	Name = "DynQEnemy05"					FullName = "Ленивый Хьюго" />
+	<Object	Name = "DynQEnemy06"					FullName = "Кровавый Грэг" />
+	<Object	Name = "DynQEnemy07"					FullName = "Николас" />
+	<Object	Name = "DynQEnemy08"					FullName = "Грязный Том" />
+	<Object	Name = "DynQEnemy09"					FullName = "Джон С. Смит" />
+	<Object	Name = "DynQEnemy10"					FullName = "Клинт Уэйн" />
+	<Object	Name = "DynQEnemy11"					FullName = "Джон Иствуд" />
+	<Object	Name = "DynQEnemy12"					FullName = "Макс Гибсон" />
+	<Object	Name = "DynQEnemy13"					FullName = "Чистый Эл" />
+	<Object	Name = "DynQEnemy14"					FullName = "Однорукий Соер" />
+	<Object	Name = "DynQEnemy15"					FullName = "Мошенник Чарли" />
+	<Object	Name = "DynQEnemy16"					FullName = "Бор Рис" />
+	<Object	Name = "DynQEnemy17"					FullName = "Ловкач Бэн" />
+	<Object	Name = "DynQEnemy18"					FullName = "Шулер Смит" />
+	<Object	Name = "DynQEnemy19"					FullName = "Картежник Питер" />
+	<Object	Name = "DynQEnemy20"					FullName = "Стрелок Жан" />
+	<Object	Name = "DynQEnemy21"					FullName = "Одноглазый Джонни" />
+	<Object	Name = "DynQEnemy22"					FullName = "Маньяк Энтони" />
+	<Object	Name = "DynQEnemy23"					FullName = "Большой Вилли" />
+	<Object	Name = "DynQEnemy24"					FullName = "Билл" />
+	<Object	Name = "DynQEnemy25"					FullName = "Вспыльчивый Майк" />
+</ObjectNames>

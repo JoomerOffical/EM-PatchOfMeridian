@@ -1,0 +1,1642 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+	<trigger	Name="GlobalVar"	active="1">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    trigger:Deactivate()
+		</script>
+	</trigger>
+
+	<trigger	Name="trStartMap"	active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+		    trigger:Deactivate()
+
+			SetRadarUpgrade (1)
+
+			g_Player:ActivatePerk( "adventurer", 1)
+
+			AddQuestItem( "quest_baseball_bat" )
+			AddQuestItem( "collectionbook1" )
+
+			AddBelongToEncyclopaedia( 1110 )
+			AddBelongToEncyclopaedia( 1105 )
+
+			TakeQuest("r5m1_WayToBookWorm_Quest")
+
+			CreateNewDummyObject( "agro_gate", "canadagate", -1, -1, CVector(2934.206, 402, 3073.421), Quaternion(0, 0.1951, 0, 0.9808), 0)
+			CreateNewDummyObject( "bochka1", "librarygate", -1, -1, CVector(2435.840, 386, 351.570), Quaternion(0, 0, 0, 1), 0)
+		</script>
+	</trigger>
+
+	<trigger	Name="trNearCleverMan"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CleaverMan_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest ("r5m1_WTBWMoveToBookWormHouse_Quest")
+
+			getObj("librarygate"):Remove()
+
+			TActivate("cinCleverMan")
+			TActivate("trCreateLibGuard")
+		</script>
+	</trigger>
+
+	<trigger	Name="trCreateLibGuard"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			SetTolerance(1100, 1151, RS_NEUTRAL)
+
+			local listpos = {CVector(getPos("SpawnGuard1_loc")),CVector(getPos("SpawnGuard2_loc")),CVector(getPos("SpawnGuard3_loc")),CVector(getPos("SpawnGuard4_loc")),CVector(getPos("SpawnGuard5_loc"))}
+
+			CreateTeam ("LibGuardians", 1151, listpos, {"Cruiser01","Hunter02","Hunter01","Scout01","Scout01"}, nil, nil, nil)
+
+			local lbteam = CreateCaravanTeam ("LibGuard", 1151, CVector(getPos("SpawnLibGuard_loc")), {"FlagCar1"}, nil, nil, nil)
+			if lbteam then
+				local veh = lbteam:GetVehicle(0)
+				if veh then
+					veh:SetExternalPathByName("LibGuard_ExPath")
+
+					TActivate("trGuardEndPath")
+					TActivate("trMoveGuardLoc")
+					TActivate("trNearGuard")
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trNearLibBridge"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearLibBridge_loc" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate("cinLibraryLook")
+
+			CompleteQuest("r5m1_MoveToLibrary_Quest")
+		</script>
+	</trigger>
+
+	<trigger	Name="trMoveGuardLoc"	active="0">
+		<event	timeout="0.5"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local pos = getPos("LibGuard_vehicle_0")
+			setPos("LibGuard_loc" , CVector(getPos("LibGuard_vehicle_0")))
+		</script>
+	</trigger>
+
+	<trigger	Name="trGuardEndPath"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="LibGuard_vehicle_0"/>
+		<script>
+			local veh = getObj("LibGuard_vehicle_0")
+			if veh then
+				veh:SetExternalPathByName("LibGuard_ExPath")
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trNearGuard"	active="0">
+		<event 	eventid="GE_OBJECT_DIE" 		ObjName="LibGuard_vehicle_0" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="LibGuard_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="LibGuard1_loc" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1100, 1151, RS_ENEMY)
+
+			TDeactivate("trGuardEndPath")
+			TDeactivate("trMoveGuardLoc")
+			TDeactivate("trEnterLibrary")
+
+			local lbteam = getObj("LibGuardians")
+			if lbteam then
+				lbteam:SetDestination(CVector(getPos("LibGuard_loc")))
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trStartTonnel"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="StartTonnel_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_ETLFindSecretWay_Quest")
+		</script>
+	</trigger>
+
+	<trigger	Name="trEndTonnel"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="EndTonnel_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_ETLCompleteSecretWay_Quest")
+
+			TActivate("trEnterLibrary")
+		</script>
+	</trigger>
+
+	<trigger	Name="trEnterLibrary"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="LibEnter_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_EnterToLibrary_Quest")
+
+			TActivate("trPlayerLock")
+
+			TActivate("cinPlayerLock")
+		</script>
+	</trigger>
+
+	<trigger	Name="trPlayerLock"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="PlLock_loc" />
+		<event 	eventid="GE_OBJECT_DIE" 		ObjName="Brbrdg" />
+		<script>
+			trigger:Deactivate()
+
+			PlayRadioSoundById(1116)
+
+			TActivate("cinPlRunFromLib")
+
+			CompleteQuest("r5m1_FastLeaveLibrary_Quest")
+
+			local veh = getObj("LibGuard_vehicle_0")
+			if veh then
+				veh:Remove()
+			end
+
+			CreateNewDummyObject( "bochka1", "librarygate", -1, -1, CVector(2435.840, 386, 351.570), Quaternion(0, 0, 0, 1), 0)
+
+			TDeactivate("trNearGuard")
+		</script>
+	</trigger>
+
+
+
+
+
+<!-- -->
+	<trigger	Name="trCreateKonkurent"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			TActivate("trNearKonkurent")
+		</script>
+	</trigger>
+
+	<trigger	Name="trNearKonkurent"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearFormulaVeh_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CreateVehicle ( "Scout01", 1105, CVector(0, 1000, 0), "FormulaEx")
+
+			CompleteQuest("r5m1_SQSMoveToPlace_Quest")
+
+			TActivate("cinNearFormulaVeh")
+		</script>
+	</trigger>
+
+	<trigger Name="trKonkurentDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="FormulaEx" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_SQSDestroyCar_Quest")
+
+			TActivate("cinBeforeGonka")
+		</script>
+	</trigger>
+
+
+
+
+
+<1-- -->
+	<trigger	Name="trCreateVor"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			SetTolerance(1100, 1152, RS_ALLY)
+			SetTolerance(1100, 1112, RS_ALLY)
+
+			SetTolerance(1152, 1112, RS_ENEMY)
+
+			SetTolerance(1152, 1105, RS_ALLY)
+			SetTolerance(1152, 1106, RS_ALLY)
+
+			SetTolerance(1112, 1105, RS_ALLY)
+			SetTolerance(1112, 1106, RS_ALLY)
+
+			TActivate("trNearVor")
+		</script>
+	</trigger>
+
+	<trigger Name="trCreateStopVor" active="0">
+		<event timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			local comp = GetEntityByName("VorTeam_vehicle_0")
+			comp:SetThrottle( 0 )
+			comp:SetCustomLinearVelocity( 0 )
+		</script>
+	</trigger>
+
+	<trigger	Name="trNearVor"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearVor_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_BPOSMoveToLoc_Quest")
+
+			SetTolerance(1100, 1112, RS_ENEMY)
+
+			TActivate("cinNearVor")
+		</script>
+	</trigger>
+
+	<trigger Name="trPresledDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="PresledovateliTeam" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_BPOSKillUnknownCars_Quest")
+
+			SetGodTeam("VorTeam", 0)
+
+			SetTolerance(1100, 1112, RS_ALLY)
+			SetTolerance(1100, 1152, RS_ENEMY)
+
+			TActivate("trVorDie")
+			TActivate("cinAfterPreslDie")
+		</script>
+	</trigger>
+
+	<trigger Name="trVorDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="VorTeam" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_BPOSKillThiefCar_Quest")
+
+			TActivate("trReturnToSam")
+			TActivate("cinVorDie")
+		</script>
+	</trigger>
+
+	<trigger	Name="trReturnToSam"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="SemBaseEnter_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="TheTownBigHead_enter" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_BPOSReturnToSam_Quest")
+
+			TActivate("cinAfterVorAtSam")
+		</script>
+	</trigger>
+
+
+	<trigger	Name="trMegaFight"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(false)
+
+			PlayCustomMusic("battle03")
+
+			SetTolerance(1151, 1109, RS_NEUTRAL)
+			SetTolerance(1100, 1109, RS_NEUTRAL)
+			SetTolerance(1100, 1151, RS_ENEMY)
+
+			CreateVehicleEx ( "r5m1_sumo02", "PlSumoCar", CVector(getPos("SumoSpOp_loc")), 1100)
+
+			SetVar("PlayerCarName",GetPlayerVehicle():GetName())
+			GetPlayerVehicle():setGodMode(1)
+			CapturePlayerVehicle(0, "PlCar")
+
+			local veh=getObj("PlSumoCar")
+			if veh then
+				g_Player:SaveWeaponGroups()
+				g_Player:AddChild(veh)
+				TActivate("trPlayerSumoDie")
+			end
+
+			GetPlayerVehicle():SetCustomControlEnabled( false )
+			GetPlayerVehicle():setGodMode(0)
+
+			local opveh = CreateVehicleEx ( "r5m1_sumo01", "SumoOponent", CVector(getPos("SumoSpPl_loc")), 1151)
+			if opveh then
+				opveh:SetRotation(Quaternion(0.006, -0.980, 0.002, -0.200))
+				opveh:SetExternalPathByName("Sumo"..random(6).."_ExPath")
+				opveh:SetRandomSkin()
+
+				TActivate("trOpEndPath")
+				TActivate("trOponentDie")
+			end
+
+			TActivate("trPlLeaveSumoArena")
+			TActivate("trPlEnterArena")
+
+			SetCameraBehindPlayerVehicle()
+
+		</script>
+	</trigger>
+
+
+	<trigger	Name="trPlLeaveSumoArena"	active="0">
+		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="BattleSumoPl_loc" />
+		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="BattleSumoOponent_loc" />
+		<script>
+			local count = trigger:GetTriggeredObjectAmount()
+
+			local name = trigger:GetCallObjName()
+			if name == "BattleSumoPl_loc" then
+				SetTolerance(1100, 1109, RS_ENEMY)
+			else
+				SetTolerance(1151, 1109, RS_ENEMY)
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trPlEnterArena"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="BattleSumoPl_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="BattleSumoOponent_loc" />
+		<script>
+			local count = trigger:GetTriggeredObjectAmount()
+			local name = trigger:GetCallObjName()
+			if name == "BattleSumoPl_loc" then
+				SetTolerance(1100, 1109, RS_NEUTRAL)
+			else
+				SetTolerance(1151, 1109, RS_NEUTRAL)
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trOpEndPath"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="SumoOponent"/>
+		<script>
+			local opveh = getObj("SumoOponent")
+			if opveh then
+				opveh:SetExternalPathByName("Sumo"..random(6).."_ExPath")
+				TActivate("trOpEndPath")
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="trOponentDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="SumoOponent" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(true)
+
+			CompleteQuest("r5m1_BattleInArena_Quest")
+
+			TDeactivate("trOpEndPath")
+			TDeactivate("trPlLeaveSumoArena")
+			TDeactivate("trPlEnterArena")
+
+			SetTolerance(1100, 1109, RS_ALLY)
+			SetTolerance(1151, 1109, RS_ALLY)
+			SetTolerance(1100, 1151, RS_ALLY)
+
+			TActivate("cinAfterFight")
+		</script>
+	</trigger>
+
+	<trigger Name="trAfterOponentDie" active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local plcarname=GetVar("PlayerCarName").AsString
+			local veh=getObj(plcarname)
+			GetPlayerVehicle():setGodMode(1)
+			if veh then
+				CapturePlayerVehicle(0, "SumoPlCar")
+	   		    g_Player:AddChild(veh)
+				g_Player:RestoreWeaponGroups()
+	   		end
+
+	   		GetPlayerVehicle():setGodMode(0)
+	   		GetPlayerVehicle():SetCustomControlEnabled( false )
+
+			local Plf = GetPlayerVehicle()
+			Plf:setGodMode(0)
+			Plf:SetPosition(CVector(getPos("TankSpawn_loc")))
+			Plf:AddModifier( "hp", "+ 1000000" )
+			local cab = Plf:GetCabin()
+			if cab then cab:AddModifier( "dur", "+ 1000000" ) end	
+			local basket = Plf:GetBasket()
+			if basket then basket:AddModifier( "dur", "+ 1000000" ) end
+
+			local veh = getObj("PlSumoCar")
+			if veh then 
+				veh:Remove()
+			end
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+	<trigger Name="trPlayerSumoDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="PlSumoCar" />
+		<script>
+		    	trigger:Deactivate()
+
+			TDeactivate("trOponentDie")
+		</script>
+	</trigger>
+
+	<trigger	Name="trFindTreasure"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Treasure_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_FT_FindBook")
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger	Name="trStartPosilka"	active="0">
+		<event	timeout="20"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    trigger:Deactivate()
+
+			local veh = CreateVehicleEx("Scout03", "PosilkaCar", CVector(getPos("SpawnPosilka_loc")), 1109)
+			if veh then
+				veh:SetExternalPathByName("Posilka_ExPath")
+			end
+
+			TActivate("trPosilkaReach")
+			TActivate("trPlEndPosilka")
+		</script>
+	</trigger>
+
+	<trigger	Name="trPosilkaReach"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="PosilkaCar"/>
+		<script>
+			trigger:Deactivate()
+
+			if IsQuestTaken("r5m1_Posilka") then
+				FailQuest("r5m1_Posilka")
+			end
+
+			local veh = getObj("PosilkaCar")
+			if veh then
+				veh:Remove()
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trPlEndPosilka"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="TownBigHead_Racer" />
+		<script>
+			trigger:Deactivate()
+
+			if IsQuestTaken("r5m1_Posilka") then
+				CompleteQuest("r5m1_Posilka")
+			end
+
+			local veh = getObj("PosilkaCar")
+			if veh then
+				veh:Remove()
+			end
+
+			TDeactivate("trPosilkaReach")
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger	Name="trCreateKontr"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			local zteam = CreateVehicle ( "Scout03", 1152, CVector(getPos("NarkoBaron_loc")), "ZakazchikTeam")
+
+			local kteam = CreateCaravanTeam("KontrTeam",1152,CVector(getPos("SpawnKontrabandist1_loc")),{"Scout02"},nil,nil,Quaternion(0,0,0,1))
+--			local kteam = CreateVehicle ( "Scout02", 1152, CVector(getPos("SpawnKontrabandist1_loc")), "KontrTeam")
+
+			if kteam then
+				local veh = kteam:GetVehicle(0)
+				if veh then
+					veh:SetExternalPathByName("Kotrab1_ExPath")
+					veh:SetCruisingSpeed("100")
+					veh:SetCanBeDistractedFromMoving(true)
+					SetVar("KtDieCount", 0)
+
+					TActivate("trKontrReachEnd")
+					TActivate("trKontrDie")
+					TActivate("NearKontr")
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="NearKontr" active="0">
+		<event timeout="1" eventid="GE_TIME_PERIOD" />
+		<script>
+			local run = GetEntityByName("KontrTeam_vehicle_0")
+			local pl = GetPlayerVehicle()
+			local len
+
+			if run and run:IsAlive() then
+				len = Dist(pl, run)
+				if (len > 300) or (20 > len) then
+					CinemaFiltersUse()
+					
+				    FailQuest("r5m1_KillKontrabondist")
+
+					trigger:Deactivate()
+					TActivate("NearKontrLose")
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trKontrReachEnd"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="KontrTeam_vehicle_0"/>
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_KK_Spy")
+
+
+			local veh = GetEntityByName("KontrTeam_vehicle_0")
+			if veh then
+				veh:PlaceToEndOfPath("Kotrab1_ExPath")
+			end
+
+            TDeactivate("NearKontr")	
+
+			SetTolerance(1100, 1152, RS_ENEMY)
+		</script>
+	</trigger>
+
+	<trigger Name="trKontrDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ZakazchikTeam" />
+		<event eventid="GE_OBJECT_DIE" ObjName="KontrTeam" />
+		<script>
+			if not(IsQuestComplete("r5m1_KK_Spy")) then
+				trigger:Deactivate()
+
+				TDeactivate("trKontrReachEnd")
+
+				FailQuest("r5m1_KK_Spy")
+				FailQuest("r5m1_KK_KillThem")
+				FailQuest("r5m1_KillKontrabondist")
+			end
+
+			local stat = GetVar("KtDieCount").AsInt+1
+			if stat>=2 then
+				trigger:Deactivate()
+
+				SetTolerance(1100, 1152, RS_NEUTRAL)
+
+				CompleteQuest("r5m1_KK_KillThem")
+
+			else
+				SetVar("KtDieCount", stat)
+	
+			end
+		</script>
+	</trigger>
+
+
+
+
+
+	<trigger	Name="trWowVehBarrel"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="NearWowBarrel_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local bbveh = CreateVehicleEx ( "Scout01", "WowVehBarrel", CVector(getPos("SpawnWowVehBarrel_loc")), 1107)
+			if bbveh then
+				bbveh:SetExternalPathByName("WowVehBarrel_ExPath")
+			end
+		</script>
+	</trigger>
+
+
+	<trigger	Name="trWowVehWall"	active="1">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="WowNearWall_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local bbveh = CreateVehicleEx ( "Bug01", "WowVehWall", CVector(getPos("SpawnWowVehWall_loc")), 1108)
+			if bbveh then
+				bbveh:SetExternalPathByName("WowVehWall_ExPath")
+			end
+		</script>
+	</trigger>
+
+
+	<trigger	Name="trWowStone"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="WowNearStones_loc" />
+		<script>
+			trigger:Deactivate()
+--Создать камней нафиг
+		</script>
+	</trigger>
+
+	<trigger	Name="trBridge"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="WowNearBridge_loc" />
+		<script>
+			trigger:Deactivate()
+--Взрывать мост нафиг
+		</script>
+	</trigger>
+
+	<trigger	Name="trStartGonka"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(false)
+
+			SetGameTime(12,00)
+
+			SetVar("nummsg",3)
+
+			SetVar("MaxLap",2)
+			SetVar("MaxPoint",5)
+			SetVar("MaxVeh",4)
+
+			local maxlap = GetVar("MaxLap").AsInt
+			local maxpoint = GetVar("MaxPoint").AsInt
+			local maxveh = GetVar("MaxVeh").AsInt
+
+			for i=1,maxlap do
+				for j=1,maxpoint do
+--Переменая для подсчета кол-ва машинок проехавшик через каждй чекпоинт на каждом круге
+					SetVar("ChkPntStatP"..j.."L"..i,0)
+				end
+			end
+
+			for i=1,maxveh do
+--следующий чекоинт игрока
+				SetVar("VehNextPoint"..i,1)
+--текущее место.. х.з. зачем
+				SetVar("VehCurPlace"..i,0)
+--текущий круг машинки
+				SetVar("VehCurLap"..i,1)
+			end
+
+			for i=1,3 do
+				local veh = CreateVehicleEx ("DozerRace"..i,"FormulaCar"..i,  CVector(getPos("GonkaCar"..i.."_loc"))+CVector(0,1,0), 1100)
+				if veh then
+					veh:SetRotation(Quaternion(0.000, 0.734, 0.000, 0.679))
+					veh:SetSkin (i+i)
+					veh:SetForcedMaxTorque(300)
+					veh:SetReactingOnDisturbingVehicles( false )
+--veh:SetMaxSpeed(500)
+--veh:SetCruisingSpeed(500)
+				end
+			end
+
+			local plnewcar = CreateVehicleEx("DozerRace","PlayerFormula",  CVector(getPos("GonkaCar4_loc"))+CVector(0,0,0), 1100)
+			if plnewcar then
+				plnewcar:SetRotation(Quaternion(0.000, 0.734, 0.000, 0.679))
+				plnewcar:SetForcedMaxTorque(150)
+				plnewcar:SetCustomControlEnabled(true)
+
+				local plcar = GetPlayerVehicle()
+				CapturePlayerVehicle(0, "PlCarGonka")
+				g_Player:SaveWeaponGroups()
+				g_Player:AddChild(plnewcar)
+				plcar:SetGamePositionOnGround(CVector(getPos("PlCarPosGonka_loc")))
+			else
+				LOG("TRIGGER ERROR: Cant Create Player Car")
+			end
+
+			TActivate("trRaceTimer")
+			TActivate("trCheckPoint")
+			TActivate("trFalseStartRace")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+	<trigger	Name="trFalseStartRace"	active="0">
+		<event	eventid="GE_OBJECT_LEAVES_LOCATION"		ObjName="GonkaCar4_loc" />
+		<script>
+		trigger:Deactivate()
+
+        StopPlayingCustomMusic()
+		SpawnMessageBox(8807)
+		ShowDeathMenu()
+		</script>
+	</trigger>
+
+
+	<trigger	Name="trRaceTimer"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local nummsg=GetVar("nummsg").AsInt
+
+			AddImportantFadingMsgByStrIdFormatted( "fm_race_start_1", nummsg)
+
+			SetVar("nummsg",nummsg-1)
+
+			if nummsg==1 then
+				trigger:Deactivate()
+				
+				TActivate("tRunCar")
+				TDeactivate("trFalseStartRace")
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="tRunCar"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    trigger:Deactivate()
+
+			AddImportantFadingMsgByStrIdFormatted( "fm_race_start_0")	
+
+			for i=1,3 do
+				local veh = getObj("FormulaCar"..i)
+				if veh then
+					veh:SetExternalPathByName("GonkaCar"..i.."_ExPath")
+				end
+			end
+            
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled(false)
+			end
+
+			PlayCustomMusic("multiplayer")
+
+			TActivate("trAIEndPath")
+		</script>
+	</trigger>
+
+	<trigger	Name="trCheckPoint"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CheckPoint1_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CheckPoint2_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CheckPoint3_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CheckPoint4_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="CheckPoint5_loc" />
+		<script>
+--trigger:Deactivate()
+
+			local amount = trigger:GetTriggeredObjectAmount()
+
+			if amount>1 then
+--println("amount = "..amount)
+			end
+
+			local maxlap = GetVar("MaxLap").AsInt
+			local maxpoint = GetVar("MaxPoint").AsInt
+			local maxveh = GetVar("MaxVeh").AsInt
+
+			local locname = trigger:GetCallObjName()
+			local locnum = tonumber(strsub(locname,11,11))
+
+--println("========================================= CHEKPOINT "..locnum)
+LOG("========================================= CHEKPOINT "..locnum)
+
+			for i=0, amount-1 do
+				local guestID = trigger:GetTriggeredObjectID(i)
+				local guest = getObj(guestID)
+
+				if guest then
+					local name = guest:GetName()
+					local carnum = maxveh
+
+					if name == "PlayerFormula" then
+--println("Player point = "..locnum)
+						LOG("Player point = "..locnum)
+					else
+						carnum = tonumber(strsub(name,11,11))
+--println("Guest name = "..name)
+						LOG("Guest name = "..name)
+					end
+--SetVar("ChkPntStatP"..j.."L"..i,0)
+
+--println("Car Num = "..carnum)
+					LOG("Car Num = "..carnum)
+
+					local nextpoint = GetVar("VehNextPoint"..carnum).AsInt
+					local curplace = GetVar("VehCurPlace"..carnum).AsInt
+					local curlap = GetVar("VehCurLap"..carnum).AsInt
+					local oldlap = curlap
+
+
+
+--println("Cur Point = "..locnum.." Next Point = "..nextpoint.."   CurLap = "..curlap )
+					LOG("Cur Point = "..locnum.." Next Point = "..nextpoint.."   CurLap = "..curlap)
+
+					local pointcarcount = GetVar("ChkPntStatP"..locnum.."L"..curlap).AsInt
+
+--println("pointcarcount = "..pointcarcount)
+--LOG("pointcarcount = "..pointcarcount)
+
+					if nextpoint==locnum then
+--Приехали в нужный чекпоинт
+--println("Point OK")
+						LOG("Point OK")
+
+						nextpoint = nextpoint + 1
+						pointcarcount = pointcarcount + 1
+
+						if name == "PlayerFormula" then
+							AddImportantFadingMsgId( "fm_race_chekpoint" )
+							AddImportantFadingMsgByStrIdFormatted( "fm_race_finish_less", pointcarcount, maxveh)
+						end
+
+
+						if nextpoint>maxpoint then
+--Приехали в последний чекпонит круга
+--println("End Lap Point OK")
+							LOG("End Lap Point OK")
+
+							if curlap>=maxlap then
+--Это последний круг
+--END
+--println("Finish")
+								LOG("Finish")
+
+								if name == "PlayerFormula" then
+									AddImportantFadingMsgId( "fm_race_finish" )
+									if pointcarcount==1 then
+										AddImportantFadingMsgId( "fm_race_finish_1" )
+
+										TActivate("trGonkaEnd")
+--ВЫЙГРАЛИ ГОНКУ!!!!!!!!!
+									else
+										AddImportantFadingMsgId( "fm_race_finish_lose" )
+
+										SpawnMessageBox(8804)
+										ShowDeathMenu()
+--ПРОИГРАЛИ ГОНКУ!!!!!!!!
+									end
+								end
+							else
+
+								if name == "PlayerFormula" then
+									AddImportantFadingMsgByStrIdFormatted( "fm_race_firslap" )
+								end
+							end
+
+							curlap=curlap+1
+							nextpoint = 1
+						end
+
+					else
+--неверный чекопоинт
+--println("Checkpoint Fail")
+						LOG("Checkpoint Fail")
+
+						if name == "PlayerFormula" then
+							AddImportantFadingMsgId( "fm_race_chekpoint_notright" )
+						end
+					end
+
+					SetVar("VehNextPoint"..carnum, nextpoint)
+					SetVar("VehCurPlace"..carnum, pointcarcount)
+					SetVar("VehCurLap"..carnum, curlap)
+					SetVar("ChkPntStatP"..locnum.."L"..oldlap, pointcarcount)
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trAIEndPath"	active="0">
+		<event eventid="GE_TARGET_REACHED" ObjName="FormulaCar1"/>
+		<event eventid="GE_TARGET_REACHED" ObjName="FormulaCar2"/>
+		<event eventid="GE_TARGET_REACHED" ObjName="FormulaCar3"/>
+		<script>
+			local carname = trigger:GetCallObjName()
+			local carnum = tonumber(strsub(carname,11,11))
+
+			local maxlap =GetVar("MaxLap").AsInt
+			local curlap = GetVar("VehCurLap"..carnum).AsInt
+
+--println("------------------------------------------")
+--println ("Car Name = "..carname)
+--println ("Max Lap = "..maxlap.."  Cur Lap = "..curlap)
+			if maxlap>=curlap then
+				getObj(carname):SetExternalPathByName("GonkaCar"..carnum.."_ExPath")
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trGonkaEnd"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r5m1_RaceofSam_Quest")
+
+			AllowSave(true)
+
+			TDeactivate("trAIEndPath")
+			TActivate("cinAfterGonka")
+
+			local maxveh = GetVar("MaxVeh").AsInt
+			for i=1,maxveh-1 do
+				local veh = getObj("FormulaCar"..i)
+				if veh then
+					veh:Remove()
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trAfterGonkaEnd"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CapturePlayerVehicle (1, "GonkaCar")
+
+			local plteam = getObj("PlCarGonka")
+			if plteam  then
+				local plcar = plteam:GetVehicle(0)
+				if plcar then
+					plcar:SetCustomControlEnabled(0)
+					g_Player:AddChild(plcar)
+					g_Player:RestoreWeaponGroups()
+				else
+					LOG("TRIGGER ERROR: Cant find player car")
+				end
+			else
+				LOG("TRIGGER ERROR: Cant find player team")
+			end
+
+			local Plf = GetPlayerVehicle()
+			Plf:setGodMode(0)
+		</script>
+	</trigger>
+
+
+
+
+<!-- ТАНК -->
+	<trigger	Name="trReturnFromR5M2"	active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			if IsQuestTaken("r5m1_ReturnToSamWithMovies_Quest") then
+		    		trigger:Deactivate()
+
+				TActivate("trReturnMoviesToSam")
+				TActivate("trDestroyDots")
+
+				CreateTeam("RobotGroupZero", 1118, CVector(760, 380, 1900), {"Robot4SMALL","Robot4SMALL"}, CVector(getPos("FromR5M2")))
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trDestroyDots"	active="0">
+		<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+		<script>
+		    	trigger:Deactivate()
+
+			for i=1,20 do
+				local dot = getObj("BigHead_dot"..i)
+				if dot then
+					dot:AddModifier("hp","= -10000")
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trReturnMoviesToSam"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="SemBaseEnter_loc" />
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="TheTownBigHead_enter" />
+		<script>
+			trigger:Deactivate()
+
+			for i=0,6 do
+				SetTolerance(1118, (1105+i), RS_NEUTRAL)
+			end
+
+			CompleteQuest("r5m1_ReturnToSamWithMovies_Quest")
+
+			TActivate("cinReturnMovies")
+		</script>
+	</trigger>
+
+
+	<trigger	Name="trCreateTank"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			TakeQuest("r5m1_KillRobotsWithTank_Quest")
+
+			SetTolerance(1109,1118,RS_ENEMY)
+			SetTolerance(1105,1118,RS_NEUTRAL)
+			SetTolerance(1105,1100,RS_NEUTRAL)
+            
+            AllowSave(false)
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:setGodMode(1)
+				Plf:SetGamePositionOnGround(CVector(3760.207, 426.081, 230.219))
+			end
+
+			CapturePlayerVehicle (0, "PlCarTank")
+
+			local tank = CreateVehicleEx ( "Tank01", "PlayerTank", CVector(2146.818 , 343.039, 1951.361), 1100)
+			if tank then
+				tank:SetRotation(Quaternion(0.004, 0.938, -0.011, 0.346))
+				g_Player:SaveWeaponGroups()
+				g_Player:AddChild(tank)
+			end
+
+            CreateNewDummyObject("crag_desert_4", "Wall1", -1, -1, CVector(1512.538, 332.815, 1915.687), Quaternion(0.0000, -0.0828, 0.0000, 0.9966),0)
+            CreateNewDummyObject("crag_desert_4", "Wall2", -1, -1, CVector(1528.185, 332.815, 1992.038), Quaternion(0.0000, 0.3028, 0.0000, 0.9531),0)	
+			CreateNewDummyObject("crag_desert_3", "Wall3", -1, -1, CVector(1576.991, 332.815, 2020.080), Quaternion(0.0000, 0.5057, 0.0000, 0.8627),0)
+            CreateNewDummyObject("crag_desert_4", "Wall4", -1, -1, CVector(1614.389, 328.815, 2080.920), Quaternion(0.0000, 0.2840, 0.0000, 0.9588),0)		
+			CreateNewDummyObject("crag_desert_4", "Wall5", -1, -1, CVector(1666.405, 328.815, 2140.711), Quaternion(0.0000, 0.2986, 0.0000, 0.9544),0)		
+			CreateNewDummyObject("crag_desert_4", "Wall6", -1, -1, CVector(1720.836, 328.815, 2201.289), Quaternion(0.0000, 0.3746, 0.0000, 0.9272),0)		
+			CreateNewDummyObject("crag_desert_4", "Wall7", -1, -1, CVector(1750.643, 328.815, 2244.181), Quaternion(0.0000, 0.1844, 0.0000, 0.9829),0)
+			CreateNewDummyObject("crag_desert_4", "Wall8", -1, -1, CVector(2470.713, 336.147, 2155.847), Quaternion(0.0000, -0.4067, 0.0000, 0.9135),0)
+			CreateNewDummyObject("crag_desert_4", "Wall9", -1, -1, CVector(2523.798, 336.147, 2105.690), Quaternion(0.0000, -0.2334, 0.0000, 0.9724),0)	
+			CreateNewDummyObject("crag_desert_4", "Wall10", -1, -1, CVector(2545.193, 336.147, 2030.064), Quaternion(0.0000, 0.1284, 0.0000, 0.9917),0)
+			CreateNewDummyObject("crag_desert_4", "Wall11", -1, -1, CVector(2523.943, 336.147, 1959.042), Quaternion(0.0000, 0.3173, 0.0000, 0.9483),0)
+			CreateNewDummyObject("crag_desert_4", "Wall12", -1, -1, CVector(2503.275, 336.147, 1884.167), Quaternion(0.0000, 0.0000, 0.0000, 1.0000),0)	
+			CreateNewDummyObject("crag_desert_4", "Wall13", -1, -1, CVector(2436.966, 349.338, 1787.786), Quaternion(0.0000, 0.6208, 0.0000, 0.7840),0)
+			CreateNewDummyObject("crag_desert_3", "Wall14", -1, -1, CVector(2376.643, 349.338, 1768.449), Quaternion(0.0000, -0.8013, 0.0000, 0.5983),0)
+			CreateNewDummyObject("crag_desert_4", "Wall15", -1, -1, CVector(1691.203, 342.193, 1667.269), Quaternion(0.0000, -0.6018, 0.0000, 0.7986),0)
+			CreateNewDummyObject("crag_desert_3", "Wall16", -1, -1, CVector(1664.185, 342.193, 1708.730), Quaternion(0.0000, -0.1951, 0.0000, 0.9808),0)
+			CreateNewDummyObject("crag_desert_4", "Wall17", -1, -1, CVector(2112.394, 339.479, 1564.972), Quaternion(0.0000, 0.3297, 0.0000, 0.9441),0)
+			CreateNewDummyObject("crag_desert_4", "Wall18", -1, -1, CVector(2060.783, 339.479, 1518.678), Quaternion(0.0000, 0.5244, 0.0000, 0.8515),0)							
+
+
+			TActivate("trRadioTank")
+			TActivate("trTankLeaveArena")
+
+			GetEntityByName("TownBigHead_enter"):SetProperty("Active",0)
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+	<trigger	Name="trRadioTank"	active="0">
+		<event	timeout="15"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local tradio = random(10)
+			tradio = tradio+1100
+
+			PlayRadioSoundById(tradio)
+		</script>
+	</trigger>
+	<trigger	Name="trTankLeaveArena"	active="0">
+		<event	eventid="GE_OBJECT_LEAVES_LOCATION"	ObjName="SemBase_loc" />
+		<script>
+			local amount = trigger:GetTriggeredObjectAmount()
+			for i=0, amount-1 do
+				local guestID = trigger:GetTriggeredObjectID(i)
+				local guest = getObj(guestID)
+				if guest then
+					local name = guest:GetName()
+--println (name)
+
+					if name == "PlayerTank" then
+						trigger:Deactivate()
+
+						TDeactivate("trRadioTank")
+
+						PlayRadioSoundById(1111)
+
+						TActivate ("trTankLeaveArenaTime")
+						TActivate ("trTankLeaveArenaBack")
+					end
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trTankLeaveArenaTime"	active="0">
+		<event	timeout="30"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			FailQuest("r5m1_KillRobotsWithTank_Quest")
+
+			SpawnMessageBox(8805)
+			ShowDeathMenu()
+		</script>
+	</trigger>
+
+	<trigger	Name="trNextWaveRobots1"	active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup1" />
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup2" />
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup3" />
+		<script>
+			trigger:IncCount(1)
+
+			local stat = trigger:GetCount()
+			if stat>=3 then
+				trigger:Deactivate()
+
+				CreateTeam("RobotGroup4",1118,CVector(getPos("SpawnRobotGroup2_loc")),{"NoDrop_Robot4SMALL","NoDrop_Robot4_2SMALL"}, CVector(getPos("SpawnRobotGroup3_loc")))
+				CreateTeam("RobotGroup5",1118,CVector(getPos("SpawnRobotGroup4_loc")),{"NoDrop_Robot4SMALL","NoDrop_Robot4_2SMALL"}, CVector(getPos("SpawnRobotGroup3_loc")))
+				CreateTeam("RobotGroup6",1118,CVector(getPos("SpawnRobotGroup6_loc")),{"NoDrop_Robot4SMALL","NoDrop_Robot4_2SMALL"}, CVector(getPos("SpawnRobotGroup3_loc")))
+
+				AddImportantFadingMsg("Новая волна роботов наступает.")
+				AddFadingMsg("Новая волна роботов наступает.")
+
+				TActivate("trNextWaveRobots2")
+			end
+
+		</script>
+	</trigger>
+
+	<trigger	Name="trNextWaveRobots2"	active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup4" />
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup5" />
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup6" />
+		<script>
+			trigger:IncCount(1)
+
+			local stat = trigger:GetCount()
+			if stat>=3 then
+				trigger:Deactivate()
+
+				CreateTeam("RobotGroup7",1118,CVector(getPos("SpawnRobotGroup1_loc")),{"NoDrop_Robot4SMALL","NoDrop_Robot4_2SMALL","NoDrop_Robot3BIG"}, CVector(getPos("SpawnRobotGroup3_loc")))
+				CreateTeam("RobotGroup8",1118,CVector(getPos("SpawnRobotGroup3_loc")),{"NoDrop_Robot4SMALL","NoDrop_Robot4_2SMALL","NoDrop_Robot3BIG"}, CVector(getPos("SpawnRobotGroup3_loc")))
+				CreateTeam("RobotGroup9",1118,CVector(getPos("SpawnRobotGroup5_loc")),{"NoDrop_Robot4SMALL","NoDrop_Robot4_2SMALL","NoDrop_Robot3BIG"}, CVector(getPos("SpawnRobotGroup3_loc")))
+
+				AddImportantFadingMsg("Новая волна роботов наступает.")
+				AddFadingMsg("Новая волна роботов наступает.")
+
+				TActivate("trRobotGroupsDie")
+			end
+
+		</script>
+	</trigger>
+
+	<trigger	Name="trTankLeaveArenaBack"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="SemBase_loc" />
+		<script>
+			trigger:Deactivate()
+
+			PlayRadioSoundById(1112)
+
+			TActivate("trRadioTank")
+			TActivate("trTankLeaveArena")
+
+			TDeactivate("trTankLeaveArenaTime")
+		</script>
+	</trigger>
+
+	<trigger Name="trRobotGroupsDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup7" />
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup8" />
+		<event eventid="GE_OBJECT_DIE" ObjName="RobotGroup9" />
+		<script>
+			trigger:IncCount(1)
+
+			SetTolerance(1105,1118,RS_ENEMY)
+			SetTolerance(1105,1100,RS_ENEMY)
+
+			local stat = trigger:GetCount()
+			if stat>=3 then
+				trigger:Deactivate()
+
+				TDeactivate("trRadioTank")
+				TDeactivate("trTankLeaveArena")
+
+				GetEntityByName("ToR6M1"):SetProperty("Active",1)
+				GetEntityByName("TownBigHead_enter"):SetProperty("Active",1)
+
+				GetEntityByName("canadagate"):Remove()
+
+				CompleteQuest("r5m1_KillRobotsWithTank_Quest")
+
+				getObj("heavy_dot1_vulcan4230"):AddModifier("hp","= -10000")
+			    getObj("heavy_dot1_vulcan4231"):AddModifier("hp","= -10000")
+
+				CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(2918.536, 377.499, 2813.881), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+
+			    local town = GetEntityByName("PetrolStationTown2")
+			    if town then
+				    town:SetOpenGateToPlayer(false)
+				    town:SetRuined(true)
+			    end
+
+				AllowSave(true)
+
+				TActivate("cinRobotGroupsDie")
+				TActivate("trNearBoss")
+				TActivate("DeleteWall")
+
+				for i=0,6 do
+					SetTolerance(1118, (1105+i), RS_ENEMY)
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="DeleteWall"	active="0">
+		<event	timeout="0"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local hs = GetEntityByName ("Wall1")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall2")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall3")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall4")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall5")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall6")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall7")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall8")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall9")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall10")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall11")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall12")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall13")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall14")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall15")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall16")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall17")
+			if hs then 
+			    hs:Remove() 
+			end
+
+			local hs = GetEntityByName ("Wall18")
+			if hs then 
+			    hs:Remove() 
+			end
+		</script>
+	</trigger>	
+
+
+
+
+	<trigger	Name="trNearBoss"	active="1">
+		<event eventid="GE_GAME_START" ObjName="Player1" />
+		<script>
+			if IsQuestTaken("r5m1_KillBoss4_Quest") then
+				trigger:Deactivate()
+
+				AllowSave(false)
+
+				local Plf = GetPlayerVehicle()
+				Plf:AddModifier( "hp", "+ 1000000" )
+				Plf:AddModifier( "fuel", "+ 1000000" )
+				local cab = Plf:GetCabin()
+				if cab then cab:AddModifier( "dur", "+ 1000000" ) end	
+				local basket = Plf:GetBasket()
+				if basket then basket:AddModifier( "dur", "+ 1000000" ) end
+
+				if 	g_Player:IsPerkActive("adventurer") and (g_Player:IsPerkActive("lawyer") or g_Player:IsPerkActive("smuggler")) and 						g_Player:IsPerkActive("millionaire") and g_Player:IsPerkActive("professional") and g_Player:IsPerkActive("butcher") and 					g_Player:IsPerkActive("aggressor") and g_Player:IsPerkActive("rogue") and g_Player:IsPerkActive("lucky") and g_Player:IsPerkActive("maniac") then
+					TActivate("cinFinal3")
+				else
+					TActivate("cinFinal2")
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger	Name="trNearBossMoveRadar"	active="0">
+		<event	timeout="1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			local pl = GetPlayerVehicle()
+			local boss = getObj("Boss5")
+
+			if boss and pl then
+				local rast = Dist(boss,pl)
+				if rast>200 then
+					FailQuest("r5m1_KillBoss4_Quest")
+
+					TDeactivate("trNearBossDie")
+
+					SpawnMessageBox(8806)
+					ShowDeathMenu()
+				end
+			end
+		</script>
+	</trigger>
+
+	<trigger Name="trNearBossDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Boss5" />
+		<script>
+			trigger:Deactivate()
+
+			AllowSave(true)
+
+			StopPlayingCustomMusic()
+
+			CompleteQuest("r5m1_KillBoss4_Quest")
+
+			TActivate("cinFinal1")
+		</script>
+	</trigger>
+
+	<trigger	Name="trCreatePolice"	active="0">
+		<event	timeout="10"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1125,1111,RS_NEUTRAL)
+			SetTolerance(1125,1109,RS_NEUTRAL)
+			SetTolerance(1125,1110,RS_NEUTRAL)
+			SetTolerance(1100,1125,RS_NEUTRAL)
+
+			CreateTeam("PoliceCar",1125,CVector(getPos("SpawnKontrabandist1_loc")),{"FighterPolice01"},nil,nil,Quaternion(0,0,0,1))
+
+			local pol = GetEntityByName("PoliceCar_vehicle_0")
+			if pol then
+				pol:SetExternalPathByName("PolicePath_ExPath")
+				pol:SetCruisingSpeed("100")
+				pol:SetCanBeDistractedFromMoving(true)
+			end
+
+			TActivate("trNearPolice")
+			TActivate("trKillPolice")
+			TActivate("trFailPolice")
+		</script>
+	</trigger>
+
+	<trigger	Name="trFailDrugs"	active="0">
+		<event	timeout="0,1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("PoliceCar",1125,CVector(1413.123, 365.357, 967.364),{"FighterPolice01"},nil,nil,Quaternion(0,0,0,1))
+
+			SetTolerance(1125,1111,RS_NEUTRAL)
+			SetTolerance(1125,1109,RS_NEUTRAL)
+			SetTolerance(1125,1110,RS_NEUTRAL)
+			SetTolerance(1100,1125,RS_ENEMY)
+
+			FailQuest("r5m1_K_TravelLetter")
+			FailQuest("r5m1_K_FindBtotherMan")
+
+		</script>
+	</trigger>
+
+	<trigger	Name="trNearPolice"	active="0">
+		<event	timeout="0,1"		eventid="GE_TIME_PERIOD" />
+		<script>
+
+			local run = GetEntityByName("PoliceCar_vehicle_0")
+			local pl = GetPlayerVehicle()
+			local len
+
+			if run and run:IsAlive() then
+				len = Dist(pl, run)
+				if (20 > len) then
+					SetTolerance(1100,1125,RS_ENEMY)
+					FailQuest("r5m1_K_TravelLetter")
+					FailQuest("r5m1_K_FindBtotherMan")
+					trigger:Deactivate() 
+				end
+			end
+
+		</script>
+	</trigger>
+
+	<trigger	Name="trKillPolice"	active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="PoliceCar_vehicle_0" />
+		<script>
+			trigger:Deactivate() 
+
+			SetTolerance(1100,1151,RS_NEUTRAL)
+
+			FailQuest("r5m1_K_TravelLetter")
+			FailQuest("r5m1_K_FindBtotherMan")
+
+		</script>
+	</trigger>
+
+	<trigger	Name="trFailPolice"	active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="FailPolice_loc" />
+		<script>
+			trigger:Deactivate() 
+
+			SetTolerance(1100,1125,RS_ENEMY)
+
+			FailQuest("r5m1_K_TravelLetter")
+			FailQuest("r5m1_K_FindBtotherMan")
+
+		</script>
+	</trigger>
+
+	<trigger	Name="trCompletePolice"	active="0">
+		<event	timeout="0,1"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local policeveh = GetEntityByName("PoliceCar_vehicle_0")
+
+			if policeveh then
+				CompleteQuest("r5m1_K_TravelLetter")
+				TDeactivate("trNearPolice")
+				policeveh:Remove()
+			end
+
+		</script>
+	</trigger>	
+<!-- -->
+	<trigger Name="triggerExitToMap52" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR5M2" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			if IsQuestTaken("r5m2_FHMoveMapTwo_Quest") then
+
+				local b = SpawnMessageBox(8801)
+				if b == 1 then
+					PassToMap("r5m2", "FromR5M1", -1 )
+
+					GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("RolikExitToMap52")
+					TActivate ("RolikENDExitToMap52")
+				end
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+				AddCinematicMessage( 8802, 0.25 )
+
+				TActivate ("RolikExitToMap52")
+				TActivate ("RolikENDExitToMap52")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap52" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToR5M2")), CVector(getPos("FromR5M2")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR5M2")))
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap52" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+
+
+
+
+<!--  -->
+	<trigger Name="triggerExitToMap61" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR6M1" />
+		<script>
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			local b = SpawnMessageBox(8801)
+			if b == 1 then
+				PassToMap("r6m1", "FromR5M1", -1 )
+
+				GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+			else
+				SaveAllToleranceStatus(RS_NEUTRAL)
+
+				FlyAround(1, 0, 25, 1, PlfCoor, PlfID, 1, 1 )
+				StartCinematic()
+
+				TActivate ("RolikExitToMap61")
+				TActivate ("RolikENDExitToMap61")
+			end
+ 		</script>
+	</trigger>
+	<trigger Name="RolikExitToMap61" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOn")
+
+			RotationPlayerByPoints(CVector(getPos("ToR6M1")), CVector(getPos("FromR6M1")))
+
+			GetPlayerVehicle():SetGamePositionOnGround(CVector(getPos("FromR6M1")))
+		</script>
+	</trigger>
+	<trigger Name="RolikENDExitToMap61" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RuleConsole("g_postEffect NoiseOff")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+</triggers>

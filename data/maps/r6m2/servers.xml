@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<Servers>
+	<AnimatedModelsServer>
+		<Item
+			id="bochka2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="druid_gate"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="ekran"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="bochka3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="arena_barricade10"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="bridge01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="watch_tower"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="watch_tower_dyn"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="brick_wall1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="house1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="house2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="house3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="townhall"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="workshop2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="wood_fence2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03chassis"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03propeller"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03cab01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03cab02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03cab03"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03cab03_2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03cab04"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03wing_left"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03wing_right"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03machinegun_left"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03machinegun_leftgun"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03machinegun_right"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03machinegun_rightgun"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03rocketlauncher_left"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03rocketlauncher_leftgun"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03rocketlauncher_right"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="boss03rocketlauncher_rightgun"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="rusty_car_3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="rusty_car_4"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="berth"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="quay_cube"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="agro_tech1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="agro_tech2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="agro_tech3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="barrel3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="angar1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="bridge_metal"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_junglebush1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_junglebush2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_TropicTree1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_TropicTree2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_junglebush3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_t_bush_flower1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_t_bush_flower3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_tropicfern1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_tropicfern2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_tropicfern3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druid_house2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druid_house3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druid_house4"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druid_house5"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="car_cemetery01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="car_cemetery02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="car_cemetery04"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="car_cemetery05"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="car_cemetery07"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druids_mech_house1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druids_mech_house2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druids_mech_house3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druids_mech_house4"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_druids_mech_house5"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="lamppost2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="lamppost3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="concrete_tube2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="fence_angle"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="concrete_tube_angle"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="concrete_tube_middle"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="factory_box"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="factory_conteiner"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="gradyrnja"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="metal_plate1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="metal_plate2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="metal_plate3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="prom_small"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="factory_cistern1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="factory_conteiner2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="metal_tube_angle"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="metal_tube1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="prom_element"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="factory_stone"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="bochka1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="hoisting_crane_2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="hoisting_structure_1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="hoisting_structure_2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="arena_barricade11"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="arena_barricade14"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="arena_barricade15"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="bridge_jungle"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_house"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="uluc"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="pack"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="crag_boulder1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="crag_boulder2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="crag_boulder3"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="crag_boulder4"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="t_greattree1"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="t_greattree2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="t_greattree3_"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_freehouse2"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="lamppost2_broken"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_broken_dot_01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_broken_dot_02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_dot_01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_dot_02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_wall_01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_wall_02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="druid_broken_dots01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="druid_broken_dots02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="druid_dot_01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="druid_dot_02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="druid_wall_01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="druid_wall_02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_generator"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_broken_generator"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="oracle_platform_01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="ferry_01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="multi_teleport_for_gun"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="r3_man"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="Man_mask"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="Sam_mask"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="mask_hero"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="dweller_mechanik"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="dweller_sam"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="dweller_player"
+			file="data\models\AnimModels.xml" />
+	</AnimatedModelsServer>
+</Servers>

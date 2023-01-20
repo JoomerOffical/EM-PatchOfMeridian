@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Paths>
+<Path Name = "Start_cam0">
+	<Point  coord="2246.355 379.407 2694.073" rotation="-0.436 -0.012 0.006 0.900"/>
+</Path>
+<Path Name = "Start_cam1">
+	<Point  coord="2367.590 272.817 2804.448" rotation="-0.044 0.857 -0.074 0.508"/>
+	<Point  coord="2266.178 272.817 2943.784" rotation="-0.015 0.965 -0.056 0.256"/>
+</Path>
+<Path Name = "Start_cam2">
+	<Point  coord="3707.722 275.851 218.785" rotation="-0.058 0.011 -0.001 0.998"/>
+	<Point  coord="3707.722 270.851 216.745" rotation="-0.058 0.011 -0.001 0.998"/>
+</Path>
+
+<Path Name = "First_cam0">
+	<Point  coord="3479.553 295.822 749.629" rotation="0.012 0.932 -0.031 -0.361"/>
+</Path>
+<Path Name = "First_cam1">
+	<Point  coord="3524.951 424.788 688.667" rotation="-0.246 -0.637 0.695 0.225"/>
+</Path>
+<Path Name = "First_cam2">
+	<Point  coord="3500.395 292.807 714.948" rotation="0.009 0.934 -0.022 -0.356"/>
+	<Point  coord="3476.688 294.519 741.557" rotation="0.009 0.934 -0.022 -0.356"/>
+</Path>
+
+<Path Name = "Arlekin_cam0">
+	<Point  coord="2668.392 204.218 1616.545" rotation="0.021 0.979 -0.133 -0.155"/>
+	<Point  coord="2568.014 206.706 1484.670" rotation="-0.002 0.998 -0.033 0.052"/>
+</Path>
+<Path Name = "Arlekin_cam1">
+	<Point  coord="2568.014 206.706 1484.670" rotation="-0.002 0.998 -0.033 0.052"/>
+</Path>
+<Path Name = "Arlekin_cam2">
+	<Point  coord="2607.523 191.237 1510.105" rotation="-0.016 -0.817 0.022 0.576"/>
+</Path>
+<Path Name = "Arlekin_cam3">
+	<Point  coord="2638.978 199.610 1499.300" rotation="-0.017 0.714 -0.017 0.699"/>
+	<Point  coord="2655.994 200.428 1499.667" rotation="-0.017 0.714 -0.017 0.699"/>
+</Path>
+
+<Path Name = "Kitty_cam0">
+	<Point  coord="2604.790 194.366 1534.177" rotation="-0.012 0.987 -0.088 0.131"/>
+	<Point  coord="2604.790 194.366 1534.177" rotation="0.005 0.419 0.003 0.908"/>
+</Path>
+<Path Name = "Kitty_cam1">
+	<Point  coord="2590.434 194.595 1548.221" rotation="-0.004 0.357 -0.002 0.934"/>
+	<Point  coord="2603.729 197.482 1511.558" rotation="-0.068 0.148 -0.010 0.987"/>
+</Path>
+<Path Name = "Kitty_cam2">
+	<Point  coord="2594.424 195.113 1532.110" rotation="0.003 0.304 0.001 0.953"/>
+	<Point  coord="2570.897 195.357 1565.199" rotation="0.003 0.304 0.001 0.953"/>
+</Path>
+
+<Path Name = "Egoist_cam0">
+	<Point  coord="1298.079 329.603 2133.398" rotation="-0.069 -0.842 0.112 0.523"/>
+</Path>
+<Path Name = "Egoist_cam1">
+	<Point  coord="1309.905 322.831 2100.845" rotation="-0.063 -0.709 0.064 0.700"/>
+</Path>
+<Path Name = "Egoist_cam2">
+	<Point  coord="1309.905 322.831 2100.845" rotation="-0.063 -0.709 0.064 0.700"/>
+</Path>
+<Path Name = "Egoist_cam3">
+	<Point  coord="1322.507 326.666 2084.714" rotation="-0.180 0.014 -0.003 0.983"/>
+</Path>
+
+<Path Name = "Caravan_cam0">
+	<Point  coord="1618.871 314.548 1697.000" rotation="-0.070 0.921 -0.198 0.327"/>
+</Path>
+<Path Name = "Caravan_cam1">
+	<Point  coord="1464.904 254.164 1600.467" rotation="0.084 0.914 -0.251 -0.308"/>
+</Path>
+<Path Name = "Caravan_cam2">
+	<Point  coord="1458.808 358.660 1585.272" rotation="-0.517 -0.434 0.343 0.653"/>
+</Path>
+
+<Path Name = "SanRafael_cam0">
+	<Point  coord="1247.334 312.521 3591.222" rotation="-0.162 0.794 -0.240 0.535"/>
+</Path>
+<Path Name = "SanRafael_cam1">
+	<Point  coord="1082.705 268.555 3476.103" rotation="-0.135 -0.343 0.050 0.928"/>
+</Path>
+<Path Name = "SanRafael_cam2">
+	<Point  coord="1082.705 268.555 3476.103" rotation="-0.135 -0.343 0.050 0.928"/>
+</Path>
+
+<Path Name = "Cross_cam0">
+	<Point  coord="2758.484 694.547 1735.092" rotation="-0.526 -0.286 0.194 0.777"/>
+</Path>
+<Path Name = "Cross_cam1">
+	<Point  coord="2884.707 224.663 1882.448" rotation="-0.012 -0.391 0.005 0.920"/>
+	<Point  coord="2931.006 285.668 1915.897" rotation="-0.228 -0.355 0.090 0.902"/>
+</Path>
+<Path Name = "Cross_cam2">
+	<Point  coord="2965.929 237.335 1960.518" rotation="-0.091 -0.394 0.039 0.914"/>
+</Path>
+<Path Name = "Cross_cam3">
+	<Point  coord="2965.929 237.335 1960.518" rotation="-0.091 -0.394 0.039 0.914"/>
+</Path>
+
+<Path Name = "After_cam0">
+	<Point  coord="2974.346 237.988 1984.984" rotation="-0.146 0.092 -0.014 0.985"/>
+</Path>
+<Path Name = "After_cam1">
+	<Point  coord="2989.772 231.591 2099.926" rotation="-0.008 0.987 -0.049 0.152"/>
+</Path>
+
+<Path Name = "Farm_cam0">
+	<Point  coord="2204.430 253.543 781.526" rotation="-0.083 0.830 -0.129 0.536"/>
+	<Point  coord="2190.730 245.407 712.823" rotation="-0.023 0.813 -0.032 0.581"/>
+	<Point  coord="2133.418 249.183 671.001" rotation="-0.002 0.915 -0.005 0.404"/>
+</Path>
+<Path Name = "Farm_cam1">
+	<Point  coord="2133.418 249.183 671.001" rotation="-0.002 0.915 -0.005 0.404"/>
+</Path>
+
+
+<Path Name = "Capture_cam0">
+	<Point  coord="2210.804 371.237 695.836" rotation="-0.323 0.625 -0.317 0.636"/>
+</Path>
+<Path Name = "Capture_cam1">
+	<Point  coord="2052.441 255.757 605.506" rotation="-0.054 -0.254 0.014 0.966"/>
+</Path>
+<Path Name = "Capture_cam2">
+	<Point  coord="2076.918 261.449 824.212" rotation="0.001 0.997 -0.018 -0.076"/>
+</Path>
+<Path Name = "Capture_cam3">
+	<Point  coord="1993.049 367.493 620.820" rotation="-0.395 0.586 -0.392 0.590"/>
+</Path>
+<Path Name = "Capture_cam4">
+	<Point  coord="2006.067 240.472 630.058" rotation="-0.024 0.709 -0.024 0.704"/>
+</Path>
+<Path Name = "Capture_cam5">
+	<Point  coord="1986.718 314.152 547.033" rotation="-0.235 0.402 -0.107 0.878"/>
+</Path>
+
+<Path Name = "Mayor_cam0">
+	<Point  coord="2573.936 278.923 2954.698" rotation="-0.092 0.898 -0.222 0.370"/>
+	<Point  coord="2564.852 268.779 2911.555" rotation="-0.157 0.477 -0.087 0.860"/>
+</Path>
+
+<Path Name = "BattleBorn_cam0">
+	<Point  coord="3551.026 294.366 699.850" rotation="0.010 0.987 -0.065 -0.144"/>
+	<Point  coord="3617.453 292.465 634.468" rotation="-0.000 0.999 -0.048 0.003"/>
+	<Point  coord="3662.034 291.862 547.936" rotation="-0.081 0.693 -0.079 0.712"/>
+</Path>
+
+<Path Name = "Final_cam1">
+	<Point  coord="2266.178 272.817 2943.784" rotation="-0.015 0.965 -0.056 0.256"/>
+	<Point  coord="2367.590 272.817 2804.448" rotation="-0.044 0.857 -0.074 0.508"/>
+</Path>
+<Path Name = "Final_cam2">
+	<Point  coord="3707.722 270.851 216.745" rotation="-0.058 0.011 -0.001 0.998"/>
+	<Point  coord="3707.722 275.851 218.785" rotation="-0.058 0.011 -0.001 0.998"/>
+</Path>
+</Paths>

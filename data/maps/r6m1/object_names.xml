@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<ObjectNames>
+	<Object	Name = "ToR6M2"					FullName = "Дорога в Механические джунгли" />
+	<Object	Name = "ToR5M1"					FullName = "Дорога в Земли Сэма" />
+
+	<Object	Name = "PetrolStationTown2"			FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown2_Workshop"	FullName = "Мастерская" />
+	<Object	Name = "PetrolStationTown7"			FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown7_Workshop"	FullName = "Мастерская" />
+	<Object	Name = "PetrolStationTown9"			FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown9_Workshop"	FullName = "Мастерская" />
+	<Object	Name = "PetrolStationTown10"			FullName = "Заправка" />
+	<Object	Name = "PetrolStationTown10_Workshop"	FullName = "Мастерская" />
+
+	<Object	Name = "r6m1_Lost"				FullName = "Потерянное" />
+	<Object	Name = "r6m1_Lost_Bar"				FullName = "Бар ''Лебедь''" />
+	<Object	Name = "r6m1_Lost_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "r6m1_Lost_Shop"				FullName = "Магазин" />
+	<Object	Name = "r6m1_Lost_Bar_Barman"			FullName = "Бармен Дез" />
+	<Object	Name = "r6m1_Lost_LostMan"			FullName = "Староста Джэк" />
+	<Object	Name = "r6m1_Lost_Keyt"				FullName = "Жительница Клэр" />
+	<Object	Name = "r6m1_Lost_Charli"			FullName = "Трубадур Чарльз" />
+
+	<Object	Name = "r6m1_Starosta_NPC"			FullName = "Староста Джэк" />
+
+	<Object	Name = "r6m1_Lost_AvtostopMan1"		FullName = "Автостопщик Бэн" />
+	<Object	Name = "r6m1_Lost_AvtostopMan2"		FullName = "Автостопщик Бэн" />
+
+	<Object	Name = "r6m1_Real"				FullName = "Реаль" />
+	<Object	Name = "r6m1_Real_Bar"				FullName = "Бар ''Устрица''" />
+	<Object	Name = "r6m1_Real_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "r6m1_Real_Shop"				FullName = "Магазин" />
+	<Object	Name = "r6m1_Real_Bar_Barman"			FullName = "Бармен Мик" />
+	<Object	Name = "r6m1_Real_Racer"			FullName = "Житель Скотт" />
+
+	<Object	Name = "r6m1_Onto"				FullName = "Онто" />
+	<Object	Name = "r6m1_Onto_Bar"				FullName = "Бар ''Тор''" />
+	<Object	Name = "r6m1_Onto_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "r6m1_Onto_Shop"				FullName = "Магазин" />
+	<Object	Name = "r6m1_Onto_Bar_Barman"			FullName = "Бармен Джон" />
+	<Object	Name = "r6m1_Onto_Signer"			FullName = "Крестьянин Мэл" />
+
+	<Object	Name = "r6m1_Lodon"				FullName = "Лодон" />
+	<Object	Name = "r6m1_Lodon_Bar"				FullName = "Паб ''Забой''" />
+	<Object	Name = "r6m1_Lodon_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "r6m1_Lodon_Shop"			FullName = "Магазин" />
+	<Object	Name = "r6m1_Lodon_Bar_Barman"		FullName = "Бармен Эдриан" />
+	<Object	Name = "r6m1_Lodon_Worker"			FullName = "Рабочий Стэн" />
+
+	<Object	Name = "theTownMapleSheet"				FullName = "Мэплшит" />
+	<Object	Name = "theTownMapleSheet_Bar"			FullName = "Бар ''Просветленный''" />
+	<Object	Name = "theTownMapleSheet_Workshop"			FullName = "Мастерская" />
+	<Object	Name = "theTownMapleSheet_Shop"			FullName = "Магазин" />
+	<Object	Name = "theTownMapleSheet_Bar_Barman"		FullName = "Бармен Ян" />
+	<Object	Name = "theTownMapleSheet_WorestMan"		FullName = "Просветитель Том" />
+	<Object	Name = "theTownMapleSheet_WorestScientist"	FullName = "Ученый Абрахам" />
+
+	<Object	Name = "DynQEnemy01"					FullName = "Гарольд" />
+	<Object	Name = "DynQEnemy02"					FullName = "Сизый Билл" />
+	<Object	Name = "DynQEnemy03"					FullName = "Гудвин" />
+	<Object	Name = "DynQEnemy04"					FullName = "Жорж Добробуш" />
+	<Object	Name = "DynQEnemy05"					FullName = "Ленивый Хьюго" />
+	<Object	Name = "DynQEnemy06"					FullName = "Кровавый Грэг" />
+	<Object	Name = "DynQEnemy07"					FullName = "Николас" />
+	<Object	Name = "DynQEnemy08"					FullName = "Грязный Том" />
+	<Object	Name = "DynQEnemy09"					FullName = "Джон С. Смит" />
+	<Object	Name = "DynQEnemy10"					FullName = "Клинт Уэйн" />
+	<Object	Name = "DynQEnemy11"					FullName = "Джон Иствуд" />
+	<Object	Name = "DynQEnemy12"					FullName = "Макс Гибсон" />
+	<Object	Name = "DynQEnemy13"					FullName = "Чистый Эл" />
+	<Object	Name = "DynQEnemy14"					FullName = "Однорукий Соер" />
+	<Object	Name = "DynQEnemy15"					FullName = "Мошенник Чарли" />
+	<Object	Name = "DynQEnemy16"					FullName = "Бор Рис" />
+	<Object	Name = "DynQEnemy17"					FullName = "Ловкач Бэн" />
+	<Object	Name = "DynQEnemy18"					FullName = "Шулер Смит" />
+	<Object	Name = "DynQEnemy19"					FullName = "Картежник Питер" />
+	<Object	Name = "DynQEnemy20"					FullName = "Стрелок Жан" />
+	<Object	Name = "DynQEnemy21"					FullName = "Одноглазый Джонни" />
+	<Object	Name = "DynQEnemy22"					FullName = "Маньяк Энтони" />
+	<Object	Name = "DynQEnemy23"					FullName = "Большой Вилли" />
+	<Object	Name = "DynQEnemy24"					FullName = "Билл" />
+	<Object	Name = "DynQEnemy25"					FullName = "Вспыльчивый Майк" />
+</ObjectNames>

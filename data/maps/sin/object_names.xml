@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<ObjectNames>
+	<Object 	Name="Sin_WestIerihon" 				FullName = "Восточный Иерихон"/>
+	<Object 	Name="Sin_WestIerihon_Bar" 			FullName = "Бар 'У Джо'"/>
+	<Object	    Name="Sin_WestIerihon_Shop" 		FullName = "Магазин"/>
+	<Object	    Name="Sin_WestIerihon_Workshop" 	FullName = "Мастерская"/>
+	<Object	    Name="Sin_EastIerihon_Shop" 		FullName = "Магазин"/>
+	<Object	    Name="Sin_EastIerihon_Workshop" 	FullName = "Мастерская"/>
+	<Object	    Name="Sin_EastIerihon_Bar" 			FullName = "Бар"/>
+	<Object	    Name="Sin_SanRafael_Shop" 			FullName = "Магазин"/>
+	<Object	    Name="Sin_SanRafael_Workshop" 		FullName = "Мастерская"/>
+	<Object	    Name="Sin_CatHouse_Shop" 			FullName = "Магазин"/>
+	<Object	    Name="Sin_CatHouse_Workshop" 		FullName = "Мастерская"/>
+	<Object	    Name="Sin_DogHouse_Shop" 			FullName = "Магазин"/>
+	<Object	    Name="Sin_DogHouse_Workshop" 		FullName = "Мастерская"/>
+	<Object	    Name="Sin_DogHouse_Bar" 			FullName = "Ферма"/>
+	<Object	    Name="Sin_Church_Workshop" 			FullName = "Мастерская"/>
+	<Object	    Name="Sin_Church_Bar" 				FullName = "Храм"/>
+	<Object	    Name="PetrolStation_Workshop" 		FullName = "Мастерская"/>
+	<Object	    Name="Sin_EastIerihon_Bar_Barman" 	FullName = "Бармен"/>
+	<Object	    Name="Sin_EastIerihon" 				FullName = "Западный Иерихон"/>
+	<Object 	Name="Sin_IerihonEast_MayorPlace"	FullName = "Мэрия"/>
+	<Object 	Name="Sin_Joe" 						FullName = "Джо"/>
+	<Object 	Name="Sin_Kitty" 					FullName = "Крошка Китти"/>
+	<Object   	Name="Sin_Bulldog" 					FullName = "Борн"/>
+	<Object	    Name="Sin_Garfield" 				FullName = "Гарфилд"/>
+	<Object  	Name="Sin_BlackWood" 				FullName = "Блэквуд"/>
+	<Object   	Name="Sin_Egoist" 					FullName = "Эгоист"/>
+	<Object		Name="Sin_Kitty_Trapped" 			FullName = "Крошка Китти"/>
+	<Object 	Name="Sin_Father" 					FullName = "Отец Патрик" />
+	<Object 	Name="Sin_Church" 					FullName = "Церковь Колеса" />
+	<Object 	Name="Sin_CatHouse" 				FullName = "Кошкин Дом"/>
+	<Object 	Name="Sin_DogHouse" 				FullName = "Старая Ферма" />
+	<Object 	Name="Sin_SanRafael" 				FullName = "Сан Рафаэль" />
+	<Object 	Name="Sin_Church_Inside"			FullName = "Церковь" />
+	<Object 	Name="PetrolStation" 				FullName = "Заправка" />
+	<Object 	Name="Sin_CatHouse_Bar"      		FullName = "Бар" />
+	<Object 	Name="Sin_CatHouse_Bar_Barman"      FullName = "Чак" />
+	<Object 	Name="Sin_SanRafael_Bar"     		FullName = "Бар 'Аллигатор'" />
+	<Object 	Name="Sin_SanRafael_Bar_Barman"     FullName = "Марио" />
+</ObjectNames>

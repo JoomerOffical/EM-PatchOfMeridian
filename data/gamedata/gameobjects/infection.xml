@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: Infection.xml,v 1.1 2005/12/08 08:58:04 anton Exp $
+-->
+
+<Prototypes>
+
+	<Prototype
+		Class			= "InfectionZone"
+		Name			= "InfectionZone"
+		MinDistToPlayer	= "200"
+		CriticalTeamDist	= "500"
+		CriticalTeamTime	= "5" 
+		BlindTeamDist	= "200"
+		BlindTeamTime	= "20"
+		DropOutTimeOut	= "30.000"
+		/>
+
+
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "ScoutVanTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-2"
+		VehiclesPrototypes			= "Sml1 Sml2"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "VanGang"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-2"
+		VehiclesPrototypes			= "Sml1 Sml2 Scout"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "VanFighterGang"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-2"
+		VehiclesPrototypes			= "Sml1 Sml2 Sml3 Sml4 Scout"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "FighterMolokovozGang"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Sml3 Sml4 Scout Bug"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+
+
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "MolokovozGang"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-2"
+		VehiclesPrototypes			= "Sml3 Sml4 Scout Bug Fighter"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "MolokovozUralTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-2"
+		VehiclesPrototypes			= "Sml4 Scout Bug Fighter Hunter"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "UralTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Scout Bug Fighter Hunter Molokovoz"		
+			GunAffixGeneratorPrototype	= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "UralBelazTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Bug Fighter Hunter Molokovoz"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "BelazMirotovrecTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Bug Fighter Hunter Molokovoz Ural"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "MirotvorecTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Fighter Hunter Molokovoz Ural Belaz Cruiser"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "IZG_Z11"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Ural Hunter Molokovoz Fighter"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "IZG_Z12"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Belaz Ural Hunter Molokovoz Fighter"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "UralRobotTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Robot04_SMALL Robot01"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "IZG_Z14"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Robot01 Robot04_SMALL"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "IZG_Z15"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Robot01 Robot04_SMALL"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class			= "InfectionTeam"
+		Name						= "IZG_Z16"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Cruiser Belaz Ural Hunter Molokovoz Fighter"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "IZG_Z17"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Robot03_Big Robot01"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "IZG_Z18"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Robot03_Big Robot01"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "MirotvorecRobotsTeam"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Robot03_Big Robot01 Robot04_SMALL"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_bad">
+	</Prototype>
+	<Prototype
+		Class						= "InfectionTeam"
+		Name						= "IZG_Z20"
+		DecisionMatrix	        		= "teammain.lua"
+
+		DesiredCount 				= "1-3"
+		VehiclesPrototypes			= "Mirotvorec Cruiser Belaz Ural Hunter"		
+		GunAffixGeneratorPrototype		= "gun_affix_Generator_good">
+	</Prototype>
+</Prototypes>

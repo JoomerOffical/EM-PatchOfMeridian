@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<Paths>
+	<Path
+		Name="BaseRobot2_ExPath">
+		<Point
+			coord="1805.574 2519.518" />
+	</Path>
+
+	<Path
+		Name="BaseRobot_ExPath">
+		<Point
+			coord="2065.543 2426.374" />
+
+		<Point
+			coord="2024.974 2417.105" />
+
+		<Point
+			coord="1995.856 2423.671" />
+
+		<Point
+			coord="1807.464 2518.401" />
+	</Path>
+
+	<Path
+		Name="EnterBase1_1_ExPath">
+		<Point
+			coord="1767.515 2498.963" />
+
+		<Point
+			coord="1754.122 2507.166" />
+
+		<Point
+			coord="1738.245 2519.559" />
+	</Path>
+
+	<Path
+		Name="EnterBase1_2_ExPath">
+		<Point
+			coord="1792.166 2535.272" />
+
+		<Point
+			coord="1780.640 2543.998" />
+
+		<Point
+			coord="1762.974 2555.054" />
+	</Path>
+
+	<Path
+		Name="EnterBase1_3_ExPath">
+		<Point
+			coord="1818.226 2566.156" />
+
+		<Point
+			coord="1805.142 2576.801" />
+
+		<Point
+			coord="1787.971 2589.510" />
+	</Path>
+
+	<Path
+		Name="EnterBase2_1_ExPath">
+		<Point
+			coord="1733.961 2535.208" />
+
+		<Point
+			coord="1719.416 2544.510" />
+
+		<Point
+			coord="1707.123 2553.022" />
+	</Path>
+
+	<Path
+		Name="EnterBase2_2_ExPath">
+		<Point
+			coord="1760.141 2574.120" />
+
+		<Point
+			coord="1747.502 2582.805" />
+
+		<Point
+			coord="1733.713 2592.786" />
+	</Path>
+
+	<Path
+		Name="EnterBase2_3_ExPath">
+		<Point
+			coord="1785.478 2606.595" />
+
+		<Point
+			coord="1773.623 2621.802" />
+
+		<Point
+			coord="1758.155 2628.294" />
+	</Path>
+
+	<Path
+		Name="EnterBase3_1_ExPath">
+		<Point
+			coord="1679.068 2537.094" />
+
+		<Point
+			coord="1664.672 2546.815" />
+
+		<Point
+			coord="1650.464 2570.718" />
+	</Path>
+
+	<Path
+		Name="EnterBase3_2_ExPath">
+		<Point
+			coord="1706.664 2572.113" />
+
+		<Point
+			coord="1689.001 2584.695" />
+
+		<Point
+			coord="1667.703 2594.756" />
+	</Path>
+
+	<Path
+		Name="EnterBase3_3_ExPath">
+		<Point
+			coord="1738.370 2613.989" />
+
+		<Point
+			coord="1715.853 2621.398" />
+
+		<Point
+			coord="1692.203 2624.943" />
+	</Path>
+
+	<Path
+		Name="EnterBase_End_ExPath">
+		<Point
+			coord="1642.527 2600.502" />
+
+		<Point
+			coord="1498.584 2572.025" />
+
+		<Point
+			coord="1390.852 2584.698" />
+	</Path>
+
+	<Path
+		Name="GonkaVaypegGradofaks_ExPath">
+		<Point
+			coord="1578.683 785.670" />
+
+		<Point
+			coord="1814.922 794.618" />
+
+		<Point
+			coord="1888.999 790.636" />
+
+		<Point
+			coord="1956.781 846.484" />
+
+		<Point
+			coord="2008.645 942.130" />
+
+		<Point
+			coord="2095.158 1017.571" />
+
+		<Point
+			coord="2134.017 1103.109" />
+
+		<Point
+			coord="2162.960 1268.085" />
+
+		<Point
+			coord="2189.855 1321.959" />
+
+		<Point
+			coord="2600.845 1482.476" />
+
+		<Point
+			coord="2831.382 1478.451" />
+
+		<Point
+			coord="3080.634 1349.374" />
+
+		<Point
+			coord="3137.800 1423.090" />
+
+		<Point
+			coord="3215.731 1554.467" />
+
+		<Point
+			coord="3385.414 1629.942" />
+
+		<Point
+			coord="3480.208 1838.334" />
+
+		<Point
+			coord="3518.583 2279.112" />
+
+		<Point
+			coord="3309.673 2375.642" />
+
+		<Point
+			coord="3094.966 2423.640" />
+	</Path>
+
+	<Path
+		Name="Mehan_path01">
+		<Point
+			coord="3494.151 1672.896" />
+
+		<Point
+			coord="3456.875 1680.477" />
+
+		<Point
+			coord="3428.383 1675.692" />
+
+		<Point
+			coord="3383.019 1643.703" />
+
+		<Point
+			coord="3345.548 1618.182" />
+
+		<Point
+			coord="3267.760 1595.834" />
+
+		<Point
+			coord="3196.018 1521.371" />
+
+		<Point
+			coord="3124.469 1383.136" />
+
+		<Point
+			coord="3017.998 1277.011" />
+
+		<Point
+			coord="3034.546 999.528" />
+
+		<Point
+			coord="3084.206 881.250" />
+
+		<Point
+			coord="3038.231 797.940" />
+	</Path>
+
+	<Path
+		Name="Player_path01">
+		<Point
+			coord="3511.344 1368.885" />
+
+		<Point
+			coord="3519.941 1395.514" />
+
+		<Point
+			coord="3536.115 1441.969" />
+
+		<Point
+			coord="3543.566 1504.000" />
+	</Path>
+
+	<Path
+		Name="Player_path02">
+		<Point
+			coord="3491.206 1665.352" />
+
+		<Point
+			coord="3454.344 1674.233" />
+
+		<Point
+			coord="3424.765 1667.001" />
+
+		<Point
+			coord="3386.002 1637.599" />
+
+		<Point
+			coord="3356.307 1617.257" />
+	</Path>
+
+	<Path
+		Name="RobotSvat_loc">
+		<Point
+			coord="3161.683 2807.052" />
+
+		<Point
+			coord="3199.175 2754.293" />
+
+		<Point
+			coord="3231.589 2699.222" />
+
+		<Point
+			coord="3286.798 2643.651" />
+
+		<Point
+			coord="3345.259 2588.965" />
+
+		<Point
+			coord="3458.165 2481.924" />
+
+		<Point
+			coord="3483.261 2393.218" />
+
+		<Point
+			coord="3495.977 2210.298" />
+
+		<Point
+			coord="3509.298 2092.078" />
+
+		<Point
+			coord="3489.850 1948.887" />
+
+		<Point
+			coord="3462.280 1806.075" />
+
+		<Point
+			coord="3415.104 1656.882" />
+
+		<Point
+			coord="3319.504 1607.067" />
+
+		<Point
+			coord="3213.739 1546.350" />
+
+		<Point
+			coord="3144.970 1437.754" />
+
+		<Point
+			coord="3088.167 1341.912" />
+
+		<Point
+			coord="3041.754 1294.033" />
+
+		<Point
+			coord="3008.523 1233.979" />
+
+		<Point
+			coord="3020.594 1183.382" />
+
+		<Point
+			coord="3028.325 1148.444" />
+
+		<Point
+			coord="3023.358 1091.363" />
+
+		<Point
+			coord="2983.177 1017.325" />
+
+		<Point
+			coord="2928.433 963.338" />
+
+		<Point
+			coord="2867.232 995.970" />
+
+		<Point
+			coord="2850.836 996.385" />
+
+		<Point
+			coord="2800.826 1020.737" />
+
+		<Point
+			coord="2765.920 1076.690" />
+
+		<Point
+			coord="2753.112 1151.524" />	
+	</Path>
+
+	<Path
+		Name="ToBarrel_ExPath">
+		<Point
+			coord="3317.103 2364.829" />
+
+		<Point
+			coord="3366.577 2353.737" />
+
+		<Point
+			coord="3424.380 2340.528" />
+
+		<Point
+			coord="3448.696 2353.236" />
+
+		<Point
+			coord="3480.771 2387.280" />
+
+		<Point
+			coord="3472.425 2454.365" />
+
+		<Point
+			coord="3447.189 2500.238" />
+
+		<Point
+			coord="3413.030 2524.936" />
+
+		<Point
+			coord="3362.444 2552.068" />
+
+		<Point
+			coord="3349.213 2580.042" />
+
+		<Point
+			coord="3318.007 2621.102" />
+
+		<Point
+			coord="3266.388 2646.036" />
+
+		<Point
+			coord="3234.641 2685.960" />
+
+		<Point
+			coord="3200.618 2757.839" />
+
+		<Point
+			coord="3178.640 2782.528" />
+
+		<Point
+			coord="3147.077 2807.158" />
+
+		<Point
+			coord="3101.421 2815.318" />
+
+		<Point
+			coord="3036.128 2813.535" />
+
+		<Point
+			coord="2512.074 2799.489" />
+	</Path>
+
+	<Path
+		Name="ToMechanik_Mech_ExPath">
+		<Point
+			coord="3433.661 1671.014" />
+
+		<Point
+			coord="3377.881 1622.690" />
+
+		<Point
+			coord="3301.759 1609.504" />
+
+		<Point
+			coord="3230.031 1558.916" />
+
+		<Point
+			coord="3153.802 1467.127" />
+
+		<Point
+			coord="3097.316 1342.113" />
+
+		<Point
+			coord="3018.051 1263.265" />
+
+		<Point
+			coord="3014.492 1185.464" />
+
+		<Point
+			coord="3028.290 1150.884" />
+
+		<Point
+			coord="3038.844 1082.348" />
+
+		<Point
+			coord="3036.751 1008.775" />
+
+		<Point
+			coord="3045.880 955.554" />
+
+		<Point
+			coord="3086.004 879.644" />
+
+		<Point
+			coord="3076.994 815.291" />
+
+		<Point
+			coord="3045.872 788.915" />
+	</Path>
+
+	<Path
+		Name="ToMechanik_Player_ExPath">
+		<Point
+			coord="3430.774 1669.949" />
+
+		<Point
+			coord="3365.058 1621.619" />
+
+		<Point
+			coord="3282.262 1602.786" />
+
+		<Point
+			coord="3222.732 1553.428" />
+
+		<Point
+			coord="3172.709 1494.766" />
+
+		<Point
+			coord="3124.979 1386.862" />
+
+		<Point
+			coord="3066.136 1326.929" />
+
+		<Point
+			coord="3023.612 1272.257" />
+
+		<Point
+			coord="3013.304 1214.797" />
+
+		<Point
+			coord="3025.868 1161.993" />
+
+		<Point
+			coord="3040.180 1101.630" />
+
+		<Point
+			coord="3039.944 1033.927" />
+
+		<Point
+			coord="3043.042 953.544" />
+
+		<Point
+			coord="3083.803 885.642" />
+
+		<Point
+			coord="3054.526 818.305" />
+	</Path>
+
+	<Path
+		Name="WowWall_ExPath">
+		<Point
+			coord="3362.160 3333.427" />
+
+		<Point
+			coord="3330.400 3292.622" />
+
+		<Point
+			coord="3287.724 3236.736" />
+
+		<Point
+			coord="3187.418 3024.394" />
+	</Path>
+
+	<Path
+		Name="hum1">
+		<Point
+			coord="1398.588 740.287" />
+
+		<Point
+			coord="1407.991 797.198" />
+
+		<Point
+			coord="1386.293 797.870" />
+
+		<Point
+			coord="1395.233 739.879" />
+	</Path>
+
+	<Path
+		Name="hum10">
+		<Point
+			coord="2317.357 3318.119" />
+
+		<Point
+			coord="2321.824 3348.083" />
+
+		<Point
+			coord="2352.574 3345.979" />
+
+		<Point
+			coord="2327.286 3345.285" />
+
+		<Point
+			coord="2320.798 3323.903" />
+	</Path>
+
+	<Path
+		Name="hum11">
+		<Point
+			coord="2379.521 3336.732" />
+
+		<Point
+			coord="2340.249 3297.673" />
+
+		<Point
+			coord="2358.032 3285.472" />
+
+		<Point
+			coord="2324.072 3317.985" />
+
+		<Point
+			coord="2334.926 3300.017" />
+
+		<Point
+			coord="2376.542 3341.743" />
+	</Path>
+
+	<Path
+		Name="hum12">
+		<Point
+			coord="2367.324 3284.871" />
+
+		<Point
+			coord="2390.327 3303.432" />
+
+		<Point
+			coord="2373.898 3294.630" />
+	</Path>
+
+	<Path
+		Name="hum13">
+		<Point
+			coord="687.656 2267.924" />
+
+		<Point
+			coord="694.153 2261.790" />
+
+		<Point
+			coord="800.699 2192.333" />
+
+		<Point
+			coord="819.209 2191.772" />
+
+		<Point
+			coord="839.689 2181.304" />
+
+		<Point
+			coord="818.871 2189.893" />
+
+		<Point
+			coord="799.510 2192.455" />
+
+		<Point
+			coord="693.603 2262.238" />
+	</Path>
+
+	<Path
+		Name="hum14">
+		<Point
+			coord="800.393 2162.581" />
+
+		<Point
+			coord="785.416 2169.521" />
+
+		<Point
+			coord="787.170 2183.059" />
+
+		<Point
+			coord="788.064 2170.466" />
+
+		<Point
+			coord="799.142 2163.407" />
+	</Path>
+
+	<Path
+		Name="hum15">
+		<Point
+			coord="690.154 2301.092" />
+
+		<Point
+			coord="684.138 2289.965" />
+	</Path>
+
+	<Path
+		Name="hum2">
+		<Point
+			coord="1355.837 802.228" />
+
+		<Point
+			coord="1352.250 864.120" />
+
+		<Point
+			coord="1376.798 864.876" />
+
+		<Point
+			coord="1359.865 858.133" />
+
+		<Point
+			coord="1378.057 841.883" />
+
+		<Point
+			coord="1358.604 853.259" />
+
+		<Point
+			coord="1358.601 800.058" />
+	</Path>
+
+	<Path
+		Name="hum3">
+		<Point
+			coord="1463.127 831.298" />
+
+		<Point
+			coord="1463.221 839.221" />
+
+		<Point
+			coord="1408.283 846.532" />
+
+		<Point
+			coord="1458.109 833.385" />
+	</Path>
+
+	<Path
+		Name="hum4">
+		<Point
+			coord="2968.650 2417.343" />
+
+		<Point
+			coord="2968.651 2431.617" />
+	</Path>
+
+	<Path
+		Name="hum5">
+		<Point
+			coord="2970.124 2436.273" />
+
+		<Point
+			coord="2988.431 2436.519" />
+	</Path>
+
+	<Path
+		Name="hum6">
+		<Point
+			coord="2932.235 2364.036" />
+
+		<Point
+			coord="2931.738 2400.759" />
+
+		<Point
+			coord="2895.677 2399.171" />
+
+		<Point
+			coord="2928.950 2368.922" />
+	</Path>
+
+	<Path
+		Name="hum7">
+		<Point
+			coord="3616.481 3493.895" />
+
+		<Point
+			coord="3620.205 3508.681" />
+
+		<Point
+			coord="3612.123 3505.039" />
+
+		<Point
+			coord="3615.600 3500.420" />
+	</Path>
+
+	<Path
+		Name="hum8">
+		<Point
+			coord="3572.007 3447.657" />
+
+		<Point
+			coord="3572.718 3435.761" />
+
+		<Point
+			coord="3603.786 3437.435" />
+
+		<Point
+			coord="3579.505 3438.186" />
+
+		<Point
+			coord="3575.771 3449.923" />
+
+		<Point
+			coord="3574.519 3437.718" />
+	</Path>
+
+	<Path
+		Name="hum9">
+		<Point
+			coord="3669.267 3455.716" />
+
+		<Point
+			coord="3648.190 3444.262" />
+
+		<Point
+			coord="3628.320 3429.358" />
+
+		<Point
+			coord="3615.464 3413.859" />
+
+		<Point
+			coord="3637.781 3433.612" />
+
+		<Point
+			coord="3669.324 3453.979" />
+	</Path>
+</Paths>

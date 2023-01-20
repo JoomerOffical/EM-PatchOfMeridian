@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Belongs>
+    <Belong id="1100" logo="16" />
+    <Belong id="1001" logo="16" />
+
+    <Belong id="1105" logo="1" />
+    <Belong id="1106" logo="2" />
+    <Belong id="1107" logo="3" />
+    <Belong id="1108" logo="4" />
+    <Belong id="1109" logo="5" />
+    <Belong id="1110" logo="6" />
+    <Belong id="1111" logo="7" />
+    <Belong id="1112" logo="8" />
+    <Belong id="1113" logo="9" />
+    <Belong id="1114" logo="10" />
+    <Belong id="1115" logo="11" />
+    <Belong id="1116" logo="12" />
+    <Belong id="1117" logo="13" />
+    <Belong id="1118" logo="14" />
+    <Belong id="1120" logo="23" />
+    <Belong id="1121" logo="25" />
+    <Belong id="1122" logo="24" />
+
+
+    <Belong id="1119" logo="1" />
+    <Belong id="1123" logo="19" />
+    <Belong id="1126" logo="22" />
+    <Belong id="1124" logo="25" />
+    <Belong id="1125" logo="7" />
+
+
+    <Belong id="1150" logo="13" />
+    <Belong id="1151" logo="5" />
+    <Belong id="1152" logo="1" />
+    <Belong id="1153" logo="11" />
+
+    <Belong id="1190" logo="3" />
+    <Belong id="1191" logo="3" />
+    <Belong id="1192" logo="5" />
+    <Belong id="1193" logo="5" />
+    <Belong id="1194" logo="8" />
+    <Belong id="1195" logo="8" />
+    <Belong id="1196" logo="6" />
+
+</Belongs>

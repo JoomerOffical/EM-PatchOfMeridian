@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource><!-- 1.	Начальная фраза игрока. -->
+	<string
+		id="101"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не вижу ни одной таблички с надписью: ''До Эдмонтона 10 километров''. Ну что ж, будем искать. "
+		sound="data\sounds\Speech\r5m1\r5m1_101_nomad.ogg"
+		time="7" />
+<!-- 2.	Игрок видит библиотеку. -->
+	<string
+		id="201"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Прав был Умник, сверлить его карбюратор! Эта, как ее? Библиотека действительно неплохо охраняется. Но ничего, не в такие места пролезали!"
+		sound="data\sounds\Speech\r5m1\r5m1_201_nomad.ogg"
+		time="11" />
+<!-- 4.	Разговор с Умником. Уговорить умника указать путь к Эдмонту. Тот угрожает что нажалуется боссу. -->
+	<string
+		id="401"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Здарова! Ты и есть тип по прозвищу Умник?"
+		sound="data\sounds\Speech\r5m1\r5m1_401_nomad.ogg"
+		time="4" />
+
+	<string
+		id="402"
+		modelName="mask_ben"
+		modelSlot="1"
+		value="НОВАЛ|Так меня называют. Кто ты и что тебе надо?"
+		sound="data\sounds\Speech\r5m1\r5m1_402_noval.ogg"
+		time="5" />
+
+	<string
+		id="403"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Меня зовут Бродяга. Мне сказали, что ты специалист по всяким там древним картам и прочим астрономиям. Мне надо узнать, как добраться до города Эдмонтона."
+		sound="data\sounds\Speech\r5m1\r5m1_403_nomad.ogg"
+		time="10" />
+
+	<string
+		id="404"
+		modelName="mask_ben"
+		modelSlot="1"
+		value="НОВАЛ|Никогда не слышал о таком."
+		sound="data\sounds\Speech\r5m1\r5m1_404_noval.ogg"
+		time="3" />
+
+	<string
+		id="405"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Эй, да ладно, брось! Ты же суперспец по картам, лопни твой бензобак! Ты просто обязан знать про Эдмонтон."
+		sound="data\sounds\Speech\r5m1\r5m1_405_nomad.ogg"
+		time="8" />
+
+	<string
+		id="406"
+		modelName="mask_ben"
+		modelSlot="1"
+		value="НОВАЛ|Что вы себе позволяете, уважаемый?!  Никому я ничего не обязан! Я действительно разбираюсь в картах, но не в географических. А в игральных! Я крупный специалист по истории карточных азартных игр."
+		sound="data\sounds\Speech\r5m1\r5m1_406_noval.ogg"
+		time="20" />
+
+	<string
+		id="407"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Значит так, зануда. Я не знаю, о чем ты говоришь, но имей в виду: мне нет дела до твоих игр. Так что или ты расскажешь мне, где находится Эдмонтон, или придется познакомить тебя с моей битой. Понял?"
+		sound="data\sounds\Speech\r5m1\r5m1_407_nomad.ogg"
+		time="16" />
+
+	<string
+		id="408"
+		modelName="mask_ben"
+		modelSlot="1"
+		value="НОВАЛ|Понял. Зачем нервничать? Хотя я действительно не знаю, где находится город Эдмонтон, но могу дать совет. Нужные тебе карты наверняка есть в здании, называемом... э-э... Библиотека. Оно находится в паре сотен метров отсюда."
+		sound="data\sounds\Speech\r5m1\r5m1_408_noval.ogg"
+		time="20" />
+
+	<string
+		id="409"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Клянусь глушителем! Уж больно легко ты сдался. Тебя ведь не зря прозвали Умником? А теперь говори, о чем ты забыл меня предупредить?"
+		sound="data\sounds\Speech\r5m1\r5m1_409_nomad.ogg"
+		time="11" />
+
+	<string
+		id="410"
+		modelName="mask_ben"
+		modelSlot="1"
+		value="НОВАЛ|Ну что вы! Не ''забыл'', а просто не успел. Дело в том, что Библиотека является собственностью Сэма и охраняется его бойцами."
+		sound="data\sounds\Speech\r5m1\r5m1_410_noval.ogg"
+		time="13" />
+
+	<string
+		id="411"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Что еще за Сэм? Местная большая шишка?"
+		sound="data\sounds\Speech\r5m1\r5m1_411_nomad.ogg"
+		time="4" />
+
+	<string
+		id="412"
+		modelName="mask_ben"
+		modelSlot="1"
+		value="НОВАЛ|Если опустить несущественные детали, то вы правы."
+		sound="data\sounds\Speech\r5m1\r5m1_412_noval.ogg"
+		time="6" />
+
+	<string
+		id="413"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ладно, будем иметь в виду этого Сэма."
+		sound="data\sounds\Speech\r5m1\r5m1_413_nomad.ogg"
+		time="4" />
+
+<!-- 5.	Герой читает о том, где находиться Эдмонт. (фразы когда герой бежит из библиотеки) -->
+	<string
+		id="5011"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ага... хм... понятно. Выходит, Эдмонтон - это где-то по ту сторону Великой реки в землях... э-э-э Ле Канады."
+		sound="data\sounds\Speech\r5m1\r5m1_5011_nomad.ogg"
+		time="11" />
+
+	<string
+		id="5012"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А как прикажете перебираться через реку? Так... Ага! Один мост я вижу. Если это, конечно, обозначает мост. Надеюсь, он не развалится от старости. Потому что других мостов, ведущих на противоположный берег Великой Реки, я на этой карте не вижу. "
+		sound="data\sounds\Speech\r5m1\r5m1_5012_nomad.ogg"
+		time="20" />
+
+<!-- 6.	Сэм обвиняет Героя и приговаривает его к смерти на арене. -->
+	<string
+		id="601"
+		modelSlot="1"
+		value="СЭМ|Парень, ты больной на голову? Или ты всерьез воображаешь, что можешь безнаказанно обворовывать меня? Причем дважды!"
+		sound="data\sounds\Speech\r5m1\r5m1_601_sam.ogg"
+		time="10" />
+
+	<string
+		id="602"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я что-то и одного раза не припомню. Где уж тут дважды?"
+		sound="data\sounds\Speech\r5m1\r5m1_602_nomad.ogg"
+		time="4" />
+
+	<string
+		id="603"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Ты влез в Библиотеку, которая принадлежит мне. И ты посмел наезжать на Умника! А Умник – тоже моя собственность."
+		sound="data\sounds\Speech\r5m1\r5m1_603_sam.ogg"
+		time="12" />
+
+	<string
+		id="604"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Сверлить мой карбюратор! Что-то я не видел надписи: ''Собственность Сэма'' ни на Умнике, ни на Библиотеке."
+		sound="data\sounds\Speech\r5m1\r5m1_604_nomad.ogg"
+		time="7" />
+
+	<string
+		id="605"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|На взведенной мине тоже ничего не написано, а стоит на нее встать, и ''бах''! Считай меня миной, на которую ты нарвался. Надо бы тебя пристрелить, но ты не стоишь потраченных на тебя пуль. "
+		sound="data\sounds\Speech\r5m1\r5m1_605_sam.ogg"
+		time="19" />
+
+	<string
+		id="60512"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Пожалуй, лучше всего выставить тебя на гладиаторские бои, чтобы заработать денег на тотализаторе."
+		sound="data\sounds\Speech\r5m1\r5m1_60512_sam.ogg"
+		time="10" />
+
+	<string
+		id="606"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А ты уверен, что я буду драться?"
+		sound="data\sounds\Speech\r5m1\r5m1_606_nomad.ogg"
+		time="3" />
+
+	<string
+		id="607"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Не хочешь? Не дерись. Можно будет делать ставки на то, какое место твоей машине отстрелят в первую очередь."
+		sound="data\sounds\Speech\r5m1\r5m1_607_sam.ogg"
+		time="11" />
+
+	<string
+		id="608"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А если победа останется за мной?"
+		sound="data\sounds\Speech\r5m1\r5m1_608_nomad.ogg"
+		time="3" />
+
+	<string
+		id="609"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Тогда дам тебе сутки, за которые тебе будет позволено убраться с моей территории."
+		sound="data\sounds\Speech\r5m1\r5m1_609_sam.ogg"
+		time="7" />
+
+	<string
+		id="610"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Отлично! Я буду драться. И послушай совета: поставь свои деньги на меня. Не пожалеешь."
+		sound="data\sounds\Speech\r5m1\r5m1_610_nomad.ogg"
+		time="9" />
+
+	<string
+		id="611"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Вот наглец!"
+		sound="data\sounds\Speech\r5m1\r5m1_611_sam.ogg"
+		time="2" />
+<!-- 7.	Сэм, предлагает герою войти в его команду, Герой соглашается на его предложение. -->
+	<string
+		id="701"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Послушай, приятель, я был не прав. Мне редко доводилось видеть таких умелых бойцов. Ты прирожденный водитель. Как ты смотришь на то, чтобы войти в мою команду?"
+		sound="data\sounds\Speech\r5m1\r5m1_701_sam.ogg"
+		time="12" />
+
+	<string
+		id="702"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|На кой мне это надо?"
+		sound="data\sounds\Speech\r5m1\r5m1_702_nomad.ogg"
+		time="2" />
+
+	<string
+		id="703"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Послушай меня. Ты, видимо, решил, что тебе предлагают поработать бойцом в рядовой банде? Если так, то ты ошибаешься. Оглядись! Я - единственный владелец всех этих земель. Смекаешь?"
+		sound="data\sounds\Speech\r5m1\r5m1_703_sam.ogg"
+		time="18" />
+
+	<string
+		id="704"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|О, раз ты местный хозяин, ты, наверно, знаешь где находится Мост через Великую реку?"
+		sound="data\sounds\Speech\r5m1\r5m1_704_nomad.ogg"
+		time="7" />
+
+	<string
+		id="705"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Знаю, но даже и не думай соваться к нему. За Мостом находятся земли Ле Канады. Когда-нибудь я доберусь до их богатств. Но до того момента никому не будет позволено опередить меня. Любой приблизившийся к Мосту будет убит на месте."
+		sound="data\sounds\Speech\r5m1\r5m1_705_sam.ogg"
+		time="22" />
+
+	<string
+		id="70512"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|И всякий, кто попробует меня обхитрить, получит пулю в бензобак, понятно? Имей в виду, Мост хорошо охраняется моими парнями."
+		sound="data\sounds\Speech\r5m1\r5m1_70512_sam.ogg"
+		time="15" />
+
+	<string
+		id="706"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Все понятно. Я ведь просто так спросил. Чего мне делать в этой Ле Канаде? А что касается предложения вступить в твою команду, то я согласен."
+		sound="data\sounds\Speech\r5m1\r5m1_706_nomad.ogg"
+		time="11" />
+
+	<string
+		id="707"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ| Ну что ж, отлично! Поверь, ты не ошибся с выбором."
+		sound="data\sounds\Speech\r5m1\r5m1_707_sam.ogg"
+		time="7" />
+<!-- 9.	Герой отчитывается Сэму. Сэм дает ему новое задание. -->
+	<string
+		id="901"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Ну, что он тебе сказал?"
+		sound="data\sounds\Speech\r5m1\r5m1_901_sam.ogg"
+		time="2" />
+
+	<string
+		id="902"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я, конечно, могу ошибаться, но, по-моему, ответ был отрицателен."
+		sound="data\sounds\Speech\r5m1\r5m1_902_nomad.ogg"
+		time="4" />
+
+	<string
+		id="903"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Вот проклятье! Слушай, тогда у меня к тебе другое задание. Необходимо срочно уничтожить один автомобиль."
+		sound="data\sounds\Speech\r5m1\r5m1_903_sam.ogg"
+		time="8" />
+
+	<string
+		id="904"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да я на своем веку уничтожил кучу автомобилей, в чем проблема?"
+		sound="data\sounds\Speech\r5m1\r5m1_904_nomad.ogg"
+		time="5" />
+
+	<string
+		id="905"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Есть одна сложность. На этом автомобиле мой бывший друг перевозит контрабанду. Мне бы не хотелось его убивать, в память о прошлой дружбе. Но контрабанде надо положить конец."
+		sound="data\sounds\Speech\r5m1\r5m1_905_sam.ogg"
+		time="15" />
+
+	<string
+		id="90512"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Если ты расстреляешь автомобиль в то время, как его владелец будет дома, то мы одновременно и контрабанду прекратим, и мой друг не пострадает. Ну как, берешься?"
+		sound="data\sounds\Speech\r5m1\r5m1_90512_sam.ogg"
+		time="15" />
+<!-- 10.	Небольшой диалог перед сражение с потенциальным лидером -->
+	<string
+		id="1001"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="332"
+		modelSlot="1"
+		value="НЕЗНАКОМЕЦ|Кто ты такой? Что тебе тут надо?"
+		sound="data\sounds\Speech\r5m1\r5m1_1001_stranger.ogg"
+		time="3" />
+
+	<string
+		id="1002"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я пришел сделать тебе небольшое внушение насчет перевозки контрабанды."
+		sound="data\sounds\Speech\r5m1\r5m1_1002_nomad.ogg"
+		time="5" />
+
+	<string
+		id="1003"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="332"
+		modelSlot="1"
+		value="НЕЗНАКОМЕЦ|Сдурел? Какой еще контрабанды? Я не занимаюсь никакой контрабандой!"
+		sound="data\sounds\Speech\r5m1\r5m1_1003_stranger.ogg"
+		time="4" />
+
+	<string
+		id="1004"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вот всем так и говори. Тем более, что после того, как я закончу, это будет абсолютная правда."
+		sound="data\sounds\Speech\r5m1\r5m1_1004_nomad.ogg"
+		time="7" />
+<!-- 11.	Герой отчитывается Сэму. Сэм предлагает ему поучаствовать в гонках. -->
+	<string
+		id="1101"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Ну как успехи?"
+		sound="data\sounds\Speech\r5m1\r5m1_1101_sam.ogg"
+		time="2" />
+
+	<string
+		id="1102"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Все в полном порядке! Твой друг завязал с контрабандой."
+		sound="data\sounds\Speech\r5m1\r5m1_1102_nomad.ogg"
+		time="5" />
+
+	<string
+		id="1103"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Отлично! А теперь у меня к тебе серьезное предложение."
+		sound="data\sounds\Speech\r5m1\r5m1_1103_sam.ogg"
+		time="6" />
+
+	<string
+		id="1104"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А до этого были шуточные?"
+		sound="data\sounds\Speech\r5m1\r5m1_1104_nomad.ogg"
+		time="2" />
+
+	<string
+		id="1105"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Нет, но и не такие серьезные, как это. Ежегодно мы организуем гонки. Куча участников и куча болельщиков. На победителя ставят очень большие деньги. В этот раз я решил принять участие в ставках."
+		sound="data\sounds\Speech\r5m1\r5m1_1105_sam.ogg"
+		time="18" />
+
+	<string
+		id="1106"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Понятно. На мне охрана наиболее вероятного победителя, верно?"
+		sound="data\sounds\Speech\r5m1\r5m1_1106_nomad.ogg"
+		time="5" />
+
+	<string
+		id="1107"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Помнишь парня, которому ты отвозил письмо? Он именно тот, на кого я хотел поставить.  Но он, как ты помнишь, отказался."
+		sound="data\sounds\Speech\r5m1\r5m1_1107_sam.ogg"
+		time="12" />
+
+	<string
+		id="1108"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Было такое, лопни его покрышки!"
+		sound="data\sounds\Speech\r5m1\r5m1_1108_nomad.ogg"
+		time="3" />
+
+	<string
+		id="1109"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="СЭМ|Потом ты по моей просьбе подстрелил машину главного претендента на победу. Теперь никто не знает, на кого ставить. Я предлагаю тебе принять участие в гонке и стать той темной лошадкой, которая сорвет куш. "
+		sound="data\sounds\Speech\r5m1\r5m1_1109_sam.ogg"
+		time="16" />
+
+	<string
+		id="1110"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Заманчивое предложение, не могу отказаться."
+		sound="data\sounds\Speech\r5m1\r5m1_1110_nomad.ogg"
+		time="4" />
+
+<!-- 12.	Сэм принимает Героя в команду в качестве полноценного партнера, и предлагает поймать нарушителей границы. -->
+	<string
+		id="1201"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Ну что ж, я рад, что не ошибся в тебе."
+		sound="data\sounds\Speech\r5m1\r5m1_1201_sam.ogg"
+		time="4" />
+
+	<string
+		id="1202"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Это было не так уж сложно."
+		sound="data\sounds\Speech\r5m1\r5m1_1202_nomad.ogg"
+		time="2" />
+
+	<string
+		id="120212"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Вот твоя доля выигрыша, у меня все честно."
+		sound="data\sounds\Speech\r5m1\r5m1_120212_sam.ogg"
+		time="6" />
+
+	<string
+		id="1203"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|У меня есть поручение как раз для такого крутого гонщика, как ты. Тут кое-кто решил наплевать на мои порядки."
+		sound="data\sounds\Speech\r5m1\r5m1_1203_sam.ogg"
+		time="10" />
+
+	<string
+		id="1204"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Превысили скорость?!"
+		sound="data\sounds\Speech\r5m1\r5m1_1204_nomad.ogg"
+		time="2" />
+
+	<string
+		id="1205"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Что-то в этом духе."
+		sound="data\sounds\Speech\r5m1\r5m1_1205_sam.ogg"
+		time="2" />
+
+	<string
+		id="1206"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Давай ближе к делу, Сэм. Что у тебя за привычка - ходить вокруг да около?"
+		sound="data\sounds\Speech\r5m1\r5m1_1206_nomad.ogg"
+		time="5" />
+
+	<string
+		id="1207"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ| Какие-то идиоты мотаются по моим землям без моего разрешения. Стрельбу устраивают, фермеров пугают. Поймай этих мерзавцев и проучи их хорошенько."
+		sound="data\sounds\Speech\r5m1\r5m1_1207_sam.ogg"
+		time="14" />
+<!-- 13.	Небольшой диалог героя с преследователями вора. -->
+	<string
+		id="1301"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="314"
+		modelSlot="1"
+		value="ПРЕСЛЕДОВАТЕЛЬ|Что ты здесь забыл? Вали отсюда, пока цел!"
+		sound="data\sounds\Speech\r5m1\r5m1_1301_persecutor.ogg"
+		time="3" />
+
+	<string
+		id="1302"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вы, парни, вторглись в чужие владения. И я специально приехал, чтобы преподать вам урок географии."
+		sound="data\sounds\Speech\r5m1\r5m1_1302_nomad.ogg"
+		time="10" />
+
+	<string
+		id="1303"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="314"
+		modelSlot="1"
+		value="ПРЕСЛЕДОВАТЕЛЬ|Мы преследуем вора, обокравшего сокровищницу Мирового Порядка. И тебе лучше не мешать нам, если не хочешь получить пулю в голову. "
+		sound="data\sounds\Speech\r5m1\r5m1_1303_persecutor.ogg"
+		time="7" />
+
+	<string
+		id="1304"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вы уж извините, ребята, но я вас перебью."
+		sound="data\sounds\Speech\r5m1\r5m1_1304_nomad.ogg"
+		time="4" />
+<!-- 14.	Герой говорит с вором. Убивает его. -->
+	<string
+		id="1401"
+		modelName="Man_mask"
+		modelSkin="0"
+		modelCfg="148"
+		modelSlot="1"
+		value="ВОР|Спасибо за помощь, приятель. А теперь прощай."
+		sound="data\sounds\Speech\r5m1\r5m1_1401_thief.ogg"
+		time="5" />
+
+	<string
+		id="1402"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Постой, постой, не так быстро. Кто ты такой, кто эти типы и что вы тут вообще все делаете?"
+		sound="data\sounds\Speech\r5m1\r5m1_1402_nomad.ogg"
+		time="8" />
+
+	<string
+		id="1403"
+		modelName="Man_mask"
+		modelSkin="0"
+		modelCfg="148"
+		modelSlot="1"
+		value="ВОР|Эти типы - бандиты, которые хотели меня ограбить."
+		sound="data\sounds\Speech\r5m1\r5m1_1403_thief.ogg"
+		time="4" />
+
+	<string
+		id="1404"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да что ты говоришь? А вот они называли вором тебя. Не покажешь, что у тебя в багажнике?"
+		sound="data\sounds\Speech\r5m1\r5m1_1404_nomad.ogg"
+		time="9" />
+
+	<string
+		id="1405"
+		modelName="Man_mask"
+		modelSkin="0"
+		modelCfg="148"
+		modelSlot="1"
+		value="ВОР|Еще чего? Ты бы, приятель особо не выступал, а то не посмотрю, что ты мне помог. Я бы, в общем-то, и сам мог бы справиться. Так что езжай отсюда, пока цел."
+		sound="data\sounds\Speech\r5m1\r5m1_1405_thief.ogg"
+		time="16" />
+
+	<string
+		id="1406"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ты не слишком-то вежлив. Ну что ж, тогда придется преподать тебе урок хороших манер."
+		sound="data\sounds\Speech\r5m1\r5m1_1406_nomad.ogg"
+		time="7" />
+<!-- 16.	Герой комментирует то, что нашел в багажнике вора. -->
+	<string
+		id="1601"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Надеюсь, что эта штука стоит боеприпасов, которые я потратил на ее добывание. Интересно, что это такое? Полагаю, Сэм разберется."
+		sound="data\sounds\Speech\r5m1\r5m1_1601_nomad.ogg"
+		time="11" />
+<!-- 17. Бродяга с Сэмом смотрят кинопленки.-->
+	<string
+		id="1701"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Привет, Сэм.  Я расправился со всеми, кто посмел нарушать границу."
+		sound="data\sounds\Speech\r5m1\r5m1_1701_nomad.ogg"
+		time="5" />
+
+	<string
+		id="1702"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Очень хорошо! Ты не выяснил, что это за идиоты были?"
+		sound="data\sounds\Speech\r5m1\r5m1_1702_sam.ogg"
+		time="6" />
+
+	<string
+		id="1703"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Они утверждали, что они из банды Мирового Порядка. Якобы преследовали какого-то вора."
+		sound="data\sounds\Speech\r5m1\r5m1_1703_nomad.ogg"
+		time="6" />
+
+	<string
+		id="1704"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Вора тебе поймать не удалось?"
+		sound="data\sounds\Speech\r5m1\r5m1_1704_sam.ogg"
+		time="3" />
+
+	<string
+		id="1705"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Обижаешь. От меня никто не уходит. Я подбил и вора, и его преследователей. В его вещах я нашел вот такой странный свиток. Понятия не имею, что это такое."
+		sound="data\sounds\Speech\r5m1\r5m1_1705_nomad.ogg"
+		time="13" />
+
+	<string
+		id="1706"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Это, мой друг, носитель информации. Для того, чтобы его читать, необходимо иметь специальные приборы."
+		sound="data\sounds\Speech\r5m1\r5m1_1706_sam.ogg"
+		time="8" />
+
+	<string
+		id="1707"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|И что там?"
+		sound="data\sounds\Speech\r5m1\r5m1_1707_nomad.ogg"
+		time="2" />
+
+	<string
+		id="1708"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Сейчас посмотрим."
+		sound="data\sounds\Speech\r5m1\r5m1_1708_sam.ogg"
+		time="2" />
+
+	<string
+		id="1801"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Бродяга, ты гений! Ты герой! Ты даже не представляешь, насколько ценную информацию ты принес мне! Мы только что видели действие сверхмощного оружия! Это оружие должно быть моим, понимаешь? "
+		sound="data\sounds\Speech\r5m1\r5m1_1801_sam.ogg"
+		time="22" />
+
+	<string
+		id="180112"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Я не хочу, чтобы кто-то еще узнал об этой находке. Ты должен проникнуть в этот Мировой Порядок и добыть еще таких же свитков. В них наверняка должна быть информация о том, как добыть это оружие, где оно хранится и прочее."
+		sound="data\sounds\Speech\r5m1\r5m1_180112_sam.ogg"
+		time="20" />
+
+	<string
+		id="1802"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Сэм, этого оружия, может быть, уже давным-давно в помине нет."
+		sound="data\sounds\Speech\r5m1\r5m1_1802_nomad.ogg"
+		time="4" />
+
+	<string
+		id="1803"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Поверь мне, оно есть. Никто не стал бы снаряжать погоню за воришкой, укравшим ничего не значащий предмет."
+		sound="data\sounds\Speech\r5m1\r5m1_1803_sam.ogg"
+		time="9" />
+
+	<string
+		id="1804"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Логично. Но я никогда не был в тех краях. Где и что там искать?"
+		sound="data\sounds\Speech\r5m1\r5m1_1804_nomad.ogg"
+		time="6" />
+
+	<string
+		id="1805"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Бродяга, ты достаточно умный парень, чтобы отыскать эти свитки, я в тебя верю."
+		sound="data\sounds\Speech\r5m1\r5m1_1805_sam.ogg"
+		time="8" />
+
+	<string
+		id="1806"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ладно, уговорил."
+		sound="data\sounds\Speech\r5m1\r5m1_1806_nomad.ogg"
+		time="2" />
+<!-- 32.	Доклад Сэму о результатах экспедиции.-->
+	<string
+		id="3201"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Ты как нельзя вовремя, дружище. Видишь, что тут у нас творится?"
+		sound="data\sounds\Speech\r5m1\r5m1_3201_sam.ogg"
+		time="5" />
+
+	<string
+		id="3202"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да уж, ничего не скажешь, весело. "
+		sound="data\sounds\Speech\r5m1\r5m1_3202_nomad.ogg"
+		time="4" />
+
+	<string
+		id="3203"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Наши боеприпасы на исходе."
+		sound="data\sounds\Speech\r5m1\r5m1_3203_sam.ogg"
+		time="3" />
+
+	<string
+		id="3204"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я так понимаю, что коробки, за которыми ты меня послал, уже потеряли свое значение?"
+		sound="data\sounds\Speech\r5m1\r5m1_3204_nomad.ogg"
+		time="6" />
+
+	<string
+		id="3205"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|А ты добыл их? Да это же наш шанс на спасение!"
+		sound="data\sounds\Speech\r5m1\r5m1_3205_sam.ogg"
+		time="5" />
+
+	<string
+		id="3206"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не понимаю, как они могут помочь нам?"
+		sound="data\sounds\Speech\r5m1\r5m1_3206_nomad.ogg"
+		time="3" />
+
+	<string
+		id="3207"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Что ж тут непонятного? В этих фильмах указывается местонахождение сверхоружия древних. Как только мы добудем его, мы уничтожим всех роботов."
+		sound="data\sounds\Speech\r5m1\r5m1_3207_sam.ogg"
+		time="12" />
+
+	<string
+		id="3208"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А как мы прорвемся в Ле Канаду? Роботы заблокировали все пути!"
+		sound="data\sounds\Speech\r5m1\r5m1_3208_nomad.ogg"
+		time="5" />
+
+	<string
+		id="3209"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Пробьемся. Я еще не использовал все свои ресурсы. Идем за мной, я тебе кое-что покажу. "
+		sound="data\sounds\Speech\r5m1\r5m1_3209_sam.ogg"
+		time="8" />
+<!-- 33.	Сэм и герой на танке. -->
+	<string
+		id="3301"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Что это за колымага?"
+		sound="data\sounds\Speech\r5m1\r5m1_3301_nomad.ogg"
+		time="2" />
+
+	<string
+		id="3302"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Это – танк. Самая мощная машина на ближайшие сто миль. Отстреливай роботов, а я буду руководить процессом. "
+		sound="data\sounds\Speech\r5m1\r5m1_3302_sam.ogg"
+		time="10" />
+
+	<string
+		id="3303"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну-ну."
+		sound="data\sounds\Speech\r5m1\r5m1_3303_nomad.ogg"
+		time="2" />
+<!-- 34.	Сэм и герой на одном танке побеждают роботов. -->
+	<string
+		id="3401"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Похоже, наше мощное оружие свое отработало."
+		sound="data\sounds\Speech\r5m1\r5m1_3401_nomad.ogg"
+		time="3" />
+
+	<string
+		id="3402"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|М-да, покойся с миром, наш железный друг, ты оказал нам неоценимую услугу. А через мост мы поедем на более привычных транспортных средствах."
+		sound="data\sounds\Speech\r5m1\r5m1_3402_sam.ogg"
+		time="14" />
+<!-- 53.	Последний разговор с Сэмом перед боем. -->
+	<string
+		id="5301"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Эй, Сэмми! Ты еще не забыл меня?"
+		sound="data\sounds\Speech\r5m1\r5m1_5301_nomad.ogg"
+		time="3" />
+
+	<string
+		id="5302"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Нет, Бродяга! Я тебя хорошо помню. Удивлен, что ты выжил!"
+		sound="data\sounds\Speech\r5m1\r5m1_5302_sam.ogg"
+		time="7" />
+
+	<string
+		id="5303"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Твоей заслуги тут нет, Сэм! Разве не ты посоветовал Эмиссару Оракула убить меня? Ты гнусный предатель, Сэм! Все мы верили тебе, а ты..."
+		sound="data\sounds\Speech\r5m1\r5m1_5303_nomad.ogg"
+		time="11" />
+
+	<string
+		id="5304"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Оставь эти сопливые разговоры! Дружба, предательство - чушь все это! Единственное, что имеет значение в мире, это сила и власть. И поскольку, и то, и другое у меня теперь есть, тебе лучше убраться с моей дороги."
+		sound="data\sounds\Speech\r5m1\r5m1_5304_sam.ogg"
+		time="18" />
+
+	<string
+		id="5305"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да ну? Ишь, какой коленвал выходит! Силы-то не много? Не лопнешь? "
+		sound="data\sounds\Speech\r5m1\r5m1_5305_nomad.ogg"
+		time="6" />
+
+	<string
+		id="5306"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Приготовься умереть! "
+		sound="data\sounds\Speech\r5m1\r5m1_5306_sam.ogg"
+		time="3" />
+<!-- 54.	Финальный ролик 1. -->
+	<string
+		id="5401"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Армию роботов, лишенную пополнения, люди постепенно уничтожили."
+		sound="data\sounds\Speech\r5m1\r5m1_5401_nomad.ogg"
+		time="5" />
+
+	<string
+		id="5402"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Никакие Оракулы и их Эмиссары нас больше не тревожат. Мне ''пришлось'' занять место Сэма."
+		sound="data\sounds\Speech\r5m1\r5m1_5402_nomad.ogg"
+		time="7" />
+
+	<string
+		id="5403"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Это конечно не Эдмонтон, но тоже неплохо. Я не нашел свою мечту, но могло бы быть и хуже."
+		sound="data\sounds\Speech\r5m1\r5m1_5403_nomad.ogg"
+		time="8" />
+<!-- 60.	Финальный ролик 2. Там же, где и Последний разговор с Сэмом перед боем. -->
+	<string
+		id="6001"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Эй, Сэм! Ты еще не забыл меня?"
+		sound="data\sounds\Speech\r5m1\r5m1_6001_nomad.ogg"
+		time="3" />
+
+	<string
+		id="6002"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Нет, Бродяга! Я тебя хорошо помню. Рад, что ты выжил!"
+		sound="data\sounds\Speech\r5m1\r5m1_6002_sam.ogg"
+		time="7" />
+
+	<string
+		id="6003"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Твоей заслуги тут нет, Сэм! Разве не ты посоветовал Эмиссару Оракула убить меня? Ты гнусный предатель, Сэм! Все мы верили тебе, а ты..."
+		sound="data\sounds\Speech\r5m1\r5m1_6003_nomad.ogg"
+		time="11" />
+
+	<string
+		id="6004"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Погоди орать. Лучше попробуй мыслить логически. У меня есть предложение, от которого ты не сможешь отказаться."
+		sound="data\sounds\Speech\r5m1\r5m1_6004_sam.ogg"
+		time="10" />
+
+	<string
+		id="6005"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Говори, но только побыстрее, а то у меня палец на спусковом крючке судорогой сводит. Того и гляди, выстрелит."
+		sound="data\sounds\Speech\r5m1\r5m1_6005_nomad.ogg"
+		time="8" />
+
+	<string
+		id="6006"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Остынь, приятель. В нашем распоряжении может оказаться весь мир. Мои знания вместе с твоими боевыми качествами и целеустремленностью могут дать отличные результаты! Если ты понимаешь, о чем я…"
+		sound="data\sounds\Speech\r5m1\r5m1_6006_sam.ogg"
+		time="18" />
+
+	<string
+		id="6101"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Армию роботов лишенную пополнения, люди постепенно уничтожили."
+		sound="data\sounds\Speech\r5m1\r5m1_6101_nomad.ogg"
+		time="5" />
+
+	<string
+		id="6102"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я не нашел свою мечту, но могло бы быть и хуже."
+		sound="data\sounds\Speech\r5m1\r5m1_6102_nomad.ogg"
+		time="5" />
+
+	<string
+		id="6103"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Эдмонтон, Эдмонтон... Да в нашем распоряжении целый континент. Осталось только взять его."
+		sound="data\sounds\Speech\r5m1\r5m1_6103_sam.ogg"
+		time="10" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я не знаю, куда ведет эта дорога, поэтому останусь здесь." 
+		sound="data\sounds\Speech\r5m1\r5m1_8802_nomad.ogg"
+		time="5" />
+
+	<string
+		id="8803"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Какое-то странное место. Лучше держаться отсюда подальше."
+		sound="data\sounds\Speech\r5m1\r5m1_8803_nomad.ogg"
+		time="5" />
+
+	<string
+		id="88031"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Черт. Слежка не удалась, теперь на награду не стоит расчитывать."
+		sound=""
+		time="6" />
+
+	<string
+		id="8804"
+		value="Гонка проиграна! Без кубка победителя нет смысла возвращаться к Сэму.| Попробуйте еще раз."
+		numButtons="1" />
+
+	<string
+		id="8805"
+		value="Город остался без защиты. Армия роботов уничтожила его!"
+		numButtons="1" />
+
+	<string
+		id="8806"
+		value="Сэм скрылся в неизвестном направлении. Бой проигран!"
+		numButtons="1" />
+
+	<string
+		id="8807"
+		value="Фальстарт! Вы пройграли гонку."
+		numButtons="1" />
+
+	<string
+		id="9001"
+		value="Число найденных в игре Коллекционных книг - 1 из 10."
+		numButtons="1" />
+	<string
+		id="9002"
+		value="Число найденных в игре Коллекционных книг - 2 из 10."
+		numButtons="1" />
+	<string
+		id="9003"
+		value="Число найденных в игре Коллекционных книг - 3 из 10."
+		numButtons="1" />
+	<string
+		id="9004"
+		value="Число найденных в игре Коллекционных книг - 4 из 10."
+		numButtons="1" />
+	<string
+		id="9005"
+		value="Число найденных в игре Коллекционных книг - 5 из 10."
+		numButtons="1" />
+	<string
+		id="9006"
+		value="Число найденных в игре Коллекционных книг - 6 из 10."
+		numButtons="1" />
+	<string
+		id="9007"
+		value="Число найденных в игре Коллекционных книг - 7 из 10."
+		numButtons="1" />
+	<string
+		id="9008"
+		value="Число найденных в игре Коллекционных книг - 8 из 10."
+		numButtons="1" />
+	<string
+		id="9009"
+		value="Число найденных в игре Коллекционных книг - 9 из 10."
+		numButtons="1" />
+	<string
+		id="9010"
+		value="Число найденных в игре Коллекционных книг - 10 из 10!|Открылся доступ к дополнительной карте."
+		numButtons="1" />
+</resource>

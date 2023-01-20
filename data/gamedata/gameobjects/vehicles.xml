@@ -1,0 +1,4163 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
+-->
+
+<Prototypes>
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot04_SMALL"
+		ResourceType		= "VEHICLE"
+
+		DiffRatio			= "8.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+     		AdditionalWheelsHover   = "-0.1"
+
+		SteeringSpeed		= "1.0"
+		HitForce               = "75"		
+		HornSound			= "ET_S_HORN08"
+		ForMultiplayer="true"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		DecisionMatrix		= "vehiclemain.lua"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		="0.1"
+		MassSize		= "5 3 8"
+		MassTranslation		= "0 -1.6 0"
+
+		CameraHeight		= "4"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "3000.0"
+		WheelSpringCoeffBig		= "6000.0"
+		WheelUpDampingCoeff		= "50.0f"
+		WheelDownDampingCoeff		= "200.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta = "0.25"
+		AllowedRoles		= "roleMeat8 roleCoward"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		ThrowRagdollOnCriticalDeath	= "false"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "ROBOT4_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "ROBOT4_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_GIANT_GUN" partResourceType = "ROBOT4_GUN" lpName = "LP_BIG01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "robot04Chassis_small" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "robot2Wheel02_L"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel02_R"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel03_L" />
+			<Wheel Prototype = "robot2Wheel03_R" />
+			<Wheel Prototype = "robot2Wheel04_L" />
+			<Wheel Prototype = "robot2Wheel04_R" />
+			<Wheel Prototype = "robot2Wheel05_L" />
+			<Wheel Prototype = "robot2Wheel05_R" />               
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot03_Big"
+		ResourceType		= "VEHICLE"
+
+		DiffRatio			= "8.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "2500"
+		HighGearShiftLimit	= "6000"
+        	AdditionalWheelsHover   = "-0.1"
+		SteeringSpeed		= "1.5"
+		
+		HornSound		= "ET_S_HORN07"
+                HitForce               = "150"
+		DecisionMatrix		= "vehiclemain.lua"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		="0.3"
+		MassSize			= "5 3 12"
+		MassTranslation		= "0 -1.6 0"
+                ForMultiplayer="true"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "400.0"
+		WheelSpringCoeffBig		= "800.0"
+		WheelUpDampingCoeff		= "0.1f"
+		WheelDownDampingCoeff		= "10.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta = "0.4"
+		AllowedRoles		= "roleMeat2 roleSniper"
+
+		CameraHeight		= "19"
+		CameraMaxDist		= "60"
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		ThrowRagdollOnCriticalDeath	= "false"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "ROBOT3_CHASSIS">
+			<PartDescription id="CHASSIS_SIDE_GUN_0"	partResourceType = "SIDE_GUN" lpName = "LP_SIDE01L,LP_SIDE01R" />
+			<PartDescription id = "CABIN" partResourceType = "ROBOT3_CABIN" lpName = "LP_CAB01" />
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "robot03Chassis_big" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "robot2Wheel01_L"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel01_R"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel02_L"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel02_R"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel03_L" />
+			<Wheel Prototype = "robot2Wheel03_R" />
+			<Wheel Prototype = "robot2Wheel04_L" />
+			<Wheel Prototype = "robot2Wheel04_R" />
+			<Wheel Prototype = "robot2Wheel05_L" />
+			<Wheel Prototype = "robot2Wheel05_R" />
+			<Wheel Prototype = "robot2Wheel06_L" />
+			<Wheel Prototype = "robot2Wheel06_R" />
+			<Wheel Prototype = "robot2Wheel07_L" />
+			<Wheel Prototype = "robot2Wheel07_R" />
+			<Wheel Prototype = "robot2Wheel08_L" />
+			<Wheel Prototype = "robot2Wheel08_R" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot02"
+		ResourceType		= "VEHICLE"
+
+		DiffRatio			= "8.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "2500"
+		HighGearShiftLimit	= "6000"
+        	AdditionalWheelsHover   = "-0.1"
+		SteeringSpeed		= "1.5"
+		
+		HornSound		= "ET_S_HORN06"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+                HitForce               = "150"
+		DecisionMatrix		= "vehiclemain.lua"
+                ForMultiplayer="true"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		="0.3"
+		MassSize			= "5 3 12"
+		MassTranslation		= "0 -1.6 0"
+
+		CameraHeight		= "5"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "400.0"
+		WheelSpringCoeffBig		= "800.0"
+		WheelUpDampingCoeff		= "0.1f"
+		WheelDownDampingCoeff		= "10.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta = "0.4"
+		AllowedRoles		= "roleCheater roleCoward"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		ThrowRagdollOnCriticalDeath	= "false"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "ROBOT2_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "ROBOT2_CABIN" lpName = "LP_CAB01" >
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "robot02Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "robot2Wheel01_L"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel01_R"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel02_L"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel02_R"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel03_L"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel03_R"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel04_L"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel04_R"  steering = "correct" />
+			<Wheel Prototype = "robot2Wheel05_L" />
+			<Wheel Prototype = "robot2Wheel05_R" />
+			<Wheel Prototype = "robot2Wheel06_L" />
+			<Wheel Prototype = "robot2Wheel06_R" />
+			<Wheel Prototype = "robot2Wheel07_L" />
+			<Wheel Prototype = "robot2Wheel07_R" />
+			<Wheel Prototype = "robot2Wheel08_L" />
+			<Wheel Prototype = "robot2Wheel08_R" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot01"
+		ResourceType		= "VEHICLE"
+
+		DiffRatio			= "8.0"
+		MaxEngineRpm		= "7000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+     		AdditionalWheelsHover   = "-0.1"
+
+		SteeringSpeed		= "1.5"
+                HitForce               = "100"		
+		HornSound		= "ET_S_HORN05"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		CameraHeight		= "6"
+		DecisionMatrix		= "vehiclemain.lua"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		="0.3"
+		MassSize			= "5 3 12"
+		MassTranslation		= "0 -1.6 0"
+                ForMultiplayer="true"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "1450.0"
+		WheelSpringCoeffBig		= "1800.0"
+		WheelUpDampingCoeff		= "0.01f"
+		WheelDownDampingCoeff		= "10.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta = "0.4"
+		AllowedRoles		= "roleRam"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		ThrowRagdollOnCriticalDeath	= "false"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "ROBOT1_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "ROBOT1_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_GIANT_GUN" partResourceType = "ROBOT1_GUN" lpName = "LP_GIANT01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "robot01Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "robot1Wheel01_L"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel01_R"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel02_L"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel02_R"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel03_L" />
+			<Wheel Prototype = "robot1Wheel03_R" />
+			<Wheel Prototype = "robot1Wheel04_L" />
+			<Wheel Prototype = "robot1Wheel04_R" />
+			<Wheel Prototype = "robot1Wheel05_L" />
+			<Wheel Prototype = "robot1Wheel05_R" />
+			<Wheel Prototype = "robot1Wheel05_L" />
+			<Wheel Prototype = "robot1Wheel05_R" />
+		</Wheels>
+	</Prototype>
+  
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot_Player_01"
+		ResourceType		= "VEHICLE"
+
+		DiffRatio			= "8.0"
+		MaxEngineRpm		= "7000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+     		AdditionalWheelsHover   = "-0.1"
+
+		SteeringSpeed		= "1.5"
+                HitForce               = "100"		
+		HornSound		= "ET_S_HORN05"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		CameraHeight		= "5"
+		CameraMaxDist		= "25"
+		DecisionMatrix		= "vehiclemain.lua"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		="0.3"
+		MassSize			= "5 3 12"
+		MassTranslation		= "0 -1.6 0"
+                ForMultiplayer="true"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "1450.0"
+		WheelSpringCoeffBig		= "1800.0"
+		WheelUpDampingCoeff		= "0.01f"
+		WheelDownDampingCoeff		= "10.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta = "0.4"
+		AllowedRoles		= "roleRam"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		ThrowRagdollOnCriticalDeath	= "false"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "ROBOT1_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "ROBOT1_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="BASKET_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_GIANT01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "robot01Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "robot1Wheel01_L"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel01_R"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel02_L"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel02_R"  steering = "correct" />
+			<Wheel Prototype = "robot1Wheel03_L" />
+			<Wheel Prototype = "robot1Wheel03_R" />
+			<Wheel Prototype = "robot1Wheel04_L" />
+			<Wheel Prototype = "robot1Wheel04_R" />
+			<Wheel Prototype = "robot1Wheel05_L" />
+			<Wheel Prototype = "robot1Wheel05_R" />
+			<Wheel Prototype = "robot1Wheel05_L" />
+			<Wheel Prototype = "robot1Wheel05_R" />
+		</Wheels>
+	</Prototype> 
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Sml4"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio			= "2.0"
+		MaxEngineRpm		= "7000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+                HitForce               = "10"
+		SteeringSpeed		= "1.0"
+		
+		HornSound		= "ET_S_HORN01"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		DecisionMatrix		= "vehiclemain.lua"
+		AdditionalWheelsHover   ="0.1"
+                ForMultiplayer="true"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		="0.3"
+		MassSize			= "2 1 4"
+		MassTranslation		= "0 -0.5 0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "3000.0"
+		WheelSpringCoeffBig		= "5000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "300.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta    = "0.25"
+		AllowedRoles		= "roleMeat roleMeat8"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "SML4_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "SML4_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "sml4Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "sml4Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml4Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml4Wheel02" />
+			<Wheel Prototype = "sml4Wheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Sml3"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio			= "2.0"
+		MaxEngineRpm		= "7000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+                HitForce               = "10"
+		SteeringSpeed		= "1.0"
+		
+		AdditionalWheelsHover = "0.1"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+		
+		DecisionMatrix		= "vehiclemain.lua"
+                ForMultiplayer="true"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		= "0.3"
+		MassSize		= "2 1 4"
+		MassTranslation		= "0 -0.5 0.5"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "3000.0"
+		WheelSpringCoeffBig		= "5000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "300.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta    = "0.25"
+		AllowedRoles		= "roleMeat roleMeat8"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "SML3_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "SML3_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "sml3Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "sml3Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml3Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml3Wheel01" />
+			<Wheel Prototype = "sml3Wheel01" />
+		</Wheels>
+	</Prototype>
+
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Sml2"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio			= "2.0"
+		MaxEngineRpm		= "7000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+
+		AdditionalWheelsHover   ="0.1"
+		SteeringSpeed		= "1.0"
+                HitForce               = "10"		
+		HornSound		= "ET_S_HORN01"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		DecisionMatrix		= "vehiclemain.lua"
+                ForMultiplayer="true"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		= "0.3"
+		MassSize		= "2 1 4"
+		MassTranslation		= "0 -0.5 0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "3000.0"
+		WheelSpringCoeffBig		= "5000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "300.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta    = "0.25"
+		AllowedRoles		= "roleMeat roleMeat8"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "SML2_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "SML2_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "sml2Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "sml2Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml2Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml2Wheel02" />
+			<Wheel Prototype = "sml2Wheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Sml1"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio			= "2.0"
+		MaxEngineRpm		= "7000"
+		LowGearShiftLimit		= "1000"
+		HighGearShiftLimit	= "2000"
+
+		SteeringSpeed		= "1.0"
+		AdditionalWheelsHover   ="0.1"
+                ForMultiplayer="true"		
+		HornSound		= "ET_S_HORN01"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		DecisionMatrix		= "vehiclemain.lua"
+                HitForce               = "10"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "2.5"
+		TakingRadius		= "30.0"
+		DriftCoeff		= "0.3"
+		MassSize		= "2 1 4"
+		MassTranslation		= "0 -0.5 0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "3000.0"
+		WheelSpringCoeffBig		= "5000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "300.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta    = "0.25"
+		AllowedRoles		= "roleMeat roleMeat8"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 			= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "SML1_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "SML1_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "sml1Chassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "sml1Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml1Wheel01"  steering = "correct" />
+			<Wheel Prototype = "sml1Wheel02" />
+			<Wheel Prototype = "sml1Wheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Scout"
+		ResourceType			= "VEHICLE"
+		DiffRatio		= "10.0"
+		MaxEngineRpm		= "9000"
+		LowGearShiftLimit	= "3000"
+		HighGearShiftLimit	= "4000"
+
+		MinNotIdleRpm		= "1000"
+		IdleEngineSoundSpeed	= "0.8"
+		EngineRpmForNormalSound = "5000"
+
+		SteeringSpeed		= "0.7"
+	
+
+		SteeringN		= "10.0"
+		SteeringTime		= "8.0"
+
+		HornSound		= "ET_S_HORN02"
+        AdditionalWheelsHover	= "0.01"
+		DecisionMatrix		= "vehiclemain.lua"
+		LookRadius		= "200.0"
+		IntersectionRadius	= "3.0"
+		TakingRadius		= "30.0"
+		DriftCoeff		= "0.01"
+		MassSize		= "4 2 5"
+		MassTranslation		= "0 -0.9 0.5"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+        CameraHeight            = "3.66"
+		CameraMaxDist		= "18"
+        ForMultiplayer="true"
+        HitForce               = "25"
+		WheelSpringCoeffSmall		= "8000.0"
+		WheelSpringCoeffBig		= "12000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "500.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta    = "0.25"
+		AllowedRoles		= "roleMeat2 roleMeat8"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop	= "additional_stability"
+
+		Abstract 		= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "SCOUT_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "SCOUT_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" >
+				<PartDescription id="BASKET_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "scoutChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "scoutWheel01" steering = "correct" />
+			<Wheel Prototype = "scoutWheel01" steering = "correct" />
+			<Wheel Prototype = "scoutWheel02" />
+			<Wheel Prototype = "scoutWheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "ArcadeScout"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio		= "2.5"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "2000"
+		HighGearShiftLimit	= "13000"
+
+		SteeringSpeed		= "2.5"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+		
+		HornSound		= "ET_S_HORN02"
+
+		DecisionMatrix		= "vehiclemain.lua"
+		IsIntersecting		= "true"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "3.0"
+		TakingRadius		= "30.0"
+
+
+		AdditionalWheelsHover="0.20"
+		DriftCoeff			= "0.00000001"
+        	CameraHeight            = "3"
+		CameraMaxDist		= "6"
+		MassSize		= "3 2 2"
+		MassTranslation		= "0 -1.5 -0.2"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		Abstract 		= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "SCOUT_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "SCOUT_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "arcadescoutChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "arcadescoutWheel01" steering = "correct" />
+			<Wheel Prototype = "arcadescoutWheel01" steering = "correct" />
+			<Wheel Prototype = "arcadescoutWheel02" />
+			<Wheel Prototype = "arcadescoutWheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DenScout"
+		ResourceType		= "VEHICLE"
+
+		DiffRatio		= "1.5"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "2000"
+		HighGearShiftLimit	= "13000"
+
+		SteeringSpeed		= "0.8"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+		
+		HornSound		= "ET_S_HORN02"
+
+		DecisionMatrix		= "vehiclemain.lua"
+		IsIntersecting		= "true"
+		LookRadius			= "200.0"
+		IntersectionRadius	= "3.0"
+		TakingRadius		= "30.0"
+
+
+		DriftCoeff		= "0.1"
+                AdditionalWheelsHover   ="0.1"
+		MassSize		= "3 2 5"
+		MassTranslation		= "0 -1.0 0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		Abstract 		= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "SCOUT_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "SCOUT_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "denscoutChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "scoutWheel01" steering = "correct" />
+			<Wheel Prototype = "scoutWheel01" steering = "correct" />
+			<Wheel Prototype = "scoutWheel02" />
+			<Wheel Prototype = "scoutWheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class					= "Vehicle"
+		Name					= "RoboScout"
+		ResourceType			= "VEHICLE"
+		DiffRatio				= "10.0"
+		MaxEngineRpm			= "10000"
+		LowGearShiftLimit			= "3000"
+		HighGearShiftLimit		= "4000"
+
+		MinNotIdleRpm			= "1000"
+		IdleEngineSoundSpeed		= "0.8"
+		EngineRpmForNormalSound 	= "5000"
+
+		SteeringSpeed			= "0.7"
+	
+		SteeringN				= "10.0"
+		SteeringTime			= "8.0"
+
+		HornSound				= "ET_S_HORN02"
+		AdditionalWheelsHover		= "0.01"
+		DecisionMatrix			= "vehiclemain.lua"
+		LookRadius				= "200.0"
+		IntersectionRadius		= "3.0"
+		TakingRadius			= "30.0"
+		DriftCoeff				= "0.01"
+		MassSize				= "4 2 5"
+		MassTranslation			= "0 -0.9 0.5"
+		DestroyEffectPiercing		= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast		= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy		= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater		= "ET_PS_VEH_EXP2_SMALL"
+		CameraHeight            	= "3"
+		CameraMaxDist			= "14"
+		ForMultiplayer="true"
+		HitForce               		= "10"
+		WheelSpringCoeffSmall		= "8000.0"
+		WheelSpringCoeffBig		= "12000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "500.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta	= "0.25"
+		AllowedRoles			= "roleMeat2 roleMeat8"
+
+		GadgetWeaponForDrop		= ""
+		GadgetVehicleForDrop		= ""
+
+		Abstract 				= "true"	>
+
+		<MainPartDescription	id = "CHASSIS"	partResourceType = "ROBOSCOUT_CHASSIS">
+			<PartDescription	id = "CABIN"	partResourceType = "ROBOSCOUT_CABIN"	lpName = "w" >
+			</PartDescription>
+			<PartDescription	id = "BASKET"	partResourceType="FAKE_BIGBASKET"	lpName = "LP_CAB01" >
+			</PartDescription>
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "roboscoutChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "roboscoutWheel01" steering = "correct" />
+			<Wheel Prototype = "roboscoutWheel01" steering = "correct" />
+			<Wheel Prototype = "roboscoutWheel02" />
+			<Wheel Prototype = "roboscoutWheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Fighter"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio				= "15.0"
+		MaxEngineRpm			= "8500"
+		LowGearShiftLimit	= "1500"
+		HighGearShiftLimit	= "2000"
+                AdditionalWheelsHover	= "0.1"
+		SteeringSpeed		= "0.5"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		SteeringN		= "3.0"
+		SteeringTime		= "3.0"
+
+		HornSound		= "ET_S_HORN03"
+ 		DriftCoeff		= "0.01"
+		DecisionMatrix		= "vehiclemain.lua"
+		LookRadius		= "200.0"
+		IntersectionRadius	= "5.0"
+		TakingRadius		= "30.0"
+        CameraHeight            = "4"
+		CameraMaxDist		= "20"
+                HitForce               = "50"
+		MassSize		= "4 3 7.5"
+		MassTranslation		= "0 -1.2 -0.2" 
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+                ForMultiplayer="true"
+		WheelSpringCoeffSmall		= "4000.0"
+		WheelSpringCoeffBig		= "7000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "600.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta    = "0.25"
+		AllowedRoles		= "roleCheater roleBarrier"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 		= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "FIGHTER_CHASSIS">
+			<PartDescription 		id = "CABIN" 		partResourceType = "FIGHTER_CABIN"	lpName = "LP_CAB01" >
+				<PartDescription 	id="CABIN_SMALL_GUN" 	partResourceType = "SMALL_GUN" 	lpName = "LP_SML01" />
+				<PartDescription 	id="CABIN_BIG_GUN_2" 	partResourceType = "BIG_GUN" 		lpName = "LP_BIG01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" >
+				<PartDescription id="BASKET_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "fighterChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "fighterWheel01l" steering = "correct" />
+			<Wheel Prototype = "fighterWheel01r" steering = "correct" />
+			<Wheel Prototype = "fighterWheel02l" />
+			<Wheel Prototype = "fighterWheel02r" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class					= "Vehicle"
+		Name					= "Hunter"
+		ResourceType			= "VEHICLE"
+
+                DiffRatio		= "10.0"
+		MaxEngineRpm		= "14000"
+		LowGearShiftLimit	= "3000"
+		HighGearShiftLimit	= "4000"
+		SteeringSpeed			= "0.5"
+		DriftCoeff		= "0.005"
+		HornSound				= "ET_S_HORN04"
+                CameraHeight            = "4"
+		CameraMaxDist		= "14"
+                AdditionalWheelsHover	= "0.1"
+		DecisionMatrix			= "vehiclemain.lua"
+                HitForce               = "75"
+		SteeringN		= "3.0"
+		SteeringTime		= "5.0"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		LookRadius				= "200.0"
+		IntersectionRadius		= "4.5"
+		TakingRadius			= "30.0"
+                ForMultiplayer="true"
+		MassSize		= "5 4 7"
+		MassTranslation		= "0 -0.9 -0.1"
+		DestroyEffectPiercing		= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast		= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy		= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater		= "ET_PS_VEH_EXP2_MED"
+		WheelSpringCoeffSmall		= "5000.0"
+		WheelSpringCoeffBig		= "7000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "500.0f"
+		WheelSuspensionRange		= "0.3"
+		WheelCriticalSuspensionDelta    = "0.2"
+		AllowedRoles		= "roleMeat roleCheater"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 				= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "HUNTER_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "HUNTER_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" 	partResourceType = "SMALL_GUN" 	lpName = "LP_SML01" />
+				<PartDescription id="CABIN_BIG_GUN_1" 	partResourceType = "BIG_GUN" 		lpName = "LP_BIG01" />
+				<PartDescription id="CABIN_BIG_GUN_2" 	partResourceType = "BIG_GUN" 		lpName = "LP_BIG02" />
+				<PartDescription id="CABIN_GIANT_GUN" 	partResourceType = "GIANT_GUN" 	lpName = "LP_GIANT01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BIGBASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "hunterChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "hunterWheel01l" steering = "correct" />
+			<Wheel Prototype = "hunterWheel01r" steering = "correct" />
+			<Wheel Prototype = "hunterWheel01l" />
+			<Wheel Prototype = "hunterWheel01r" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Cruiser"
+		ResourceType			= "VEHICLE"
+		DiffRatio		= "6.0"
+		MaxEngineRpm		= "14000"
+		LowGearShiftLimit	= "3000"
+		HighGearShiftLimit	= "9000"
+
+		SteeringSpeed		= "0.5"
+
+		HornSound		= "ET_S_HORN05"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+		DriftCoeff		= "0.01"
+		DecisionMatrix		= "vehiclemain.lua"
+
+		SteeringN		= "3.0"
+		SteeringTime		= "5.0"
+                ForMultiplayer="true"
+                HitForce               = "150"
+		LookRadius		= "200.0"
+		IntersectionRadius	= "5.5"
+		TakingRadius		= "30.0"
+                CameraHeight            = "3.5"
+		CameraMaxDist		= "15"
+                AdditionalWheelsHover	= "0.1"
+		MassSize		= "7 3 8"
+		MassTranslation		= "0 -1.0 0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		WheelSpringCoeffSmall		= "6000.0"
+		WheelSpringCoeffBig		= "8000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "500.0f"
+		WheelSuspensionRange		= "0.45"
+		WheelCriticalSuspensionDelta    = "0.2"
+		AllowedRoles		= "roleCheater roleSniper"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 		= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "CRUISER_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "CRUISER_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_BIG_GUN_1" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+				<PartDescription id="CABIN_BIG_GUN_2" partResourceType = "BIG_GUN" lpName = "LP_BIG02" />
+				<PartDescription id="CABIN_GIANT_GUN" partResourceType = "GIANT_GUN" lpName = "LP_GIANT01" />
+				<PartDescription id="CABIN_SIDE_GUN_0" partResourceType = "SIDE_GUN" lpName = "LP_SIDE01L,LP_SIDE01R" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "cruiserChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "cruiserWheel01l" steering = "correct" />
+			<Wheel Prototype = "cruiserWheel01r" steering = "correct" />
+			<Wheel Prototype = "cruiserWheel01l" steering = "correct" />
+			<Wheel Prototype = "cruiserWheel01r" steering = "correct" />
+			<Wheel Prototype = "cruiserWheel01l" />
+			<Wheel Prototype = "cruiserWheel01r" />
+			<Wheel Prototype = "cruiserWheel01l" />
+			<Wheel Prototype = "cruiserWheel01r" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class					= "Vehicle"
+		Name					= "Dozer"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio				= "2.0"
+		MaxEngineRpm			= "5000"
+		LowGearShiftLimit			= "1000"
+		HighGearShiftLimit		= "2000"
+		HitForce               		= "75"
+		SteeringSpeed			= "0.5"
+
+		HornSound				= "ET_S_HORN03"
+		MinNotIdleRpm			= "500"
+		IdleEngineSoundSpeed		= "0.5"
+		EngineRpmForNormalSound 	= "3000"
+
+		DecisionMatrix			= "vehiclemain.lua"
+
+        CameraHeight            = "4"
+		CameraMaxDist		= "20"
+
+		LookRadius				= "200.0"
+		IntersectionRadius		= "5.5"
+		TakingRadius			= "30.0"
+  		ForMultiplayer			= "true"
+		MassSize				= "18 1 13"
+		MassTranslation			= "0 -1.0 0"
+		DestroyEffectPiercing		= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast		= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy		= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater		= "ET_PS_VEH_EXP2_MED"
+		WheelSpringCoeffSmall		= "6000.0"
+		WheelSpringCoeffBig		= "8000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "500.0f"
+		WheelSuspensionRange		= "0.45"
+		WheelCriticalSuspensionDelta	= "0.2"
+
+		AllowedRoles			= "roleMeat roleCoward"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 				= "true">
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "DOZER_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "DOZER_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "CHASSIS_BIG_GUN" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+			<PartDescription id = "BASKET" partResourceType="FAKE_BASKET" lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "dozerChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "dozerWheel01" steering = "correct" />
+			<Wheel Prototype = "dozerWheel01l" steering = "correct" />
+			<Wheel Prototype = "dozerWheel02" />
+			<Wheel Prototype = "dozerWheel02l" />
+			<Wheel Prototype = "dozerWheel02" />
+			<Wheel Prototype = "dozerWheel02l" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Tank"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio		= "7.0"
+		MaxEngineRpm		= "5000"
+		LowGearShiftLimit	= "1000"
+		HighGearShiftLimit	= "2000"
+                HitForce               = "200"
+		SteeringSpeed		= "0.8"
+
+		HornSound		= "ET_S_HORN06"
+		MinNotIdleRpm		= "500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "3000"
+
+		DecisionMatrix		= "vehiclemain.lua"
+
+		CameraHeight            = "5"
+		CameraMaxDist		= "20"
+		SteeringN		= "5.0"
+		SteeringTime		= "7.0"
+
+		LookRadius		= "200.0"
+		IntersectionRadius	= "7.0"
+		TakingRadius		= "30.0"
+                ForMultiplayer="true"
+		MassSize		= "6 5 8"
+		MassTranslation		= "0 -1.5 2"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		WheelSpringCoeffSmall		= "10000.0"
+		WheelSpringCoeffBig		= "12000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "500.0f"
+		WheelSuspensionRange		= "0.2"
+		WheelCriticalSuspensionDelta    = "0.15"
+		AllowedRoles		= "roleCheater roleSniper"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		DriftCoeff			= "0.9"
+
+		Abstract 		= "true" >
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "TANK_CHASSIS">
+			<PartDescription id = "CABIN" 		partResourceType = "TANK_CABIN" 	lpName = "LP_GIANT01" />	
+			<PartDescription id = "TANK_GUN" 		partResourceType = "TANK_GUN" 	lpName = "LP_GIANT01" />
+			<PartDescription id = "CHASSIS_SMALL_GUN" partResourceType = "SMALL_GUN" 	lpName = "LP_SML01" />
+			<PartDescription id = "BASKET" 		partResourceType="FAKE_BIGBASKET" 	lpName = "LP_CAB01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "tankChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "tankWheel01" steering = "correct" />
+			<Wheel Prototype = "tankWheel01" steering = "correct" />
+			<Wheel Prototype = "tankWheel01" />
+			<Wheel Prototype = "tankWheel01" />
+			<Wheel Prototype = "tankWheel01" steering = "inverse" />
+			<Wheel Prototype = "tankWheel01" steering = "inverse" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Dot"
+		ResourceType		= "VEHICLE"
+	
+		HitForce			= "50"
+		CameraHeight          	= "12"
+		CameraMaxDist		= "15"
+		DecisionMatrix		= "vehiclemain.lua"
+
+		LookRadius			= "200.0"
+		IntersectionRadius	= "6"
+		TakingRadius		= "30.0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		MassSize			= "6 3 6"
+		MassTranslation		= "0 0 0"		
+		Abstract 			= "true"
+		PhysicsDisabled		= "true">
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "BUG_CHASSIS">
+			<PartDescription id = "CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_CANNON01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"	Prototype = "DotBase" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class		= "Vehicle"
+		Name		= "Dot01"
+		ParentPrototype = "Dot">
+		<Parts>
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "flag01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class		= "Vehicle"
+		Name		= "Dot02"
+		ParentPrototype = "Dot">
+		<Parts>
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "kpvtfordot" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class		= "Vehicle"
+		Name		= "Dot03"
+		ParentPrototype = "Dot">
+		<Parts>
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "vulcanfordot" />
+		</Parts>
+	</Prototype>	
+
+	<Prototype
+		Class		= "Vehicle"
+		Name		= "Dot04"
+		ParentPrototype = "Dot">
+		<Parts>
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "rainmetal01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle" 
+		Name			= "Bug"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio		= "9.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "2000"
+		HighGearShiftLimit	= "8000"
+
+		SelfBrakingCoeff	= "0.006"
+
+		SteeringSpeed		= "0.8"
+
+		HornSound		= "ET_S_HORN01"
+		MinNotIdleRpm		= "2000"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "6000"
+
+
+		HitForce			= "25"
+		CameraHeight            = "4.66"
+		CameraMaxDist		= "20"
+
+		SteeringN		= "9.0"
+		SteeringTime		= "7.0"
+
+		DecisionMatrix		= "vehiclemain.lua"
+
+		LookRadius			= "200.0"
+		IntersectionRadius	= "4.5"
+		TakingRadius		= "30.0"
+
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		MassSize		= "4 3 6"
+		MassTranslation		= "0 -0.5 0"
+
+		DriftCoeff		= "0.01"
+
+		WheelSpringCoeffSmall		= "8000.0"
+		WheelSpringCoeffBig		= "10000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "600.0f"
+		WheelSuspensionRange		= "0.35"
+		WheelCriticalSuspensionDelta= "0.1"
+		
+		AllowedRoles		= "roleMeat roleBarrier"
+		
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+		
+		Abstract 		= "true">
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "BUG_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "BUG_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="BUG_BASKET" lpName = "LP_BSK01" >
+				<PartDescription id="BASKET_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"	Prototype = "bugChassis" />
+		</Parts>
+
+		
+		<Wheels>
+			<Wheel Prototype = "bugWheel01" steering = "correct" />
+			<Wheel Prototype = "bugWheel01" steering = "correct" />
+			<Wheel Prototype = "bugWheel02" />
+			<Wheel Prototype = "bugWheel02" />
+		</Wheels>
+
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Molokovoz"
+		ResourceType			= "VEHICLE"
+
+		DiffRatio		= "8.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "2000"
+		HighGearShiftLimit	= "8000"
+
+		SteeringN		= "7.0"
+		SteeringTime		= "5.0"
+
+		SteeringSpeed		= "0.7"
+
+		HornSound		= "ET_S_HORN02"
+		MinNotIdleRpm		= "2000"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "6000"
+
+        HitForce               = "50"
+		CameraHeight            = "5"
+		CameraMaxDist		= "20"
+
+		DecisionMatrix		= "vehiclemain.lua"
+
+		LookRadius		= "200.0"
+		IntersectionRadius	= "4.0"
+		TakingRadius		= "30.0"
+
+                DriftCoeff		= "0.01"
+
+		MassSize		= "5 6 7"
+		MassTranslation		= "0 -1.0 0.3"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		WheelSpringCoeffSmall		= "6000.0"
+		WheelSpringCoeffBig		= "8000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "700.0f"
+		WheelSuspensionRange		= "0.50"
+		WheelCriticalSuspensionDelta= "0.25"
+		AllowedRoles		= "roleMeat2 roleRam"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 		= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "MOLOKOVOZ_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "MOLOKOVOZ_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="MOLOKOVOZ_BASKET" lpName = "LP_BSK01" > 
+				<PartDescription id="BASKET_SMALL_GUN_0" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+				<PartDescription id="BASKET_BIG_GUN_0" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+				<PartDescription id="BASKET_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"			Prototype = "molokovozChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "molokovozWheel01l" steering = "correct" />
+			<Wheel Prototype = "molokovozWheel01r" steering = "correct" />
+			<Wheel Prototype = "molokovozWheel02" />
+			<Wheel Prototype = "molokovozWheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name				= "MolokovozTrailer"
+
+		MassSize			= "3.5 2.5 7"
+		MassTranslation		= "0 -0.6 0"
+
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		ResourceType		= "VEHICLE"
+
+		IntersectionRadius	= "4.0"
+		>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "MOLOKOVOZ_TRAILER_CHASSIS" >
+			<PartDescription id = "BASKET" partResourceType = "MOLOKOVOZ_TRAILER_BASKET" lpName = "LP_BSK01" />
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"		Prototype = "molokovozTrailer01Chassis" />
+			<Part id = "BASKET"			Prototype = "molokovozTrailer01Basket" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "molokovozWheel01l" steering = "correct" />
+			<Wheel Prototype = "molokovozWheel01r" steering = "correct" />
+			<Wheel Prototype = "molokovozWheel02" />
+			<Wheel Prototype = "molokovozWheel02" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Ural"
+		ResourceType			= "VEHICLE"
+
+
+		DiffRatio		= "8.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "3000"
+		HighGearShiftLimit	= "7000"
+
+		SteeringSpeed		= "0.6"
+
+     	AdditionalWheelsHover   = "0.1"		
+		CameraHeight            = "5.25"
+		CameraMaxDist		= "25"
+	    HitForce               = "100"
+		HornSound		= "ET_S_HORN08"
+		MinNotIdleRpm		= "3000"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "6000"
+
+		DecisionMatrix		= "vehiclemain.lua"
+
+		LookRadius		= "200.0"
+		IntersectionRadius	= "7.0"
+		TakingRadius		= "30.0"
+
+		DriftCoeff		= "0.1"
+                SteeringN		= "6.0"
+		SteeringTime		= "5.0"
+
+		MassSize		= "5 3 10"
+		MassTranslation		= "0 -2.0 0.2"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		WheelSpringCoeffSmall		= "4000.0"
+		WheelSpringCoeffBig		= "8000.0"
+		WheelUpDampingCoeff		= "100.0f"
+		WheelDownDampingCoeff		= "600.0f"
+		WheelSuspensionRange		= "0.50"
+		WheelCriticalSuspensionDelta= "0.3"
+		AllowedRoles		= "roleRam roleCoward"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 		= "true"	>
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "URAL_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "URAL_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_BIG_GUN_1" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+				<PartDescription id="CABIN_BIG_GUN_2" partResourceType = "BIG_GUN" lpName = "LP_BIG02" />
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+				<PartDescription id="CABIN_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="URAL_BASKET" lpName = "LP_BSK01" >
+				<PartDescription id="BASKET_GIANT_GUN" partResourceType = "GIANT_GUN" lpName = "LP_GIANT01" />
+				<PartDescription id="BASKET_BIG_GUN_0" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+				<PartDescription id="BASKET_SIDE_GUN_0" partResourceType = "SIDE_GUN" lpName = "LP_SIDE01L,LP_SIDE01R" />
+				<PartDescription id="BASKET_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"		Prototype = "uralChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "uralWheel01l" steering = "correct" />
+			<Wheel Prototype = "uralWheel01r" steering = "correct" />
+			<Wheel Prototype = "uralWheel02l" />
+			<Wheel Prototype = "uralWheel02r" />
+			<Wheel Prototype = "uralWheel02l" />
+			<Wheel Prototype = "uralWheel02r" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Belaz"
+		ResourceType			= "VEHICLE"
+
+
+		DiffRatio		= "12.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "2500"
+		HighGearShiftLimit	= "8500"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+		SteeringN		= "3.0"
+		SteeringTime		= "5.0"
+     		AdditionalWheelsHover   = "0.1"
+		SteeringSpeed		= "0.5"
+
+		CameraHeight            = "6.45"
+		CameraMaxDist		= "26"
+
+		HornSound		= "ET_S_HORN06"
+
+		MinNotIdleRpm		= "2500"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "6500"
+
+		DecisionMatrix		= "vehiclemain.lua"
+                HitForce               = "150"
+		LookRadius		= "200.0"
+		IntersectionRadius	= "9.0"
+		TakingRadius		= "30.0"
+
+		DriftCoeff		= "0.04"
+
+		MassSize		= "9 3 12"
+		MassTranslation		= "0 -1.8 0.9"
+       		WheelSpringCoeffSmall		= "6500.0"
+		WheelSpringCoeffBig		= "9000.0"
+		WheelUpDampingCoeff			= "100.0f"
+		WheelDownDampingCoeff		= "700.0f"
+		WheelSuspensionRange		= "0.50"
+		WheelCriticalSuspensionDelta= "0.25"
+		AllowedRoles		= "roleBarrier roleMeat8"
+		
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+		
+		Abstract 		= "true" >
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "BELAZ_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "BELAZ_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_SMALL_GUN" partResourceType = "SMALL_GUN" lpName = "LP_SML01" />
+				<PartDescription id="CABIN_SMALL_GUN_1" partResourceType = "SMALL_GUN" lpName = "LP_SML02" />
+				<PartDescription id="CABIN_BIG_GUN_1" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+<!--				<PartDescription id="CABIN_BIG_GUN_2" partResourceType = "BIG_GUN" lpName = "LP_BIG02" />-->
+				<PartDescription id = "CABIN_GIANT_GUN" partResourceType = "GIANT_GUN" lpName = "LP_GIANT01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="BELAZ_BASKET" lpName = "LP_BSK01" >
+				<PartDescription id="BASKET_BIG_GUN_0" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+				<PartDescription id="BASKET_BIG_GUN_1" partResourceType = "BIG_GUN" lpName = "LP_BIG02" />
+				<PartDescription id="BASKET_GIANT_GUN" partResourceType = "GIANT_GUN" lpName = "LP_GIANT01" />
+				<PartDescription id="BASKET_SIDE_GUN_0" partResourceType = "SIDE_GUN" lpName = "LP_SIDE01L,LP_SIDE01R" />
+				<PartDescription id="BASKET_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"		Prototype = "belazChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "belazWheel01L" steering = "correct" />
+			<Wheel Prototype = "belazWheel01R" steering = "correct" />
+			<Wheel Prototype = "belazWheel02L" />
+			<Wheel Prototype = "belazWheel02R" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Mirotvorec"
+		ResourceType			= "VEHICLE"
+
+		
+		AppendixScale		= "1.0"
+     		AdditionalWheelsHover   = "0.1"
+		DiffRatio		= "8.0"
+		MaxEngineRpm		= "10000"
+		LowGearShiftLimit	= "5000"
+		HighGearShiftLimit	= "8500"
+                SteeringN		= "6.0"
+		SteeringTime		= "5.0"
+
+		CameraHeight            = "5.9"
+		CameraMaxDist		= "25"
+                HitForce               = "200"
+		SteeringSpeed		= "0.6"
+
+		HornSound		= "ET_S_HORN05"
+		MinNotIdleRpm		= "5000"
+		IdleEngineSoundSpeed	= "0.5"
+		EngineRpmForNormalSound = "7000"
+
+		DecisionMatrix		= "vehiclemain.lua"
+
+		LookRadius			= "200.0"
+		IntersectionRadius	= "9.0"
+		TakingRadius		= "30.0"
+
+		DriftCoeff		= "0.01"
+
+		MassSize		= "6 3 9"
+		MassTranslation		= "0 -0.7 0"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+       		WheelSpringCoeffSmall		= "7000.0"
+		WheelSpringCoeffBig		= "10000.0"
+		WheelUpDampingCoeff		= "200.0f"
+		WheelDownDampingCoeff		= "700.0f"
+		WheelSuspensionRange		= "0.50"
+		WheelCriticalSuspensionDelta= "0.25"
+		AllowedRoles		= "roleSniper roleRam"
+
+		GadgetWeaponForDrop		= "cooling_system_guns"
+		GadgetVehicleForDrop		= "additional_stability"
+
+		Abstract 		= "true" >
+
+		<MainPartDescription id = "CHASSIS" partResourceType = "MIROTVOREC_CHASSIS">
+			<PartDescription id = "CABIN" partResourceType = "MIROTVOREC_CABIN" lpName = "LP_CAB01" >
+				<PartDescription id="CABIN_BIG_GUN_1" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+				<PartDescription id="CABIN_BIG_GUN_2" partResourceType = "BIG_GUN" lpName = "LP_BIG02" />
+				<PartDescription id = "CABIN_GIANT_GUN" partResourceType = "GIANT_GUN" lpName = "LP_GIANT01" />
+			</PartDescription>
+			<PartDescription id = "BASKET" partResourceType="MIROTVOTEC_BASKET" lpName = "LP_BSK01" >
+				<PartDescription id="BASKET_BIG_GUN_0" partResourceType = "BIG_GUN" lpName = "LP_BIG01" />
+				<PartDescription id="BASKET_GIANT_GUN" partResourceType = "GIANT_GUN" lpName = "LP_GIANT01" />
+				<PartDescription id="BASKET_SIDE_GUN_0" partResourceType = "SIDE_GUN" lpName = "LP_SIDE01L,LP_SIDE01R" />
+				<PartDescription id="BASKET_SPECIAL_WEAPON" partResourceType = "SPECIAL_WEAPON"/>
+			</PartDescription>
+		</MainPartDescription>
+
+		<Parts>
+			<Part id = "CHASSIS"		Prototype = "mirotvorecChassis" />
+		</Parts>
+
+		<Wheels>
+			<Wheel Prototype = "mirotvorecWheel01" steering = "correct" />
+			<Wheel Prototype = "mirotvorecWheel01" steering = "correct" />
+			<Wheel Prototype = "mirotvorecWheel01" />
+			<Wheel Prototype = "mirotvorecWheel01" />
+			<Wheel Prototype = "mirotvorecWheel01" steering = "correct" />
+			<Wheel Prototype = "mirotvorecWheel01" steering = "correct" />
+		</Wheels>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_scout01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_scout02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_scout03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m3_MerScout"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_molokovoz01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab01" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo01" />
+			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_molokovoz02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo01" />
+			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "specter01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_molokovoz03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab01" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo02" />
+			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r5m1_sumo01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab04" />
+			<Part id = "BASKET"			Prototype = "bugCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r5m1_sumo02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab05" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_bug01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_bug02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab02" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_bug03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m2_bug04"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "kord01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Iten_car"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "fagot01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "FlagBlackGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Star_car"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "FlagSkullGun" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "rapier01" /> 
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Patr_car"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Sml3">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml3Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "pkt01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Amerigo_car"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_sml01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Sml1">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml1Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_sml02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Sml2">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml2Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "specter01" />
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_sml03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Sml3">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml3Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_sml04"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Sml4">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml4Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m2_hunter02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "elephant01" /> 
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m3_hunter02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "rapier01" /> 
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Scout01"
+		ParentPrototype 	= "Scout"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Scout02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Scout04"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "storm01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Scout03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "pkt01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Scout05"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "kord01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "ArcadeScout01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "ArcadeScout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "arcadescoutCab" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Fighter01"
+		ParentPrototype 	= "Fighter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" /> 
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Fighter02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "kord01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "rapier01" /> 
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Fighter03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Fighter04"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "kord01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "rainmetal01" /> 
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "FighterPolice01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "kord01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "VeterCar01"
+		ParentPrototype 	= "Hunter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "FlagSkullGun" />  
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Hunter01"
+		ParentPrototype 	= "Hunter"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "hunterLauncher" /> 
+			<Part id = "BASKET"			Prototype = "medfakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Hunter02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "maxim01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET"			Prototype = "medfakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Hunter03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab03" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "bumblebee01" /> 
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "octopus01" /> 
+			<Part id = "BASKET"			Prototype = "medfakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "HunterMech"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab03" />
+			<Part id = "BASKET"			Prototype = "medfakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "FlagCar1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "FlagBKRTGun" />
+			<Part id = "BASKET"			Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "FlagCar2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "FlagSkullGun" /> 
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "FlagCar3"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "FlagSkullGun" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Cruiser01"
+		ParentPrototype 	= "Cruiser"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "cruiserCab01" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "octopus01" /> 
+<!--			<Part id = "CABIN_BIG_GUN_2"		Prototype = "octopus01" /> -->
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "flag01" /> 
+<!--			<Part id = "CABIN_SIDE_GUN_L"		Prototype = "hunter01" /> -->
+<!--			<Part id = "CABIN_SIDE_GUN_R"		Prototype = "hunter01" /> -->
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Cruiser02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Cruiser">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "cruiserCab02" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "rapier01" /> 
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Cruiser03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Cruiser">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "cruiserCab03" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "octopus01" /> 
+			<Part id = "CABIN_SIDE_GUN_0"		Prototype = "mrakSideGun" />
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Dozer01"
+		ParentPrototype 	= "Dozer"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "dozerCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+			<Part id = "CHASSIS_BIG_GUN"		Prototype = "octopus01" />
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Traktor01"
+		ParentPrototype 	= "Dozer"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "dozerCab01" />
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "DozerRace"
+		ParentPrototype 		= "Dozer"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "dozerCab01" />
+			<Part id = "CHASSIS_BIG_GUN"		Prototype = "FlagSkullGun" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "DozerRace1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 		= "Dozer">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "dozerCab01" />
+			<Part id = "CHASSIS_BIG_GUN"		Prototype = "FlagBEARGun" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "DozerRace2"
+		ParentPrototype 		= "Dozer"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "dozerCab01" />
+			<Part id = "CHASSIS_BIG_GUN"		Prototype = "FlagBKRTGun" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "DozerRace3"
+		ParentPrototype 		= "Dozer"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "dozerCab01" />
+			<Part id = "CHASSIS_BIG_GUN"		Prototype = "FlagTAGun" />
+		</Parts>
+	</Prototype>
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Tank01"
+		ParentPrototype 	= "Tank"
+		VisibleInEncyclopedia	= "false" >
+		<Parts>
+			<Part id = "CABIN"			Prototype = "tankCab01" />
+			<Part id = "TANK_GUN"			Prototype = "tank01" />
+			<Part id = "CHASSIS_SMALL_GUN"	Prototype = "kord01" />
+			<Part id = "BASKET"			Prototype = "tankCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Bug01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Bug02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab02" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Bug03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab03" />
+			<Part id = "BASKET"			Prototype = "bugCargo03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "pkt01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Bug04"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab03" />
+			<Part id = "BASKET"			Prototype = "bugCargo03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "maxim01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Molokovoz01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo04" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "storm01" />
+<!--			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "vulcan01" /> -->
+<!--			<Part id = "BASKET_BIG_GUN_0"	Prototype = "octopus01" /> -->
+		</Parts>
+	</Prototype>
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Molokovoz02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "storm01" />
+<!--			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "vulcan01" /> -->
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Molokovoz03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "pkt01" />
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "kpvt01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Molokovoz04"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "kord01" />
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "rainmetal01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Molokovoz05"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "maxim01" />
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "odin01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Ural00"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab01" />
+			<Part id = "BASKET"			Prototype = "uralCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Ural01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab03" />
+			<Part id = "BASKET"			Prototype = "uralCargo01" />
+<!--			<Part id = "CABIN_SMALL_GUN"	Prototype = "vulcan01" /> -->
+			<Part id = "CABIN_BIG_GUN_1"	Prototype = "FlameThrowerMed" />
+<!--			<Part id = "CABIN_BIG_GUN_2"		Prototype = "vulcan01" />  -->
+<!--			<Part id = "BASKET_GIANT_GUN"	Prototype = "rocketLauncher"/> -->
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "ElectroShockMed" /> 
+		</Parts>
+	</Prototype>
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Ural02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab05" />
+			<Part id = "BASKET"			Prototype = "fakeCargo" />
+<!--			<Part id = "CABIN_SMALL_GUN"	Prototype = "vulcan01" /> -->
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" />
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "vulcan01" /> 
+<!--			<Part id = "BASKET_GIANT_GUN"	Prototype = "rocketLauncher"/> -->
+<!--			<Part id = "BASKET_BIG_GUN_0"	Prototype = "rapier01" /> -->
+		</Parts>
+	</Prototype>
+
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Belaz01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab01" />
+			<Part id = "BASKET"			Prototype = "belazCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Belaz02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab05" />
+			<Part id = "BASKET"			Prototype = "belazCargo03" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "rainmetal01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "octopus01" />
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "rainmetal01" /> 
+			<Part id = "BASKET_BIG_GUN_1"	Prototype = "rainmetal01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Mirotvorec01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Mirotvorec">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab03" />
+			<Part id = "BASKET" 			Prototype = "mirotvorecCargo03" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "CoolBelaz_2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab04" />
+			<Part id = "BASKET"			Prototype = "belazCargo05" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "odin01" /> 
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "fagot01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET_SIDE_GUN_0"	Prototype = "mrakSideGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "CoolBelaz"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab05" />
+			<Part id = "BASKET"			Prototype = "belazCargo05" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "big_swingfire01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET_SIDE_GUN_0"	Prototype = "mrakSideGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "ArcadeBelaz"
+		ParentPrototype		= "Belaz"
+		VisibleInEncyclopedia	= "false"
+		
+		DiffRatio		= "10.0"
+		MaxEngineRpm		= "20000"
+		LowGearShiftLimit	= "2000"
+		HighGearShiftLimit	= "8000"
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_MED"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP2_MED"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_MED"
+
+		SteeringSpeed		= "0.7"
+		DriftCoeff			= "0.2"
+		>
+		<Parts>
+			<Part id = "CABIN"			Prototype = "arcadeBelazCab01" />
+			<Part id = "BASKET"			Prototype = "belazCargo05" />			
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "big_swingfire01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 				
+			<Part id = "BASKET_SIDE_GUN_0"	Prototype = "mrakSideGun" /> 
+		</Parts>
+	</Prototype>
+
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoBandit"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoBug01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab02" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoSinks"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoBandit1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoBandit2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "storm01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoFighter"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoIeriBand1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoIeriBand2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "storm01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "PublicDemoIeriCar"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "LisaCar"
+		ParentPrototype 	= "DenScout"
+		VisibleInEncyclopedia	= "false"
+		HealthRegeneration = "1.0"
+		DurabilityRegeneration	= "0.03"
+		>
+		<Parts>
+			<Part id = "CABIN"			Prototype = "denscoutCab" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "storm01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "FelixVehicle"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "FelixVehicle2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "AxelVehicle"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab04" />
+			<Part id = "BASKET"			Prototype = "belazCargo04" />
+			<Part id = "CABIN_BIG_GUN_1" 		Prototype = "kpvt01" /> 
+			<Part id = "BASKET_GIANT_GUN" 	Prototype = "hammer01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoFighter1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoHunter1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "rainmetal01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoHunter2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "cyclops01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoBug1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoBug2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab02" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoBug3"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab03" />
+			<Part id = "BASKET"			Prototype = "bugCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoMolokovoz1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab01" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo01" />
+			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "hornet01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoMolokovoz2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo02" />
+			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "hornet01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoMolokovoz3"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoMolokovozGonka"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoUral1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab01" />
+			<Part id = "BASKET"			Prototype = "uralCargo01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoShot1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab05" />
+			<Part id = "BASKET"			Prototype = "uralCargo05" />
+			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "kpvt01" /> 
+			<Part id = "BASKET_SIDE_GUN_0"	Prototype = "marsSideGun" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "bumblebee01" /> 
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "vector01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoUral2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab03" />
+			<Part id = "BASKET"			Prototype = "uralCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoUral3"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab05" />
+			<Part id = "BASKET"			Prototype = "uralCargo05" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoBelaz1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab01" />
+			<Part id = "BASKET"			Prototype = "belazCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoBelaz2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab03" />
+			<Part id = "BASKET"			Prototype = "belazCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoBelaz3"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab05" />
+			<Part id = "BASKET"			Prototype = "belazCargo05" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoMirotvorec1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Mirotvorec">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab01" />
+			<Part id = "BASKET" 			Prototype = "mirotvorecCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoMirotvorec2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Mirotvorec">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab03" />
+			<Part id = "BASKET" 			Prototype = "mirotvorecCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "DemoMirotvorec3"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Mirotvorec">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab05" />
+			<Part id = "BASKET" 			Prototype = "mirotvorecCargo05" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Revolutioner1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Revolutioner2"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazTest"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab04" />
+			<Part id = "BASKET"			Prototype = "belazCargo04" />
+			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "big_swingfire01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "MolokovozTest"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo04" />
+		</Parts>
+	</Prototype>
+
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Sml101"
+		ParentPrototype 	= "Sml1"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml1Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Sml201"
+		ParentPrototype 	= "Sml2"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml2Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Sml301"
+		ParentPrototype 	= "Sml3"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml3Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Sml401"
+		ParentPrototype 	= "Sml4"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml4Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "mirotvorecTest"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Mirotvorec">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab03" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET" 			Prototype = "mirotvorecCargo03" />
+		</Parts>
+	</Prototype>
+
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "mirotvorecTest1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Mirotvorec">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab03" />
+			<Part id = "BASKET" 			Prototype = "mirotvorecCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "MirotvorecForSale"
+		ParentPrototype 	= "Mirotvorec"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab01" />
+			<Part id = "BASKET" 			Prototype = "mirotvorecCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BugTest1"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab02" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazTest01"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab01" />
+			<Part id = "BASKET"			Prototype = "belazCargo04" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazTest02"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab02" />
+			<Part id = "BASKET"			Prototype = "belazCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazTest03"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab03" />
+			<Part id = "BASKET"			Prototype = "belazCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazTest04"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab04" />
+			<Part id = "BASKET"			Prototype = "belazCargo04" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazTest05"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab05" />
+			<Part id = "BASKET"			Prototype = "belazCargo05" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazForSale"
+		ParentPrototype 	= "Belaz"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab01" />
+			<Part id = "BASKET"			Prototype = "belazCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BugForSale"
+		ParentPrototype 	= "Bug"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "UralForSale"
+		ParentPrototype 	= "Ural"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab01" />
+			<Part id = "BASKET"			Prototype = "uralCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "MolokovozForSale"
+		ParentPrototype 	= "Molokovoz"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab01" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo01" />
+		</Parts>
+	</Prototype>
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "ScoutForSale"
+		ParentPrototype 	= "Scout"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCab01" />
+			<Part id = "BASKET"			Prototype = "scoutCargo01" />
+		</Parts>
+	</Prototype>
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "FighterForSale"
+		ParentPrototype 	= "Fighter"
+		VisibleInEncyclopedia	= "true">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazShot"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab05" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" /> 
+			<Part id = "CABIN_GIANT_GUN" 		Prototype = "big_swingfire01" /> 
+			<Part id = "BASKET"			Prototype = "belazCargo05" />
+			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "kpvt01" /> 
+			<Part id = "BASKET_SIDE_GUN_0"	Prototype = "mrakSideGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "UralShot"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab04" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "octopus01" /> 
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "octopus01" /> 
+			<Part id = "BASKET"			Prototype = "uralCargo05" />
+			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "bumblebee01" /> 
+			<Part id = "BASKET_SIDE_GUN_0"	Prototype = "marsSideGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		VisibleInEncyclopedia	= "false"
+		Name			= "MirotvorecShot"
+		ParentPrototype 	= "Mirotvorec">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "mirotvorecCab05" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "rainmetal01" /> 
+			<Part id = "CABIN_GIANT_GUN" 		Prototype = "hammer01" /> 
+			<Part id = "BASKET"			Prototype = "mirotvorecCargo05" />
+			<Part id = "BASKET_BIG_GUN_0" 	Prototype = "bumblebee01" /> 
+			<Part id = "BASKET_SIDE_GUN_0"	Prototype = "hailSideGun" /> 
+			<Part id = "BASKET_GIANT_GUN"		Prototype = "hammer01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r1m3_Fighter01"
+		ParentPrototype 		= "Fighter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r1m3_Fighter02"
+		ParentPrototype 		= "Fighter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "storm01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "elephant01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r1m3_Sml101"
+		ParentPrototype 		= "Sml1"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml1Cab01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m3_molokovoz03"
+		ParentPrototype 	= "Molokovoz"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab01" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo02" />
+			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "fagot01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m3_molokovozInOldCity"
+		ParentPrototype 	= "Molokovoz"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo02" />
+			<Part id = "BASKET_SMALL_GUN_0"	Prototype = "maxim01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_Bug1"
+		ParentPrototype 	= "Bug"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab03" />
+			<Part id = "BASKET"			Prototype = "bugCargo03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "maxim01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_Fighter01"
+		ParentPrototype 		= "Fighter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "elephant01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_Fighter02"
+
+		ParentPrototype 		= "Fighter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "hornet01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_FighterGulik"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "maxim01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "elephant01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_FighterNarcCaravan"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "vulcan01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_Hunter01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "hunterLauncher" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_Hunter02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "maxim01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name				= "r2m1_HunterNarcCaravan"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "elephant01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_HunterNarcBoss"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "rapier01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_Ural01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab03" />
+			<Part id = "BASKET"			Prototype = "uralCargo01" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "rapier01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_Belaz01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab01" />
+			<Part id = "BASKET"			Prototype = "belazCargo01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m1_Molokovoz01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "storm01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name			= "r2m1_scout01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "storm01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_scout02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_scout03"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "maxim01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m2_Molokovoz01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m2_Fighter01"
+		ParentPrototype 		= "Fighter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab01" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m2_Fighter02"
+		ParentPrototype 		= "Fighter"
+		VisibleInEncyclopedia	= "false">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "storm01" />
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "elephant01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m2_Hunter01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "maxim01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m2_scout01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r2m2_Ural01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab03" />
+			<Part id = "BASKET"			Prototype = "uralCargo01" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "rapier01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "r6m2_roboscout"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "RoboScout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "roboscoutCab" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "RobotPlayer01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot_Player_01">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robotplayer01Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "BASKET_SMALL_GUN"		Prototype = "robotgunformission" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "RobotGuard01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot01">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot01Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgunformission" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "RobotGuard02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot01">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot01Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgunformission" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "RobotBobot01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot01">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot01Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgun01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot4SMALL"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot04_SMALL">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot04Cab01_small" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgun04small_01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot4_2SMALL"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot04_SMALL">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot04Cab01_small" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgun04small_02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot3BIG"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot03_Big">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot03Cab01_big" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CHASSIS_SIDE_GUN_0"	Prototype = "marsSideGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "NoDrop_RobotBobot01"
+		CanDropChests 		= "false"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot01">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot01Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgun01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "NoDrop_Robot4SMALL"
+		VisibleInEncyclopedia   = "false"
+		CanDropChests 		= "false"
+		ParentPrototype 		= "Robot04_SMALL">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot04Cab01_small" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "robotgun04small_01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "NoDrop_Robot4_2SMALL"
+		CanDropChests 		= "false"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot04_SMALL">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot04Cab01_small" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "robotgun04small_02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "NoDrop_Robot3BIG"
+		CanDropChests 		= "false"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot03_Big">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot03Cab01_big" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CHASSIS_SIDE_GUN_0"	Prototype = "marsSideGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "Robot3_2BIG"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot03_Big">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot03Cab01_big" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CHASSIS_SIDE_GUN_0"	Prototype = "zeusSideGun" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "RobotBobot02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot02">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot02Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "RobotTron"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot01">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot01Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgun01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class				= "Vehicle"
+		Name				= "RobotMetatron"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 		= "Robot01">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "robot01Cab01" />
+			<Part id = "BASKET"			Prototype = "robotCargo01" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "robotgun01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m2_ShamanHunter01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "specter01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m2_ShamanHunter02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Hunter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "hunterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "pkt01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vector01" /> 
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_CaravanBug01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_CaravanBug02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab02" />
+			<Part id = "BASKET"			Prototype = "bugCargo01" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_CaravanBug03"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab01" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_CaravanBug04"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab02" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "hornet01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m2_CaravanBug01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab03" />
+			<Part id = "BASKET"			Prototype = "bugCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m2_CaravanBug02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Bug">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "bugCab03" />
+			<Part id = "BASKET"			Prototype = "bugCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m3_CaravanMolokovoz01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab01" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m3_CaravanMolokovoz02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_CaravanMolokovoz01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab02" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_CaravanMolokovoz02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCab03" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_CaravanUral01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab01" />
+			<Part id = "BASKET"			Prototype = "uralCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_CaravanUral02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab02" />
+			<Part id = "BASKET"			Prototype = "uralCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m2_CaravanUral01"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab03" />
+			<Part id = "BASKET"			Prototype = "uralCargo02" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m2_CaravanUral02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCab02" />
+			<Part id = "BASKET"			Prototype = "uralCargo03" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "UralMenu"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Ural">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "uralCabMenu" />
+			<Part id = "BASKET"			Prototype = "uralCargo05" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "BelazMenu"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCabMenu" />
+			<Part id = "BASKET"			Prototype = "belazCargo01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "MolokovozMenu"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Molokovoz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "molokovozCabMenu" />
+			<Part id = "BASKET"			Prototype = "molokovozCargo03" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "vulcan01" /> 
+		</Parts>
+	</Prototype>
+
+        <Prototype
+		Class			= "Vehicle"
+		Name			= "FighterMenu"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCabMenu" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "ScoutMenu"
+		VisibleInEncyclopedia   = "false"		
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "scoutCabMenu" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_CaravanGuardianSml101"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Sml1">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml1Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m1_CaravanGuardianSml201"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Sml2">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml2Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m2_CaravanGuardianSml301"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Sml3">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml3Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r1m3_CaravanGuardianSml401"
+		VisibleInEncyclopedia   = "false"	
+		ParentPrototype 	= "Sml4">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml4Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "hornet01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_CaravanGuardianSml401"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Sml4">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "sml4Cab01" />
+			<Part id = "CABIN_SMALL_GUN" 		Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m1_CaravanGuardianScout201"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab02" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "r2m2_CaravanGuardianScout301"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype 	= "Scout">
+		<Parts>
+			<Part id = "CABIN"		Prototype = "scoutCab03" />
+			<Part id = "CABIN_SMALL_GUN"	Prototype = "specter01" />
+			<Part id = "BASKET"		Prototype = "fakeCargo" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
+		Name			= "Gladiator02"
+		VisibleInEncyclopedia   = "false"
+		ParentPrototype		= "Belaz">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "belazCab03" />
+			<Part id = "BASKET"			Prototype = "belazCargo03" />
+			<Part id = "CABIN_GIANT_GUN"		Prototype = "cyclops01" />
+			<Part id = "BASKET_BIG_GUN_0"		Prototype = "bumblebee01" /> 
+			<Part id = "BASKET_BIG_GUN_1"		Prototype = "bumblebee01" /> 
+		</Parts>
+	</Prototype>
+</Prototypes>

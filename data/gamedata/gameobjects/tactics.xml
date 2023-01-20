@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: $
+-->
+
+<Prototypes>
+
+	<Prototype
+		Class 			= "VehicleRoleMeat"
+		Name			= "roleMeat"
+		
+		MinRadius		= "5"
+		MaxRadius		= "10"
+	/>
+
+	<Prototype
+		Class 			= "VehicleRoleMeat"
+		Name			= "roleMeat2"
+		
+		MinRadius		= "15"
+		MaxRadius		= "25"
+	/>
+
+	<Prototype
+		Class 			= "VehicleRoleMeat8"
+		Name			= "roleMeat8"
+
+		MinInnerRadius	= "2"
+		MaxInnerRadius	= "10"
+		
+		MinOuterRadius	= "30"
+		MaxOuterRadius	= "50"
+	/>
+	
+
+	<Prototype
+		Class 			= "VehicleRoleCheater"
+		Name			= "roleCheater"
+
+		MinInnerRadius	= "5"
+		MaxInnerRadius	= "10"
+		
+		MinOuterRadius	= "30"
+		MaxOuterRadius	= "50"
+	/>
+
+
+	<Prototype
+		Class 			= "VehicleRoleSniper"
+		Name			= "roleSniper"
+	/>
+	
+
+	<Prototype
+		Class 			= "VehicleRoleRam"
+		Name			= "roleRam"
+
+		MinDistToRam	= "30"
+		MaxDistToRam	= "50"
+	/>
+
+
+
+	<Prototype
+		Class 			= "VehicleRoleCoward"
+		Name			= "roleCoward"
+
+		MinCircleRadius	= "5"
+		MaxCircleRadius		= "10"
+		
+		MinCriticalDamage	= "0.4"
+		MaxCriticalDamage	= "0.6"
+	/>
+	
+
+	<Prototype
+		Class 			= "VehicleRoleBarrier"
+		Name			= "roleBarrier"
+	/>
+	
+    <Prototype
+		Class			= "NPCMotionController"
+		Name			= "someNPCMotionController"
+	/>
+</Prototypes>

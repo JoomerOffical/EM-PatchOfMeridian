@@ -1,0 +1,136 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by scorp (targem) -->
+<resource>
+
+	<schema
+		name="default"
+
+
+		titleFontFace="SM_Tahoma"
+		titleFontSize="10"
+		titleFontFlag="normal" 
+		titleFontType="0"
+
+		wndFontFace="SM_Tahoma"
+		wndFontSize="9"
+		wndFontFlag="normal" 
+		wndFontType="0"
+
+		tooltipFontFace="SM_Tahoma"
+		tooltipFontSize="10"
+		tooltipFontFlag="normal" 
+		tooltipFontType="0"
+
+		miscFontFace="Arial"
+		miscFontSize="9"
+		miscFontFlag="normal" 
+		miscFontType="0"
+
+		cornerSize="64"
+		btnWidth="100"
+		btnHeight="40"
+		checkSize="40"
+
+		clrDefault="ffffffff"
+		clrSelected="ffffcc66"
+		clrMouseover="ffffffff"
+		clrWndDisable="ff8f8f8f"
+
+		sliderBody="data\if\frames\Slider\stripe_fill.tga"
+		sliderThumb="data\if\frames\Slider\slider.tga"
+		sliderLeft="data\if\frames\Slider\stripe_l.tga"
+		sliderRight="data\if\frames\Slider\stripe_r.tga"
+		sliderHeight="32"
+		sliderNotchWidthRatio="1"
+
+		tabBtnMinWidth="32"			
+		tabBtnMaxWidth="100"
+		tabBtnHeight="40"
+		tabBtnSpace="5"
+
+		glyphHeight = "15">
+
+		<Sounds>
+			<SoundInfo
+				Name="CONTROL_SOUND_BUTTON_CLICK_DEFAULT"
+				File="data\sounds\events\click.wav"
+				Looped="0"
+			/>
+
+			<SoundInfo
+				Name="CONTROL_SOUND_ANIMATION_MOVE_DEFAULT"
+				File="data\sounds\other\interface\fl_of_mis02.wav"
+				Looped="1"
+			/>
+
+			<SoundInfo
+				Name="CONTROL_SOUND_ANIMATION_STOP_DEFAULT"
+				File="data\sounds\other\interface\road04.wav"
+				Looped="0"
+			/>  		
+
+			<SoundInfo
+				Name="SOUND_PICKUP_ITEMS_FROM_GROUND"
+				File="data\sounds\other\interface\pick_item.wav"
+				Looped="0"
+	/>
+
+			<SoundInfo
+				Name="SOUND_ADD_PLAYER_MONEY"
+				File="data\sounds\other\interface\coins.wav"
+				Looped="0"
+			/>
+
+			<SoundInfo
+				Name="SOUND_START_DRAG_ITEM"
+				File="data\sounds\other\interface\01.wav"
+				Looped="0"
+			/>  		
+
+			<SoundInfo
+				Name="SOUND_DROP_ITEM"
+				File="data\sounds\other\interface\02.wav"
+				Looped="0"
+			/>  		
+
+
+			<SoundInfo
+				Name="SOUND_TELEPORTATION"
+				File="data\sounds\other\new\teleportations.wav"
+				Looped="0"
+			/>  		
+
+			<SoundInfo
+				Name="SOUND_GUN_IN_SLOT"
+				File="data\sounds\other\new\guninslot.wav"
+				Looped="0"
+			/>  		
+
+			<SoundInfo
+				Name="SOUND_GADGET_IN_SLOT"
+				File="data\sounds\other\new\gadgetinslot.wav"
+				Looped="0"
+			/>  		
+
+			<SoundInfo
+				Name="SOUND_ADD_HEALTH"
+				File="data\sounds\other\new\life.wav"
+				Looped="0"
+			/>  		
+
+			<SoundInfo
+				Name="SOUND_ADD_DURABILITY"
+				File="data\sounds\other\new\arm.wav"
+				Looped="0"
+			/>  		
+
+			<SoundInfo
+				Name="SOUND_ADD_FUEL"
+				File="data\sounds\other\new\oil.wav"
+				Looped="0"
+			/>  		
+
+		</Sounds>
+
+	</schema>
+</resource>

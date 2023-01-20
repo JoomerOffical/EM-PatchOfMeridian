@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<quests><!--Root--><!--Root/r5m1--><!--Root/r5m2--><!--Root/r6m1--><!--Root/r6m2--><!--Root/sin--><!--Root/sin/Сюжетные-->
+	<quest
+		Name="Sin_FedEx_qst"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin" />
+
+	<quest
+		Name="Sin_Arlekin_qst"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="Sin_Arlekin_Band_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Sin_Arlekin_qst" />
+
+		<quest
+			Name="Sin_Arlekin_Find_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Arlekin_Band_qst" />
+
+		<quest
+			Name="Sin_Arlekin_Kill_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Arlekin_Find_qst" />
+	</quest>
+
+	<quest
+		Name="Sin_Cat_qst"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Sin_Arlekin_Kill_qst">
+		<quest
+			Name="Sin_Cat_Garfield_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Sin_Cat_qst" />
+
+		<quest
+			Name="Sin_Cat_Caravan_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Cat_Garfield_qst" />
+
+		<quest
+			Name="Sin_Cat_Kitty_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Cat_Caravan_qst" />
+	</quest>
+
+	<quest
+		Name="Sin_Egoist_qst"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Sin_Cat_Kitty_qst">
+		<quest
+			Name="Sin_Egoist_Trap_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Sin_Egoist_qst" />
+
+		<quest
+			Name="Sin_Egoist_Way_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Egoist_Trap_qst" />
+
+		<quest
+			Name="Sin_Egoist_Take_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Egoist_Tunnel_qst" />
+
+		<quest
+			Name="Sin_Egoist_Home_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Egoist_Take_qst" />
+
+		<quest
+			Name="Sin_Egoist_Father_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Egoist_Way_qst" />
+
+		<quest
+			Name="Sin_Egoist_Tunnel_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Egoist_Father_qst" />
+	</quest>
+
+	<quest
+		Name="Sin_Cross_qst"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Sin_Egoist_Home_qst">
+		<quest
+			Name="Sin_Cross_Talk_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Sin_Cross_qst" />
+
+		<quest
+			Name="Sin_Cross_Fight_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Cross_Talk_qst" />
+
+		<quest
+			Name="Sin_Cross_Born_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Cross_Fight_qst" />
+
+		<quest
+			Name="Sin_Cross_Kitty_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Cross_Born_qst" />
+
+		<quest
+			Name="Sin_Cross_Wait_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Cross_Kitty_qst" />
+	</quest>
+
+	<quest
+		Name="Sin_Run_qst"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Sin_Cross_Wait_qst Sin_Cross_qst" />
+
+	<quest
+		Name="Sin_JoeSaving_qst"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Sin_Run_qst" />
+
+	<quest
+		Name="Sin_Final_qst"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="Sin_JoeSaving_qst">
+		<quest
+			Name="Sin_Final_Way_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="Sin_Final_qst" />
+
+		<quest
+			Name="Sin_Final_Fight_qst"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="Sin_Final_Way_qst" />
+	</quest>
+<!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
+	<quest
+		Name="r6m2_WhereRobotGo"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(46650)"
+		Levels="r6m2">
+		<quest
+			Name="r6m2_WhereRobotGo_Prosledit"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m2_WhereRobotGo"
+			OnTake='TActivate("trCreateRobotProsledit"); ShowCircleOnMinimapByName("RbSledTeam_vehicle_0")'
+			Levels="r6m2" />
+
+		<quest
+			Name="r6m2_WhereRobotGo_DestroySvatilishe"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r6m2_WhereRobotGo_Prosledit"
+			OnTake='TActivate("trDestroySvatilishe"); ShowCircleOnMinimapByName("RbSledTeam_vehicle_0")'
+			Levels="r6m2" />
+	</quest>
+<!--Root/r6m2/Опциональные/Гонка-->
+	<quest
+		Name="r6m2_Gonka1"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook9" );AddPlayerMoney(46650)'
+		OnTake='ShowCircleOnMinimapByName("r6m1_Gradofaks")'
+		Levels="r6m2" />
+<!--Root/r6m2/Опциональные/Помочь в беде-->
+	<quest
+		Name="r6m2_HelpVoditel"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook10" );AddPlayerMoney(46650)'
+		OnTake='ShowCircleOnMinimapByName("BrokenVeh_loc")'
+		Levels="r6m2" />
+<!--Root/r6m2/сюжетные/Продолжить поиски источника роботов-->
+	<quest
+		Name="r6m2_ContinueFindRobotsBase_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_KillBoss2_Quest"
+		OnComplete="AddPlayerMoney(122150)" />
+<!--Root/r6m2/сюжетные/Помочь Механику-->
+	<quest
+		Name="r6m2_HelpToMechanick_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all taken"
+		PrecedingQuests="r6m2_ContinueFindRobotsBase_Quest"
+		OnComplete="AddPlayerMoney(122150)">
+		<quest
+			Name="r6m2_HTMKillRobots_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m2_HelpToMechanick_Quest"
+			OnTake='ShowCircleOnMinimapByName("Mechanic_vehicle_0")' />
+
+		<quest
+			Name="r6m2_HTMMoveToHouseMechanick_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r6m2_HTMKillRobots_Quest"
+			OnTake='ShowCircleOnMinimapByName("MechanicHouse_loc")' />
+	</quest>
+<!--Root/r6m2/сюжетные/Починить робота-->
+	<quest
+		Name="r6m2_MakeRoboHuman_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m2_HelpToMechanick_Quest"
+		OnComplete="AddPlayerMoney(122150)">
+		<quest
+			Name="r6m2_MRHPart1_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m2_MakeRoboHuman_Quest"
+			OnComplete='AddQuestItem( "quest_robot_part_1" )'
+			OnTake='ShowCircleOnMinimapByName("RobotsP1Team_vehicle_0")' />
+
+		<quest
+			Name="r6m2_MRHPart2_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m2_MakeRoboHuman_Quest"
+			OnComplete='AddQuestItem( "quest_robot_part_2" )'
+			OnTake='ShowCircleOnMinimapByName("RobotsP2Team_vehicle_0")' />
+
+		<quest
+			Name="r6m2_MRHPart3_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m2_MakeRoboHuman_Quest"
+			OnComplete='AddQuestItem( "quest_robot_part_3" )'
+			OnTake='ShowCircleOnMinimapByName("RobotsP3Team_vehicle_0")' />
+
+		<quest
+			Name="r6m2_MRHRetturnToMechanick_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r6m2_MRHPart1_Quest r6m2_MRHPart2_Quest r6m2_MRHPart3_Quest"
+			OnComplete='RemoveQuestItem( "quest_robot_part_1" ); RemoveQuestItem( "quest_robot_part_2" ); RemoveQuestItem( "quest_robot_part_3" );'
+			OnTake='TActivate("trReturnMechanik")' />
+	</quest>
+<!--Root/r6m2/сюжетные/Обмануть охранную систему-->
+	<quest
+		Name="r6m2_AferaOfHero_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m2_MakeRoboHuman_Quest"
+		OnFail="AddPlayerMoney(122150)"
+		OnTake='ShowCircleOnMinimapByName("NearLabirint_loc")' />
+<!--Root/r6m2/сюжетные/Уничтожить базу-->
+	<quest
+		Name="r6m2_DestroyRobotsBase_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m2_AferaOfHero_Quest"
+		OnComplete="AddPlayerMoney(122150)"
+		OnTake='ShowCircleOnMinimapByName("Generator")' />
+<!--Root/r6m2/сюжетные/Бежать с базы-->
+	<quest
+		Name="r6m2_MoveFromRobotBase_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m2_DestroyRobotsBase_Quest"
+		OnComplete="AddPlayerMoney(122150)"
+		OnTake='ShowCircleOnMinimapByName("EnterToArena_loc")' />
+<!--Root/r6m2/сюжетные/Убить Эмиссара-->
+	<quest
+		Name="r6m2_KillBoss3_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m2_MoveFromRobotBase_Quest"
+		OnComplete='AddQuestItem( "quest_emissary_trophies" );AddPlayerMoney(122150)' />
+<!--Root/r6m2/сюжетные/Сопроводить Механика к дому-->
+	<quest
+		Name="r6m2_NearMechanic_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r6m1/сюжетные--><!--Root/r6m1/опциональные--><!--Root/r6m1/опциональные/Найти ребенка-->
+	<quest
+		Name="r6m1_opt_FindKids"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook7" );AddPlayerMoney(18700)'
+		Levels="r6m1" />
+<!--Root/r6m1/опциональные/Подвезти человека-->
+	<quest
+		Name="r6m1_opt_HelpAvtostopshik"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(18700)"
+		OnTake='ShowCircleOnMinimapByName("r6m1_Onto_prototype6_enter")'
+		Levels="r6m1" />
+<!--Root/r6m1/опциональные/Квест на знаки-->
+	<quest
+		Name="r6m1_opt_Signs"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook8" );AddPlayerMoney(18700)'
+		Levels="r6m1">
+		<quest
+			Name="r6m1_opt_SignsSee"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m1_opt_Signs"
+			OnTake='ShowCircleOnMinimapByName("locSign")'
+			Levels="r6m1" />
+
+		<quest
+			Name="r6m1_opt_SignsDoklad"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r6m1_opt_SignsSee"
+			OnTake='ShowCircleOnMinimapByName("TownMapleSheet")'
+			Levels="r6m1" />
+	</quest>
+<!--Root/r6m1/опциональные/Квест на гонки-->
+	<quest
+		Name="r6m1_opt_StartRace"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(18700);"
+		OnTake='ShowCircleOnMinimapByName("TownMapleSheet")'
+		Levels="r6m1" />
+<!--Root/r6m1/сюжетные/Найти склад ядерного оружия-->
+	<quest
+		Name="r6m1_FindABombInJungle_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_KillRobotsWithTank_Quest"
+		OnComplete="AddPlayerMoney(17680)"
+		OnTake='ShowCircleOnMinimapByName("ToR6M1")' />
+<!--Root/r6m1/сюжетные/Спастись от падающик камней-->
+	<quest
+		Name="r6m1_EscapeFromStones_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(17680)"
+		OnTake='ShowCircleOnMinimapByName("locEndRockRace")' />
+<!--Root/r6m1/сюжетные/Поговорить с лесными жителями-->
+	<quest
+		Name="r6m1_TalkWithWorestMen_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_EscapeFromStones_Quest"
+		OnComplete="AddPlayerMoney(17680)"
+		OnTake='ShowCircleOnMinimapByName("TownMapleSheet13_enter")' />
+<!--Root/r6m1/сюжетные/Найти летающую машину-->
+	<quest
+		Name="r6m1_FindLOST_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_TalkWithWorestMen_Quest"
+		OnComplete="AddPlayerMoney(17680)"
+		OnTake='ShowCircleOnMinimapByName("r6m1_Lost_prototype4_enter")' />
+<!--Root/r6m1/сюжетные/Найти обслуживающий персонал шахты-->
+	<quest
+		Name="r6m1_FindShahtPeoples_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_FindLOST_Quest"
+		OnComplete="AddPlayerMoney(17680)">
+		<quest
+			Name="r6m1_FSPFindShaht_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m1_FindShahtPeoples_Quest"
+			OnTake='ShowCircleOnMinimapByName("locTrapInForestShahts")' />
+
+		<quest
+			Name="r6m1_FSPKillRobots_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r6m1_FSPFindShaht_Quest" />
+	</quest>
+<!--Root/r6m1/сюжетные/Найти завод-->
+	<quest
+		Name="r6m1_FindFactory_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_FindShahtPeoples_Quest"
+		OnComplete="AddPlayerMoney(17680)">
+		<quest
+			Name="r6m1_FFUseJump_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r6m1_FindFactory_Quest"
+			OnTake='ShowCircleOnMinimapByName("locFactory")' />
+
+		<quest
+			Name="r6m1_FFUseBomb_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r6m1_FFUseJump_Quest"
+			OnTake='ShowCircleOnMinimapByName("locBarrels1100")' />
+	</quest>
+
+	<quest
+		Name="r6m1_DiscoveryFactory_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_FindFactory_Quest"
+		OnComplete="AddPlayerMoney(17680)" />
+<!--Root/r6m1/сюжетные/Убить кран-босса на платформе-->
+	<quest
+		Name="r6m1_KillBoss2_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_FindABombInJungle_Quest"
+		OnComplete="AddPlayerMoney(17680)"
+		OnTake='ShowCircleOnMinimapByName("Boss2")' />
+<!--Root/r6m1/сюжетные/Попытаться догнать Сэма-->
+	<quest
+		Name="r6m1_FindBadSam_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m2_KillBoss3_Quest"
+		OnComplete="AddPlayerMoney(17680)"
+		OnTake='ShowCircleOnMinimapByName("PortToR5M2_loc")' />
+<!--Root/r6m1/сюжетные/Починить паром-->
+	<quest
+		Name="r6m1_HSFindParts_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_FindBadSam_Quest" />
+
+	<quest
+		Name="r6m1_HSBuyParts_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "quest_airplane_part" )' />
+
+	<quest
+		Name="r6m1_HSKillLosters_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "quest_airplane_part" )' />
+
+	<quest
+		Name="r6m1_HSReturn_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(17680)" />
+
+	<quest
+		Name="r6m1_HSReturn2_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='RemoveQuestItem( "quest_airplane_part" )' />
+<!--Root/r5m2/сюжетные--><!--Root/r5m2/Опциональные--><!--Root/r5m2/Опциональные/Избавиться от дяди-->
+	<quest
+		Name="r5m2_KillUncle"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook5" );AddPlayerMoney(1580)'
+		Levels="r5m2">
+		<quest
+			Name="r5m2_KillUncle_Defenders"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m2_KillUncle_Start"
+			OnTake='ShowCircleOnMinimapByName("UncleDefTeam3_vehicle_0")'
+			Levels="r5m2" />
+
+		<quest
+			Name="r5m2_KillUncle_Main"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m2_KillUncle_Defenders"
+			OnTake='ShowCircleOnMinimapByName("UncleTeam_vehicle_0")'
+			Levels="r5m2" />
+
+		<quest
+			Name="r5m2_KillUncle_Start"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m2_KillUncle"
+			OnTake='ShowCircleOnMinimapByName("UncleRodstvennik_loc")'
+			Levels="r5m2" />
+	</quest>
+<!--Root/r5m2/Опциональные/Убить бандита-->
+	<quest
+		Name="r5m2_KillBantits"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(1580)"
+		OnTake='ShowCircleOnMinimapByName("OptBandTeam_vehicle_0")'
+		Levels="r5m2" />
+<!--Root/r5m2/Опциональные/Гонка-->
+	<quest
+		Name="r5m2_MoveFirstToVillage"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='TActivate("triggerYouWin1"); AddPlayerMoney(1580)'
+		OnFail='TActivate("triggerYouLose1")'
+		OnTake='TActivate("trStartGonka"); ShowCircleOnMinimapByName("RaceFinish_loc")'
+		Levels="r5m2" />
+<!--Root/r5m2/Опциональные/Клад-->
+	<quest
+		Name="r5m2_FindKlad"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook6" );AddPlayerMoney(1580)'
+		OnTake='TActivate("trFindKlad"); ShowCircleOnMinimapByName("FindSomething_loc")'
+		Levels="r5m2" />
+<!--Root/r5m2/сюжетные/Найти откуда были украдены кинопленки-->
+	<quest
+		Name="r5m2_FindHollywood_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_BigProblemOnSide_Quest"
+		OnTake='RemoveQuestItem( "quest_movie_reel_1" )'>
+		<quest
+			Name="r5m2_FHMoveMapTwo_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m2_FindHollywood_Quest"
+			OnTake='ShowCircleOnMinimapByName("ToR5M2");' />
+
+		<quest
+			Name="r5m2_FHTalkWithCitizens_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m2_FHMoveMapTwo_Quest"
+			OnTake='ShowCircleOnMinimapByName("r5m2_Pervomayka")' />
+
+		<quest
+			Name="r5m2_FHTalkWithAnticwar_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m2_FHTalkWithCitizens_Quest"
+			OnTake='TActivate("trStarievshik"); ShowCircleOnMinimapByName("Starievshik_loc")' />
+
+		<quest
+			Name="r5m2_FHDeleteSled_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m2_FHTalkWithAnticwar_Quest" />
+	</quest>
+<!--Root/r5m2/сюжетные/Доехать до базы Одноглазой-->
+	<quest
+		Name="r5m2_MoveToOneEye_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_FindHollywood_Quest"
+		OnComplete="AddPlayerMoney(1800)"
+		OnTake='TActivate("trBattleWithIten"); ShowCircleOnMinimapByName("TheOneEyeBase")' />
+<!--Root/r5m2/сюжетные/Убить преступника-->
+	<quest
+		Name="r5m2_KillWantedBandit_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all taken"
+		PrecedingQuests="r5m2_MoveToOneEye_Quest"
+		OnComplete='AddOnlyOneQuestItem( "quest_goldsellector" );AddPlayerMoney(1750)'
+		OnTake='ShowCircleOnMinimapByName("Iten_vehicle_0")' />
+<!--Root/r5m2/сюжетные/Выявить предателя-->
+	<quest
+		Name="r5m2_KrotInOneeye_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_KillWantedBandit_Quest r5m2_MoveToOneEye_Quest"
+		OnComplete="AddPlayerMoney(1750)">
+		<quest
+			Name="r5m2_KIOMoveWithCaravan_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m2_KrotInOneeye_Quest" />
+
+		<quest
+			Name="r5m2_KIOKillKrotBand_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m2_KIOMoveWithCaravan_Quest" />
+
+		<quest
+			Name="r5m2_KIOEnd_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m2_KIOKillKrotBand_Quest" />
+	</quest>
+<!--Root/r5m2/сюжетные/Уничтожить бандитское гнездо-->
+	<quest
+		Name="r5m2_DestroyKrot_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_TalkToCvetnograd_Quest"
+		OnComplete="AddPlayerMoney(1750)"
+		OnTake='TActivate("trEnterBanditsBase"); ShowCircleOnMinimapByName("BanditBase_loc")' />
+
+	<quest
+		Name="r5m2_TalkToCvetnograd_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_KrotInOneeye_Quest" />
+<!--Root/r5m2/сюжетные/Доехать до маяка-->
+	<quest
+		Name="r5m2_MoveToMayak_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_DestroyKrot_Quest"
+		OnComplete="AddPlayerMoney(1750)" />
+<!--Root/r5m2/сюжетные/Включить маяк-->
+	<quest
+		Name="r5m2_StartMayak_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_MoveToMayak_Quest"
+		OnComplete="AddPlayerMoney(1750)"
+		OnTake='ShowCircleOnMinimapByName("Mayak_loc")' />
+<!--Root/r5m2/сюжетные/Отбить нападение роботов-->
+	<quest
+		Name="r5m2_KillRobotsAtMayak_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_StartMayak_Quest"
+		OnComplete="AddPlayerMoney(14000)" />
+<!--Root/r5m2/сюжетные/Вернуться к Одноглазой-->
+	<quest
+		Name="r5m2_ReturnToOneeyeAfterM_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_KillRobotsAtMayak_Quest"
+		OnComplete="AddPlayerMoney(1800)"
+		OnTake='TActivate("trReturnToBase")' />
+<!--Root/r5m2/сюжетные/Победить Кран-босса-->
+	<quest
+		Name="r5m2_KillBoss1_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all taken"
+		PrecedingQuests="r5m2_ReturnToOneeyeAfterM_Quest"
+		OnComplete="AddPlayerMoney(1800)" />
+<!--Root/r5m2/сюжетные/Отбить нападение роботов на город из дота-->
+	<quest
+		Name="r5m2_KillRobotsWithDot_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(1800)" />
+<!--Root/r5m2/сюжетные/Догнать караваны-->
+	<quest
+		Name="r5m2_MoveToOneeyeCaravans_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_KillRobotsWithDot_Quest"
+		OnComplete="AddPlayerMoney(1800)"
+		OnTake='TActivate("trGonnaGetCaravan");ShowCircleOnMinimapByName("BattleWithCaravan_loc")' />
+<!--Root/r5m2/сюжетные/Отобрать пленки-->
+	<quest
+		Name="r5m2_GetAllMovies_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_MoveToOneeyeCaravans_Quest"
+		OnComplete='AddQuestItem( "quest_movie_reel_2" );AddPlayerMoney(1900)' />
+<!--Root/r5m1/Сюжетные--><!--Root/r5m1/Опциональные-->
+	<quest
+		Name="r5m1_FindTreasure"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddOnlyOneQuestItem( "quest_goldsellector" );AddQuestItem( "collectionbook4" );AddPlayerMoney(350)'
+		Levels="r5m1">
+		<quest
+			Name="r5m1_FT_FindBook"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m1_FindTreasure"
+			OnComplete='AddQuestItem( "quest_forbidden_books" )'
+			OnTake='TActivate("trFindTreasure"); ShowCircleOnMinimapByName("Treasure_loc")'
+			Levels="r5m1" />
+
+		<quest
+			Name="r5m1_FT_Return"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_FT_FindBook"
+			OnComplete='RemoveQuestItem( "quest_forbidden_books" )'
+			OnTake='ShowCircleOnMinimapByName("TheApple")'
+			Levels="r5m1" />
+	</quest>
+
+	<quest
+		Name="r5m1_Posilka"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook3" ); AddPlayerMoney(400)'
+		OnTake='ShowCircleOnMinimapByName("TownBigHead_enter")'
+		Levels="r5m1" />
+
+	<quest
+		Name="r5m1_Kontrabanda"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='g_Player:ActivatePerk( "smuggler", 1);AddPlayerMoney(400)'
+		Levels="r5m1">
+		<quest
+			Name="r5m1_K_FindBtotherMan"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m1_Kontrabanda"
+			OnComplete='AddQuestItem( "quest_special_drugs" )'
+			OnFail='RemoveQuestItem( "quest_special_drugs" )'
+			OnTake='ShowCircleOnMinimapByName("ThePensilvansk")'
+			Levels="r5m1" />
+
+		<quest
+			Name="r5m1_K_TravelLetter"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_K_FindBtotherMan"
+			OnComplete='RemoveQuestItem( "quest_special_drugs" )'
+			OnTake='ShowCircleOnMinimapByName("TheApple")'
+			Levels="r5m1" />
+	</quest>
+
+	<quest
+		Name="r5m1_KillKontrabondist"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='g_Player:ActivatePerk( "lawyer", 1);AddPlayerMoney(350)'
+		Levels="r5m1">
+		<quest
+			Name="r5m1_KK_Spy"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m1_KillKontrabondist"
+			OnTake='ShowCircleOnMinimapByName("KontrTeam_vehicle_0");'
+			Levels="r5m1" />
+
+		<quest
+			Name="r5m1_KK_KillThem"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_KK_Spy"
+			Levels="r5m1" />
+	</quest>
+<!--Root/r5m1/Сюжетные/Осмотреться на новом месте-->
+	<quest
+		Name="r5m1_WayToBookWorm_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete="AddPlayerMoney(200)">
+		<quest
+			Name="r5m1_WTBWTalkWithAborigens_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m1_WayToBookWorm_Quest"
+			OnTake='ShowCircleOnMinimapByName("TheApple")' />
+
+		<quest
+			Name="r5m1_WTBWMoveToBookWormHouse_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_WTBWTalkWithAborigens_Quest"
+			OnTake='TActivate("trNearCleverMan");ShowCircleOnMinimapByName("CleaverMan_loc")' />
+	</quest>
+<!--Root/r5m1/Сюжетные/Доехать до библиотеки-->
+	<quest
+		Name="r5m1_MoveToLibrary_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_WayToBookWorm_Quest"
+		OnComplete="AddPlayerMoney(250)"
+		OnTake='TActivate("trNearLibBridge");ShowCircleOnMinimapByName("NearLibBridge_loc")' />
+<!--Root/r5m1/Сюжетные/Проникнуть в библиотеку-->
+	<quest
+		Name="r5m1_EnterToLibrary_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_MoveToLibrary_Quest"
+		OnComplete="AddPlayerMoney(300)"
+		OnTake='TActivate("trEnterLibrary");ShowCircleOnMinimapByName("LibEnter_loc")' />
+
+	<quest
+		Name="r5m1_FastLeaveLibrary_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_EnterToLibrary_Quest"
+		OnTake='ShowCircleOnMinimapByName("PlLock_loc")' />
+<!--Root/r5m1/Сюжетные/Победить в сражении-->
+	<quest
+		Name="r5m1_BattleInArena_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_FastLeaveLibrary_Quest"
+		OnComplete="AddPlayerMoney(350)"
+		OnTake='ShowCircleOnMinimapByName("SumoOponent")' />
+<!--Root/r5m1/Сюжетные/Договориться с гонщиком-->
+	<quest
+		Name="r5m1_FirstQofSam_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_BattleInArena_Quest"
+		OnComplete='TActivate("cinAfterGonchik");AddPlayerMoney(400)'
+		OnTake='ShowCircleOnMinimapByName("TheKonneks")' />
+<!--Root/r5m1/Сюжетные/Ликвидировать конкурента-->
+	<quest
+		Name="r5m1_SecondQofSam_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_FirstQofSam_Quest"
+		OnComplete='AddPlayerMoney(450);TakeQuest("r5m1_GoToMichikar_Quest")'>
+		<quest
+			Name="r5m1_SQSMoveToPlace_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m1_SecondQofSam_Quest"
+			OnTake='ShowCircleOnMinimapByName("NearFormulaVeh_loc")' />
+
+		<quest
+			Name="r5m1_SQSDestroyCar_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_SQSMoveToPlace_Quest"
+			OnTake='ShowCircleOnMinimapByName("FormulaEx")' />
+	</quest>
+<!--Root/r5m1/Сюжетные/Победить в гонке-->
+	<quest
+		Name="r5m1_RaceofSam_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_SecondQofSam_Quest"
+		OnComplete='AddQuestItem( "quest_grand_prix" );AddPlayerMoney(600)'
+		OnTake='ShowCircleOnMinimapByName("CheckPoint1_loc");ShowCircleOnMinimapByName("CheckPoint2_loc");ShowCircleOnMinimapByName("CheckPoint3_loc");ShowCircleOnMinimapByName("CheckPoint4_loc");ShowCircleOnMinimapByName("CheckPoint5_loc")
+' />
+<!--Root/r5m1/Сюжетные/Разобраться с заезжими хулиганами-->
+	<quest
+		Name="r5m1_BigProblemOnSide_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m1_RaceofSam_Quest"
+		OnComplete="AddPlayerMoney(650)">
+		<quest
+			Name="r5m1_BPOSMoveToLoc_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r5m1_BigProblemOnSide_Quest"
+			OnTake='ShowCircleOnMinimapByName("NearVor_loc");' />
+
+		<quest
+			Name="r5m1_BPOSKillUnknownCars_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_BPOSMoveToLoc_Quest"
+			OnTake='ShowCircleOnMinimapByName("PesledovateliTeam_vehicle_0");' />
+
+		<quest
+			Name="r5m1_BPOSKillThiefCar_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_BPOSKillUnknownCars_Quest"
+			OnComplete='AddQuestItem( "quest_movie_reel_1" )'
+			OnTake='ShowCircleOnMinimapByName("VorTeam_vehicle_0");' />
+
+		<quest
+			Name="r5m1_BPOSReturnToSam_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r5m1_BPOSKillThiefCar_Quest"
+			OnComplete='RemoveQuestItem( "quest_movie_reel_1" )'
+			OnTake='ShowCircleOnMinimapByName("SemBase_loc");' />
+	</quest>
+<!--Root/r5m1/Сюжетные/Убить Сэма-->
+	<quest
+		Name="r5m1_KillBoss4_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r6m1_HSReturn2_Quest"
+		OnTake='ShowCircleOnMinimapByName("Boss5");' />
+<!--Root/r5m1/Сюжетные/после 5-2-->
+	<quest
+		Name="r5m1_ReturnToSamWithMovies_Quest"
+		Automatic="1"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		PrecedingQuests="r5m2_GetAllMovies_Quest"
+		OnComplete='RemoveQuestItem( "quest_movie_reel_2" )'
+		OnTake='ShowCircleOnMinimapByName("ToR5M1");' />
+
+	<quest
+		Name="r5m1_KillRobotsWithTank_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnComplete='AddQuestItem( "collectionbook2" );AddPlayerMoney(20000)' />
+<!--Root/r5m1/Сюжетные/Добраться до Мичикара-->
+	<quest
+		Name="r5m1_GoToMichikar_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnTake='ShowCircleOnMinimapByName("TheTownMichikar")' />
+<!--Root/r5m1/Сюжетные/Начать гонку-->
+	<quest
+		Name="r5m1_StartRace_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+
+	<MutuallyExclusives>
+		<mutex
+			quests="r5m1_KillKontrabondist r5m1_Kontrabanda" />
+	</MutuallyExclusives>
+</quests>

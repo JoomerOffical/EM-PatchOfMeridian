@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: SpecialGuns.xml 773 2006-10-12 05:28:50Z anton $
+-->
+
+<Prototypes>
+	<Prototype
+		Class					= "Appendix"
+		Name					= "thorn1"
+		ModelFile				= "thorn1"
+		ResourceType			= "SPECIAL_WEAPON"
+		NodeScale				= "1 1 1"
+		Mass					= "1.0"
+		ApplyAffixes			= "false"
+		
+		CanBeUsedInAutogenerating 	=  "1"
+
+		ChargeSize     = "999999"
+		
+		Price					= "1500"
+		Durability				= "250" 
+		FiringType				= "Thorns"
+		LoadPoint				= "LP_THORN"
+		ThornForce				= "25"
+		AppendixType			= "1"
+	/>
+
+	<Prototype
+		Class					= "Appendix"
+		Name					= "thorn2"
+		ModelFile				= "thorn2"
+		ResourceType			= "SPECIAL_WEAPON"
+		NodeScale				= "1 1 1"
+		Mass					= "1.0"
+		ApplyAffixes			= "false"
+		
+		CanBeUsedInAutogenerating 	=  "1"
+
+		ChargeSize     = "999999"
+		
+		Price					= "5000"
+		Durability				= "500" 
+		FiringType				= "Thorns"
+		LoadPoint				= "LP_THORN"
+		ThornForce				= "50"
+		AppendixType			= "1"
+	/>
+
+	<Prototype
+		Class					= "Appendix"
+		Name					= "thorn3"
+		ModelFile				= "thorn3"
+		ResourceType			= "SPECIAL_WEAPON"
+		NodeScale				= "1 1 1"
+		Mass					= "1.0"
+		ApplyAffixes			= "false"
+		
+		CanBeUsedInAutogenerating 	=  "1"
+
+		ChargeSize     = "999999"
+		
+		Price					= "10000"
+		Durability				= "750" 
+		FiringType				= "Thorns"
+		LoadPoint				= "LP_THORN"
+		ThornForce				= "75"
+		AppendixType			= "1"
+	/>
+
+	<Prototype
+		Class					= "TurboAccelerationPusher"
+		Name					= "someTurboAccelerationPusher"
+		ModelFile				= "Turboakselerator"
+		ResourceType			= "SPECIAL_WEAPON"
+		NodeScale				= "1 1 1"
+		Mass					= "1.0"
+		ApplyAffixes			= "false"
+		BulletPrototype			= "turbo"
+		ExplosionType			= "MACHINEGUN"
+		FiringEffect			= "none"
+		Damage				= "0"
+		FiringRate				= "10"
+		GroupingAngle			= "1.0"
+		FiringRange				= "0"
+		RecoilForce				= "2"		
+
+		CanBeUsedInAutogenerating  	=  "0"
+		Price					= "8600"
+
+		ShellsPoolSize		= "25"
+		WithShellsPoolLimit	= "true"
+
+		ChargeSize     			= "1"
+		RechargingTime 			= "10"
+
+		Durability				= "200" 
+		
+		ShellsPoolSize		= "25"
+		WithShellsPoolLimit	= "true"
+		
+		AccelerationValue			= "1.6"
+		AccelerationTime			= "5"
+		FiringType				= "Turbo"
+		UseEffect				= "ET_PS_TURBOPUSHER"
+	/>
+
+	<Prototype
+		Class					= "TurboAccelerationPusher"
+		Name					= "Jumper"
+		ModelFile				= "Dimzavesa"
+		ResourceType			= "SPECIAL_WEAPON"
+		NodeScale				= "1 1 1"
+		Mass					= "1.0"
+		ApplyAffixes			= "false"
+		BulletPrototype			= "turbo"
+		ExplosionType			= "MACHINEGUN"
+		FiringEffect			= "none"
+		Damage				= "0"
+		FiringRate				= "10"
+		GroupingAngle			= "1.0"
+		FiringRange				= "0"
+		RecoilForce				= "2"		
+
+		CanBeUsedInAutogenerating  	=  "0"
+		Price					= "8600"
+		
+		ChargeSize     		= "1"
+		RechargingTime 		= "6"
+
+		Durability				= "200" 
+		
+		ShellsPoolSize		= "25"
+		WithShellsPoolLimit	= "true"
+		
+		TapType				= "1"
+		FiringType				= "Turbo"
+		AccelerationValue			= "20"
+		UseEffect				= "ET_PS_JUMPPUSHER"
+	/>
+
+	<Prototype
+		Class			= "LocationPusher"
+		Name			= "engineOilPusher"
+		ModelFile		= "MasloRazliF"
+		ResourceType		= "SPECIAL_WEAPON"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		ApplyAffixes		= "false"
+		BulletPrototype		= "engineOilLocation"
+		ExplosionType		= "MACHINEGUN"
+		FiringEffect		= "none"
+		Damage			= "0"
+		FiringRate		= "60"
+		GroupingAngle		= "0.5"
+		FiringRange		= "20"
+		RecoilForce		= "2"		
+
+		CanBeUsedInAutogenerating  =  "0"
+		Price			= "3670"
+		
+		ChargeSize     		= "20"
+		RechargingTime 		= "8"
+		ShellsPoolSize		= "80"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "200" 
+
+		ShellsPoolSize		= "25"
+		WithShellsPoolLimit	= "true"
+
+		FiringType		= "Oil"
+	/>
+
+	<Prototype
+		Class			= "LocationPusher"
+		Name			= "nailsPusher"
+		ModelFile		= "meXaNizm"
+		ResourceType		= "SPECIAL_WEAPON"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		ApplyAffixes	= "false"
+		BulletPrototype		= "nailLocation"
+		ExplosionType		= "MACHINEGUN"
+		FiringEffect		= "none"
+		Damage			= "0"
+		FiringRate		= "60"
+		GroupingAngle		= "0.5"
+		FiringRange		= "10"
+		RecoilForce		= "2"		
+
+		CanBeUsedInAutogenerating  =  "0"
+		Price			= "4700"
+		
+
+		ChargeSize     		= "30"
+		RechargingTime 		= "10"
+
+		ShellsPoolSize		= "90"
+		WithShellsPoolLimit	= "true"
+		Durability		= "200" 
+		FiringType		= "Nail"
+	/>
+
+	<Prototype
+		Class			= "LocationPusher"
+		Name			= "SmokeGun"
+		ModelFile		= "Dimzavesa"
+		ResourceType	= "SPECIAL_WEAPON"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		ApplyAffixes	= "false"
+		BulletPrototype	= "smokeScreenLocation"
+		ExplosionType	= "MACHINEGUN"
+		FiringEffect	= "none"
+		Damage			= "0"
+		FiringRate		= "4"
+		GroupingAngle	= "0.5"
+		FiringRange		= "0"
+		RecoilForce		= "2"		
+
+		CanBeUsedInAutogenerating  =  "0"
+		Price			= "1780"
+		
+
+		ChargeSize     		= "1"
+		RechargingTime 		= "3"
+		ShellsPoolSize		= "20"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "200" 
+
+		ShellsPoolSize		= "25"
+		WithShellsPoolLimit	= "true"
+
+		FiringType		= "Smoke"
+	/>
+
+	<Prototype
+		Class			= "MinePusher"
+		Name			= "minePusher"
+		ModelFile		= "minoYkladchiK"
+		ResourceType		= "SPECIAL_WEAPON"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		ApplyAffixes	= "false"
+		BulletPrototype		= "mine"
+		ExplosionType	= "CANNON"
+		FiringEffect		= "none"
+		Damage			= "150"
+		FiringRate		= "15"
+		GroupingAngle		= "0.5"
+		FiringRange		= "500"
+		RecoilForce		= "2"		
+
+		CanBeUsedInAutogenerating  =  "0"
+		Price				= "1120"
+		
+		ChargeSize     		= "1"
+		RechargingTime 		= "4"
+		DamageType	= "BLAST"
+		ShellsPoolSize		= "20"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "200" 
+
+		ShellsPoolSize		= "20"
+		WithShellsPoolLimit	= "true"
+
+		FiringType		= "Mine"
+	/>
+
+	<Prototype
+		Class			= "MinePusher"
+		Name			= "minePusher_1"
+		ModelFile		= "minoYkladchiK"
+		ResourceType		= "SPECIAL_WEAPON"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		ApplyAffixes	= "false"
+		BulletPrototype		= "mine"
+		ExplosionType	= "CANNON"
+		FiringEffect		= "none"
+		Damage			= "400"
+		FiringRate		= "10"
+		GroupingAngle		= "0.5"
+		FiringRange			= "500"
+		RecoilForce			= "2"		
+      		DamageType	= "BLAST"
+		CanBeUsedInAutogenerating  =  "0"
+		Price			= "3540"
+		
+		ChargeSize     		= "1"
+		RechargingTime 		= "4"
+
+		ShellsPoolSize		= "20"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "200" 
+		FiringType		= "Mine"
+	/>
+
+	<Prototype
+		Class			= "MinePusher"
+		Name			= "minePusher_2"
+		ModelFile		= "minoYkladchiK"
+		ResourceType		= "SPECIAL_WEAPON"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		ApplyAffixes	= "false"
+		BulletPrototype		= "mine"
+		ExplosionType	= "CANNON"
+		FiringEffect		= "none"
+		Damage			= "600"
+		FiringRate		= "8"
+		GroupingAngle		= "0.5"
+		FiringRange			= "500"
+		RecoilForce			= "2"		
+		DamageType	= "BLAST"
+		CanBeUsedInAutogenerating  =  "0"
+		Price			= "7400"
+		
+		ChargeSize     		= "1"
+		RechargingTime 		= "3"
+
+		ShellsPoolSize		= "20"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "200" 
+		FiringType		= "Mine"
+	/>
+</Prototypes>

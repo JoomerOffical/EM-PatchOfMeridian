@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<!--
+$Id: SideGuns.xml,v 1.1 2005/12/08 08:58:05 anton Exp $
+-->
+
+<Prototypes>
+
+	<Prototype
+		Class			= "RocketVolleyLauncher"
+		Name			= "hail01R"
+		ModelFile			= "hail01R"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		BulletPrototype		= "hail_rocket"
+		ExplosionType		= "BLAST"
+		FiringEffect		= "none"
+		Damage			= "100"
+		FiringRate		= "120"
+		GroupingAngle		= "1"
+		FiringRange		= "400"
+            FiringType		= "Rocket"
+     		ApplyAffixes	= "false"
+		WithAngleLimit		= "false"
+		ChargeSize     		= "6"
+		RechargingTime = "15"
+
+		ShellsPoolSize		= "12"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "3000"
+		
+		ActionDist		= "1000"		
+		RecoilForce		= "0"
+
+		CanBeUsedInAutogenerating  =  "0"
+		CanBeDroppedFromEnemies	= "false"
+		VisibleInEncyclopedia = "false"
+	/>
+
+	<Prototype
+		Class			= "RocketVolleyLauncher"
+		Name			= "hail01L"
+		ModelFile			= "hail01L"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+     		ApplyAffixes	= "false"		
+		BulletPrototype		= "hail_rocket"
+		ExplosionType		= "BLAST"
+		FiringEffect		= "none"
+		Damage			= "100"
+		FiringRate		= "120"
+		GroupingAngle		= "1"
+		FiringRange		= "400"
+            FiringType		= "Rocket"
+
+		WithAngleLimit		= "false"
+		ChargeSize     		= "6"
+		RechargingTime = "15"
+		ShellsPoolSize		= "12"
+		WithShellsPoolLimit	= "true"
+
+
+		Durability		= "3000"
+		
+		ActionDist		= "1000"		
+		RecoilForce		= "0"
+
+		CanBeDroppedFromEnemies	= "false"
+		CanBeUsedInAutogenerating  =  "0"
+		VisibleInEncyclopedia = "false"
+	/>
+
+
+	<Prototype
+		Class			= "CompoundGun"
+		Name				= "hailSideGun"
+		Price				= "120000"
+
+		Decal				= "DC_ROKET"
+
+		CanBeUsedInAutogenerating  =  "0"
+     		ApplyAffixes	= "false"
+		ResourceType		= "SIDE_GUN">	
+		<Part id = "BASKET_SIDE_GUN_L"	Prototype = "hail01L" /> 
+		<Part id = "BASKET_SIDE_GUN_R"	Prototype = "hail01R" /> 
+
+
+	</Prototype>
+
+	<Prototype
+		Class			= "MortarVolleyLauncher"
+		Name			= "mars01R"
+		ModelFile		= "mars01L"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		ActionDist		= "1000"		
+		InitialVelocity		= "70"
+     	ApplyAffixes	= "false"
+		BulletPrototype		= "marsMortarShell"
+		ExplosionType		= "GRENADE"
+		FiringEffect		= "none"
+		Damage			= "600"
+		FiringRate		= "5"
+		GroupingAngle		= "1"
+		FiringRange		= "100"
+        FiringType		= "Artillery"
+		Decal				= "DC_GUN"
+
+		ChargeSize     = "3"
+		RechargingTime = "12"
+
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "4000"
+
+		CanBeDroppedFromEnemies	= "false"		
+		VisibleInEncyclopedia = "false"
+		IgnoreStopAnglesWhenFire = "true"
+		/>
+
+	<Prototype
+		Class			= "MortarVolleyLauncher"
+		Name			= "mars01L"
+		ModelFile		= "mars01R"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		ActionDist		= "1000"		
+		InitialVelocity		= "70"
+     	ApplyAffixes	= "false"
+		BulletPrototype		= "marsMortarShell"
+		ExplosionType		= "GRENADE"
+		FiringEffect		= "none"
+		Damage			= "600"
+		FiringRate		= "5"
+		GroupingAngle		= "1"
+		FiringRange		= "100"
+        FiringType		= "Artillery"
+		Decal				= "DC_GUN"
+
+		ChargeSize     = "3"
+		RechargingTime = "12"
+
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "4000"
+
+		CanBeDroppedFromEnemies	= "false"		
+		VisibleInEncyclopedia = "false"
+		IgnoreStopAnglesWhenFire = "true"
+		/>
+
+	<Prototype
+		Class				= "CompoundGun"
+		Name				= "marsSideGun"
+		Price				= "14800"
+
+		Decal				= "DC_GUN"
+     		ApplyAffixes		= "false"
+		ResourceType		= "SIDE_GUN">	
+
+		<Part id = "BASKET_SIDE_GUN_L"	Prototype = "mars01L" /> 
+		<Part id = "BASKET_SIDE_GUN_R"	Prototype = "mars01R" /> 
+	</Prototype>
+
+
+	<Prototype
+		Class			= "ThunderboltLauncher"
+		Name			= "zeus01R"
+		ModelFile		= "zeus01R"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+     		ApplyAffixes	= "false"		
+		BulletPrototype		= "zeusThunderbolt"
+		ExplosionType		= "PLASMA"
+		FiringEffect		= "none"
+		Damage		= "400"
+		FiringRate		= "4"
+		GroupingAngle		= "1"
+		FiringRange		= "200"
+		ActionDist		= "400"		
+                FiringType		= "Plasma"
+		ChargeSize     = "1"
+		RechargingTime = "15"
+
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+		CanBeDroppedFromEnemies	= "false"
+		CanBeUsedInAutogenerating  =  "0"
+		Durability		= "1000"
+		
+		VisibleInEncyclopedia = "false"
+		IgnoreStopAnglesWhenFire = "true"
+		/>
+
+	<Prototype
+		Class			= "ThunderboltLauncher"
+		Name			= "zeus01L"
+		ModelFile		= "zeus01L"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+     		ApplyAffixes	= "false"		
+		BulletPrototype		= "zeusThunderbolt"
+		ExplosionType		= "PLASMA"
+		FiringEffect		= "none"
+		Damage		= "400"
+		FiringRate		= "4"
+		GroupingAngle		= "1"
+		FiringRange		= "200"
+		ActionDist		= "400"		
+                FiringType		= "Plasma"
+		ChargeSize     = "1"
+		RechargingTime = "15"
+
+		CanBeUsedInAutogenerating  =  "0"
+		ShellsPoolSize		= "3"
+		WithShellsPoolLimit	= "true"
+
+		Durability		= "4000"
+
+		CanBeDroppedFromEnemies	= "false"
+		VisibleInEncyclopedia = "false"
+		IgnoreStopAnglesWhenFire = "true"
+		/>
+
+
+
+	<Prototype
+		Class			= "CompoundGun"
+		Name				= "zeusSideGun"
+		Price		= "110000"
+		Decal				= "DC_LASER"
+
+		CanBeUsedInAutogenerating  =  "0"
+     		ApplyAffixes	= "false"
+		ResourceType		= "SIDE_GUN">	
+
+		<Part id = "BASKET_SIDE_GUN_L"	Prototype = "zeus01L" /> 
+		<Part id = "BASKET_SIDE_GUN_R"	Prototype = "zeus01R" /> 
+
+
+	</Prototype>
+
+	<Prototype
+		Class			= "RocketLauncher"
+		Name			= "hunter01L"
+		ModelFile		= "hunter01L"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		BulletPrototype		= "rocket_sml01"
+		ExplosionType		= "BLAST"
+		FiringEffect		= "none"
+		Damage		= "100"
+		FiringRate		= "40"
+		GroupingAngle		= "1"
+		FiringRange		= "500"
+                FiringType		= "Rocket"
+		ChargeSize     = "4"
+		RechargingTime = "8"
+     		ApplyAffixes	= "false"
+		CanBeUsedInAutogenerating  =  "0"
+		ShellsPoolSize		= "4"
+		WithShellsPoolLimit	= "true"
+
+
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "3000"
+		VisibleInEncyclopedia = "false"
+		/>
+
+	<Prototype
+		Class			= "RocketLauncher"
+		Name			= "hunter01R"
+		ModelFile		= "hunter01R"
+		ResourceType		= "SIDE_GUN"
+		NodeScale		= "1 1 1"
+		Mass			= "1.0"
+		
+		BulletPrototype		= "rocket_sml01"
+		ExplosionType		= "BLAST"
+		FiringEffect		= "none"
+		Damage		= "100"
+		FiringRate		= "40"
+		GroupingAngle		= "1"
+		FiringRange		= "500"
+                FiringType		= "Rocket"
+     		ApplyAffixes	= "false"
+		CanBeUsedInAutogenerating  =  "0"
+		ChargeSize     = "4"
+		RechargingTime = "8"
+
+		ShellsPoolSize		= "4"
+		WithShellsPoolLimit	= "true"
+
+
+		CanBeDroppedFromEnemies	= "false"
+		Durability		= "3000"
+		VisibleInEncyclopedia = "false"
+		/>
+
+
+
+	<Prototype
+		Class			= "CompoundGun"
+		Name				= "hunterSideGun"
+
+		Price		= "120000"
+		Decal				= "DC_ROKET"
+
+
+		CanBeUsedInAutogenerating  =  "0"
+     		ApplyAffixes	= "false"
+		ResourceType		= "SIDE_GUN">	
+
+		<Part id = "BASKET_SIDE_GUN_L"	Prototype = "hunter01L" /> 
+		<Part id = "BASKET_SIDE_GUN_R"	Prototype = "hunter01R" /> 
+	</Prototype>
+
+</Prototypes>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="r5m1_TheTownBigHead_diz"
+		value="Очень крупный город, живущий за счет мелкого бандитизма, азартных игр и торговли с соседними деревнями." />
+
+	<string
+		id="r5m1_TheKonneks_diz"
+		value="Помимо трудно выговариваемого названия, в этом городе больше нет никаких особенностей." />
+
+	<string
+		id="r5m1_TheTownMichikar_diz"
+		value="Рядом с городом расположена гоночная трасса, на которой иногда проходят соревнования." />
+
+	<string
+		id="r5m1_ThePensilvansk_diz"
+		value="Небольшой торговый поселок." />
+
+	<string
+		id="r5m1_TheApple_diz"
+		value="Забытая всеми резервация коренных жителей Америки." />
+
+	<string
+		id="r5m2_r5m2_Pervomayka_diz"
+		value="Деревня, промышляющая торговлей с заезжими бродягами." />
+
+	<string
+		id="r5m2_r5m2_Sagevsal_diz"
+		value="Население небольшое, основную территорию деревни занимают торговые склады." />
+
+	<string
+		id="r5m2_r5m2_Cvetograd_diz"
+		value="Сельскохозяйственные угодья." />
+
+	<string
+		id="r5m2_r5m2_Mexico_diz"
+		value="Очередная неприметная деревенька, занимающаяся сельским хозяйством." />
+
+	<string
+		id="r5m2_r5m2_Vraska_diz"
+		value="Группа домов зажиточных фермеров, образующая деревню." />
+
+	<string
+		id="r5m2_TheOneEyeBase_diz"
+		value="Большой, хорошо защищенный от внешних агрессоров город." />
+
+	<string
+		id="r6m1_r6m1_Lost_diz"
+		value="Странное посление возле упавшей летающей машины." />
+
+	<string
+		id="r6m1_r6m1_Real_diz"
+		value="Маленький городишко, отстранившийся от всего остального мира." />
+
+	<string
+		id="r6m1_r6m1_Onto_diz"
+		value="Торговое поселение местных жителей." />
+
+	<string
+		id="r6m1_r6m1_Lodon_diz"
+		value="Временное поселение обслуживающего персонала фабрики." />
+
+	<string
+		id="r6m1_theTownMapleSheet_diz"
+		value="Город средних размеров, затерявшийся в джунглях." />
+
+	<string
+		id="r6m2_r6m1_Vaypeg_diz"
+		value="Хорошо укрепленный город, способный выдержать очередное нападение роботов." />
+
+	<string
+		id="r6m2_r6m1_Tander_diz"
+		value="Удачное географическое положение - единственное, что спасло город от полного уничтожения роботами." />
+
+	<string
+		id="r6m2_r6m1_Gradofaks_diz"
+		value="Небольшое селение, старающееся просто выжить." />
+
+	<string
+		id="r6m2_r6m1_Bey_diz"
+		value="Деревня с крайне малым населением." />
+
+	<string
+		id="r6m2_r6m1_Kanata_diz"
+		value="Непроходимые джунгли спрятали этот городок от посторонних глаз." />
+
+	<string
+		id="r5m1_PetrolStationTown1_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r5m1_PetrolStationTown2_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r5m1_ToR5M2_diz"
+		value="Дорога в Нефтянные леса." />
+
+	<string
+		id="r5m1_ToR6M1_diz"
+		value="Дорога через мост." />
+
+	<string
+		id="r5m2_r5m2_PetrolStation1_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r5m2_ToR5M1_diz"
+		value="Дорога в Земли Сэма." />
+
+	<string
+		id="r5m2_ToR6M2_diz"
+		value="Переправа на другой берег." />
+
+	<string
+		id="r6m1_PetrolStationTown2_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r6m1_PetrolStationTown7_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r6m1_PetrolStationTown9_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r6m1_PetrolStationTown10_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r6m1_ToR5M1_diz"
+		value="Дорога через мост." />
+
+	<string
+		id="r6m1_ToR6M2_diz"
+		value="Дорога в Механические джунгли." />
+
+	<string
+		id="r6m2_PetrolStationTown1_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r6m2_PetrolStationTown2_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="r6m2_ToR5M2_diz"
+		value="Переправа на другой берег." />
+
+	<string
+		id="r6m2_ToR6M1_diz"
+		value="Дорога в Живые джунгли." />
+
+	<string
+		id="sin_PetrolStation_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+
+
+
+
+	<string
+		id="sin_PetrolStation_diz"
+		value="Заправка. Можно починиться и заправиться." />
+
+	<string
+		id="sin_Sin_SanRafael_diz"
+		value="Что-то вроде небольшого бара с алкоголем. Без специального пропуска в этот бар не проехать." />
+
+	<string
+		id="sin_Sin_Church_diz"
+		value="Независимая от банд Иерихона церковь, и лишь религия и деятельность этой церкви помогают быть независимой и не подвергаться агрессии банд." />
+
+	<string
+		id="sin_Sin_CatHouse_diz"
+		value="Главный штаб Котов. Мало, кто знает, что они там за воду мутят, но по словам очевидцев явно что-то нехорошее." />
+
+	<string
+		id="sin_Sin_EastIerihon_diz"
+		value="Западная часть Иерихона, принадлежащая Котам. Иерихон был разделен в результате небольшого договора между двумя группировками." />
+
+	<string
+		id="sin_Sin_WestIerihon_diz"
+		value="Восточная часть Иерихона, принадлежащая Псам. Иерихон был разделен в результате небольшого договора между двумя группировками." />
+
+	<string
+		id="sin_Sin_DogHouse_diz"
+		value="Старая разрушенная ферма, которую до их пор используют Псы в своих темных делишках." />
+</resource>

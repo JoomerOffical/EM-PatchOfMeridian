@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<resource>
+	<string
+		id="0101"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ничего себе заросли! И вот все это ты так старательно охранял от посторонних, Сэм? Да тут наверняка даже картошка не растет. Что тут может быть ценного?"
+		sound="data\sounds\Speech\r6m1\r6m1_0101_nomad.ogg" 
+		time="11" />
+
+	<string
+		id="0102"
+		modelName="Sam_mask"
+		modelSlot="1"
+		value="СЭМ|Откуда мне знать? Я тут никогда не был. Но хватит пустых разговоров. Пора начинать поиски оружия Древних. Думаю, что нам лучше разделиться, так у нас будет больше шансов на удачу. "
+		sound="data\sounds\Speech\r6m1\r6m1_0102_sam.ogg"  
+		time="15" />
+
+	<string
+		id="0103"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А что делать тому, кто найдет эту штуку?"
+		sound="data\sounds\Speech\r6m1\r6m1_0103_nomad.ogg" 
+		time="3" />
+
+	<string
+		id="0104"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Искать меня."
+		sound="data\sounds\Speech\r6m1\r6m1_0104_sam.ogg"   
+		time="2" />
+
+	<string
+		id="0105"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Клянусь шинами, единственное, что мы найдем в этом лесу - коряги и ямы."
+		sound="data\sounds\Speech\r6m1\r6m1_0105_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="0106"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Что это?!"
+		sound="data\sounds\Speech\r6m1\r6m1_0106_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="0201"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Опять вы! И откуда вы все лезете?! Ну, получайте!"
+		sound="data\sounds\Speech\r6m1\r6m1_0201_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="0301"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="3067"
+		modelSlot="1"
+		value="РАБОЧИЙ|Спасибо тебе, чужак, за помощь в уничтожении железных монстров!"
+		sound="data\sounds\Speech\r6m1\r6m1_0301_worker.ogg"  
+		time="6" />
+
+	<string
+		id="0302"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да тут дел-то на пару выстрелов. Могли бы и сами справиться."
+		sound="data\sounds\Speech\r6m1\r6m1_0302_nomad.ogg" 
+		time="4" />
+
+	<string
+		id="0303"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="3067"
+		modelSlot="1"
+		value="РАБОЧИЙ|Мы не умеем воевать. Наша задача - обслуживать фабрику. Но пришли злые роботы и выгнали нас. Они используют священное оборудование в нечестивых целях!"
+		sound="data\sounds\Speech\r6m1\r6m1_0303_worker.ogg"  
+		time="14" />
+
+	<string
+		id="0304"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|''Священное оборудование''? Ну-ну. А что за цели?"
+		sound="data\sounds\Speech\r6m1\r6m1_0304_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="0305"
+		modelName="r3_man"
+		modelSkin="1"
+		modelCfg="1915"
+		modelSlot="1"
+		value="РАБОЧИЙ|Они разрушают благодать цехов, создавая в них роботов, таких же, как они сами. Ими командует страшный человек, чья машина летает по воздуху!"
+		sound="data\sounds\Speech\r6m1\r6m1_0305_nomad.ogg" 
+		time="10" />
+
+	<string
+		id="0306"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Подходяще получается. Если я разнесу эту фабрику, то, как говорится, одним выстрелом пробью три покрышки. И с роботами разделаюсь, и парня на летающем грузовике проучу, и, возможно, найду оружие Сэма."
+		sound="data\sounds\Speech\r6m1\r6m1_0306_nomad.ogg" 
+		time="15" />
+
+	<string
+		id="0401"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А хорошо тут железяки окопались. Просто так на завод не пробраться, проход завален намертво. Попробую поискать дырку в заборе. А не найду, так проделаю."
+		sound="data\sounds\Speech\r6m1\r6m1_0401_nomad.ogg" 
+		time="11" />
+
+	<string
+		id="0701"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Неужели Древние придумали эти штуки только для того, что бы они могли швыряться в людей тяжелыми предметами? Я возмущен."
+		sound="data\sounds\Speech\r6m1\r6m1_0701_nomad.ogg"  
+		time="9" />
+
+	<string
+		id="0702"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Сэм? Откуда ты здесь?"
+		sound="data\sounds\Speech\r6m1\r6m1_0702_nomad.ogg" 
+		time="3" />
+
+	<string
+		id="0703"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Искал место, где хранится сверхоружие Древних. Впрочем, похоже ты нашел его раньше. Поздравляю."
+		sound="data\sounds\Speech\r6m1\r6m1_0703_sam.ogg"  
+		time="9" />
+
+	<string
+		id="0704"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ты думаешь, это то самое место?"
+		sound="data\sounds\Speech\r6m1\r6m1_0704_nomad.ogg"  
+		time="3" />
+
+	<string
+		id="0705"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Да я не сомневаюсь ни на секунду!"
+		sound="data\sounds\Speech\r6m1\r6m1_0705_sam.ogg"  
+		time="3" />
+
+	<string
+		id="0706"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Но..."
+		sound="data\sounds\Speech\r6m1\r6m1_0706_nomad.ogg" 
+		time="1" />
+
+	<string
+		id="0707"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Не важно! Мы нашли то, что искали. Осталось только забрать."
+		sound="data\sounds\Speech\r6m1\r6m1_0707_sam.ogg"  
+		time="6" />
+
+	<string
+		id="0708"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Но тут куча роботов. Не думаю, что они разрешат нам порыться в своих закромах."
+		sound="data\sounds\Speech\r6m1\r6m1_0708_nomad.ogg" 
+		time="6" />
+
+	<string
+		id="0709"
+		modelName="Sam_mask"	
+		modelSlot="1"
+		value="СЭМ|Тем хуже для них! Нам все равно нужно истребить всех роботов мира. Поэтому чем раньше начнем, тем раньше закончим."
+		sound="data\sounds\Speech\r6m1\r6m1_0709_sam.ogg"   
+		time="11" />
+
+	<string
+		id="0710"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Прямо всех? Прямо во всем мире? Ну как скажешь, Сэм..."
+		sound="data\sounds\Speech\r6m1\r6m1_0710_nomad.ogg" 
+		time="6" />
+
+	<string
+		id="0501"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Эдмонтон? Так это и был Эдмонтон?! Эти роботы изгадили город моей мечты. Проклятье! Да это даже не то место, откуда появились роботы! Все зря!!!"
+		sound="data\sounds\Speech\r6m1\r6m1_0501_nomad.ogg" 
+		time="14" />
+
+	<string
+		id="0502"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну, погодите, железяки! Я вам отомщу за уничтожение моей мечты и смерть Сэма. Я буду уничтожать вас до последней капли бензина в баке, я буду преследовать вас до последнего патрона! Э-э-э, то есть наоборот."
+		sound="data\sounds\Speech\r6m1\r6m1_0502_nomad.ogg" 
+		time="16" />
+
+	<string
+		id="0503"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я проеду по вашим корпусам в то место, откуда вы выползаете, и сровняю его землей! Берегитесь, ходячий металлолом, я еду!"
+		sound="data\sounds\Speech\r6m1\r6m1_0503_nomad.ogg" 
+		time="11" />
+
+	<string
+		id="0601"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Мост взорван! Это дело рук Сэма! Что же делать?!"
+		sound="data\sounds\Speech\r6m1\r6m1_0601_nomad.ogg"  
+		time="5" />
+
+	<string
+		id="0602"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Механик! На связь! Это я, Бродяга! Дружище, мне необходима твоя помощь."
+		sound="data\sounds\Speech\r6m1\r6m1_0602_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="0603"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="МЕХАНИК|Приветствую тебя, друг! Чем я могу тебе помочь?"
+		sound="data\sounds\Speech\r6m1\r6m1_0603_mechanic.ogg"  
+		time="3" />
+
+	<string
+		id="0604"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Мне нужно перебраться через Великую Реку, но мост, по которому я попал сюда, взорван."
+		sound="data\sounds\Speech\r6m1\r6m1_0604_nomad.ogg" 
+		time="5" />
+
+	<string
+		id="0605"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="МЕХАНИК|Дался тебе этот Мост! Переправляйся паромом. Это и проще, и надежнее."
+		sound="data\sounds\Speech\r6m1\r6m1_0605_mechanic.ogg"  
+		time="5" />
+
+	<string
+		id="0606"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ты серьезно? Что за паром?"
+		sound="data\sounds\Speech\r6m1\r6m1_0606_nomad.ogg" 
+		time="3" />
+
+	<string
+		id="0607"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="МЕХАНИК|Самый обычный паром, который перевозит всех желающих через реку."
+		sound="data\sounds\Speech\r6m1\r6m1_0607_mechanic.ogg"  
+		time="4" />
+
+	<string
+		id="0608"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="МЕХАНИК|Правду сказать, он долгое время не работал, потому что на том берегу не горел Маяк. Но, как я недавно узнал, путеводный огонь восстановлен, а значит, этот путь снова открыт."
+		sound="data\sounds\Speech\r6m1\r6m1_0608_mechanic.ogg"  
+		time="9" />
+
+	<string
+		id="0609"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Отлично, рассказывай дорогу!"
+		sound="data\sounds\Speech\r6m1\r6m1_0609_nomad.ogg" 
+		time="3" />
+
+	<string
+		id="0610"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="МЕХАНИК|Это недалеко отсюда. Но есть одна загвоздка! У парома снят двигатель."
+		sound="data\sounds\Speech\r6m1\r6m1_0610_mechanic.ogg"   
+		time="5" />
+
+	<string
+		id="0611"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Лопни мои шины! Какая зараза его сперла?"
+		sound="data\sounds\Speech\r6m1\r6m1_0611_nomad.ogg" 
+		time="4" />
+
+	<string
+		id="0612"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="МЕХАНИК|Его сняли люди из племени нелетающей машины. Мотором парома они хотели поднять свою святыню в воздух. Но у них ничего не получилось."
+		sound="data\sounds\Speech\r6m1\r6m1_0612_mechanic.ogg"  
+		time="8" />
+
+	<string
+		id="0613"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Сейчас я к ним съезжу и так их всех в воздух подниму, что они три дня потом не приземлятся, ядрен бензин!"
+		sound="data\sounds\Speech\r6m1\r6m1_0613_nomad.ogg" 
+		time="7" />
+
+	<string
+		id="0801"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ничего себе! Трава растет необычным, даже странным образом. Теперь мне понятно, что заставляет людей испытывать страх."
+		sound="data\sounds\Speech\r6m1\r6m1_0801_nomad.ogg"  
+		time="10" />
+
+	<string
+		id="0901"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я победил!!!"
+		sound="data\sounds\Speech\r6m1\r6m1_0901_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="0902"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я проиграл..."
+		sound="data\sounds\Speech\r6m1\r6m1_0902_nomad.ogg" 
+		time="2" />
+
+	<string
+		id="8801"
+		value="Вы желаете покинуть эту область?"
+		numButtons="2" />
+
+	<string
+		id="8802"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я не знаю, куда ведет эта дорога, поэтому останусь здесь." 
+		sound="data\sounds\Speech\r5m1\r5m1_8802_nomad.ogg"
+		time="5" />
+
+	<string
+		id="8803"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Какое-то странное место. Лучше держаться отсюда подальше."
+		sound="data\sounds\Speech\r5m1\r5m1_8803_nomad.ogg"
+		time="5" />
+</resource>
